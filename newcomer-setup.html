@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-language="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newcomer Setup - New In Abu Dhabi | إعداد القادمين الجدد</title>
+    <meta name="description" content="Complete newcomer setup guide for Abu Dhabi - SIM cards, bank accounts, internet, furniture">
+    
+    <!-- Arabic Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Import main styles */
+        body {
+            font-family: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        [dir="rtl"] body {
+            font-family: 'Cairo', 'Inter', sans-serif;
+            text-align: right;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #d4a574;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: #e67e22;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .content-section h2 {
+            color: #2d3748;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #d4a574;
+            padding-bottom: 10px;
+        }
+
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .checklist-item {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #d4a574;
+        }
+
+        [dir="rtl"] .checklist-item {
+            border-left: none;
+            border-right: 4px solid #d4a574;
+        }
+
+        .checklist-item h3 {
+            color: #2d3748;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .priority-badge {
+            background: #e67e22;
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        [dir="rtl"] .comparison-table th,
+        [dir="rtl"] .comparison-table td {
+            text-align: right;
+        }
+
+        .comparison-table th {
+            background: #f7fafc;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .comparison-table .highlight {
+            background: #e6fffa;
+            font-weight: 600;
+        }
+
+        .tips-box {
+            background: #e6fffa;
+            border: 1px solid #81e6d9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .warning-box {
+            background: #fef5e7;
+            border: 1px solid #f6ad55;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        [dir="rtl"] .language-switcher {
+            right: auto;
+            left: 20px;
+        }
+
+        .lang-option {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #4a5568;
+            padding: 4px 8px;
+            border-radius: 8px;
+        }
+
+        .lang-option:hover {
+            background: rgba(212, 165, 116, 0.2);
+            color: #2d3748;
+        }
+
+        .lang-option.active {
+            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            color: white;
+        }
+
+        .lang-divider {
+            color: #a0aec0;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <span class="lang-option active" onclick="switchLanguage('en')" data-lang="en">EN</span>
+        <span class="lang-divider">|</span>
+        <span class="lang-option" onclick="switchLanguage('ar')" data-lang="ar">AR</span>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="back-link" data-en="← Back to Home" data-ar="← العودة للصفحة الرئيسية">← Back to Home</a>
+        
+        <div class="page-header">
+            <h1 data-en="Newcomer Setup" data-ar="إعداد القادمين الجدد">Newcomer Setup</h1>
+            <p data-en="Complete step-by-step guide to get you settled in Abu Dhabi within your first week" data-ar="دليل شامل خطوة بخطوة لمساعدتك على الاستقرار في أبوظبي خلال أسبوعك الأول">Complete step-by-step guide to get you settled in Abu Dhabi within your first week</p>
+        </div>
+
+        <!-- First Week Essentials -->
+        <div class="content-section">
+            <h2 data-en="First Week Essentials (Priority Order)" data-ar="أساسيات الأسبوع الأول (حسب الأولوية)">First Week Essentials (Priority Order)</h2>
+            
+            <div class="checklist-grid">
+                <div class="checklist-item">
+                    <h3 data-en="Day 1-2:" data-ar="اليوم 1-2:">Day 1-2:</h3>
+                    <ul>
+                        <li data-en="SIM card (AED 49-125)" data-ar="شريحة الهاتف (49-125 درهم)">SIM card (AED 49-125)</li>
+                        <li data-en="Basic groceries & supplies" data-ar="البقالة والمستلزمات الأساسية">Basic groceries & supplies</li>
+                        <li data-en="Transport setup (bus card AED 10)" data-ar="إعداد النقل (بطاقة الحافلة 10 دراهم)">Transport setup (bus card AED 10)</li>
+                    </ul>
+                </div>
+
+                <div class="checklist-item">
+                    <h3 data-en="Day 3-5:" data-ar="اليوم 3-5:">Day 3-5:</h3>
+                    <ul>
+                        <li data-en="Internet connection (AED 300+/month)" data-ar="الاتصال بالإنترنت (300+ درهم/شهر)">Internet connection (AED 300+/month)</li>
+                        <li data-en="Bank account opening" data-ar="فتح حساب مصرفي">Bank account opening</li>
+                        <li data-en="Basic furniture delivery" data-ar="توصيل الأثاث الأساسي">Basic furniture delivery</li>
+                    </ul>
+                </div>
+
+                <div class="checklist-item">
+                    <h3 data-en="Week 2:" data-ar="الأسبوع الثاني:">Week 2:</h3>
+                    <ul>
+                        <li data-en="Complete furniture setup" data-ar="إكمال إعداد الأثاث">Complete furniture setup</li>
+                        <li data-en="Utility accounts transfer" data-ar="نقل حسابات المرافق">Utility accounts transfer</li>
+                        <li data-en="Neighborhood exploration" data-ar="استكشاف الحي">Neighborhood exploration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 1: Stay Connected – SIM Cards & Mobile -->
+        <div class="content-section">
+            <h2 data-en="Step 1: Stay Connected – SIM Cards & Mobile" data-ar="الخطوة 1: البقاء على اتصال - شرائح الهاتف والجوال">Step 1: Stay Connected – SIM Cards & Mobile</h2>
+            
+            <h3 data-en="Where to Get SIM Cards (Same Day Setup):" data-ar="أين تحصل على شرائح الهاتف (إعداد نفس اليوم):">Where to Get SIM Cards (Same Day Setup):</h3>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Abu Dhabi Airport (Best for Immediate Use)" data-ar="مطار أبوظبي (الأفضل للاستخدام الفوري)">Abu Dhabi Airport (Best for Immediate Use)</h3>
+                    <div class="contact-info">
+                        <p><a href="https://maps.google.com/?q=Abu+Dhabi+Airport" target="_blank">📍 View on Google Maps</a></p>
+                    </div>
+                    <ul>
+                        <li data-en="Location: Arrivals hall, multiple kiosks" data-ar="الموقع: قاعة الوصول، عدة أكشاك">Location: Arrivals hall, multiple kiosks</li>
+                        <li data-en="Hours: 24/7" data-ar="الساعات: 24/7">Hours: 24/7</li>
+                        <li data-en="Need: Passport only" data-ar="تحتاج: جواز السفر فقط">Need: Passport only</li>
+                        <li data-en="Advantage: Ready to use immediately" data-ar="الميزة: جاهز للاستخدام فوراً">Advantage: Ready to use immediately</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Mall Locations (More Options)" data-ar="مواقع المولات (خيارات أكثر)">Mall Locations (More Options)</h3>
+                    <ul>
+                        <li data-en="Abu Dhabi Mall: Ground floor, telecom section" data-ar="أبوظبي مول: الطابق الأرضي، قسم الاتصالات">Abu Dhabi Mall: Ground floor, telecom section</li>
+                        <li data-en="Al Wahda Mall: Level 1 & 2, multiple stores" data-ar="الوحدة مول: المستوى 1 و2، متاجر متعددة">Al Wahda Mall: Level 1 & 2, multiple stores</li>
+                        <li data-en="Yas Mall: Ground floor near entrance" data-ar="ياس مول: الطابق الأرضي بالقرب من المدخل">Yas Mall: Ground floor near entrance</li>
+                        <li data-en="Marina Mall: Lower level" data-ar="مارينا مول: المستوى السفلي">Marina Mall: Lower level</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 data-en="Best SIM Deals for Newcomers:" data-ar="أفضل عروض الشرائح للقادمين الجدد:">Best SIM Deals for Newcomers:</h3>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Budget Choice: Etisalat Visitor Line" data-ar="الخيار الاقتصادي: خط الزوار من اتصالات">Budget Choice: Etisalat Visitor Line</h3>
+                    <div class="contact-info">
+                        <p data-en="Phone: 101" data-ar="الهاتف: 101">Phone: 101</p>
+                    </div>
+                    <ul>
+                        <li data-en="Basic: AED 49 (2GB + 30 mins, 28 days)" data-ar="الأساسي: 49 درهم (2GB + 30 دقيقة، 28 يوم)">Basic: AED 49 (2GB + 30 mins, 28 days)</li>
+                        <li data-en="Plus: AED 79 (4GB + 30 mins, 28 days)" data-ar="بلاس: 79 درهم (4GB + 30 دقيقة، 28 يوم)">Plus: AED 79 (4GB + 30 mins, 28 days)</li>
+                        <li data-en="Premium: AED 125 (8GB + 120 mins, 28 days)" data-ar="المتميز: 125 درهم (8GB + 120 دقيقة، 28 يوم)">Premium: AED 125 (8GB + 120 mins, 28 days)</li>
+                        <li data-en="Best for: Light users, temporary stay" data-ar="الأفضل لـ: المستخدمين الخفيفين، الإقامة المؤقتة">Best for: Light users, temporary stay</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Flexible Choice: Virgin Mobile" data-ar="الخيار المرن: Virgin Mobile">Flexible Choice: Virgin Mobile</h3>
+                    <div class="contact-info">
+                        <p data-en="Phone: +971 4 388 0000" data-ar="الهاتف: +971 4 388 0000">Phone: +971 4 388 0000</p>
+                    </div>
+                    <ul>
+                        <li data-en="7 days: AED 150 (21GB + calls)" data-ar="7 أيام: 150 درهم (21GB + مكالمات)">7 days: AED 150 (21GB + calls)</li>
+                        <li data-en="10 days: AED 200 (40GB + calls)" data-ar="10 أيام: 200 درهم (40GB + مكالمات)">10 days: AED 200 (40GB + calls)</li>
+                        <li data-en="15 days: AED 300 (unlimited data)" data-ar="15 يوم: 300 درهم (بيانات غير محدودة)">15 days: AED 300 (unlimited data)</li>
+                        <li data-en="Best for: Heavy data users, app-based control" data-ar="الأفضل لـ: مستخدمي البيانات الكثيفة، التحكم عبر التطبيق">Best for: Heavy data users, app-based control</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Long-term Choice: Du" data-ar="الخيار طويل المدى: دو">Long-term Choice: Du</h3>
+                    <div class="contact-info">
+                        <p data-en="Phone: 155" data-ar="الهاتف: 155">Phone: 155</p>
+                    </div>
+                    <ul>
+                        <li data-en="Tourist SIM: AED 49 (2GB + 30 mins)" data-ar="شريحة السياحة: 49 درهم (2GB + 30 دقيقة)">Tourist SIM: AED 49 (2GB + 30 mins)</li>
+                        <li data-en="Monthly plans: From AED 99/month" data-ar="الخطط الشهرية: من 99 درهم/شهر">Monthly plans: From AED 99/month</li>
+                        <li data-en="Family packages: AED 199+ (multiple lines)" data-ar="باقات الأسرة: 199+ درهم (خطوط متعددة)">Family packages: AED 199+ (multiple lines)</li>
+                        <li data-en="Best for: Residents, family plans" data-ar="الأفضل لـ: المقيمين، خطط الأسرة">Best for: Residents, family plans</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="eSIM Option (iPhone/Android)" data-ar="خيار eSIM (آيفون/أندرويد)">eSIM Option (iPhone/Android)</h3>
+                    <ul>
+                        <li data-en="Setup time: 5 minutes via QR code" data-ar="وقت الإعداد: 5 دقائق عبر رمز QR">Setup time: 5 minutes via QR code</li>
+                        <li data-en="Same prices as physical SIM" data-ar="نفس أسعار الشريحة الفيزيائية">Same prices as physical SIM</li>
+                        <li data-en="Advantage: Keep home country SIM active" data-ar="الميزة: الاحتفاظ بشريحة البلد الأصلي نشطة">Advantage: Keep home country SIM active</li>
+                        <li data-en="Available: All 3 providers" data-ar="متاح: جميع مقدمي الخدمة الثلاثة">Available: All 3 providers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Home Setup – Furniture & Essentials -->
+        <div class="content-section">
+            <h2 data-en="Step 2: Home Setup – Furniture & Essentials" data-ar="الخطوة 2: إعداد المنزل - الأثاث والأساسيات">Step 2: Home Setup – Furniture & Essentials</h2>
+            
+            <h3 data-en="New Furniture (Best Value)" data-ar="الأثاث الجديد (أفضل قيمة)">New Furniture (Best Value)</h3>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="IKEA – Yas Mall" data-ar="ايكيا - ياس مول">IKEA – Yas Mall</h3>
+                    <div class="contact-info">
+                        <p><a href="https://maps.google.com/?q=IKEA+Yas+Mall+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                    </div>
+                    <ul>
+                        <li data-en="Phone: +971 2 567 6555" data-ar="الهاتف: +971 2 567 6555">Phone: +971 2 567 6555</li>
+                        <li data-en="Hours: 10 AM – 12 AM daily" data-ar="الساعات: 10 صباحاً – 12 منتصف الليل يومياً">Hours: 10 AM – 12 AM daily</li>
+                        <li data-en="Delivery: AED 39-99 (next day available)" data-ar="التوصيل: 39-99 درهم (متاح في اليوم التالي)">Delivery: AED 39-99 (next day available)</li>
+                        <li data-en="Assembly: AED 50-200 per item" data-ar="التجميع: 50-200 درهم لكل قطعة">Assembly: AED 50-200 per item</li>
+                        <li data-en="Best for: Complete room setups, Scandinavian style" data-ar="الأفضل لـ: إعداد الغرف الكاملة، النمط الاسكندنافي">Best for: Complete room setups, Scandinavian style</li>
+                        <li data-en="Tip: Use IKEA app to check stock before visiting" data-ar="نصيحة: استخدم تطبيق IKEA للتحقق من المخزون قبل الزيارة">Tip: Use IKEA app to check stock before visiting</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Pan Emirates" data-ar="بان إيميريتس">Pan Emirates</h3>
+                    <div class="contact-info">
+                        <p><a href="https://maps.google.com/?q=Pan+Emirates+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                    </div>
+                    <ul>
+                        <li data-en="Locations: Mussafah, Al Wahda area" data-ar="المواقع: مصفح، منطقة الوحدة">Locations: Mussafah, Al Wahda area</li>
+                        <li data-en="Phone: +971 2 555 7777" data-ar="الهاتف: +971 2 555 7777">Phone: +971 2 555 7777</li>
+                        <li data-en="Delivery: 3-7 days, AED 50-150" data-ar="التوصيل: 3-7 أيام، 50-150 درهم">Delivery: 3-7 days, AED 50-150</li>
+                        <li data-en="Best for: Mid-range quality, local warranty" data-ar="الأفضل لـ: الجودة المتوسطة، ضمان محلي">Best for: Mid-range quality, local warranty</li>
+                        <li data-en="Payment: Installment plans available" data-ar="الدفع: خطط التقسيط متاحة">Payment: Installment plans available</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Homes R Us" data-ar="هومز آر أس">Homes R Us</h3>
+                    <div class="contact-info">
+                        <p><a href="https://maps.google.com/?q=Homes+R+Us+Airport+Road+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                    </div>
+                    <ul>
+                        <li data-en="Main store: Airport Road, near ADNOC HQ" data-ar="المتجر الرئيسي: شارع المطار، بالقرب من مقر أدنوك">Main store: Airport Road, near ADNOC HQ</li>
+                        <li data-en="Phone: +971 2 446 8888" data-ar="الهاتف: +971 2 446 8888">Phone: +971 2 446 8888</li>
+                        <li data-en="Hours: 9 AM – 10 PM daily" data-ar="الساعات: 9 صباحاً – 10 مساءً يومياً">Hours: 9 AM – 10 PM daily</li>
+                        <li data-en="Best for: Affordable basics, quick delivery" data-ar="الأفضل لـ: الأساسيات المعقولة، التوصيل السريع">Best for: Affordable basics, quick delivery</li>
+                        <li data-en="Tip: Frequent sales, check weekend promotions" data-ar="نصيحة: تخفيضات متكررة، تحقق من عروض نهاية الأسبوع">Tip: Frequent sales, check weekend promotions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 data-en="Used Furniture (Best Bargains)" data-ar="الأثاث المستعمل (أفضل الصفقات)">Used Furniture (Best Bargains)</h3>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Mussafah Used Market" data-ar="سوق مصفح المستعمل">Mussafah Used Market</h3>
+                    <div class="contact-info">
+                        <p><a href="https://maps.google.com/?q=Mussafah+Used+Furniture+Market+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                    </div>
+                    <ul>
+                        <li data-en="Location: Mussafah Industrial Area" data-ar="الموقع: منطقة مصفح الصناعية">Location: Mussafah Industrial Area</li>
+                        <li data-en="Hours: 7 AM – 7 PM daily (except Friday afternoon)" data-ar="الساعات: 7 صباحاً – 7 مساءً يومياً (عدا بعد ظهر الجمعة)">Hours: 7 AM – 7 PM daily (except Friday afternoon)</li>
+                        <li data-en="Best time: Weekend mornings for fresh stock" data-ar="أفضل وقت: صباحات نهاية الأسبوع للمخزون الجديد">Best time: Weekend mornings for fresh stock</li>
+                        <li data-en="Bargaining: Expected, start at 50% of asking price" data-ar="المساومة: متوقعة، ابدأ بـ 50% من السعر المطلوب">Bargaining: Expected, start at 50% of asking price</li>
+                        <li data-en="Transport: Bring pickup truck or arrange delivery AED 100+" data-ar="النقل: احضر شاحنة صغيرة أو رتب التوصيل 100+ درهم">Transport: Bring pickup truck or arrange delivery AED 100+</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Online Platforms:" data-ar="المنصات الإلكترونية:">Online Platforms:</h3>
+                    <ul>
+                        <li data-en="Dubizzle.com: Largest selection, filter by location" data-ar="Dubizzle.com: أكبر مجموعة، فلترة حسب الموقع">Dubizzle.com: Largest selection, filter by location</li>
+                        <li data-en="Facebook Marketplace: Good deals, direct contact" data-ar="Facebook Marketplace: صفقات جيدة، اتصال مباشر">Facebook Marketplace: Good deals, direct contact</li>
+                        <li data-en="WhatsApp Groups: "Abu Dhabi Used Furniture", "Expat Sales AD"" data-ar="مجموعات واتساب: "أثاث مستعمل أبوظبي"، "مبيعات الوافدين أبوظبي"">WhatsApp Groups: "Abu Dhabi Used Furniture", "Expat Sales AD"</li>
+                        <li data-en="Tip: Always inspect before buying, negotiate price" data-ar="نصيحة: افحص دائماً قبل الشراء، فاوض على السعر">Tip: Always inspect before buying, negotiate price</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 data-en="Installation & Assembly Services" data-ar="خدمات التركيب والتجميع">Installation & Assembly Services</h3>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Professional Apps:" data-ar="التطبيقات المهنية:">Professional Apps:</h3>
+                    <ul>
+                        <li data-en="Mr Usta: +971 4 399 3883 (24/7 support)" data-ar="Mr Usta: +971 4 399 3883 (دعم 24/7)">Mr Usta: +971 4 399 3883 (24/7 support)</li>
+                        <li data-en="ServiceMarket: Via website/app booking" data-ar="ServiceMarket: حجز عبر الموقع/التطبيق">ServiceMarket: Via website/app booking</li>
+                        <li data-en="The Fixers: +971 4 588 9191" data-ar="The Fixers: +971 4 588 9191">The Fixers: +971 4 588 9191</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Freelance Handymen:" data-ar="الحرفيون المستقلون:">Freelance Handymen:</h3>
+                    <ul>
+                        <li data-en="Rate: AED 50-100/hour" data-ar="السعر: 50-100 درهم/ساعة">Rate: AED 50-100/hour</li>
+                        <li data-en="Facebook groups: "Abu Dhabi Handyman Services"" data-ar="مجموعات فيسبوك: "خدمات الحرفيين أبوظبي"">Facebook groups: "Abu Dhabi Handyman Services"</li>
+                        <li data-en="Careem Plus: Furniture assembly available" data-ar="كريم بلاس: تجميع الأثاث متاح">Careem Plus: Furniture assembly available</li>
+                        <li data-en="Tip: Get quotes from 2-3 people, check reviews" data-ar="نصيحة: احصل على عروض من 2-3 أشخاص، تحقق من التقييمات">Tip: Get quotes from 2-3 people, check reviews</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Internet & TV Setup -->
+        <div class="content-section">
+            <h2 data-en="Step 3: Internet & TV Setup" data-ar="الخطوة 3: إعداد الإنترنت والتلفزيون">Step 3: Internet & TV Setup</h2>
+            
+            <h3 data-en="Main Providers (Fiber Internet)" data-ar="مقدمو الخدمة الرئيسيون (الإنترنت الليفي)">Main Providers (Fiber Internet)</h3>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Etisalat" data-ar="اتصالات">Etisalat</h3>
+                    <div class="contact-info">
+                        <p data-en="Customer service: 101" data-ar="خدمة العملاء: 101">Customer service: 101</p>
+                    </div>
+                    <ul>
+                        <li data-en="Setup time: 3-5 working days" data-ar="وقت التركيب: 3-5 أيام عمل">Setup time: 3-5 working days</li>
+                        <li data-en="250 Mbps: AED 329/month" data-ar="250 ميجابت/ثانية: 329 درهم/شهر">250 Mbps: AED 329/month</li>
+                        <li data-en="500 Mbps: AED 449/month" data-ar="500 ميجابت/ثانية: 449 درهم/شهر">500 Mbps: AED 449/month</li>
+                        <li data-en="1 Gbps: AED 599/month" data-ar="1 جيجابت/ثانية: 599 درهم/شهر">1 Gbps: AED 599/month</li>
+                        <li data-en="Installation: Free (usually)" data-ar="التركيب: مجاني (عادة)">Installation: Free (usually)</li>
+                        <li data-en="TV packages: From AED 99/month extra" data-ar="باقات التلفزيون: من 99 درهم/شهر إضافي">TV packages: From AED 99/month extra</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Du" data-ar="دو">Du</h3>
+                    <div class="contact-info">
+                        <p data-en="Customer service: 155" data-ar="خدمة العملاء: 155">Customer service: 155</p>
+                    </div>
+                    <ul>
+                        <li data-en="Setup time: 3-7 working days" data-ar="وقت التركيب: 3-7 أيام عمل">Setup time: 3-7 working days</li>
+                        <li data-en="250 Mbps: AED 299/month" data-ar="250 ميجابت/ثانية: 299 درهم/شهر">250 Mbps: AED 299/month</li>
+                        <li data-en="500 Mbps: AED 399/month" data-ar="500 ميجابت/ثانية: 399 درهم/شهر">500 Mbps: AED 399/month</li>
+                        <li data-en="1 Gbps: AED 549/month" data-ar="1 جيجابت/ثانية: 549 درهم/شهر">1 Gbps: AED 549/month</li>
+                        <li data-en="Installation: Free for 12-month contracts" data-ar="التركيب: مجاني للعقود 12 شهر">Installation: Free for 12-month contracts</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 data-en="What You Need for Setup:" data-ar="ما تحتاجه للإعداد:">What You Need for Setup:</h3>
+            <ul>
+                <li data-en="Emirates ID (mandatory)" data-ar="الهوية الإماراتية (إجبارية)">Emirates ID (mandatory)</li>
+                <li data-en="Tenancy contract OR landlord's Emirates ID" data-ar="عقد الإيجار أو الهوية الإماراتية للمالك">Tenancy contract OR landlord's Emirates ID</li>
+                <li data-en="Security deposit: AED 300-500 (refundable)" data-ar="وديعة الضمان: 300-500 درهم (قابلة للاسترداد)">Security deposit: AED 300-500 (refundable)</li>
+                <li data-en="Tip: Some buildings have shared connections – ask neighbors first" data-ar="نصيحة: بعض المباني لديها اتصالات مشتركة - اسأل الجيران أولاً">Tip: Some buildings have shared connections – ask neighbors first</li>
+            </ul>
+
+            <h3 data-en="Temporary Internet Solutions:" data-ar="حلول الإنترنت المؤقتة:">Temporary Internet Solutions:</h3>
+            <ul>
+                <li data-en="Mobile hotspot: Use your SIM data plan" data-ar="نقطة الاتصال المحمولة: استخدم خطة بيانات شريحتك">Mobile hotspot: Use your SIM data plan</li>
+                <li data-en="Café WiFi: Most malls and coffee shops have free WiFi" data-ar="واي فاي المقاهي: معظم المولات والمقاهي لديها واي فاي مجاني">Café WiFi: Most malls and coffee shops have free WiFi</li>
+                <li data-en="Hotel/Airbnb: Use their connection while waiting for installation" data-ar="الفندق/Airbnb: استخدم اتصالهم أثناء انتظار التركيب">Hotel/Airbnb: Use their connection while waiting for installation</li>
+            </ul>
+        </div>
+
+        <!-- Step 4: Banking Made Easy -->
+        <div class="content-section">
+            <h2 data-en="Step 4: Banking Made Easy" data-ar="الخطوة 4: الخدمات المصرفية المبسطة">Step 4: Banking Made Easy</h2>
+            
+            <h3 data-en="Best Banks for Newcomers" data-ar="أفضل المصارف للقادمين الجدد">Best Banks for Newcomers</h3>
+            
+            <h4 data-en="For Employees (Need Salary Certificate):" data-ar="للموظفين (تحتاج شهادة راتب):">For Employees (Need Salary Certificate):</h4>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="First Abu Dhabi Bank (FAB)" data-ar="بنك أبوظبي الأول">First Abu Dhabi Bank (FAB)</h3>
+                    <div class="contact-info">
+                        <p><a href="https://maps.google.com/?q=First+Abu+Dhabi+Bank" target="_blank">📍 View on Google Maps</a></p>
+                    </div>
+                    <ul>
+                        <li data-en="Phone: +971 600 524 229" data-ar="الهاتف: +971 600 524 229">Phone: +971 600 524 229</li>
+                        <li data-en="Minimum salary: AED 5,000/month" data-ar="الحد الأدنى للراتب: 5000 درهم/شهر">Minimum salary: AED 5,000/month</li>
+                        <li data-en="Account fee: AED 25/month (waived with balance)" data-ar="رسوم الحساب: 25 درهم/شهر (معفاة مع الرصيد)">Account fee: AED 25/month (waived with balance)</li>
+                        <li data-en="Benefits: Largest ATM network, excellent app" data-ar="المزايا: أكبر شبكة ATM، تطبيق ممتاز">Benefits: Largest ATM network, excellent app</li>
+                        <li data-en="Documents: Emirates ID, salary certificate, NOC from employer" data-ar="الوثائق: الهوية الإماراتية، شهادة راتب، خطاب عدم ممانعة من صاحب العمل">Documents: Emirates ID, salary certificate, NOC from employer</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Abu Dhabi Commercial Bank (ADCB)" data-ar="المصرف التجاري لأبوظبي">Abu Dhabi Commercial Bank (ADCB)</h3>
+                    <div class="contact-info">
+                        <p><a href="https://maps.google.com/?q=ADCB+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                    </div>
+                    <ul>
+                        <li data-en="Phone: +971 600 502 030" data-ar="الهاتف: +971 600 502 030">Phone: +971 600 502 030</li>
+                        <li data-en="Minimum salary: AED 3,000/month" data-ar="الحد الأدنى للراتب: 3000 درهم/شهر">Minimum salary: AED 3,000/month</li>
+                        <li data-en="Account fee: AED 25/month" data-ar="رسوم الحساب: 25 درهم/شهر">Account fee: AED 25/month</li>
+                        <li data-en="Benefits: Good customer service, expat-friendly" data-ar="المزايا: خدمة عملاء جيدة، مناسب للوافدين">Benefits: Good customer service, expat-friendly</li>
+                        <li data-en="Tip: Often has promotions for new residents" data-ar="نصيحة: غالباً لديه عروض للمقيمين الجدد">Tip: Often has promotions for new residents</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Emirates NBD" data-ar="بنك الإمارات دبي الوطني">Emirates NBD</h3>
+                    <div class="contact-info">
+                        <p><a href="https://maps.google.com/?q=Emirates+NBD+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                    </div>
+                    <ul>
+                        <li data-en="Phone: +971 600 540 000" data-ar="الهاتف: +971 600 540 000">Phone: +971 600 540 000</li>
+                        <li data-en="Minimum salary: AED 3,000/month" data-ar="الحد الأدنى للراتب: 3000 درهم/شهر">Minimum salary: AED 3,000/month</li>
+                        <li data-en="Account fee: AED 25/month" data-ar="رسوم الحساب: 25 درهم/شهر">Account fee: AED 25/month</li>
+                        <li data-en="Benefits: Wide branch network, digital banking" data-ar="المزايا: شبكة فروع واسعة، الخدمات المصرفية الرقمية">Benefits: Wide branch network, digital banking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4 data-en="For Freelancers/Self-Employed:" data-ar="للمستقلين/العاملين لحسابهم الخاص:">For Freelancers/Self-Employed:</h4>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Liv. by Emirates NBD" data-ar="ليف من بنك الإمارات دبي الوطني">Liv. by Emirates NBD</h3>
+                    <div class="contact-info">
+                        <p><a href="https://maps.google.com/?q=Liv+Bank+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                    </div>
+                    <ul>
+                        <li data-en="Phone: +971 4 316 0316" data-ar="الهاتف: +971 4 316 0316">Phone: +971 4 316 0316</li>
+                        <li data-en="Requirements: Emirates ID + UAE mobile number only" data-ar="المتطلبات: الهوية الإماراتية + رقم الهاتف الإماراتي فقط">Requirements: Emirates ID + UAE mobile number only</li>
+                        <li data-en="Account fee: AED 15/month" data-ar="رسوم الحساب: 15 درهم/شهر">Account fee: AED 15/month</li>
+                        <li data-en="Limits: AED 40,000 monthly transactions" data-ar="الحدود: 40,000 درهم معاملات شهرية">Limits: AED 40,000 monthly transactions</li>
+                        <li data-en="Best for: Digital nomads, freelancers" data-ar="الأفضل لـ: الرحالة الرقميون، المستقلون">Best for: Digital nomads, freelancers</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Mashreq Neo" data-ar="المشرق نيو">Mashreq Neo</h3>
+                    <div class="contact-info">
+                        <p><a href="https://maps.google.com/?q=Mashreq+Bank+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                    </div>
+                    <ul>
+                        <li data-en="Phone: +971 4 424 4444" data-ar="الهاتف: +971 4 424 4444">Phone: +971 4 424 4444</li>
+                        <li data-en="Requirements: Emirates ID, basic income proof" data-ar="المتطلبات: الهوية الإماراتية، إثبات دخل أساسي">Requirements: Emirates ID, basic income proof</li>
+                        <li data-en="Account fee: AED 0 (with minimum balance)" data-ar="رسوم الحساب: 0 درهم (مع الحد الأدنى للرصيد)">Account fee: AED 0 (with minimum balance)</li>
+                        <li data-en="Benefits: Modern app, instant account opening" data-ar="المزايا: تطبيق حديث، فتح حساب فوري">Benefits: Modern app, instant account opening</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tips-box">
+                <h3 data-en="Banking Tips:" data-ar="نصائح مصرفية:">Banking Tips:</h3>
+                <ul>
+                    <li data-en="Visit during: 8 AM – 2 PM (less crowded)" data-ar="زر خلال: 8 صباحاً – 2 مساءً (أقل ازدحاماً)">Visit during: 8 AM – 2 PM (less crowded)</li>
+                    <li data-en="Bring originals: All documents must be original + copies" data-ar="احضر الأصول: جميع الوثائق يجب أن تكون أصلية + نسخ">Bring originals: All documents must be original + copies</li>
+                    <li data-en="Initial deposit: AED 1,000-3,000 depending on bank" data-ar="الإيداع الأولي: 1000-3000 درهم حسب المصرف">Initial deposit: AED 1,000-3,000 depending on bank</li>
+                    <li data-en="Debit card: Usually ready same day" data-ar="بطاقة الخصم: عادة جاهزة في نفس اليوم">Debit card: Usually ready same day</li>
+                    <li data-en="Online banking: Activated within 24 hours" data-ar="الخدمات المصرفية عبر الإنترنت: تفعل خلال 24 ساعة">Online banking: Activated within 24 hours</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Step 5: Essential Shopping & Services -->
+        <div class="content-section">
+            <h2 data-en="Step 5: Essential Shopping & Services" data-ar="الخطوة 5: التسوق والخدمات الأساسية">Step 5: Essential Shopping & Services</h2>
+            
+            <h3 data-en="Grocery Shopping (Stock Your Kitchen)" data-ar="التسوق للبقالة (مخزن مطبخك)">Grocery Shopping (Stock Your Kitchen)</h3>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Budget-Friendly:" data-ar="مناسب للميزانية:">Budget-Friendly:</h3>
+                    <ul>
+                        <li data-en="LuLu Hypermarket: Multiple locations, bulk discounts" data-ar="لولو هايبر ماركت: مواقع متعددة، خصومات الجملة">
+                            <div class="contact-info">
+                                <p><a href="https://maps.google.com/?q=LuLu+Hypermarket+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                            </div>
+                        </li>
+                        <li data-en="Abu Dhabi Co-op: Local chain, competitive prices" data-ar="تعاونية أبوظبي: سلسلة محلية، أسعار منافسة">
+                            <div class="contact-info">
+                                <p><a href="https://maps.google.com/?q=Abu+Dhabi+Co-op" target="_blank">📍 View on Google Maps</a></p>
+                            </div>
+                        </li>
+                        <li data-en="Al Maya: Good for fresh produce" data-ar="المايا: جيد للمنتجات الطازجة">
+                            <div class="contact-info">
+                                <p><a href="https://maps.google.com/?q=Al+Maya+Supermarket+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="International Products:" data-ar="المنتجات العالمية:">International Products:</h3>
+                    <ul>
+                        <li data-en="Carrefour: French products, organic selection" data-ar="كارفور: منتجات فرنسية، مجموعة عضوية">
+                            <div class="contact-info">
+                                <p><a href="https://maps.google.com/?q=Carrefour+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                            </div>
+                        </li>
+                        <li data-en="Spinneys: British/European brands, premium quality" data-ar="سبينيز: علامات بريطانية/أوروبية، جودة عالية">
+                            <div class="contact-info">
+                                <p><a href="https://maps.google.com/?q=Spinneys+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                            </div>
+                        </li>
+                        <li data-en="Waitrose: High-end international groceries" data-ar="ويتروز: بقالة دولية راقية">
+                            <div class="contact-info">
+                                <p><a href="https://maps.google.com/?q=Waitrose+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 data-en="Basic Household Supplies:" data-ar="المستلزمات المنزلية الأساسية:">Basic Household Supplies:</h3>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Day to Day (Electra Street)" data-ar="يوم بيوم (شارع الكترا)">Day to Day (Electra Street)</h3>
+                    <div class="contact-info">
+                        <p><a href="https://maps.google.com/?q=Day+to+Day+Electra+Street+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                    </div>
+                    <ul>
+                        <li data-en="Everything AED 1-20: Kitchen basics, cleaning supplies" data-ar="كل شيء 1-20 درهم: أساسيات المطبخ، مستلزمات التنظيف">Everything AED 1-20: Kitchen basics, cleaning supplies</li>
+                        <li data-en="Hours: 9 AM – 11 PM daily" data-ar="الساعات: 9 صباحاً – 11 مساءً يومياً">Hours: 9 AM – 11 PM daily</li>
+                        <li data-en="Best for: Immediate essentials, very cheap prices" data-ar="الأفضل لـ: الأساسيات الفورية، أسعار رخيصة جداً">Best for: Immediate essentials, very cheap prices</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Dragon Mart (International City)" data-ar="دراغون مارت (المدينة العالمية)">Dragon Mart (International City)</h3>
+                    <div class="contact-info">
+                        <p><a href="https://maps.google.com/?q=Dragon+Mart+Dubai" target="_blank">📍 View on Google Maps</a></p>
+                    </div>
+                    <ul>
+                        <li data-en="Day trip: 45 minutes from Abu Dhabi" data-ar="رحلة يومية: 45 دقيقة من أبوظبي">Day trip: 45 minutes from Abu Dhabi</li>
+                        <li data-en="Everything wholesale: Electronics, home goods, gadgets" data-ar="كل شيء بالجملة: الإلكترونيات، السلع المنزلية، الأدوات">Everything wholesale: Electronics, home goods, gadgets</li>
+                        <li data-en="Best for: Bulk buying, unique items" data-ar="الأفضل لـ: الشراء بالجملة، العناصر الفريدة">Best for: Bulk buying, unique items</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 data-en="Pharmacy & Health:" data-ar="الصيدلية والصحة:">Pharmacy & Health:</h3>
+            <ul>
+                <li data-en="Life Pharmacy: 24/7 locations, delivery available" data-ar="صيدلية لايف: مواقع 24/7، التوصيل متاح">Life Pharmacy: 24/7 locations, delivery available 
+                    <div class="contact-info">
+                        <p><a href="https://maps.google.com/?q=Life+Pharmacy+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                    </div>
+                </li>
+                <li data-en="Aster Pharmacy: Multiple branches, good prices" data-ar="صيدلية أستر: فروع متعددة، أسعار جيدة">Aster Pharmacy: Multiple branches, good prices
+                    <div class="contact-info">
+                        <p><a href="https://maps.google.com/?q=Aster+Pharmacy+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                    </div>
+                </li>
+                <li data-en="Al Safwa: Local chain, accepts most insurance" data-ar="الصفوة: سلسلة محلية، تقبل معظم أنواع التأمين">Al Safwa: Local chain, accepts most insurance
+                    <div class="contact-info">
+                        <p><a href="https://maps.google.com/?q=Al+Safwa+Pharmacy+Abu+Dhabi" target="_blank">📍 View on Google Maps</a></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Money-Saving Setup Tips -->
+        <div class="content-section">
+            <h2 data-en="Money-Saving Setup Tips" data-ar="نصائح توفير المال في الإعداد">Money-Saving Setup Tips</h2>
+            
+            <div class="tips-box">
+                <h3 data-en="First Month Budget:" data-ar="ميزانية الشهر الأول:">First Month Budget:</h3>
+                <ul>
+                    <li data-en="SIM card: AED 125 (tourist plan)" data-ar="شريحة الهاتف: 125 درهم (خطة السياحة)">SIM card: AED 125 (tourist plan)</li>
+                    <li data-en="Basic furniture: AED 2,000-5,000 (used market)" data-ar="الأثاث الأساسي: 2000-5000 درهم (السوق المستعمل)">Basic furniture: AED 2,000-5,000 (used market)</li>
+                    <li data-en="Internet setup: AED 300 (first month + installation)" data-ar="إعداد الإنترنت: 300 درهم (الشهر الأول + التركيب)">Internet setup: AED 300 (first month + installation)</li>
+                    <li data-en="Bank account: AED 1,000 (initial deposit)" data-ar="الحساب المصرفي: 1000 درهم (الإيداع الأولي)">Bank account: AED 1,000 (initial deposit)</li>
+                    <li data-en="Total: AED 3,425-6,425" data-ar="المجموع: 3,425-6,425 درهم">Total: AED 3,425-6,425</li>
+                </ul>
+            </div>
+
+            <h3 data-en="Smart Shopping:" data-ar="التسوق الذكي:">Smart Shopping:</h3>
+            <ul>
+                <li data-en="Weekend sales: Most furniture stores discount Fri-Sat" data-ar="تخفيضات نهاية الأسبوع: معظم متاجر الأثاث تخفض الجمعة-السبت">Weekend sales: Most furniture stores discount Fri-Sat</li>
+                <li data-en="End of month: Better deals as salespeople meet targets" data-ar="نهاية الشهر: صفقات أفضل عندما يحقق البائعون أهدافهم">End of month: Better deals as salespeople meet targets</li>
+                <li data-en="Cash payments: Many places offer 5-10% cash discount" data-ar="الدفع النقدي: العديد من الأماكن تقدم خصم نقدي 5-10%">Cash payments: Many places offer 5-10% cash discount</li>
+                <li data-en="Bulk buying: Team up with other newcomers for furniture shopping" data-ar="الشراء بالجملة: تعاون مع القادمين الجدد الآخرين لشراء الأثاث">Bulk buying: Team up with other newcomers for furniture shopping</li>
+            </ul>
+
+            <h3 data-en="Free Resources:" data-ar="الموارد المجانية:">Free Resources:</h3>
+            <ul>
+                <li data-en="Facebook groups: "New in Abu Dhabi", "Abu Dhabi Expats"" data-ar="مجموعات فيسبوك: "جديد في أبوظبي"، "وافدين أبوظبي"">Facebook groups: "New in Abu Dhabi", "Abu Dhabi Expats"</li>
+                <li data-en="Meetup.com: Connect with other newcomers" data-ar="Meetup.com: تواصل مع القادمين الجدد الآخرين">Meetup.com: Connect with other newcomers</li>
+                <li data-en="Company HR: Often provide setup assistance" data-ar="الموارد البشرية للشركة: غالباً تقدم مساعدة في الإعداد">Company HR: Often provide setup assistance</li>
+                <li data-en="Hotel concierge: Can arrange services while you're settling" data-ar="كونسيرج الفندق: يمكنه ترتيب الخدمات أثناء استقرارك">Hotel concierge: Can arrange services while you're settling</li>
+            </ul>
+        </div>
+
+        <!-- Neighborhood Setup Guide -->
+        <div class="content-section">
+            <h2 data-en="Neighborhood Setup Guide" data-ar="دليل إعداد الحي">Neighborhood Setup Guide</h2>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Central Abu Dhabi (City Center)" data-ar="أبوظبي المركزية (وسط المدينة)">Central Abu Dhabi (City Center)</h3>
+                    <ul>
+                        <li data-en="Best for: Walking to work, restaurants, nightlife" data-ar="الأفضل لـ: المشي إلى العمل، المطاعم، الحياة الليلية">Best for: Walking to work, restaurants, nightlife</li>
+                        <li data-en="Furniture stores: Homes R Us (Airport Road)" data-ar="متاجر الأثاث: هومز آر أس (شارع المطار)">Furniture stores: Homes R Us (Airport Road)</li>
+                        <li data-en="Internet setup: Usually fastest (existing infrastructure)" data-ar="إعداد الإنترنت: عادة الأسرع (البنية التحتية الموجودة)">Internet setup: Usually fastest (existing infrastructure)</li>
+                        <li data-en="Banking: All major banks have branches" data-ar="المصارف: جميع المصارف الرئيسية لديها فروع">Banking: All major banks have branches</li>
+                        <li data-en="Tip: Higher rent but everything walkable" data-ar="نصيحة: إيجار أعلى لكن كل شيء قابل للمشي">Tip: Higher rent but everything walkable</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Al Reem Island" data-ar="جزيرة الريم">Al Reem Island</h3>
+                    <ul>
+                        <li data-en="Best for: Modern apartments, family-friendly" data-ar="الأفضل لـ: الشقق الحديثة، مناسب للأسرة">Best for: Modern apartments, family-friendly</li>
+                        <li data-en="Furniture delivery: All stores deliver here" data-ar="توصيل الأثاث: جميع المتاجر توصل هنا">Furniture delivery: All stores deliver here</li>
+                        <li data-en="Internet: Excellent fiber coverage" data-ar="الإنترنت: تغطية ليفية ممتازة">Internet: Excellent fiber coverage</li>
+                        <li data-en="Banking: Shams Boutik Mall has all major banks" data-ar="المصارف: شمس بوتيك مول لديه جميع المصارف الرئيسية">Banking: Shams Boutik Mall has all major banks</li>
+                        <li data-en="Tip: Plan for bridge traffic during rush hours" data-ar="نصيحة: خطط لحركة مرور الجسر خلال ساعات الذروة">Tip: Plan for bridge traffic during rush hours</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Khalifa City A/B" data-ar="مدينة خليفة أ/ب">Khalifa City A/B</h3>
+                    <ul>
+                        <li data-en="Best for: Spacious homes, family communities" data-ar="الأفضل لـ: منازل واسعة، مجتمعات أسرية">Best for: Spacious homes, family communities</li>
+                        <li data-en="Shopping: City Center Al Forsan for everything" data-ar="التسوق: سيتي سنتر الفرسان لكل شيء">Shopping: City Center Al Forsan for everything</li>
+                        <li data-en="Furniture: Good access to all major stores" data-ar="الأثاث: وصول جيد لجميع المتاجر الرئيسية">Furniture: Good access to all major stores</li>
+                        <li data-en="Internet: Reliable, newer infrastructure" data-ar="الإنترنت: موثوق، بنية تحتية أحدث">Internet: Reliable, newer infrastructure</li>
+                        <li data-en="Banking: Local branches in most areas" data-ar="المصارف: فروع محلية في معظم المناطق">Banking: Local branches in most areas</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Yas Island" data-ar="جزيرة ياس">Yas Island</h3>
+                    <ul>
+                        <li data-en="Best for: Entertainment, theme parks nearby" data-ar="الأفضل لـ: الترفيه، الملاهي قريبة">Best for: Entertainment, theme parks nearby</li>
+                        <li data-en="Shopping: Yas Mall for all services" data-ar="التسوق: ياس مول لجميع الخدمات">Shopping: Yas Mall for all services</li>
+                        <li data-en="Furniture: IKEA on-site, easy delivery" data-ar="الأثاث: ايكيا في الموقع، توصيل سهل">Furniture: IKEA on-site, easy delivery</li>
+                        <li data-en="Internet: Excellent coverage" data-ar="الإنترنت: تغطية ممتازة">Internet: Excellent coverage</li>
+                        <li data-en="Banking: All banks represented in Yas Mall" data-ar="المصارف: جميع المصارف ممثلة في ياس مول">Banking: All banks represented in Yas Mall</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Essential Setup Contacts -->
+        <div class="content-section">
+            <h2 data-en="Essential Setup Contacts" data-ar="جهات الاتصال الأساسية للإعداد">Essential Setup Contacts</h2>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Telecom Support:" data-ar="دعم الاتصالات:">Telecom Support:</h3>
+                    <ul>
+                        <li data-en="Etisalat: 101" data-ar="اتصالات: 101">Etisalat: 101</li>
+                        <li data-en="Du: 155" data-ar="دو: 155">Du: 155</li>
+                        <li data-en="Virgin Mobile: +971 4 388 0000" data-ar="Virgin Mobile: +971 4 388 0000">Virgin Mobile: +971 4 388 0000</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Utilities & Internet:" data-ar="المرافق والإنترنت:">Utilities & Internet:</h3>
+                    <ul>
+                        <li data-en="ADDC (Electricity): +971 2 400 0400" data-ar="ADDC (الكهرباء): +971 2 400 0400">ADDC (Electricity): +971 2 400 0400</li>
+                        <li data-en="Etisalat Internet: 101" data-ar="إنترنت اتصالات: 101">Etisalat Internet: 101</li>
+                        <li data-en="Du Internet: 155" data-ar="إنترنت دو: 155">Du Internet: 155</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Banking Help:" data-ar="مساعدة مصرفية:">Banking Help:</h3>
+                    <ul>
+                        <li data-en="FAB: +971 600 524 229" data-ar="FAB: +971 600 524 229">FAB: +971 600 524 229</li>
+                        <li data-en="ADCB: +971 600 502 030" data-ar="ADCB: +971 600 502 030">ADCB: +971 600 502 030</li>
+                        <li data-en="Emirates NBD: +971 600 540 000" data-ar="Emirates NBD: +971 600 540 000">Emirates NBD: +971 600 540 000</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Delivery & Assembly:" data-ar="التوصيل والتجميع:">Delivery & Assembly:</h3>
+                    <ul>
+                        <li data-en="Mr Usta: +971 4 399 3883" data-ar="Mr Usta: +971 4 399 3883">Mr Usta: +971 4 399 3883</li>
+                        <li data-en="ServiceMarket: Via app" data-ar="ServiceMarket: عبر التطبيق">ServiceMarket: Via app</li>
+                        <li data-en="IKEA Delivery: +971 2 567 6555" data-ar="توصيل ايكيا: +971 2 567 6555">IKEA Delivery: +971 2 567 6555</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Emergency:" data-ar="الطوارئ:">Emergency:</h3>
+                    <ul>
+                        <li data-en="Police: 999" data-ar="الشرطة: 999">Police: 999</li>
+                        <li data-en="Ambulance: 998" data-ar="الإسعاف: 998">Ambulance: 998</li>
+                        <li data-en="Fire Department: 997" data-ar="الإطفاء: 997">Fire Department: 997</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Your 2-Week Setup Timeline -->
+        <div class="content-section">
+            <h2 data-en="Your 2-Week Setup Timeline" data-ar="جدولك الزمني للإعداد في أسبوعين">Your 2-Week Setup Timeline</h2>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Week 1: Essentials" data-ar="الأسبوع الأول: الأساسيات">Week 1: Essentials</h3>
+                    <ul>
+                        <li data-en="Day 1: SIM card, basic groceries, transport setup" data-ar="اليوم الأول: شريحة الهاتف، البقالة الأساسية، إعداد النقل">Day 1: SIM card, basic groceries, transport setup</li>
+                        <li data-en="Day 2: Internet application, bank account opening" data-ar="اليوم الثاني: طلب الإنترنت، فتح حساب مصرفي">Day 2: Internet application, bank account opening</li>
+                        <li data-en="Day 3: Furniture shopping (measure spaces first)" data-ar="اليوم الثالث: تسوق الأثاث (قس المساحات أولاً)">Day 3: Furniture shopping (measure spaces first)</li>
+                        <li data-en="Day 4: Furniture delivery arrangement" data-ar="اليوم الرابع: ترتيب توصيل الأثاث">Day 4: Furniture delivery arrangement</li>
+                        <li data-en="Day 5: Assembly/installation services" data-ar="اليوم الخامس: خدمات التجميع/التركيب">Day 5: Assembly/installation services</li>
+                        <li data-en="Weekend: Neighborhood exploration, social connections" data-ar="نهاية الأسبوع: استكشاف الحي، الاتصالات الاجتماعية">Weekend: Neighborhood exploration, social connections</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Week 2: Comfort & Community" data-ar="الأسبوع الثاني: الراحة والمجتمع">Week 2: Comfort & Community</h3>
+                    <ul>
+                        <li data-en="Day 8: Internet installation (if scheduled)" data-ar="اليوم الثامن: تركيب الإنترنت (إذا كان مجدولاً)">Day 8: Internet installation (if scheduled)</li>
+                        <li data-en="Day 10: Final furniture pieces, decorations" data-ar="اليوم العاشر: قطع الأثاث الأخيرة، الديكورات">Day 10: Final furniture pieces, decorations</li>
+                        <li data-en="Day 12: Join local groups, plan social activities" data-ar="اليوم الثاني عشر: انضم للمجموعات المحلية، خطط للأنشطة الاجتماعية">Day 12: Join local groups, plan social activities</li>
+                        <li data-en="Day 14: Full setup complete, comfortable living" data-ar="اليوم الرابع عشر: إكمال الإعداد بالكامل، عيش مريح">Day 14: Full setup complete, comfortable living</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tips-box">
+                <p data-en="Welcome to Abu Dhabi! Save this page for reference during your first month. Each step gets easier as you become familiar with the city." data-ar="أهلاً بك في أبوظبي! احفظ هذه الصفحة للمراجعة خلال شهرك الأول. كل خطوة تصبح أسهل كلما أصبحت مألوفاً مع المدينة.">Welcome to Abu Dhabi! Save this page for reference during your first month. Each step gets easier as you become familiar with the city.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Language switching functionality
+        function switchLanguage(lang) {
+            const html = document.documentElement;
+            const langOptions = document.querySelectorAll('.lang-option');
+            
+            // Update HTML attributes
+            html.setAttribute('lang', lang);
+            html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            html.setAttribute('data-language', lang);
+            
+            // Update active language button
+            langOptions.forEach(option => {
+                option.classList.remove('active');
+                if (option.getAttribute('data-lang') === lang) {
+                    option.classList.add('active');
+                }
+            });
+            
+            // Switch content for elements with data-en and data-ar attributes
+            const elements = document.querySelectorAll('[data-en][data-ar]');
+            elements.forEach(element => {
+                if (lang === 'ar') {
+                    element.textContent = element.getAttribute('data-ar');
+                } else {
+                    element.textContent = element.getAttribute('data-en');
+                }
+            });
+            
+            // Store language preference
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        // Load saved language preference on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLanguage = localStorage.getItem('selectedLanguage');
+            if (savedLanguage && (savedLanguage === 'ar' || savedLanguage === 'en')) {
+                switchLanguage(savedLanguage);
+            }
+        });
+    </script>
+</body>
+</html>

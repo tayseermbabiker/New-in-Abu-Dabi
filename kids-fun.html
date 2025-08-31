@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-language="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Fun & Activities - New In Abu Dhabi | متعة وأنشطة الأطفال</title>
+    <meta name="description" content="Entertainment, playgrounds, and activities to keep kids happy">
+    
+    <!-- Arabic Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        [dir="rtl"] body {
+            font-family: 'Cairo', 'Inter', sans-serif;
+            text-align: right;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #d4a574;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: #e67e22;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        [dir="rtl"] .language-switcher {
+            right: auto;
+            left: 20px;
+        }
+
+        .lang-option {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #4a5568;
+            padding: 4px 8px;
+            border-radius: 8px;
+        }
+
+        .lang-option:hover {
+            background: rgba(212, 165, 116, 0.2);
+            color: #2d3748;
+        }
+
+        .lang-option.active {
+            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            color: white;
+        }
+
+        .lang-divider {
+            color: #a0aec0;
+            font-weight: 300;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .service-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .emergency-section {
+            background: #fff5f5;
+            border: 1px solid #fed7d7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <span class="lang-option active" onclick="switchLanguage('en')" data-lang="en">EN</span>
+        <span class="lang-divider">|</span>
+        <span class="lang-option" onclick="switchLanguage('ar')" data-lang="ar">AR</span>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="back-link" data-en="← Back to Home" data-ar="← العودة للصفحة الرئيسية">← Back to Home</a>
+        
+        <div class="page-header">
+            <h1 data-en="Kids Fun & Activities" data-ar="متعة وأنشطة الأطفال">Kids Fun & Activities</h1>
+            <p data-en="Entertainment, playgrounds, and activities to keep kids happy" data-ar="الترفيه والملاعب والأنشطة لإسعاد الأطفال">Entertainment, playgrounds, and activities to keep kids happy</p>
+        </div>
+
+        <div class="content-section">
+            <p data-en="Keep kids entertained with the best family-friendly activities, play areas, and educational experiences in Abu Dhabi." data-ar="أبقِ الأطفال مستمتعين بأفضل الأنشطة المناسبة للعائلة ومناطق اللعب والتجارب التعليمية في أبوظبي.">Keep kids entertained with the best family-friendly activities, play areas, and educational experiences in Abu Dhabi.</p>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>KidZania</h3>
+                    <p><strong data-en="Interactive Educational Play City" data-ar="مدينة اللعب التعليمية التفاعلية">Interactive Educational Play City</strong></p>
+                    <ul>
+                        <li data-en="Address: Yas Mall, Yas Island" data-ar="العنوان: ياس مول، جزيرة ياس">Address: Yas Mall, Yas Island</li>
+                        <li data-en="Age Range: 4-16 years" data-ar="الفئة العمرية: 4-16 سنة">Age Range: 4-16 years</li>
+                        <li data-en="Entry: AED 145+ (peak times)" data-ar="الدخول: 145+ درهم (أوقات الذروة)">Entry: AED 145+ (peak times)</li>
+                        <li data-en="Features: Role-playing activities, 60+ careers to try" data-ar="المميزات: أنشطة لعب الأدوار، أكثر من 60 مهنة للتجربة">Features: Role-playing activities, 60+ careers to try</li>
+                        <li data-en="Rating: 4.6★" data-ar="التقييم: 4.6★">Rating: 4.6★</li>
+                        <li><a href="https://maps.google.com/?q=KidZania+Yas+Mall+Abu+Dhabi" target="_blank" style="color: #d4a574; text-decoration: none;">📍 View on Google Maps</a></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Snow Abu Dhabi</h3>
+                    <p><strong data-en="Indoor Snow Park & Winter Activities" data-ar="متنزه الثلج الداخلي وأنشطة الشتاء">Indoor Snow Park & Winter Activities</strong></p>
+                    <ul>
+                        <li data-en="Address: Reem Mall, Al Reem Island" data-ar="العنوان: ريم مول، جزيرة الريم">Address: Reem Mall, Al Reem Island</li>
+                        <li data-en="Age Range: All ages (special toddler area)" data-ar="الفئة العمرية: جميع الأعمار (منطقة خاصة للأطفال الصغار)">Age Range: All ages (special toddler area)</li>
+                        <li data-en="Entry: AED 185+ (includes jacket/boots)" data-ar="الدخول: 185+ درهم (يشمل السترة/الأحذية)">Entry: AED 185+ (includes jacket/boots)</li>
+                        <li data-en="Features: Sledding, snow play, penguin encounters" data-ar="المميزات: التزلج، اللعب في الثلج، لقاء البطاريق">Features: Sledding, snow play, penguin encounters</li>
+                        <li data-en="Rating: 4.5★" data-ar="التقييم: 4.5★">Rating: 4.5★</li>
+                        <li><a href="https://maps.google.com/?q=Snow+Abu+Dhabi+Reem+Mall" target="_blank" style="color: #d4a574; text-decoration: none;">📍 View on Google Maps</a></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Bounce Abu Dhabi</h3>
+                    <p><strong data-en="Ultimate Trampoline Experience" data-ar="تجربة الترامبولين المثلى">Ultimate Trampoline Experience</strong></p>
+                    <ul>
+                        <li data-en="Address: Al Wahda Mall, Level 2" data-ar="العنوان: الوحدة مول، الطابق الثاني">Address: Al Wahda Mall, Level 2</li>
+                        <li data-en="Age Range: 3+ years (separate toddler zone)" data-ar="الفئة العمرية: 3+ سنوات (منطقة منفصلة للأطفال الصغار)">Age Range: 3+ years (separate toddler zone)</li>
+                        <li data-en="Entry: AED 85-120 (60-90 min sessions)" data-ar="الدخول: 85-120 درهم (جلسات 60-90 دقيقة)">Entry: AED 85-120 (60-90 min sessions)</li>
+                        <li data-en="Features: Free jump, dodgeball, slam dunk zones" data-ar="المميزات: القفز الحر، كرة المراوغة، مناطق الغطس المفاجئ">Features: Free jump, dodgeball, slam dunk zones</li>
+                        <li data-en="Rating: 4.4★" data-ar="التقييم: 4.4★">Rating: 4.4★</li>
+                        <li><a href="https://maps.google.com/?q=Bounce+Abu+Dhabi+Al+Wahda+Mall" target="_blank" style="color: #d4a574; text-decoration: none;">📍 View on Google Maps</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 data-en="FREE Activities" data-ar="الأنشطة المجانية">FREE Activities</h2>
+            <div class="emergency-section">
+                <h3 data-en="🌳 Best Free Playgrounds" data-ar="🌳 أفضل الملاعب المجانية">🌳 Best Free Playgrounds</h3>
+                <ul>
+                    <li><strong>Umm Al Emarat Park</strong> - <span data-en="Large playground, lake, climbing areas" data-ar="ملعب كبير، بحيرة، مناطق تسلق">Large playground, lake, climbing areas</span></li>
+                    <li><strong>Corniche Beach</strong> - <span data-en="Beach play, cycle paths, public facilities" data-ar="لعب الشاطئ، مسارات الدراجات، مرافق عامة">Beach play, cycle paths, public facilities</span></li>
+                    <li><strong>Al Bateen Beach</strong> - <span data-en="Family beach with kids area" data-ar="شاطئ عائلي مع منطقة للأطفال">Family beach with kids area</span></li>
+                    <li><strong>Heritage Park</strong> - <span data-en="Traditional playground, picnic areas" data-ar="ملعب تقليدي، مناطق نزهة">Traditional playground, picnic areas</span></li>
+                </ul>
+            </div>
+
+            <h3 data-en="🎯 Money-Saving Tips" data-ar="🎯 نصائح توفير المال">🎯 Money-Saving Tips</h3>
+            <ul>
+                <li data-en="Visit during weekday mornings for discounted rates" data-ar="زر خلال صباح أيام الأسبوع للحصول على أسعار مخفضة">Visit during weekday mornings for discounted rates</li>
+                <li data-en="Look for family packages and combo deals" data-ar="ابحث عن العروض العائلية والصفقات المدمجة">Look for family packages and combo deals</li>
+                <li data-en="Many malls have free kids areas - Marina Mall, Yas Mall" data-ar="العديد من المولات لديها مناطق أطفال مجانية - مارينا مول، ياس مول">Many malls have free kids areas - Marina Mall, Yas Mall</li>
+                <li data-en="Check UAE residents discounts with Emirates ID" data-ar="تحقق من خصومات المقيمين في الإمارات ببطاقة الهوية الإماراتية">Check UAE residents discounts with Emirates ID</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2 data-en="Contact & Support" data-ar="الاتصال والدعم">Contact & Support</h2>
+            <p data-en="Need help planning kids activities or have questions about age-appropriate venues?" data-ar="تحتاج مساعدة في تخطيط أنشطة الأطفال أو لديك أسئلة حول الأماكن المناسبة للعمر؟">Need help planning kids activities or have questions about age-appropriate venues?</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://wa.me/971501234567?text=Hi! I need help with kids activities in Abu Dhabi" 
+                   style="display: inline-block; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: 600; transition: transform 0.3s ease;" 
+                   onmouseover="this.style.transform='scale(1.05)'" 
+                   onmouseout="this.style.transform='scale(1)'">
+                    <span data-en="💬 WhatsApp Support" data-ar="💬 دعم واتساب">💬 WhatsApp Support</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const html = document.documentElement;
+            const langOptions = document.querySelectorAll('.lang-option');
+            
+            html.setAttribute('lang', lang);
+            html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            html.setAttribute('data-language', lang);
+            
+            langOptions.forEach(option => {
+                option.classList.remove('active');
+                if (option.getAttribute('data-lang') === lang) {
+                    option.classList.add('active');
+                }
+            });
+            
+            const elements = document.querySelectorAll('[data-en][data-ar]');
+            elements.forEach(element => {
+                if (lang === 'ar') {
+                    element.textContent = element.getAttribute('data-ar');
+                } else {
+                    element.textContent = element.getAttribute('data-en');
+                }
+            });
+            
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLanguage = localStorage.getItem('selectedLanguage');
+            if (savedLanguage && (savedLanguage === 'ar' || savedLanguage === 'en')) {
+                switchLanguage(savedLanguage);
+            }
+        });
+    </script>
+</body>
+</html>

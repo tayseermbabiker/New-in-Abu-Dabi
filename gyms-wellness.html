@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-language="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyms & Wellness - New In Abu Dhabi | صالات رياضية وعافية</title>
+    <meta name="description" content="Fitness centers, spas, and wellness facilities for healthy living">
+    
+    <!-- Arabic Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        [dir="rtl"] body {
+            font-family: 'Cairo', 'Inter', sans-serif;
+            text-align: right;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #d4a574;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: #e67e22;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        [dir="rtl"] .language-switcher {
+            right: auto;
+            left: 20px;
+        }
+
+        .lang-option {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #4a5568;
+            padding: 4px 8px;
+            border-radius: 8px;
+        }
+
+        .lang-option:hover {
+            background: rgba(212, 165, 116, 0.2);
+            color: #2d3748;
+        }
+
+        .lang-option.active {
+            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            color: white;
+        }
+
+        .lang-divider {
+            color: #a0aec0;
+            font-weight: 300;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .service-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .emergency-section {
+            background: #fff5f5;
+            border: 1px solid #fed7d7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <span class="lang-option active" onclick="switchLanguage('en')" data-lang="en">EN</span>
+        <span class="lang-divider">|</span>
+        <span class="lang-option" onclick="switchLanguage('ar')" data-lang="ar">AR</span>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="back-link" data-en="← Back to Home" data-ar="← العودة للصفحة الرئيسية">← Back to Home</a>
+        
+        <div class="page-header">
+            <h1 data-en="Gyms & Wellness" data-ar="صالات رياضية وعافية">Gyms & Wellness</h1>
+            <p data-en="Fitness centers, spas, and wellness facilities for healthy living" data-ar="مراكز اللياقة البدنية والمنتجعات الصحية ومرافق العافية للعيش الصحي">Fitness centers, spas, and wellness facilities for healthy living</p>
+        </div>
+
+        <div class="content-section">
+            <p data-en="Complete guide to Abu Dhabi gyms, fitness centers, spas and wellness facilities. Find budget-friendly options, ladies-only gyms, luxury spas, and specialized fitness studios." data-ar="دليل شامل لصالات الألعاب الرياضية ومراكز اللياقة البدنية والمنتجعات الصحية ومرافق العافية في أبوظبي. ابحث عن الخيارات الاقتصادية وصالات الألعاب الرياضية المخصصة للسيدات والمنتجعات الصحية الفاخرة.">Complete guide to Abu Dhabi gyms, fitness centers, spas and wellness facilities. Find budget-friendly options, ladies-only gyms, luxury spas, and specialized fitness studios.</p>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3 data-en="GymNation Abu Dhabi" data-ar="جيم نيشن أبوظبي">GymNation Abu Dhabi</h3>
+                    <p><strong data-en="24/7 Budget-Friendly Fitness" data-ar="لياقة بدنية اقتصادية على مدار 24/7">24/7 Budget-Friendly Fitness</strong></p>
+                    <ul>
+                        <li data-en="Monthly Price: AED 279-350" data-ar="السعر الشهري: 279-350 درهم">Monthly Price: AED 279-350</li>
+                        <li data-en="Locations: Khalidiyah Mall, Mushrif Mall, Reem Island" data-ar="المواقع: خليدية مول، مشرف مول، جزيرة الريم">Locations: Khalidiyah Mall, Mushrif Mall, Reem Island</li>
+                        <li data-en="Hours: 24/7 access" data-ar="الساعات: وصول على مدار 24/7">Hours: 24/7 access</li>
+                        <li data-en="Gender Facilities: Mixed with dedicated ladies sections" data-ar="المرافق: مختلط مع أقسام مخصصة للسيدات">Gender Facilities: Mixed with dedicated ladies sections</li>
+                        <li data-en="Trial: Free trial available online" data-ar="التجربة: تجربة مجانية متاحة أونلاين">Trial: Free trial available online</li>
+                        <li><a href="https://maps.google.com/?q=GymNation+Abu+Dhabi" target="_blank" style="color: #d4a574; text-decoration: none;">📍 View on Google Maps</a></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3 data-en="Fitness First Abu Dhabi" data-ar="فيتنس فيرست أبوظبي">Fitness First Abu Dhabi</h3>
+                    <p><strong data-en="Premium Chain with Multiple Locations" data-ar="سلسلة متميزة مع مواقع متعددة">Premium Chain with Multiple Locations</strong></p>
+                    <ul>
+                        <li data-en="Monthly Price: AED 279-699 (varies by location)" data-ar="السعر الشهري: 279-699 درهم (يختلف حسب الموقع)">Monthly Price: AED 279-699 (varies by location)</li>
+                        <li data-en="Locations: Abu Dhabi Mall, Marina Mall, Al Seef Mall" data-ar="المواقع: أبوظبي مول، مارينا مول، السيف مول">Locations: Abu Dhabi Mall, Marina Mall, Al Seef Mall</li>
+                        <li data-en="Gender Facilities: Mixed clubs with ladies sections AND ladies-only gyms" data-ar="المرافق: نوادي مختلطة مع أقسام سيدات وصالات مخصصة للسيدات فقط">Gender Facilities: Mixed clubs with ladies sections AND ladies-only gyms</li>
+                        <li data-en="Facilities: Swimming pools, group classes, personal training" data-ar="المرافق: أحواض سباحة، دروس جماعية، تدريب شخصي">Facilities: Swimming pools, group classes, personal training</li>
+                        <li data-en="Payment Plans: Zero-interest installments available" data-ar="خطط الدفع: أقساط بدون فوائد متاحة">Payment Plans: Zero-interest installments available</li>
+                        <li><a href="https://maps.google.com/?q=Fitness+First+Abu+Dhabi+Mall" target="_blank" style="color: #d4a574; text-decoration: none;">📍 View on Google Maps</a></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3 data-en="The Warehouse Gym Ladies-Only" data-ar="مستودع الجيم للسيدات فقط">The Warehouse Gym Ladies-Only</h3>
+                    <p><strong data-en="Dedicated Women's Fitness Facility" data-ar="مرفق لياقة بدنية مخصص للنساء">Dedicated Women's Fitness Facility</strong></p>
+                    <ul>
+                        <li data-en="Location: Yas Bay (separate facility exclusively for women)" data-ar="الموقع: ياس باي (مرفق منفصل حصرياً للنساء)">Location: Yas Bay (separate facility exclusively for women)</li>
+                        <li data-en="Specialty: CrossFit, boxing, strength and conditioning" data-ar="التخصص: كروسفيت، ملاكمة، قوة ولياقة">Specialty: CrossFit, boxing, strength and conditioning</li>
+                        <li data-en="Equipment: High-end functional training equipment" data-ar="المعدات: معدات تدريب وظيفي عالية الجودة">Equipment: High-end functional training equipment</li>
+                        <li data-en="Privacy: Complete privacy for women's fitness" data-ar="الخصوصية: خصوصية كاملة للياقة النساء">Privacy: Complete privacy for women's fitness</li>
+                        <li data-en="Contact: Visit location for pricing details" data-ar="الاتصال: قم بزيارة الموقع لتفاصيل الأسعار">Contact: Visit location for pricing details</li>
+                        <li><a href="https://maps.google.com/?q=The+Warehouse+Gym+Yas+Bay+Abu+Dhabi" target="_blank" style="color: #d4a574; text-decoration: none;">📍 View on Google Maps</a></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3 data-en="Etizan Fitness at Erth" data-ar="إيتيزان فيتنس في إيرث">Etizan Fitness at Erth</h3>
+                    <p><strong data-en="Luxury Wellness with Ladies Hub" data-ar="عافية فاخرة مع مركز السيدات">Luxury Wellness with Ladies Hub</strong></p>
+                    <ul>
+                        <li data-en="Location: Erth (formerly Armed Forces Officers Club)" data-ar="الموقع: إيرث (نادي ضباط القوات المسلحة سابقاً)">Location: Erth (formerly Armed Forces Officers Club)</li>
+                        <li data-en="Gender Facilities: Mixed gym AND exclusive Ladies Wellness Hub" data-ar="المرافق: صالة ألعاب مختلطة ومركز عافية السيدات الحصري">Gender Facilities: Mixed gym AND exclusive Ladies Wellness Hub</li>
+                        <li data-en="Premium Features: Olympic-sized pool, specialized sports courts" data-ar="المميزات المتميزة: حمام سباحة بالحجم الأولمبي، ملاعب رياضية متخصصة">Premium Features: Olympic-sized pool, specialized sports courts</li>
+                        <li data-en="Pool Access: Scheduled ladies-only times" data-ar="الوصول للمسبح: أوقات مجدولة للسيدات فقط">Pool Access: Scheduled ladies-only times</li>
+                        <li data-en="Membership: Premium pricing, contact for rates" data-ar="العضوية: أسعار متميزة، اتصل للأسعار">Membership: Premium pricing, contact for rates</li>
+                        <li><a href="https://maps.google.com/?q=Erth+Abu+Dhabi+Etizan+Fitness" target="_blank" style="color: #d4a574; text-decoration: none;">📍 View on Google Maps</a></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3 data-en="Vogue Fitness" data-ar="فوغ فيتنس">Vogue Fitness</h3>
+                    <p><strong data-en="CrossFit & Functional Training" data-ar="كروسفيت وتدريب وظيفي">CrossFit & Functional Training</strong></p>
+                    <ul>
+                        <li data-en="Locations: Yas Marina, Marina Mall, Saadiyat, Al Raha" data-ar="المواقع: ياس مارينا، مارينا مول، السعديات، الراحة">Locations: Yas Marina, Marina Mall, Saadiyat, Al Raha</li>
+                        <li data-en="Gender Facilities: Mixed facilities PLUS Yas Ladies location" data-ar="المرافق: مرافق مختلطة بالإضافة إلى موقع ياس للسيدات">Gender Facilities: Mixed facilities PLUS Yas Ladies location</li>
+                        <li data-en="Specialty: CrossFit, functional fitness, strength training" data-ar="التخصص: كروسفيت، لياقة وظيفية، تدريب القوة">Specialty: CrossFit, functional fitness, strength training</li>
+                        <li data-en="Classes: Specialized conditioning programs" data-ar="الدروس: برامج تكييف متخصصة">Classes: Specialized conditioning programs</li>
+                        <li data-en="Contact: Call individual locations for pricing" data-ar="الاتصال: اتصل بالمواقع الفردية للأسعار">Contact: Call individual locations for pricing</li>
+                        <li><a href="https://maps.google.com/?q=Vogue+Fitness+Yas+Marina+Abu+Dhabi" target="_blank" style="color: #d4a574; text-decoration: none;">📍 View on Google Maps</a></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3 data-en="California Gym Abu Dhabi" data-ar="كاليفورنيا جيم أبوظبي">California Gym Abu Dhabi</h3>
+                    <p><strong data-en="MMA & Strength Training Specialist" data-ar="متخصص في فنون الدفاع عن النفس وتدريب القوة">MMA & Strength Training Specialist</strong></p>
+                    <ul>
+                        <li data-en="Monthly Price: AED 200 (promotional rates available)" data-ar="السعر الشهري: 200 درهم (أسعار ترويجية متاحة)">Monthly Price: AED 200 (promotional rates available)</li>
+                        <li data-en="Location: Al Hisn area" data-ar="الموقع: منطقة الحصن">Location: Al Hisn area</li>
+                        <li data-en="Gender Facilities: Mixed-gender gym" data-ar="المرافق: صالة ألعاب مختلطة">Gender Facilities: Mixed-gender gym</li>
+                        <li data-en="Specialty: MMA, strength training" data-ar="التخصص: فنون القتال المختلطة، تدريب القوة">Specialty: MMA, strength training</li>
+                        <li data-en="Equipment: Free weights, machines, MMA equipment" data-ar="المعدات: أوزان حرة، آلات، معدات فنون قتالية مختلطة">Equipment: Free weights, machines, MMA equipment</li>
+                        <li><a href="https://maps.google.com/?q=California+Gym+Al+Hisn+Abu+Dhabi" target="_blank" style="color: #d4a574; text-decoration: none;">📍 View on Google Maps</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 data-en="Luxury Hotel Spas" data-ar="منتجعات صحية فندقية فاخرة">Luxury Hotel Spas</h2>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3 data-en="The Spa at St. Regis Abu Dhabi" data-ar="المنتجع الصحي في سانت ريجيس أبوظبي">The Spa at St. Regis Abu Dhabi</h3>
+                    <ul>
+                        <li data-en="Location: The Corniche" data-ar="الموقع: الكورنيش">Location: The Corniche</li>
+                        <li data-en="Current Offer: 25% off 90-minute massages (valid until August 31, 2025)" data-ar="العرض الحالي: خصم 25% على التدليك لمدة 90 دقيقة (صالح حتى 31 أغسطس 2025)">Current Offer: 25% off 90-minute massages (valid until August 31, 2025)</li>
+                        <li data-en="Signature Treatments: Traditional and modern wellness fusion" data-ar="العلاجات المميزة: دمج العافية التقليدية والحديثة">Signature Treatments: Traditional and modern wellness fusion</li>
+                        <li data-en="Features: Marble-lined treatment rooms, personalized service" data-ar="المميزات: غرف علاج مبطنة بالرخام، خدمة شخصية">Features: Marble-lined treatment rooms, personalized service</li>
+                        <li><a href="https://maps.google.com/?q=St+Regis+Abu+Dhabi+Spa" target="_blank" style="color: #d4a574; text-decoration: none;">📍 View on Google Maps</a></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3 data-en="Emirates Palace Mandarin Oriental Spa" data-ar="منتجع قصر الإمارات مندرين أورينتال الصحي">Emirates Palace Mandarin Oriental Spa</h3>
+                    <ul>
+                        <li data-en="Inspiration: Moroccan culture and Oriental heritage" data-ar="الإلهام: الثقافة المغربية والتراث الشرقي">Inspiration: Moroccan culture and Oriental heritage</li>
+                        <li data-en="Treatments: Ancient Eastern healing, Arabesque therapies" data-ar="العلاجات: الشفاء الشرقي القديم، العلاجات العربية">Treatments: Ancient Eastern healing, Arabesque therapies</li>
+                        <li data-en="Specialties: Bespoke wellness programs, contrast therapy" data-ar="التخصصات: برامج عافية مخصصة، العلاج المتباين">Specialties: Bespoke wellness programs, contrast therapy</li>
+                        <li data-en="Expert Staff: Certified Level 4 spa professionals" data-ar="الموظفون الخبراء: محترفون معتمدون في المنتجع الصحي من المستوى 4">Expert Staff: Certified Level 4 spa professionals</li>
+                        <li><a href="https://maps.google.com/?q=Emirates+Palace+Mandarin+Oriental+Spa+Abu+Dhabi" target="_blank" style="color: #d4a574; text-decoration: none;">📍 View on Google Maps</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 data-en="Membership Pricing Guide" data-ar="دليل أسعار العضويات">Membership Pricing Guide</h2>
+            <div class="emergency-section">
+                <h3 data-en="💰 Abu Dhabi Gym Membership Prices 2025" data-ar="💰 أسعار عضوية الصالات الرياضية في أبوظبي 2025">💰 Abu Dhabi Gym Membership Prices 2025</h3>
+                <ul>
+                    <li data-en="Budget Gyms: AED 200-450 per month" data-ar="الصالات الاقتصادية: 200-450 درهم شهرياً">Budget Gyms: AED 200-450 per month</li>
+                    <li data-en="Premium Gyms: AED 500-900 per month" data-ar="الصالات المتميزة: 500-900 درهم شهرياً">Premium Gyms: AED 500-900 per month</li>
+                    <li data-en="Luxury Hotel Gyms: AED 1,000+ per month" data-ar="صالات الفنادق الفاخرة: 1,000+ درهم شهرياً">Luxury Hotel Gyms: AED 1,000+ per month</li>
+                    <li data-en="Drop-in Classes: AED 80-150 per session" data-ar="دروس منفردة: 80-150 درهم للجلسة">Drop-in Classes: AED 80-150 per session</li>
+                </ul>
+            </div>
+
+            <h3 data-en="💡 Money-Saving Tips" data-ar="💡 نصائح توفير المال">💡 Money-Saving Tips</h3>
+            <ul>
+                <li data-en="Take advantage of free trials – Most gyms offer trial sessions" data-ar="استفد من التجارب المجانية - معظم الصالات الرياضية تقدم جلسات تجريبية">Take advantage of free trials – Most gyms offer trial sessions</li>
+                <li data-en="Compare annual vs monthly rates – Significant savings with longer commitments" data-ar="قارن الأسعار السنوية مقابل الشهرية - وفورات كبيرة مع الالتزامات الأطول">Compare annual vs monthly rates – Significant savings with longer commitments</li>
+                <li data-en="Ask about corporate discounts – Many employers have partnerships" data-ar="اسأل عن الخصومات المؤسسية - العديد من أصحاب العمل لديهم شراكات">Ask about corporate discounts – Many employers have partnerships</li>
+                <li data-en="Look for seasonal promotions (Valentine's, summer, New Year)" data-ar="ابحث عن العروض الموسمية (عيد الحب، الصيف، السنة الجديدة)">Look for seasonal promotions (Valentine's, summer, New Year)</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2 data-en="Contact & Support" data-ar="الاتصال والدعم">Contact & Support</h2>
+            <p data-en="Need help choosing the right gym or spa in Abu Dhabi?" data-ar="تحتاج مساعدة في اختيار الصالة الرياضية أو المنتجع الصحي المناسب في أبوظبي؟">Need help choosing the right gym or spa in Abu Dhabi?</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://wa.me/971501234567?text=Hi! I need help choosing a gym or spa in Abu Dhabi" 
+                   style="display: inline-block; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: 600; transition: transform 0.3s ease;" 
+                   onmouseover="this.style.transform='scale(1.05)'" 
+                   onmouseout="this.style.transform='scale(1)'">
+                    <span data-en="💬 WhatsApp Support" data-ar="💬 دعم واتساب">💬 WhatsApp Support</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const html = document.documentElement;
+            const langOptions = document.querySelectorAll('.lang-option');
+            
+            html.setAttribute('lang', lang);
+            html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            html.setAttribute('data-language', lang);
+            
+            langOptions.forEach(option => {
+                option.classList.remove('active');
+                if (option.getAttribute('data-lang') === lang) {
+                    option.classList.add('active');
+                }
+            });
+            
+            const elements = document.querySelectorAll('[data-en][data-ar]');
+            elements.forEach(element => {
+                if (lang === 'ar') {
+                    element.textContent = element.getAttribute('data-ar');
+                } else {
+                    element.textContent = element.getAttribute('data-en');
+                }
+            });
+            
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLanguage = localStorage.getItem('selectedLanguage');
+            if (savedLanguage && (savedLanguage === 'ar' || savedLanguage === 'en')) {
+                switchLanguage(savedLanguage);
+            }
+        });
+    </script>
+</body>
+</html>

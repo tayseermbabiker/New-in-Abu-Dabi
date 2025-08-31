@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- MAIN PAGES -->
+    <url>
+        <loc>https://newinabudhabi.com/</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/privacy.html</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/terms.html</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <!-- SERVICE CATEGORIES -->
+    <url>
+        <loc>https://newinabudhabi.com/#visa-legal</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/#transport</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/#healthcare</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/#education</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/#housing</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/#grocery</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/#fitness</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/#home-services</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/#entertainment</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/#islamic</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/#fashion</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/#tech</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/#logistics</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/#storage</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://newinabudhabi.com/#kids-fun</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- QUICK START GUIDE -->
+    <url>
+        <loc>https://newinabudhabi.com/#guides</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- REVIEWS SECTION -->
+    <url>
+        <loc>https://newinabudhabi.com/#reviews</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- CONTACT -->
+    <url>
+        <loc>https://newinabudhabi.com/#contact</loc>
+        <lastmod>2024-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+</urlset>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-language="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile & PC Repair Services - New In Abu Dhabi | خدمات إصلاح الجوال والكمبيوتر</title>
+    <meta name="description" content="Find trusted electronics repair in Abu Dhabi with fast, affordable service for phones, tablets, and laptops">
+    
+    <!-- Arabic Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Import main styles */
+        body {
+            font-family: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        [dir="rtl"] body {
+            font-family: 'Cairo', 'Inter', sans-serif;
+            text-align: right;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #d4a574;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: #e67e22;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .content-section h2 {
+            color: #2d3748;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #d4a574;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .content-section h3 {
+            color: #2d3748;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .emergency-section {
+            background: #fff5f5;
+            border: 1px solid #fed7d7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .service-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #d4a574;
+        }
+
+        [dir="rtl"] .service-item {
+            border-left: none;
+            border-right: 4px solid #d4a574;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        [dir="rtl"] .comparison-table th,
+        [dir="rtl"] .comparison-table td {
+            text-align: right;
+        }
+
+        .comparison-table th {
+            background: #f7fafc;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .tips-box {
+            background: #e6fffa;
+            border: 1px solid #81e6d9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .contact-info {
+            background: #f0f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        [dir="rtl"] .language-switcher {
+            right: auto;
+            left: 20px;
+        }
+
+        .lang-option {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #4a5568;
+            padding: 4px 8px;
+            border-radius: 8px;
+        }
+
+        .lang-option:hover {
+            background: rgba(212, 165, 116, 0.2);
+            color: #2d3748;
+        }
+
+        .lang-option.active {
+            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            color: white;
+        }
+
+        .lang-divider {
+            color: #a0aec0;
+            font-weight: 300;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #d4a574;
+            font-weight: bold;
+        }
+
+        [dir="rtl"] li {
+            padding-left: 0;
+            padding-right: 20px;
+        }
+
+        [dir="rtl"] li:before {
+            left: auto;
+            right: 0;
+        }
+
+        .rating-badge {
+            background: #fbbf24;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        [dir="rtl"] .rating-badge {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <span class="lang-option active" onclick="switchLanguage('en')" data-lang="en">EN</span>
+        <span class="lang-divider">|</span>
+        <span class="lang-option" onclick="switchLanguage('ar')" data-lang="ar">AR</span>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="back-link" data-en="← Back to Home" data-ar="← العودة للصفحة الرئيسية">← Back to Home</a>
+        
+        <div class="page-header">
+            <h1 data-en="Mobile & PC Repair" data-ar="إصلاح الجوال والكمبيوتر">Mobile & PC Repair</h1>
+            <p data-en="Find trusted electronics repair in Abu Dhabi with our guide. We list top-rated phone, tablet, and laptop repair shops that offer fast, affordable service for issues like cracked screens and dead batteries." data-ar="اعثر على إصلاح الإلكترونيات الموثوق في أبوظبي مع دليلنا. نسرد محلات إصلاح الهواتف والأجهزة اللوحية واللابتوب عالية التقييم التي تقدم خدمة سريعة ومعقولة التكلفة لمشاكل مثل الشاشات المكسورة والبطاريات المعطلة.">Find trusted electronics repair in Abu Dhabi with our guide. We list top-rated phone, tablet, and laptop repair shops that offer fast, affordable service for issues like cracked screens and dead batteries.</p>
+        </div>
+
+        <!-- Top Repair Clusters -->
+        <div class="content-section">
+            <h2 data-en="Top-Rated Repair Shops" data-ar="محلات الإصلاح عالية التقييم">Top-Rated Repair Shops</h2>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Al Dana Area - Cluster of Shops Near Zayed The First Street" data-ar="منطقة الدانة - مجموعة محلات بالقرب من شارع زايد الأول">Al Dana Area - Cluster of Shops Near Zayed The First Street <span class="rating-badge">4.7★</span></h3>
+                    <ul>
+                        <li data-en="Type: Group of shops in close proximity to each other" data-ar="النوع: مجموعة من المحلات بالقرب من بعضها البعض">Type: Group of shops in close proximity to each other</li>
+                        <li data-en="Area: Al Dana Area, near Zayed The First Street" data-ar="المنطقة: منطقة الدانة، بالقرب من شارع زايد الأول">Area: Al Dana Area, near Zayed The First Street</li>
+                        <li data-en="Customer Reviews: Highly-rated for trustworthiness, professionalism, expertise in handling difficult repairs" data-ar="تقييمات العملاء: مقيّمة عالياً للموثوقية والمهنية والخبرة في التعامل مع الإصلاحات الصعبة">Customer Reviews: Highly-rated for trustworthiness, professionalism, expertise in handling difficult repairs</li>
+                        <li data-en="Services: All types of mobile and electronics repair" data-ar="الخدمات: جميع أنواع إصلاح الجوال والإلكترونيات">Services: All types of mobile and electronics repair</li>
+                        <li data-en="Best For: Multiple options to compare, competitive pricing" data-ar="الأفضل لـ: خيارات متعددة للمقارنة، أسعار تنافسية">Best For: Multiple options to compare, competitive pricing</li>
+                    </ul>
+                    
+                    <div class="contact-info">
+                        <h4 data-en="Location:" data-ar="الموقع:">Location:</h4>
+                        <p data-en="View on Google Maps - Al Dana Area cluster" data-ar="عرض على خرائط جوجل - مجموعة منطقة الدانة">View on Google Maps - Al Dana Area cluster</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Green Valley Computers – Electra Street" data-ar="جرين فالي كمبيوترز – شارع الكترا">Green Valley Computers – Electra Street <span class="rating-badge">4.5★</span></h3>
+                    <ul>
+                        <li data-en="Type: Laptop, Mac, tablet, and smartphone repair" data-ar="النوع: إصلاح لابتوب وماك وتابلت وهواتف ذكية">Type: Laptop, Mac, tablet, and smartphone repair</li>
+                        <li data-en="Area: Electra Street, Zone E10" data-ar="المنطقة: شارع الكترا، منطقة E10">Area: Electra Street, Zone E10</li>
+                        <li data-en="Google Rating: 4.5 stars (500+ reviews)" data-ar="تقييم جوجل: 4.5 نجمة (500+ تقييم)">Google Rating: 4.5 stars (500+ reviews)</li>
+                        <li data-en="Customer Feedback: Efficient and friendly service, quick turnaround, reasonable pricing" data-ar="ملاحظات العملاء: خدمة فعالة وودودة، تسليم سريع، أسعار معقولة">Customer Feedback: "Efficient and friendly service, quick turnaround, reasonable pricing"</li>
+                        <li data-en="Specialties: Mac repairs, complex diagnostics" data-ar="التخصصات: إصلاحات ماك، تشخيصات معقدة">Specialties: Mac repairs, complex diagnostics</li>
+                    </ul>
+                    
+                    <div class="contact-info">
+                        <h4 data-en="Location:" data-ar="الموقع:">Location:</h4>
+                        <p data-en="View on Google Maps - Green Valley Computers" data-ar="عرض على خرائط جوجل - جرين فالي كمبيوترز">View on Google Maps - Green Valley Computers</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Fixsquad Abu Dhabi" data-ar="فيكس سكواد أبوظبي">Fixsquad Abu Dhabi <span class="rating-badge">4.9★</span></h3>
+                    <ul>
+                        <li data-en="Type: Chip-level diagnostics, mobile & laptop repair" data-ar="النوع: تشخيصات على مستوى الرقاقة، إصلاح جوال ولابتوب">Type: Chip-level diagnostics, mobile & laptop repair</li>
+                        <li data-en="Area: Multiple drop-off points (Virgin Megastore branches)" data-ar="المنطقة: نقاط تسليم متعددة (فروع فيرجن ميجاستور)">Area: Multiple drop-off points (Virgin Megastore branches)</li>
+                        <li data-en="Google Rating: 4.9 stars (1,950+ reviews)" data-ar="تقييم جوجل: 4.9 نجمة (1,950+ تقييم)">Google Rating: 4.9 stars (1,950+ reviews)</li>
+                        <li data-en="Customer Feedback: Best service ever, free diagnosis, 12-month warranty" data-ar="ملاحظات العملاء: أفضل خدمة على الإطلاق، تشخيص مجاني، ضمان 12 شهر">Customer Feedback: "Best service ever, free diagnosis, 12-month warranty"</li>
+                        <li data-en="Specialties: Complex chip-level repairs, data recovery" data-ar="التخصصات: إصلاحات معقدة على مستوى الرقاقة، استرداد البيانات">Specialties: Complex chip-level repairs, data recovery</li>
+                    </ul>
+                    
+                    <div class="contact-info">
+                        <h4 data-en="Convenience:" data-ar="الراحة:">Convenience:</h4>
+                        <p data-en="Drop-off at any Virgin Megastore location across Abu Dhabi" data-ar="التسليم في أي موقع فيرجن ميجاستور عبر أبوظبي">Drop-off at any Virgin Megastore location across Abu Dhabi</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Speed Computer – Near Najda Street" data-ar="سبيد كمبيوتر – بالقرب من شارع النجدة">Speed Computer – Near Najda Street <span class="rating-badge">4.6★</span></h3>
+                    <ul>
+                        <li data-en="Type: OEM-grade battery/screen replacements, chip-level board services" data-ar="النوع: استبدال بطارية/شاشة بجودة الشركة الأصلية، خدمات اللوحة على مستوى الرقاقة">Type: OEM-grade battery/screen replacements, chip-level board services</li>
+                        <li data-en="Area: Near Najda Street" data-ar="المنطقة: بالقرب من شارع النجدة">Area: Near Najda Street</li>
+                        <li data-en="Google Rating: 4.6 stars (370+ reviews)" data-ar="تقييم جوجل: 4.6 نجمة (370+ تقييم)">Google Rating: 4.6 stars (370+ reviews)</li>
+                        <li data-en="Customer Feedback: Very professional, got MacBook fixed in 2 hours" data-ar="ملاحظات العملاء: مهني جداً، أصلح الماك بوك في ساعتين">Customer Feedback: "Very professional, got MacBook fixed in 2 hours"</li>
+                        <li data-en="Specialties: Fast turnaround, quality parts" data-ar="التخصصات: تسليم سريع، قطع عالية الجودة">Specialties: Fast turnaround, quality parts</li>
+                    </ul>
+                    
+                    <div class="contact-info">
+                        <h4 data-en="Location:" data-ar="الموقع:">Location:</h4>
+                        <p data-en="View on Google Maps - Speed Computer" data-ar="عرض على خرائط جوجل - سبيد كمبيوتر">View on Google Maps - Speed Computer</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Just Fix Electronics" data-ar="جست فيكس إلكترونيكس">Just Fix Electronics <span class="rating-badge">4.7★</span></h3>
+                    <ul>
+                        <li data-en="Type: Mobile, tablet & laptop repair with pickup & delivery" data-ar="النوع: إصلاح جوال وتابلت ولابتوب مع الاستلام والتسليم">Type: Mobile, tablet & laptop repair with pickup & delivery</li>
+                        <li data-en="Area: Abu Dhabi (citywide service)" data-ar="المنطقة: أبوظبي (خدمة شاملة للمدينة)">Area: Abu Dhabi (citywide service)</li>
+                        <li data-en="Google Rating: 4.7 stars (160+ reviews)" data-ar="تقييم جوجل: 4.7 نجمة (160+ تقييم)">Google Rating: 4.7 stars (160+ reviews)</li>
+                        <li data-en="Customer Feedback: They picked up my phone and returned it the same day fully fixed!" data-ar="ملاحظات العملاء: استلموا هاتفي وأعادوه في نفس اليوم مصلح بالكامل!">Customer Feedback: "They picked up my phone and returned it the same day fully fixed!"</li>
+                        <li data-en="Special Service: Free pickup and delivery within Abu Dhabi" data-ar="خدمة خاصة: استلام وتسليم مجاني داخل أبوظبي">Special Service: Free pickup and delivery within Abu Dhabi</li>
+                    </ul>
+                    
+                    <div class="contact-info">
+                        <h4 data-en="Convenience:" data-ar="الراحة:">Convenience:</h4>
+                        <p data-en="Call for pickup service - no need to leave your home/office" data-ar="اتصل لخدمة الاستلام - لا حاجة لترك منزلك/مكتبك">Call for pickup service - no need to leave your home/office</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="DEVICE CARE – Defence Road" data-ar="ديفايس كير – شارع الدفاع">DEVICE CARE – Defence Road <span class="rating-badge">4.8★</span></h3>
+                    <ul>
+                        <li data-en="Type: Chip-level diagnostics for phones and laptops" data-ar="النوع: تشخيصات على مستوى الرقاقة للهواتف واللابتوب">Type: Chip-level diagnostics for phones and laptops</li>
+                        <li data-en="Area: Defence Road, Abu Dhabi" data-ar="المنطقة: شارع الدفاع، أبوظبي">Area: Defence Road, Abu Dhabi</li>
+                        <li data-en="Rating: Highly recommended on Facebook groups" data-ar="التقييم: موصى به بشدة في مجموعات فيسبوك">Rating: Highly recommended on Facebook groups</li>
+                        <li data-en="Customer Feedback: Quality chip-level repair, solved complex issues no one else could" data-ar="ملاحظات العملاء: إصلاح عالي الجودة على مستوى الرقاقة، حل مشاكل معقدة لم يستطع أحد غيرهم حلها">Customer Feedback: "Quality chip-level repair, solved complex issues no one else could"</li>
+                        <li data-en="Specialties: Advanced motherboard repairs, water damage recovery" data-ar="التخصصات: إصلاحات اللوحة الأم المتقدمة، استرداد أضرار المياه">Specialties: Advanced motherboard repairs, water damage recovery</li>
+                    </ul>
+                    
+                    <div class="tips-box">
+                        <h4 data-en="Pro Tip:" data-ar="نصيحة احترافية:">Pro Tip:</h4>
+                        <p data-en="Highly recommended by tech community for complex repairs other shops can't handle" data-ar="موصى به بشدة من مجتمع التقنية للإصلاحات المعقدة التي لا تستطيع المحلات الأخرى التعامل معها">Highly recommended by tech community for complex repairs other shops can't handle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Smart Questions Section -->
+        <div class="content-section">
+            <h2 data-en="Smart Questions to Ask Before Repair" data-ar="أسئلة ذكية تطرحها قبل الإصلاح">Smart Questions to Ask Before Repair</h2>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Quality & Warranty Questions" data-ar="أسئلة الجودة والضمان">Quality & Warranty Questions</h3>
+                    <ul>
+                        <li data-en="Do you use original (OEM) parts?" data-ar="هل تستخدمون قطع أصلية (OEM)؟">Do you use original (OEM) parts?</li>
+                        <li data-en="How long is your warranty (3-12 months)?" data-ar="كم مدة الضمان (3-12 شهر)؟">How long is your warranty (3-12 months)?</li>
+                        <li data-en="What exactly does the warranty cover?" data-ar="ما الذي يغطيه الضمان بالتحديد؟">What exactly does the warranty cover?</li>
+                        <li data-en="Can I see a sample of the replacement part?" data-ar="هل يمكنني رؤية عينة من القطعة البديلة؟">Can I see a sample of the replacement part?</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Service & Convenience Questions" data-ar="أسئلة الخدمة والراحة">Service & Convenience Questions</h3>
+                    <ul>
+                        <li data-en="Is there a pickup/delivery option?" data-ar="هل هناك خيار استلام/توصيل؟">Is there a pickup/delivery option?</li>
+                        <li data-en="How long will the repair take?" data-ar="كم ستستغرق عملية الإصلاح؟">How long will the repair take?</li>
+                        <li data-en="Do you accept cash or card?" data-ar="هل تقبلون النقد أم البطاقة؟">Do you accept cash or card?</li>
+                        <li data-en="Can you provide a written estimate?" data-ar="هل يمكنكم تقديم تقدير مكتوب؟">Can you provide a written estimate?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Caution Section -->
+        <div class="content-section">
+            <h2 data-en="Important Cautions & Red Flags" data-ar="تحذيرات مهمة وعلامات حمراء">Important Cautions & Red Flags</h2>
+            
+            <div class="emergency-section">
+                <h3 data-en="Defence Road Area - Exercise Caution" data-ar="منطقة شارع الدفاع - توخي الحذر">Defence Road Area - Exercise Caution</h3>
+                <ul>
+                    <li data-en="Avoid small stalls with no reviews or established reputation" data-ar="تجنب الأكشاك الصغيرة بدون تقييمات أو سمعة راسخة">Avoid small stalls with no reviews or established reputation</li>
+                    <li data-en="Stick to verified shops like DEVICE CARE or Axiom Care (on Google Maps)" data-ar="التزم بالمحلات المتحققة مثل ديفايس كير أو أكسيوم كير (على خرائط جوجل)">Stick to verified shops like DEVICE CARE or Axiom Care (on Google Maps)</li>
+                    <li data-en="Always ask for a written estimate before work begins" data-ar="اطلب دائماً تقديراً مكتوباً قبل بدء العمل">Always ask for a written estimate before work begins</li>
+                    <li data-en="Be wary of shops demanding full payment upfront" data-ar="احذر من المحلات التي تطلب دفع كامل المبلغ مقدماً">Be wary of shops demanding full payment upfront</li>
+                </ul>
+            </div>
+
+            <div class="tips-box">
+                <h3 data-en="General Safety Tips:" data-ar="نصائح الأمان العامة:">General Safety Tips:</h3>
+                <ul>
+                    <li data-en="Back up your data before repair" data-ar="اعمل نسخة احتياطية من بياناتك قبل الإصلاح">Back up your data before repair</li>
+                    <li data-en="Remove SIM card and memory cards" data-ar="أخرج شريحة الهاتف وبطاقات الذاكرة">Remove SIM card and memory cards</li>
+                    <li data-en="Take photos of your device condition before leaving it" data-ar="التقط صور لحالة جهازك قبل تركه">Take photos of your device condition before leaving it</li>
+                    <li data-en="Get a receipt with repair details and promised completion date" data-ar="احصل على إيصال مع تفاصيل الإصلاح وموعد الإنجاز الموعود">Get a receipt with repair details and promised completion date</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Pricing Guide -->
+        <div class="content-section">
+            <h2 data-en="Typical Repair Pricing Guide" data-ar="دليل أسعار الإصلاح النموذجية">Typical Repair Pricing Guide</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th data-en="Repair Type" data-ar="نوع الإصلاح">Repair Type</th>
+                        <th data-en="Budget Range" data-ar="النطاق الاقتصادي">Budget Range</th>
+                        <th data-en="Premium Range" data-ar="النطاق المميز">Premium Range</th>
+                        <th data-en="Typical Duration" data-ar="المدة النموذجية">Typical Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-en="Phone Screen Replacement" data-ar="استبدال شاشة الهاتف">Phone Screen Replacement</td>
+                        <td>AED 80-150</td>
+                        <td>AED 200-400</td>
+                        <td data-en="1-3 hours" data-ar="1-3 ساعات">1-3 hours</td>
+                    </tr>
+                    <tr>
+                        <td data-en="Phone Battery Replacement" data-ar="استبدال بطارية الهاتف">Phone Battery Replacement</td>
+                        <td>AED 40-80</td>
+                        <td>AED 100-150</td>
+                        <td data-en="30-60 minutes" data-ar="30-60 دقيقة">30-60 minutes</td>
+                    </tr>
+                    <tr>
+                        <td data-en="Laptop Screen Repair" data-ar="إصلاح شاشة اللابتوب">Laptop Screen Repair</td>
+                        <td>AED 300-500</td>
+                        <td>AED 600-1000</td>
+                        <td data-en="1-3 days" data-ar="1-3 أيام">1-3 days</td>
+                    </tr>
+                    <tr>
+                        <td data-en="Water Damage Recovery" data-ar="استرداد أضرار المياه">Water Damage Recovery</td>
+                        <td>AED 100-200</td>
+                        <td>AED 300-500</td>
+                        <td data-en="2-5 days" data-ar="2-5 أيام">2-5 days</td>
+                    </tr>
+                    <tr>
+                        <td data-en="Data Recovery" data-ar="استرداد البيانات">Data Recovery</td>
+                        <td>AED 200-400</td>
+                        <td>AED 500-1000</td>
+                        <td data-en="3-7 days" data-ar="3-7 أيام">3-7 days</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="tips-box">
+                <p data-en="Prices vary significantly based on device model, part quality, and shop reputation. Always get quotes from multiple shops for expensive repairs." data-ar="تختلف الأسعار بشكل كبير حسب موديل الجهاز وجودة القطعة وسمعة المحل. احصل دائماً على عروض من محلات متعددة للإصلاحات المكلفة.">Prices vary significantly based on device model, part quality, and shop reputation. Always get quotes from multiple shops for expensive repairs.</p>
+            </div>
+        </div>
+
+        <!-- Best Practices -->
+        <div class="content-section">
+            <h2 data-en="Best Practices for Device Repair" data-ar="أفضل الممارسات لإصلاح الأجهزة">Best Practices for Device Repair</h2>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Before You Go" data-ar="قبل الذهاب">Before You Go</h3>
+                    <ul>
+                        <li data-en="Research the shop online - check Google reviews and ratings" data-ar="ابحث عن المحل عبر الإنترنت - تحقق من تقييمات ومراجعات جوجل">Research the shop online - check Google reviews and ratings</li>
+                        <li data-en="Call ahead to confirm they can fix your specific device model" data-ar="اتصل مسبقاً لتأكيد قدرتهم على إصلاح موديل جهازك المحدد">Call ahead to confirm they can fix your specific device model</li>
+                        <li data-en="Ask about part availability and estimated repair time" data-ar="اسأل عن توفر القطع ووقت الإصلاح المقدر">Ask about part availability and estimated repair time</li>
+                        <li data-en="Backup your data and remove personal information" data-ar="اعمل نسخة احتياطية من بياناتك وأزل المعلومات الشخصية">Backup your data and remove personal information</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="During the Visit" data-ar="أثناء الزيارة">During the Visit</h3>
+                    <ul>
+                        <li data-en="Ask to see the replacement part before installation" data-ar="اطلب رؤية القطعة البديلة قبل التركيب">Ask to see the replacement part before installation</li>
+                        <li data-en="Get a written estimate with labor and parts breakdown" data-ar="احصل على تقدير مكتوب مع تفصيل العمالة والقطع">Get a written estimate with labor and parts breakdown</li>
+                        <li data-en="Understand warranty terms - what's covered and for how long" data-ar="فهم شروط الضمان - ما هو مشمول وللفترة">Understand warranty terms - what's covered and for how long</li>
+                        <li data-en="Don't agree to additional work without new estimates" data-ar="لا توافق على عمل إضافي بدون تقديرات جديدة">Don't agree to additional work without new estimates</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="After Repair" data-ar="بعد الإصلاح">After Repair</h3>
+                    <ul>
+                        <li data-en="Test all functions before leaving the shop" data-ar="اختبر جميع الوظائف قبل مغادرة المحل">Test all functions before leaving the shop</li>
+                        <li data-en="Keep your receipt and warranty information safe" data-ar="احتفظ بإيصالك ومعلومات الضمان بأمان">Keep your receipt and warranty information safe</li>
+                        <li data-en="Take photos of the repair work for your records" data-ar="التقط صور للعمل المُصلح لسجلاتك">Take photos of the repair work for your records</li>
+                        <li data-en="Leave an honest review to help other customers" data-ar="اترك مراجعة صادقة لمساعدة العملاء الآخرين">Leave an honest review to help other customers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Important Note -->
+        <div class="content-section">
+            <div class="tips-box">
+                <p data-en="Remember: Quality repairs may cost more upfront but save money long-term. Choose reputable shops with good reviews, proper warranties, and transparent pricing. When in doubt, get a second opinion for expensive repairs." data-ar="تذكر: الإصلاحات عالية الجودة قد تكلف أكثر في البداية لكنها توفر المال على المدى الطويل. اختر محلات موثوقة بتقييمات جيدة وضمانات مناسبة وأسعار شفافة. في حالة الشك، احصل على رأي ثانٍ للإصلاحات المكلفة.">Remember: Quality repairs may cost more upfront but save money long-term. Choose reputable shops with good reviews, proper warranties, and transparent pricing. When in doubt, get a second opinion for expensive repairs.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Language switching functionality
+        function switchLanguage(lang) {
+            const html = document.documentElement;
+            const langOptions = document.querySelectorAll('.lang-option');
+            
+            // Update HTML attributes
+            html.setAttribute('lang', lang);
+            html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            html.setAttribute('data-language', lang);
+            
+            // Update active language button
+            langOptions.forEach(option => {
+                option.classList.remove('active');
+                if (option.getAttribute('data-lang') === lang) {
+                    option.classList.add('active');
+                }
+            });
+            
+            // Switch content for elements with data-en and data-ar attributes
+            const elements = document.querySelectorAll('[data-en][data-ar]');
+            elements.forEach(element => {
+                if (lang === 'ar') {
+                    element.textContent = element.getAttribute('data-ar');
+                } else {
+                    element.textContent = element.getAttribute('data-en');
+                }
+            });
+            
+            // Store language preference
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        // Load saved language preference on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLanguage = localStorage.getItem('selectedLanguage');
+            if (savedLanguage && (savedLanguage === 'ar' || savedLanguage === 'en')) {
+                switchLanguage(savedLanguage);
+            }
+        });
+    </script>
+</body>
+</html>

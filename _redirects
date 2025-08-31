@@ -1,0 +1,38 @@
+# Netlify redirects file
+# Handle URL redirects and rewrites
+
+# Redirect common variations to canonical URLs
+/home              /                    301
+/index             /                    301
+/index.php         /                    301
+/index.html        /                    301
+
+# Redirect old WordPress URLs
+/wp-admin/*        /                    301
+/wp-content/*      /                    301
+/wp-includes/*     /                    301
+/wordpress/*       /                    301
+
+# Service category shortcuts (future enhancement)
+/visa              /#visa-legal         301
+/transport         /#transport          301
+/healthcare        /#healthcare         301
+/education         /#education          301
+/housing           /#housing            301
+/reviews           /#reviews            301
+
+# Handle trailing slashes consistently
+/privacy/          /privacy.html        301
+/terms/            /terms.html          301
+
+# Affiliate link redirects (when implemented)
+# /go/adcb          https://affiliate-link.com/adcb     302
+# /go/fab           https://affiliate-link.com/fab      302
+# /go/etisalat      https://affiliate-link.com/etisalat 302
+
+# API endpoints for future enhancements
+# /api/reviews      /.netlify/functions/reviews    200
+# /api/contact      /.netlify/functions/contact    200
+
+# SPA fallback - serve index.html for any unmatched routes
+/*                 /index.html          404

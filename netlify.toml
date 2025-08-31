@@ -1,0 +1,132 @@
+# Netlify Configuration File
+# New In Abu Dhabi - Static Site Deployment
+
+[build]
+  # Build command - not needed for static HTML sites but good to have
+  command = "echo 'Static site - no build required'"
+  
+  # Publish directory - where the site files are located
+  publish = "."
+
+[build.environment]
+  # Node version (if needed for any build tools later)
+  NODE_VERSION = "18"
+
+# Headers for better performance and security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Security headers
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(self)"
+    
+    # Performance headers
+    X-DNS-Prefetch-Control = "on"
+
+# Cache static assets for better performance
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# HTML files cache for shorter time
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+# Redirects for better SEO and user experience
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/index"
+  to = "/"
+  status = 301
+
+# Redirect old WordPress URLs if any
+[[redirects]]
+  from = "/wp-admin/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wordpress/*"
+  to = "/"
+  status = 301
+
+# Form handling for contact forms (if added later)
+# [[redirects]]
+#   from = "/contact"
+#   to = "/.netlify/functions/contact"
+#   status = 200
+
+# 404 handling - redirect to home page for now
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+
+# Edge functions for better performance (future enhancement)
+# [functions]
+# directory = "netlify/functions"
+
+# Plugin configuration for optimization
+[[plugins]]
+  package = "netlify-plugin-minify-html"
+
+[[plugins]]
+  package = "netlify-plugin-inline-css"
+  [plugins.inputs]
+    # Only inline small CSS files
+    threshold = 0
+
+# Environment variables for different deploy contexts
+[context.production.environment]
+  NODE_ENV = "production"
+  SITE_URL = "https://newinabudhabi.com"
+
+[context.deploy-preview.environment]
+  NODE_ENV = "development" 
+  SITE_URL = "https://deploy-preview-1--newinabudhabi.netlify.app"
+
+[context.branch-deploy.environment]
+  NODE_ENV = "development"
+  SITE_URL = "https://branch-deploy--newinabudhabi.netlify.app"
+
+# Branch-specific settings
+[context.production]
+  command = "echo 'Production deployment'"
+
+[context.deploy-preview]
+  command = "echo 'Preview deployment'"
+
+# Custom domain settings (when ready)
+# [[edge_handlers]]
+#   pattern = "/*"
+#   function = "redirect-www"

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-language="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handyman & Repair Services - New In Abu Dhabi | خدمات الصيانة والإصلاح</title>
+    <meta name="description" content="Complete guide to reliable handyman services in Abu Dhabi with current pricing and verified reviews">
+    
+    <!-- Arabic Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Import main styles */
+        body {
+            font-family: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        [dir="rtl"] body {
+            font-family: 'Cairo', 'Inter', sans-serif;
+            text-align: right;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #d4a574;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: #e67e22;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .content-section h2 {
+            color: #2d3748;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #d4a574;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .content-section h3 {
+            color: #2d3748;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .emergency-section {
+            background: #fff5f5;
+            border: 1px solid #fed7d7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .service-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #d4a574;
+        }
+
+        [dir="rtl"] .service-item {
+            border-left: none;
+            border-right: 4px solid #d4a574;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        [dir="rtl"] .comparison-table th,
+        [dir="rtl"] .comparison-table td {
+            text-align: right;
+        }
+
+        .comparison-table th {
+            background: #f7fafc;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .tips-box {
+            background: #e6fffa;
+            border: 1px solid #81e6d9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .contact-info {
+            background: #f0f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        [dir="rtl"] .language-switcher {
+            right: auto;
+            left: 20px;
+        }
+
+        .lang-option {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #4a5568;
+            padding: 4px 8px;
+            border-radius: 8px;
+        }
+
+        .lang-option:hover {
+            background: rgba(212, 165, 116, 0.2);
+            color: #2d3748;
+        }
+
+        .lang-option.active {
+            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            color: white;
+        }
+
+        .lang-divider {
+            color: #a0aec0;
+            font-weight: 300;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #d4a574;
+            font-weight: bold;
+        }
+
+        [dir="rtl"] li {
+            padding-left: 0;
+            padding-right: 20px;
+        }
+
+        [dir="rtl"] li:before {
+            left: auto;
+            right: 0;
+        }
+
+        .whatsapp-contact {
+            background: #dcf8c6;
+            border: 1px solid #4caf50;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .whatsapp-contact h4 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <span class="lang-option active" onclick="switchLanguage('en')" data-lang="en">EN</span>
+        <span class="lang-divider">|</span>
+        <span class="lang-option" onclick="switchLanguage('ar')" data-lang="ar">AR</span>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="back-link" data-en="← Back to Home" data-ar="← العودة للصفحة الرئيسية">← Back to Home</a>
+        
+        <div class="page-header">
+            <h1 data-en="Handymen, Repairs & Home Services" data-ar="عمال صيانة وإصلاح وخدمات منزلية">Handymen, Repairs & Home Services</h1>
+            <p data-en="Complete guide to reliable handyman services in Abu Dhabi. Find trusted professionals for home repairs, furniture assembly, AC maintenance, and emergency fixes with current pricing and verified reviews." data-ar="دليل شامل لخدمات العمال الماهرين الموثوقة في أبوظبي. اعثر على محترفين موثوقين للإصلاحات المنزلية وتجميع الأثاث وصيانة التكييف والإصلاحات الطارئة مع الأسعار الحالية والتقييمات المتحققة.">Complete guide to reliable handyman services in Abu Dhabi. Find trusted professionals for home repairs, furniture assembly, AC maintenance, and emergency fixes with current pricing and verified reviews.</p>
+        </div>
+
+        <!-- Pricing Guide -->
+        <div class="content-section">
+            <h2 data-en="Abu Dhabi Handyman Pricing Guide 2025" data-ar="دليل أسعار العمال الماهرين أبوظبي 2025">Abu Dhabi Handyman Pricing Guide 2025</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th data-en="Service Level" data-ar="مستوى الخدمة">Service Level</th>
+                        <th data-en="Hourly Rate" data-ar="السعر بالساعة">Hourly Rate</th>
+                        <th data-en="Minimum Booking" data-ar="الحد الأدنى للحجز">Minimum Booking</th>
+                        <th data-en="Best For" data-ar="الأفضل لـ">Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-en="Budget Options" data-ar="الخيارات الاقتصادية">Budget Options</td>
+                        <td>AED 50-100</td>
+                        <td data-en="1-2 hours" data-ar="1-2 ساعة">1-2 hours</td>
+                        <td data-en="Simple tasks, budget-conscious residents" data-ar="المهام البسيطة، السكان المهتمين بالميزانية">Simple tasks, budget-conscious residents</td>
+                    </tr>
+                    <tr>
+                        <td data-en="Mid-Range Services" data-ar="الخدمات متوسطة المستوى">Mid-Range Services</td>
+                        <td>AED 100-130</td>
+                        <td data-en="2-3 hours" data-ar="2-3 ساعات">2-3 hours</td>
+                        <td data-en="Professional service, reliable scheduling" data-ar="خدمة مهنية، جدولة موثوقة">Professional service, reliable scheduling</td>
+                    </tr>
+                    <tr>
+                        <td data-en="Premium Companies" data-ar="الشركات المميزة">Premium Companies</td>
+                        <td>AED 130-150</td>
+                        <td data-en="2-4 hours" data-ar="2-4 ساعات">2-4 hours</td>
+                        <td data-en="Comprehensive home services" data-ar="خدمات منزلية شاملة">Comprehensive home services</td>
+                    </tr>
+                    <tr>
+                        <td data-en="Emergency/Same-Day" data-ar="طوارئ/نفس اليوم">Emergency/Same-Day</td>
+                        <td data-en="+20-30% surcharge" data-ar="+20-30% رسوم إضافية">+20-30% surcharge</td>
+                        <td data-en="1 hour minimum" data-ar="ساعة واحدة كحد أدنى">1 hour minimum</td>
+                        <td data-en="Urgent repairs, emergencies" data-ar="إصلاحات عاجلة، طوارئ">Urgent repairs, emergencies</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="tips-box">
+                <p data-en="Prices exclude materials and parts. Updated August 2025." data-ar="الأسعار لا تشمل المواد والقطع. تم التحديث في أغسطس 2025.">Prices exclude materials and parts. Updated August 2025.</p>
+            </div>
+        </div>
+
+        <!-- Quick Emergency Services -->
+        <div class="content-section">
+            <h2 data-en="Quick Emergency Handyman Services (Same-Day Available)" data-ar="خدمات العمال الماهرين السريعة للطوارئ (متاح نفس اليوم)">Quick Emergency Handyman Services (Same-Day Available)</h2>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="SmileHandyy Abu Dhabi" data-ar="سمايل هاندي أبوظبي">SmileHandyy Abu Dhabi</h3>
+                    <ul>
+                        <li data-en="Hourly Rate: AED 89/hour (3+ hours) | AED 99/hour (1-2 hours)" data-ar="السعر بالساعة: 89 درهم/ساعة (3+ ساعات) | 99 درهم/ساعة (1-2 ساعة)">Hourly Rate: AED 89/hour (3+ hours) | AED 99/hour (1-2 hours)</li>
+                        <li data-en="Service Areas: Abu Dhabi, Al Ain, Dubai" data-ar="مناطق الخدمة: أبوظبي، العين، دبي">Service Areas: Abu Dhabi, Al Ain, Dubai</li>
+                        <li data-en="Same-Day: Available with 24-hour notice preferred" data-ar="نفس اليوم: متاح مع تفضيل إشعار 24 ساعة">Same-Day: Available with 24-hour notice preferred</li>
+                        <li data-en="Languages: English, Arabic, Hindi, Urdu" data-ar="اللغات: إنجليزي، عربي، هندي، أردو">Languages: English, Arabic, Hindi, Urdu</li>
+                        <li data-en="What's Included: Basic tools, ladder, drill machine" data-ar="ما هو مشمول: أدوات أساسية، سلم، آلة الحفر">What's Included: Basic tools, ladder, drill machine</li>
+                        <li data-en="Payment: Online or cash after completion" data-ar="الدفع: عبر الإنترنت أو نقداً بعد الانتهاء">Payment: Online or cash after completion</li>
+                    </ul>
+                    
+                    <div class="whatsapp-contact">
+                        <h4 data-en="WhatsApp Booking:" data-ar="الحجز عبر واتساب:">WhatsApp Booking:</h4>
+                        <p data-en="Book through SmileHandyy website or app for instant confirmation" data-ar="احجز عبر موقع أو تطبيق سمايل هاندي للحصول على تأكيد فوري">Book through SmileHandyy website or app for instant confirmation</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="OnTimeFix Abu Dhabi" data-ar="أون تايم فيكس أبوظبي">OnTimeFix Abu Dhabi</h3>
+                    <ul>
+                        <li data-en="Service Type: Quick same-day repairs" data-ar="نوع الخدمة: إصلاحات سريعة نفس اليوم">Service Type: Quick same-day repairs</li>
+                        <li data-en="Specialties: Emergency electrical, plumbing, AC repairs" data-ar="التخصصات: كهرباء طارئة، سباكة، إصلاحات التكييف">Specialties: Emergency electrical, plumbing, AC repairs</li>
+                        <li data-en="Rating: 4.5 stars" data-ar="التقييم: 4.5 نجمة">Rating: 4.5 stars</li>
+                        <li data-en="Response Time: Same-day service available" data-ar="وقت الاستجابة: خدمة نفس اليوم متاحة">Response Time: Same-day service available</li>
+                        <li data-en="Best For: Urgent repairs, electrical emergencies" data-ar="الأفضل لـ: إصلاحات عاجلة، طوارئ كهربائية">Best For: Urgent repairs, electrical emergencies</li>
+                    </ul>
+                    
+                    <div class="whatsapp-contact">
+                        <h4 data-en="Contact:" data-ar="التواصل:">Contact:</h4>
+                        <p data-en="Website and WhatsApp booking available" data-ar="الموقع الإلكتروني والحجز عبر واتساب متاح">Website and WhatsApp booking available</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="ServiceMarket Network" data-ar="شبكة سيرفيس ماركت">ServiceMarket Network</h3>
+                    <ul>
+                        <li data-en="Hourly Rate: AED 129/hour" data-ar="السعر بالساعة: 129 درهم/ساعة">Hourly Rate: AED 129/hour</li>
+                        <li data-en="New Customer Offer: AED 50 off first booking" data-ar="عرض العملاء الجدد: خصم 50 درهم على الحجز الأول">New Customer Offer: AED 50 off first booking</li>
+                        <li data-en="Team Size: Two handymen per booking" data-ar="حجم الفريق: عاملان ماهران في كل حجز">Team Size: Two handymen per booking</li>
+                        <li data-en="Service Areas: All Abu Dhabi areas" data-ar="مناطق الخدمة: جميع مناطق أبوظبي">Service Areas: All Abu Dhabi areas</li>
+                        <li data-en="What's Included: Basic tools, screws, small materials" data-ar="ما هو مشمول: أدوات أساسية، براغي، مواد صغيرة">What's Included: Basic tools, screws, small materials</li>
+                        <li data-en="Licensed: Only works with licensed maintenance companies" data-ar="مرخص: يعمل فقط مع شركات الصيانة المرخصة">Licensed: Only works with licensed maintenance companies</li>
+                    </ul>
+                    
+                    <div class="whatsapp-contact">
+                        <h4 data-en="Booking:" data-ar="الحجز:">Booking:</h4>
+                        <p data-en="Online platform with instant confirmation" data-ar="منصة إلكترونية مع التأكيد الفوري">Online platform with instant confirmation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Budget-Friendly Options -->
+        <div class="content-section">
+            <h2 data-en="Budget-Friendly Handyman Options (Under AED 100/hour)" data-ar="خيارات العمال الماهرين الاقتصادية (أقل من 100 درهم/ساعة)">Budget-Friendly Handyman Options (Under AED 100/hour)</h2>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Facebook Freelance Groups" data-ar="مجموعات العمل الحر على فيسبوك">Facebook Freelance Groups</h3>
+                    <ul>
+                        <li data-en="Hourly Rate: AED 50-80/hour" data-ar="السعر بالساعة: 50-80 درهم/ساعة">Hourly Rate: AED 50-80/hour</li>
+                        <li data-en="Popular Groups:" data-ar="المجموعات الشعبية:">Popular Groups:</li>
+                        <li data-en="Sudanese Around Abu Dhabi (سودانيات حول أبوظبي)" data-ar="Sudanese Around Abu Dhabi (سودانيات حول أبوظبي)">Sudanese Around Abu Dhabi (سودانيات حول أبوظبي)</li>
+                        <li data-en="Filipino Abu Dhabi Community Groups" data-ar="مجموعات مجتمع الفلبينيين أبوظبي">Filipino Abu Dhabi Community Groups</li>
+                        <li data-en="Pakistani Workers Abu Dhabi" data-ar="العمال الباكستانيين أبوظبي">Pakistani Workers Abu Dhabi</li>
+                        <li data-en="Services: Curtain hanging, shelf mounting, basic repairs" data-ar="الخدمات: تعليق الستائر، تركيب الرفوف، الإصلاحات الأساسية">Services: Curtain hanging, shelf mounting, basic repairs</li>
+                        <li data-en="Payment: Usually cash only" data-ar="الدفع: عادة نقداً فقط">Payment: Usually cash only</li>
+                        <li data-en="Languages: Arabic, English, Tagalog, Urdu, Hindi" data-ar="اللغات: عربي، إنجليزي، تاجالوج، أردو، هندي">Languages: Arabic, English, Tagalog, Urdu, Hindi</li>
+                    </ul>
+                    
+                    <div class="tips-box">
+                        <h4 data-en="Tips:" data-ar="نصائح:">Tips:</h4>
+                        <p data-en="Always ask for photos of previous work, get quotes via WhatsApp" data-ar="اطلب دائماً صور الأعمال السابقة، احصل على عروض الأسعار عبر واتساب">Always ask for photos of previous work, get quotes via WhatsApp</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Local Handyman Shops" data-ar="محلات العمال الماهرين المحلية">Local Handyman Shops</h3>
+                    <ul>
+                        <li data-en="Hourly Rate: AED 60-90/hour" data-ar="السعر بالساعة: 60-90 درهم/ساعة">Hourly Rate: AED 60-90/hour</li>
+                        <li data-en="Locations: Muroor Road, Electra Street, Baniyas area" data-ar="المواقع: شارع مرور، شارع الكترا، منطقة بنياس">Locations: Muroor Road, Electra Street, Baniyas area</li>
+                        <li data-en="Services: Walk-in repairs, tool sales, quick fixes" data-ar="الخدمات: إصلاحات فورية، بيع أدوات، إصلاحات سريعة">Services: Walk-in repairs, tool sales, quick fixes</li>
+                        <li data-en="Languages: Primarily Arabic, some English" data-ar="اللغات: عربي بشكل أساسي، بعض الإنجليزية">Languages: Primarily Arabic, some English</li>
+                        <li data-en="Payment: Cash preferred" data-ar="الدفع: النقد مفضل">Payment: Cash preferred</li>
+                        <li data-en="Best For: Immediate small repairs, buying tools" data-ar="الأفضل لـ: إصلاحات صغيرة فورية، شراء أدوات">Best For: Immediate small repairs, buying tools</li>
+                        <li data-en="Advantages: Face-to-face negotiation, local knowledge" data-ar="المزايا: تفاوض وجهاً لوجه، معرفة محلية">Advantages: Face-to-face negotiation, local knowledge</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Premium App-Based Services -->
+        <div class="content-section">
+            <h2 data-en="Premium App-Based Services" data-ar="الخدمات المميزة عبر التطبيقات">Premium App-Based Services</h2>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Urban Company (Justlife)" data-ar="أوربان كومباني (جست لايف)">Urban Company (Justlife)</h3>
+                    <ul>
+                        <li data-en="Hourly Rate: AED 120-129/hour + materials" data-ar="السعر بالساعة: 120-129 درهم/ساعة + المواد">Hourly Rate: AED 120-129/hour + materials</li>
+                        <li data-en="Rating: 4.4 stars (400+ reviews)" data-ar="التقييم: 4.4 نجمة (400+ تقييم)">Rating: 4.4 stars (400+ reviews)</li>
+                        <li data-en="Services: Handyman, cleaning, pest control, deep cleaning" data-ar="الخدمات: عمال ماهرين، تنظيف، مكافحة آفات، تنظيف عميق">Services: Handyman, cleaning, pest control, deep cleaning</li>
+                        <li data-en="Service Areas: All Abu Dhabi neighborhoods" data-ar="مناطق الخدمة: جميع أحياء أبوظبي">Service Areas: All Abu Dhabi neighborhoods</li>
+                        <li data-en="Booking: Mobile app or website" data-ar="الحجز: تطبيق الجوال أو الموقع">Booking: Mobile app or website</li>
+                        <li data-en="Payment: Multiple options including card" data-ar="الدفع: خيارات متعددة تشمل البطاقة">Payment: Multiple options including card</li>
+                        <li data-en="What's Included: Professional toolkit, basic materials" data-ar="ما هو مشمول: أدوات مهنية، مواد أساسية">What's Included: Professional toolkit, basic materials</li>
+                        <li data-en="Languages: English, Arabic, Hindi" data-ar="اللغات: إنجليزي، عربي، هندي">Languages: English, Arabic, Hindi</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Mr Usta" data-ar="مستر أوستا">Mr Usta</h3>
+                    <ul>
+                        <li data-en="Rating: 4.6 stars (Google reviews)" data-ar="التقييم: 4.6 نجمة (تقييمات جوجل)">Rating: 4.6 stars (Google reviews)</li>
+                        <li data-en="Services: All-in-one app for mounting, fixing, AC, plumbing" data-ar="الخدمات: تطبيق شامل للتركيب والإصلاح والتكييف والسباكة">Services: All-in-one app for mounting, fixing, AC, plumbing</li>
+                        <li data-en="Booking: Mobile app and website" data-ar="الحجز: تطبيق الجوال والموقع">Booking: Mobile app and website</li>
+                        <li data-en="Coverage: Abu Dhabi wide" data-ar="التغطية: جميع أنحاء أبوظبي">Coverage: Abu Dhabi wide</li>
+                        <li data-en="Features: Upfront pricing, tracked service" data-ar="المميزات: تسعير مقدم، خدمة متتبعة">Features: Upfront pricing, tracked service</li>
+                        <li data-en="Languages: Multiple languages supported" data-ar="اللغات: دعم لغات متعددة">Languages: Multiple languages supported</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specialized Services -->
+        <div class="content-section">
+            <h2 data-en="What's Included vs Extra Costs" data-ar="ما هو مشمول مقابل التكاليف الإضافية">What's Included vs Extra Costs</h2>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 data-en="Usually Included in Hourly Rate" data-ar="عادة مشمول في السعر بالساعة">Usually Included in Hourly Rate</h3>
+                    <ul>
+                        <li data-en="Basic hand tools (screwdriver, hammer, pliers)" data-ar="أدوات يدوية أساسية (مفك، شاكوش، كماشة)">Basic hand tools (screwdriver, hammer, pliers)</li>
+                        <li data-en="Small hardware (screws, nails, basic fittings)" data-ar="أجهزة صغيرة (براغي، مسامير، تركيبات أساسية)">Small hardware (screws, nails, basic fittings)</li>
+                        <li data-en="Transportation to your location" data-ar="النقل إلى موقعك">Transportation to your location</li>
+                        <li data-en="Basic consultation and assessment" data-ar="استشارة وتقييم أساسي">Basic consultation and assessment</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 data-en="Extra Costs to Expect" data-ar="التكاليف الإضافية المتوقعة">Extra Costs to Expect</h3>
+                    <ul>
+                        <li data-en="Materials and Parts: Cost price + 10-20% service fee" data-ar="المواد والقطع: سعر التكلفة + 10-20% رسوم خدمة">Materials and Parts: Cost price + 10-20% service fee</li>
+                        <li data-en="Specialized Tools: Drill bits, saw blades, specific fixtures" data-ar="أدوات متخصصة: ريش حفر، شفرات منشار، تركيبات محددة">Specialized Tools: Drill bits, saw blades, specific fixtures</li>
+                        <li data-en="Major Components: Light fixtures, faucets, electrical switches" data-ar="مكونات كبيرة: تركيبات إضاءة، حنفيات، مفاتيح كهربائية">Major Components: Light fixtures, faucets, electrical switches</li>
+                        <li data-en="Paint and Supplies: If painting work required" data-ar="الطلاء واللوازم: إذا كان العمل يتطلب طلاء">Paint and Supplies: If painting work required</li>
+                        <li data-en="Disposal Fees: Removing old fixtures or materials" data-ar="رسوم التخلص: إزالة التركيبات أو المواد القديمة">Disposal Fees: Removing old fixtures or materials</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tips-box">
+                <h3 data-en="Sample Project Costs" data-ar="تكاليف المشاريع النموذجية">Sample Project Costs</h3>
+                <ul>
+                    <li data-en="Hang 3 Pictures: AED 80-120 total" data-ar="تعليق 3 صور: 80-120 درهم إجمالي">Hang 3 Pictures: AED 80-120 total</li>
+                    <li data-en="Mount 50-inch TV: AED 200-350 total" data-ar="تركيب تلفزيون 50 بوصة: 200-350 درهم إجمالي">Mount 50-inch TV: AED 200-350 total</li>
+                    <li data-en="Install Bathroom Shelf: AED 100-150 total" data-ar="تركيب رف حمام: 100-150 درهم إجمالي">Install Bathroom Shelf: AED 100-150 total</li>
+                    <li data-en="Fix Leaky Faucet: AED 120-200 total" data-ar="إصلاح حنفية مسربة: 120-200 درهم إجمالي">Fix Leaky Faucet: AED 120-200 total</li>
+                    <li data-en="Assemble IKEA Wardrobe: AED 150-250 total" data-ar="تجميع خزانة إيكيا: 150-250 درهم إجمالي">Assemble IKEA Wardrobe: AED 150-250 total</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Money-Saving Tips -->
+        <div class="content-section">
+            <h2 data-en="Money-Saving Tips & Shortcuts" data-ar="نصائح توفير المال والاختصارات">Money-Saving Tips & Shortcuts</h2>
+            
+            <div class="tips-box">
+                <h3 data-en="Booking Tips:" data-ar="نصائح الحجز:">Booking Tips:</h3>
+                <ul>
+                    <li data-en="Book multiple tasks together – better hourly rates" data-ar="احجز مهام متعددة معاً - أسعار أفضل بالساعة">Book multiple tasks together – better hourly rates</li>
+                    <li data-en="Avoid weekends and evenings – premium pricing" data-ar="تجنب عطلات نهاية الأسبوع والأمسيات - أسعار مميزة">Avoid weekends and evenings – premium pricing</li>
+                    <li data-en="Buy materials yourself – avoid markup fees" data-ar="اشتر المواد بنفسك - تجنب رسوم الزيادة">Buy materials yourself – avoid markup fees</li>
+                    <li data-en="Use first-time customer discounts – many apps offer them" data-ar="استخدم خصومات العملاء الجدد - العديد من التطبيقات تقدمها">Use first-time customer discounts – many apps offer them</li>
+                    <li data-en="Get quotes from 3 providers – compare total project cost" data-ar="احصل على عروض من 3 مزودين - قارن التكلفة الإجمالية للمشروع">Get quotes from 3 providers – compare total project cost</li>
+                </ul>
+
+                <h3 data-en="Time-Saving Tips:" data-ar="نصائح توفير الوقت:">Time-Saving Tips:</h3>
+                <ul>
+                    <li data-en="Early morning visits: Less crowded, faster service" data-ar="الزيارات الصباحية المبكرة: أقل ازدحاماً، خدمة أسرع">Early morning visits: Less crowded, faster service</li>
+                    <li data-en="Take photos of the problem or project" data-ar="التقط صور للمشكلة أو المشروع">Take photos of the problem or project</li>
+                    <li data-en="List everything you need done for bulk pricing" data-ar="اسرد كل ما تحتاجه لتسعير الكميات">List everything you need done for bulk pricing</li>
+                    <li data-en="Check reviews and ratings carefully" data-ar="تحقق من التقييمات والتقديرات بعناية">Check reviews and ratings carefully</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Final Important Note -->
+        <div class="content-section">
+            <div class="tips-box">
+                <p data-en="Remember: Always confirm rates and availability directly with service providers before booking. Keep digital and physical copies of all receipts and work documentation." data-ar="تذكر: أكد دائماً الأسعار والتوفر مباشرة مع مقدمي الخدمة قبل الحجز. احتفظ بنسخ رقمية وفيزيائية من جميع الإيصالات ووثائق العمل.">Remember: Always confirm rates and availability directly with service providers before booking. Keep digital and physical copies of all receipts and work documentation.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Language switching functionality
+        function switchLanguage(lang) {
+            const html = document.documentElement;
+            const langOptions = document.querySelectorAll('.lang-option');
+            
+            // Update HTML attributes
+            html.setAttribute('lang', lang);
+            html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            html.setAttribute('data-language', lang);
+            
+            // Update active language button
+            langOptions.forEach(option => {
+                option.classList.remove('active');
+                if (option.getAttribute('data-lang') === lang) {
+                    option.classList.add('active');
+                }
+            });
+            
+            // Switch content for elements with data-en and data-ar attributes
+            const elements = document.querySelectorAll('[data-en][data-ar]');
+            elements.forEach(element => {
+                if (lang === 'ar') {
+                    element.textContent = element.getAttribute('data-ar');
+                } else {
+                    element.textContent = element.getAttribute('data-en');
+                }
+            });
+            
+            // Store language preference
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        // Load saved language preference on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLanguage = localStorage.getItem('selectedLanguage');
+            if (savedLanguage && (savedLanguage === 'ar' || savedLanguage === 'en')) {
+                switchLanguage(savedLanguage);
+            }
+        });
+    </script>
+</body>
+</html>

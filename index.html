@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-language="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New In Abu Dhabi - Complete Settlement Guide | جديد في أبوظبي - دليل الاستقرار الكامل</title>
+    <meta name="description" content="Complete guide for new residents in Abu Dhabi. دليل شامل للمقيمين الجدد في أبوظبي">
+    
+    <!-- Arabic Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google AdSense - Add your real Publisher ID when ready -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script> -->
+    
+    <style>
+        /* Inline CSS for faster loading */
+        .abu-dhabi-guide {
+            font-family: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Arabic RTL Support */
+        [dir="rtl"] .abu-dhabi-guide {
+            font-family: 'Cairo', 'Inter', sans-serif;
+        }
+
+        [dir="rtl"] .guide-container {
+            text-align: right;
+        }
+
+        [dir="rtl"] .search-box-main {
+            direction: rtl;
+        }
+
+        [dir="rtl"] .categories-grid {
+            direction: rtl;
+        }
+
+        [dir="rtl"] .nav-list {
+            flex-direction: row-reverse;
+        }
+
+        /* Language Switcher */
+        .language-switcher {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        [dir="rtl"] .language-switcher {
+            right: auto;
+            left: 15px;
+        }
+
+        .lang-option {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #4a5568;
+            padding: 4px 8px;
+            border-radius: 8px;
+        }
+
+        .lang-option:hover {
+            background: rgba(212, 165, 116, 0.2);
+            color: #2d3748;
+        }
+
+        .lang-option.active {
+            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            color: white;
+        }
+
+        .lang-divider {
+            color: #a0aec0;
+            font-weight: 300;
+        }
+
+
+        .guide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .guide-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 20px 20px;
+            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .guide-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .guide-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        /* Search Section */
+        .search-container {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-box-main {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.95);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50px;
+            padding: 5px 5px 5px 20px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .search-box-main:focus-within {
+            border-color: rgba(255,255,255,0.8);
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.2);
+            background: white;
+        }
+
+        .search-box-main input {
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            padding: 12px 15px;
+            font-size: 1rem;
+            color: #2d3748;
+        }
+
+        .search-box-main input::placeholder {
+            color: #718096;
+        }
+
+        .search-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .search-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-1px);
+        }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            margin-top: 10px;
+            background: white;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+            z-index: 100;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        /* Ad Containers */
+        .ad-container {
+            margin: 30px 0;
+            text-align: center;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .ad-label {
+            font-size: 0.75rem;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .ad-mobile-sticky {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+            .ad-mobile-sticky {
+                display: block;
+            }
+            body {
+                padding-bottom: 100px;
+            }
+        }
+
+        /* Products Section */
+        .products-section {
+            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            margin: 30px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(212, 165, 116, 0.15);
+        }
+
+        .product-card-minimal {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            margin: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .product-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .product-description {
+            color: #4a5568;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .product-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2c5f4f;
+        }
+
+        .product-btn {
+            background: linear-gradient(135deg, #2c5f4f 0%, #27ae60 100%);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(44, 95, 79, 0.25);
+        }
+
+        .product-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(44, 95, 79, 0.35);
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Categories Grid */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .categories-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(45deg, #d4a574, #e67e22);
+        }
+
+        .card-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .card-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(212,165,116,0.3), rgba(230,126,34,0.3));
+            z-index: 2;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .card-description {
+            font-size: 0.75rem;
+            color: #718096;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Review Section */
+        .review-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 50px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .review-section h2 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .review-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #4a5568;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #d4a574;
+            box-shadow: 0 0 0 3px rgba(212,165,116,0.1);
+        }
+
+        .rating-stars {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+
+        .star {
+            font-size: 1.5rem;
+            color: #e2e8f0;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .star:hover,
+        .star.active {
+            color: #ffd700;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212,165,116,0.3);
+        }
+
+        .no-reviews-yet {
+            text-align: center;
+            padding: 40px 20px;
+            color: #718096;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .guide-header h1 {
+                font-size: 2rem;
+            }
+            
+            .guide-header p {
+                font-size: 1rem;
+            }
+            
+            .card-image {
+                height: 150px;
+            }
+            
+            .search-box-main {
+                flex-direction: column;
+                padding: 15px;
+                border-radius: 15px;
+            }
+            
+            .search-box-main input {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            
+            .search-btn {
+                width: 100%;
+                justify-content: center;
+                border-radius: 10px;
+            }
+            
+            .product-footer {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="abu-dhabi-guide">
+    <div class="guide-container">
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher">
+            <span class="lang-option active" onclick="switchLanguage('en')" data-lang="en">EN</span>
+            <span class="lang-divider">|</span>
+            <span class="lang-option" onclick="switchLanguage('ar')" data-lang="ar">AR</span>
+        </div>
+        
+        <!-- Header Section with Search -->
+        <div class="guide-header">
+            <h1 data-en="New in Abu Dhabi?" data-ar="جديد في أبوظبي؟">New in Abu Dhabi?</h1>
+            <p data-en="Practical, budget-friendly guides for visas, SIMs, driving, kids, and weekend plans—curated by locals." data-ar="أدلة عملية واقتصادية للتأشيرات وشرائح الهاتف والقيادة والأطفال وخطط نهاية الأسبوع - منسقة من قبل السكان المحليين.">Practical, budget-friendly guides for visas, SIMs, driving, kids, and weekend plans—curated by locals.</p>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-box-main">
+                    <input type="text" id="main-search" data-en="Search for services, locations, or information..." data-ar="ابحث عن الخدمات أو المواقع أو المعلومات..." placeholder="Search for services, locations, or information..." onkeyup="performSearch()" onkeypress="handleSearchEnter(event)">
+                    <button class="search-btn" onclick="performSearch()" data-en="🔍 Search" data-ar="🔍 بحث">
+                        🔍 Search
+                    </button>
+                </div>
+                
+                <div class="search-results" id="search-results"></div>
+            </div>
+        </div>
+
+        <!-- Top Ad Space - Enable when you get AdSense approval -->
+        <!-- <div class="ad-container">
+            <div class="ad-label">Advertisement</div>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div> -->
+
+        <!-- Featured Digital Products Section -->
+        <div class="products-section">
+            <div class="product-card-minimal">
+                <div class="product-content">
+                    <h3 class="product-title" data-en="💡 Transportation Hack - Save Money on Transport" data-ar="💡 خدعة النقل - وفر المال على المواصلات">💡 Transportation Hack - Save Money on Transport</h3>
+                    <p class="product-description" data-en="Don't get lost, fined, or overcharged. Get insider tips: exact buses to Dubai, cheapest smart cards, late-night taxi tricks." data-ar="لا تتيه أو تدفع غرامات أو تدفع أكثر من اللازم. احصل على نصائح داخلية: الحافلات المحددة إلى دبي، أرخص البطاقات الذكية، حيل التاكسي في وقت متأخر من الليل.">Don't get lost, fined, or overcharged. Get insider tips: exact buses to Dubai, cheapest smart cards, late-night taxi tricks.</p>
+                    <div class="product-footer">
+                        <span class="price" data-en="Only AED 5" data-ar="5 دراهم فقط">Only AED 5</span>
+                        <a href="https://eternabasics.myshopify.com/products/transportation-hack" class="product-btn" target="_blank" data-en="Get Guide" data-ar="احصل على الدليل">Get Guide</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories Grid -->
+        <div class="categories-grid">
+            
+            <a href="visa-legal.html" class="category-card">
+                <div class="card-image">
+                    <img src="visa.jpg" alt="Visa & Legal Help" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title" data-en="Visa & Legal Help" data-ar="مساعدة التأشيرات والقانون">Visa & Legal Help</h3>
+                    <p class="card-description" data-en="Trusted typing centers, Tasheel services, Emirates ID, family sponsorship, and legal support" data-ar="مراكز طباعة موثوقة، خدمات تسهيل، الهوية الإماراتية، كفالة العائلة، والدعم القانوني">Trusted typing centers, Tasheel services, Emirates ID, family sponsorship, and legal support</p>
+                </div>
+            </a>
+
+            <a href="newcomer-setup.html" class="category-card">
+                <div class="card-image">
+                    <img src="settle.jpg" alt="Newcomer Setup" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title" data-en="Newcomer Setup" data-ar="إعداد القادمين الجدد">Newcomer Setup</h3>
+                    <p class="card-description" data-en="SIM cards, mobile plans, furniture, bank accounts, and everything to get started in Abu Dhabi" data-ar="شرائح الهاتف وخطط الجوال والأثاث والحسابات المصرفية وكل ما تحتاجه للبدء في أبوظبي">SIM cards, mobile plans, furniture, bank accounts, and everything to get started in Abu Dhabi</p>
+                </div>
+            </a>
+            
+            <a href="transport-driving.html" class="category-card">
+                <div class="card-image">
+                    <img src="driving.jpg" alt="Transport & Driving License" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title" data-en="Transport & Driving License" data-ar="النقل ورخصة القيادة">Transport & Driving License</h3>
+                    <p class="card-description" data-en="Get your UAE driving license, public transport info, and vehicle registration guides" data-ar="احصل على رخصة القيادة الإماراتية ومعلومات النقل العام وأدلة تسجيل المركبات">Get your UAE driving license, public transport info, and vehicle registration guides</p>
+                </div>
+            </a>
+
+            <a href="food-groceries.html" class="category-card">
+                <div class="card-image">
+                    <img src="grocery (1).jpg" alt="Food & Grocery" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title" data-en="Food & Grocery" data-ar="الطعام والبقالة">Food & Grocery</h3>
+                    <p class="card-description" data-en="Best supermarkets, local markets, and food delivery options in Abu Dhabi" data-ar="أفضل الأسواق التجارية والأسواق المحلية وخيارات توصيل الطعام في أبوظبي">Best supermarkets, local markets, and food delivery options in Abu Dhabi</p>
+                </div>
+            </a>
+
+            <a href="discount-warehouses.html" class="category-card">
+                <div class="card-image">
+                    <img src="warehouse.jpg" alt="Discount Warehouses" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title" data-en="Discount Warehouses" data-ar="مستودعات التخفيضات">Discount Warehouses</h3>
+                    <p class="card-description" data-en="Save money shopping at wholesale and discount stores across the city" data-ar="وفر المال من التسوق في متاجر الجملة والخصم في جميع أنحاء المدينة">Save money shopping at wholesale and discount stores across the city</p>
+                </div>
+            </a>
+
+            <!-- Mid-Content Ad - Enable when you get AdSense approval -->
+            <!-- <div class="ad-container" style="grid-column: 1 / -1;">
+                <div class="ad-label">Advertisement</div>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-XXXXXXXXXX"
+                     data-ad-slot="XXXXXXXXXX"
+                     data-ad-format="rectangle"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div> -->
+
+            <a href="healthcare.html" class="category-card">
+                <div class="card-image">
+                    <img src="hospital.jpg" alt="Discounted Hospitals" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title" data-en="Discounted Hospitals" data-ar="مستشفيات مخفضة التكلفة">Discounted Hospitals</h3>
+                    <p class="card-description" data-en="Affordable healthcare options and medical services in Abu Dhabi" data-ar="خيارات الرعاية الصحية بأسعار معقولة والخدمات الطبية في أبوظبي">Affordable healthcare options and medical services in Abu Dhabi</p>
+                </div>
+            </a>
+
+            <a href="handyman-repair.html" class="category-card">
+                <div class="card-image">
+                    <img src="handyman.jpg" alt="Handyman & Repair" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title" data-en="Handyman & Repair" data-ar="صيانة وإصلاح">Handyman & Repair</h3>
+                    <p class="card-description" data-en="Reliable home repair services, maintenance, and handyman contacts" data-ar="خدمات إصلاح منزلية موثوقة وصيانة وجهات اتصال عمال ماهرين">Reliable home repair services, maintenance, and handyman contacts</p>
+                </div>
+            </a>
+
+            <a href="mobile-pc-repair.html" class="category-card">
+                <div class="card-image">
+                    <img src="pc repar.jpg" alt="Mobile & PC Repair" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title" data-en="Mobile & PC Repair" data-ar="إصلاح الجوال والكمبيوتر">Mobile & PC Repair</h3>
+                    <p class="card-description" data-en="Fix your devices at trusted repair shops with fair pricing" data-ar="أصلح أجهزتك في محلات إصلاح موثوقة بأسعار عادلة">Fix your devices at trusted repair shops with fair pricing</p>
+                </div>
+            </a>
+
+            <a href="kids-education.html" class="category-card">
+                <div class="card-image">
+                    <img src="kids education.jpg" alt="Kids Education" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title" data-en="Kids Education" data-ar="تعليم الأطفال">Kids Education</h3>
+                    <p class="card-description" data-en="Nurseries, schools, and educational resources for your children" data-ar="دور الحضانة والمدارس والموارد التعليمية لأطفالك">Nurseries, schools, and educational resources for your children</p>
+                </div>
+            </a>
+
+            <a href="kids-fun.html" class="category-card">
+                <div class="card-image">
+                    <img src="kids fun.jpg" alt="Kids Fun & Activities" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title" data-en="Kids Fun & Activities" data-ar="متعة وأنشطة الأطفال">Kids Fun & Activities</h3>
+                    <p class="card-description" data-en="Entertainment, playgrounds, and activities to keep kids happy" data-ar="الترفيه والملاعب والأنشطة لإسعاد الأطفال">Entertainment, playgrounds, and activities to keep kids happy</p>
+                </div>
+            </a>
+
+            <a href="tailor-curtains.html" class="category-card">
+                <div class="card-image">
+                    <img src="tailor.jpg" alt="Tailor, Curtains & Bedsheets" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title" data-en="Tailor, Curtains & Bedsheets" data-ar="خياط وستائر وملاءات">Tailor, Curtains & Bedsheets</h3>
+                    <p class="card-description" data-en="Custom tailoring and home textile services at great prices" data-ar="خياطة مخصصة وخدمات المنسوجات المنزلية بأسعار رائعة">Custom tailoring and home textile services at great prices</p>
+                </div>
+            </a>
+
+            <a href="cargo-shipping.html" class="category-card">
+                <div class="card-image">
+                    <img src="cargo.jpg" alt="Home Country Cargo" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title" data-en="Home Country Cargo" data-ar="شحن الوطن الأم">Home Country Cargo</h3>
+                    <p class="card-description" data-en="Ship items back home with reliable and affordable cargo services" data-ar="اشحن الأغراض إلى الوطن الأم مع خدمات شحن موثوقة ومعقولة التكلفة">Ship items back home with reliable and affordable cargo services</p>
+                </div>
+            </a>
+
+            <a href="quran-islamic.html" class="category-card">
+                <div class="card-image">
+                    <img src="quraan.jpg" alt="Quran Centers & Islamic Books" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title" data-en="Quran Centers & Islamic Books" data-ar="مراكز القرآن والكتب الإسلامية">Quran Centers & Islamic Books</h3>
+                    <p class="card-description" data-en="Islamic education centers and bookstores for spiritual growth" data-ar="مراكز التعليم الإسلامي والمكتبات للنمو الروحي">Islamic education centers and bookstores for spiritual growth</p>
+                </div>
+            </a>
+
+            <a href="gyms-wellness.html" class="category-card">
+                <div class="card-image">
+                    <img src="gym.jpg" alt="Gyms & Wellness" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title" data-en="Gyms & Wellness" data-ar="صالات رياضية وعافية">Gyms & Wellness</h3>
+                    <p class="card-description" data-en="Fitness centers, spas, and wellness facilities for healthy living" data-ar="مراكز اللياقة البدنية والمنتجعات الصحية ومرافق العافية للعيش الصحي">Fitness centers, spas, and wellness facilities for healthy living</p>
+                </div>
+            </a>
+
+            <a href="weekend-fun.html" class="category-card">
+                <div class="card-image">
+                    <img src="weekend.jpg" alt="Weekend Fun" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title" data-en="Weekend Fun" data-ar="متعة نهاية الأسبوع">Weekend Fun</h3>
+                    <p class="card-description" data-en="Discover exciting weekend activities and attractions in Abu Dhabi" data-ar="اكتشف أنشطة نهاية الأسبوع المثيرة والمعالم في أبوظبي">Discover exciting weekend activities and attractions in Abu Dhabi</p>
+                </div>
+            </a>
+
+        </div>
+
+
+        <!-- Bottom Ad Space - Enable when you get AdSense approval -->
+        <!-- <div class="ad-container">
+            <div class="ad-label">Advertisement</div>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div> -->
+
+        <!-- Review Section -->
+        <div class="review-section">
+            <h2>Share Your Experience</h2>
+            <p>Help other newcomers by sharing your experience with services in Abu Dhabi</p>
+            
+            <form class="review-form" onsubmit="submitReview(event)">
+                <div class="form-group">
+                    <label for="reviewer-name">Your Name</label>
+                    <input type="text" id="reviewer-name" name="name" required placeholder="Enter your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service-category">Service Category</label>
+                    <select id="service-category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="visa">Visa & Legal Help</option>
+                        <option value="newcomer">Newcomer Setup</option>
+                        <option value="transport">Transport & Driving License</option>
+                        <option value="food">Food & Grocery</option>
+                        <option value="discount">Discount Warehouses</option>
+                        <option value="hospital">Discounted Hospitals</option>
+                        <option value="handyman">Handyman & Repair</option>
+                        <option value="mobile">Mobile & PC Repair</option>
+                        <option value="education">Kids Education</option>
+                        <option value="kids-fun">Kids Fun & Activities</option>
+                        <option value="tailor">Tailor, Curtains & Bedsheets</option>
+                        <option value="cargo">Home Country Cargo</option>
+                        <option value="quran">Quran Centers & Islamic Books</option>
+                        <option value="gym">Gyms & Wellness</option>
+                        <option value="weekend">Weekend Fun</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Rating</label>
+                    <div class="rating-stars" data-rating="0">
+                        <span class="star" data-value="1">⭐</span>
+                        <span class="star" data-value="2">⭐</span>
+                        <span class="star" data-value="3">⭐</span>
+                        <span class="star" data-value="4">⭐</span>
+                        <span class="star" data-value="5">⭐</span>
+                    </div>
+                    <input type="hidden" id="rating-value" name="rating" value="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="review-text">Your Review</label>
+                    <textarea id="review-text" name="review" required placeholder="Share your experience, tips, or recommendations..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Review</button>
+            </form>
+            
+            <div class="recent-reviews">
+                <h3>Community Reviews</h3>
+                <div class="no-reviews-yet">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">💬</div>
+                    <h4 style="color: #4a5568; margin-bottom: 10px;">No reviews yet</h4>
+                    <p>Be the first to share your experience and help other newcomers to Abu Dhabi!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer style="text-align: center; padding: 40px 20px; background: #2d3748; color: white; margin-top: 50px; border-radius: 15px;">
+            <div style="margin-bottom: 20px;">
+                <h3>🏜️ New In Abu Dhabi</h3>
+                <p style="opacity: 0.8;">Your trusted guide for settling in the UAE capital</p>
+            </div>
+            
+            <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; flex-wrap: wrap;">
+                <a href="privacy.html" style="color: white; text-decoration: none;">Privacy Policy</a>
+                <a href="terms.html" style="color: white; text-decoration: none;">Terms of Service</a>
+                <a href="mailto:Eterna.General@gmail.com" style="color: white; text-decoration: none;">Contact</a>
+            </div>
+            
+            
+            <p style="opacity: 0.7; margin: 0;">&copy; 2025 New In Abu Dhabi. All rights reserved.</p>
+        </footer>
+
+    </div>
+</div>
+
+<!-- Mobile Ad (Sticky Bottom) - Enable when you get AdSense approval -->
+<!-- <div class="ad-mobile-sticky">
+    <div class="ad-label">Advertisement</div>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXX"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="fluid"
+         data-layout-key="-fb+5w+4e-db+86"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div> -->
+
+<script>
+// Search Functionality
+const searchData = [
+    {title: "Visa & Legal Help", description: "Trusted typing centers, Tasheel services, Emirates ID, family sponsorship, and legal support"},
+    {title: "Newcomer Setup", description: "SIM cards, mobile plans, furniture, bank accounts, and everything to get started in Abu Dhabi"},
+    {title: "Transport & Driving License", description: "Get your UAE driving license, public transport info, and vehicle registration guides"},
+    {title: "Food & Grocery", description: "Best supermarkets, local markets, and food delivery options in Abu Dhabi"},
+    {title: "Discount Warehouses", description: "Save money shopping at wholesale and discount stores across the city"},
+    {title: "Discounted Hospitals", description: "Affordable healthcare options and medical services in Abu Dhabi"},
+    {title: "Handyman & Repair", description: "Reliable home repair services, maintenance, and handyman contacts"},
+    {title: "Mobile & PC Repair", description: "Fix your devices at trusted repair shops with fair pricing"},
+    {title: "Kids Education", description: "Nurseries, schools, and educational resources for your children"},
+    {title: "Kids Fun & Activities", description: "Entertainment, playgrounds, and activities to keep kids happy"},
+    {title: "Tailor, Curtains & Bedsheets", description: "Custom tailoring and home textile services at great prices"},
+    {title: "Home Country Cargo", description: "Ship items back home with reliable and affordable cargo services"},
+    {title: "Quran Centers & Islamic Books", description: "Islamic education centers and bookstores for spiritual growth"},
+    {title: "Gyms & Wellness", description: "Fitness centers, spas, and wellness facilities for healthy living"},
+    {title: "Weekend Fun", description: "Discover exciting weekend activities and attractions in Abu Dhabi"}
+];
+
+function performSearch() {
+    const query = document.getElementById('main-search').value.toLowerCase().trim();
+    const resultsContainer = document.getElementById('search-results');
+    
+    if (query.length === 0) {
+        resultsContainer.style.display = 'none';
+        return;
+    }
+    
+    const filteredResults = searchData.filter(item => 
+        item.title.toLowerCase().includes(query) || 
+        item.description.toLowerCase().includes(query)
+    );
+    
+    if (filteredResults.length === 0) {
+        resultsContainer.innerHTML = '<div style="padding: 20px; text-align: center; color: #718096;">No results found for "' + query + '"</div>';
+        resultsContainer.style.display = 'block';
+        return;
+    }
+    
+    const resultsHTML = filteredResults.map(item => `
+        <div style="padding: 15px 20px; border-bottom: 1px solid #f0f4f8; cursor: pointer; transition: background-color 0.2s ease;" 
+             onmouseover="this.style.backgroundColor='#f7fafc'" 
+             onmouseout="this.style.backgroundColor='white'">
+            <div style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">${item.title}</div>
+            <div style="color: #718096; font-size: 0.9rem;">${item.description}</div>
+        </div>
+    `).join('');
+    
+    resultsContainer.innerHTML = resultsHTML;
+    resultsContainer.style.display = 'block';
+}
+
+function handleSearchEnter(event) {
+    if (event.key === 'Enter') {
+        performSearch();
+    }
+}
+
+// Hide search results when clicking outside
+document.addEventListener('click', function(event) {
+    const searchSection = document.querySelector('.search-container');
+    if (searchSection && !searchSection.contains(event.target)) {
+        document.getElementById('search-results').style.display = 'none';
+    }
+});
+
+// Rating Stars Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const stars = document.querySelectorAll('.star');
+    const ratingValue = document.getElementById('rating-value');
+    
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            const rating = this.getAttribute('data-value');
+            ratingValue.value = rating;
+            
+            stars.forEach((s, index) => {
+                if (index < rating) {
+                    s.classList.add('active');
+                } else {
+                    s.classList.remove('active');
+                }
+            });
+        });
+        
+        star.addEventListener('mouseover', function() {
+            const rating = this.getAttribute('data-value');
+            stars.forEach((s, index) => {
+                if (index < rating) {
+                    s.style.color = '#ffd700';
+                } else {
+                    s.style.color = '#e2e8f0';
+                }
+            });
+        });
+    });
+    
+    document.querySelector('.rating-stars').addEventListener('mouseleave', function() {
+        const currentRating = ratingValue.value;
+        stars.forEach((s, index) => {
+            if (index < currentRating) {
+                s.style.color = '#ffd700';
+            } else {
+                s.style.color = '#e2e8f0';
+            }
+        });
+    });
+});
+
+// Submit Review Function
+function submitReview(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(event.target);
+    const reviewData = {
+        name: formData.get('name'),
+        category: formData.get('category'),
+        rating: formData.get('rating'),
+        review: formData.get('review'),
+        date: new Date().toLocaleDateString()
+    };
+    
+    // Here you would typically send the data to your server
+    alert('Thank you for your review! It will be published after moderation.');
+    
+    // Reset form
+    event.target.reset();
+    document.getElementById('rating-value').value = '0';
+    document.querySelectorAll('.star').forEach(star => {
+        star.classList.remove('active');
+        star.style.color = '#e2e8f0';
+    });
+}
+
+// Language Switching Functionality
+function switchLanguage(lang) {
+    const html = document.documentElement;
+    const langOptions = document.querySelectorAll('.lang-option');
+    
+    // Update HTML attributes
+    html.setAttribute('lang', lang);
+    html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    html.setAttribute('data-language', lang);
+    
+    // Update active language button
+    langOptions.forEach(option => {
+        option.classList.remove('active');
+        if (option.getAttribute('data-lang') === lang) {
+            option.classList.add('active');
+        }
+    });
+    
+    // Switch content for elements with data-en and data-ar attributes
+    const elements = document.querySelectorAll('[data-en][data-ar]');
+    elements.forEach(element => {
+        if (lang === 'ar') {
+            // Handle input placeholders
+            if (element.tagName.toLowerCase() === 'input') {
+                element.placeholder = element.getAttribute('data-ar');
+            } else {
+                element.textContent = element.getAttribute('data-ar');
+            }
+        } else {
+            // Handle input placeholders
+            if (element.tagName.toLowerCase() === 'input') {
+                element.placeholder = element.getAttribute('data-en');
+            } else {
+                element.textContent = element.getAttribute('data-en');
+            }
+        }
+    });
+    
+    // Store language preference
+    localStorage.setItem('selectedLanguage', lang);
+    
+    console.log(`Language switched to: ${lang === 'ar' ? 'Arabic' : 'English'}`);
+}
+
+// Load saved language preference on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const savedLanguage = localStorage.getItem('selectedLanguage');
+    if (savedLanguage && (savedLanguage === 'ar' || savedLanguage === 'en')) {
+        switchLanguage(savedLanguage);
+    }
+});
+
+// Initialize AdSense
+window.addEventListener('load', function() {
+    if (typeof adsbygoogle !== 'undefined') {
+        console.log('AdSense loaded successfully');
+    }
+});
+</script>
+
+</body>
+</html>

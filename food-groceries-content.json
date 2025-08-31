@@ -1,0 +1,906 @@
+{
+  "title": "Food & Groceries - New In Abu Dhabi",
+  "url": "https://newinabudhabi.com/food-groceries/",
+  "content": [
+    {
+      "tag": "h1",
+      "text": "Food & Groceries",
+      "className": "wp-block-post-title"
+    },
+    {
+      "tag": "p",
+      "text": "Discover the best grocery stores in Abu Dhabi for families and expats. From budget hypermarkets to specialty ethnic stores, find everything you need for grocery shopping in Abu Dhabi with current prices, hours, and delivery options..",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "p",
+      "text": "Everyday Hypermarkets",
+      "className": "has-text-align-center has-normal-font-size"
+    },
+    {
+      "tag": "p",
+      "text": "24-Hour Stores:",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Choithrams (AED 200+ average shop)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Abela Supermarket (AED 150+ average)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Al Madina Hypermarket (AED 180+ average)",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Budget Options:",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Union Coop (AED 120+ average shop)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Aswaaq (AED 100+ average)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Mina Markets (AED 80+ average)",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Premium/International:",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Waitrose (AED 300+ average shop)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Spinneys (AED 250+ average)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Organic Foods & Cafe (AED 200+ average)",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "24-Hour Grocery Stores Abu Dhabi",
+      "className": "has-text-align-center has-normal-font-size"
+    },
+    {
+      "tag": "p",
+      "text": "When you need emergency grocery shopping in Abu Dhabi, these 24-hour grocery stores are your best option. Open around the clock, these supermarkets ensure you never run out of essentials.",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Choithrams",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "p",
+      "text": "Premium 24-Hour Chain",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Location 1: King Khalid Bin Abdul Aziz Street, Al Khalidiya",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Phone: +971 2 665 7009",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Location 2: Corniche Road, near Oryx Hotel",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Phone: +971 2 681 6930",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Hours: 24/7 at main branches",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Google Maps: Al Khalidiya Branch | Corniche Branch",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Why Choose: Always open, fresh bakery, international brands",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Best For: Emergency shopping, late-night needs",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Average Bill: AED 200-500",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Online: Delivery available through website",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Abela Supermarket",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "p",
+      "text": "24-Hour Organic & Vegan Options",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Address: Ground Floor, Bin Butti Building, Al Khalidiya",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Phone: +971 2 667 4675",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Hours: 24/7",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Google Maps: View Location",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Why Choose: Organic products, vegan options, always open",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Best For: Health-conscious families, emergency shopping",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Average Bill: AED 150-400",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Special: Large selection of organic and specialty diet foods",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Al Madina Hypermarket",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "p",
+      "text": "24-Hour Budget Option",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Main Location: 42nd Street, Mohamed Bin Zayed City",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Phone: +971 2 555 0033",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Other Branches: Al Raha, Al Mafraq, Musaffah",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Hours: 24/7",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Google Maps: MBZ City Location",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Why Choose: Budget-friendly, electronics section",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Best For: Late-night shopping, household items",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Average Bill: AED 120-350",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Specialty Grocery Stores Abu Dhabi – International Communities",
+      "className": "has-text-align-center has-normal-font-size"
+    },
+    {
+      "tag": "p",
+      "text": "Abu Dhabi’s diverse expat community is served by excellent specialty grocery stores. These ethnic grocery stores Abu Dhabi offer authentic ingredients from around the world, making it easy to cook traditional dishes from home.",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "p",
+      "text": "Ethiopian & African",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Habesha Food Supplies",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Location: Al Khalidiya, near Kitfo Restaurant",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Phone: +971 50 123 4567",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Hours: 9 AM – 9 PM daily",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Google Maps: View Location",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Specialties: Injera bread, teff flour, berbere spice, Ethiopian coffee",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Best For: Authentic Ethiopian cooking ingredients",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Average Bill: AED 80-200",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Korean & East Asian",
+      "className": "has-text-align-center has-normal-font-size"
+    },
+    {
+      "tag": "p",
+      "text": "QKO Asian Market",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Address: 214 Hamdan Bin Mohammed Street, Al Hisn",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Phone: +971 2 639 8888",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Hours: 10 AM – 10 PM daily",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Google Maps: View Location",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Specialties: Korean BBQ marinades, Japanese snacks, Thai sauces, frozen goods",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Best For: Authentic Asian cooking ingredients",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Average Bill: AED 100-300",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Delivery: Available within central Abu Dhabi",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "1004 Gourmet Asian Grocery",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Locations: Dalma Mall, Mushrif Mall (kiosks)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Phone: +971 2 550 9999",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Hours: Mall hours (10 AM – 10 PM)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Google Maps: Dalma Mall | Mushrif Mall",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Specialties: Korean ready meals, ramen varieties, bulgogi sauces",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Best For: Quick Asian meal solutions",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Average Bill: AED 50-150",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Turkish",
+      "className": "has-text-align-center"
+    },
+    {
+      "tag": "p",
+      "text": "Istanbul Turkish Mini Mart",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Location: Hazza Bin Zayed Street, near Lebanese Flower Restaurant",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Phone: +971 2 627 7788",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Hours: 8 AM – 10 PM daily",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Google Maps: View Location",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Specialties: Turkish olives, labneh, baklava, simit, cheese, spices",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Best For: Mediterranean cooking ingredients",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Average Bill: AED 60-180",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Note: Small store but authentic products",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Filipino",
+      "className": "has-text-align-center"
+    },
+    {
+      "tag": "p",
+      "text": "Metro Manila Mart",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Locations: Electra Street, Zayed the First Street, Rashid bin Saeed Street",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Phone: +971 2 626 4455 (Electra Street)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Hours: 9 AM – 11 PM daily",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Google Maps: Electra Street Location",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Specialties: Pandesal, longganisa, canned goods, Filipino snacks",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Best For: Filipino comfort foods and ingredients",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Average Bill: AED 70-200",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Sudanese & African",
+      "className": "has-text-align-center"
+    },
+    {
+      "tag": "p",
+      "text": "Kahraman Sudanese Foodstuff",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Location: Near Madinat Zayed Shopping Centre",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Phone: +971 2 633 5566",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Hours: 8 AM – 9 PM daily",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Google Maps: View Location",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Specialties: Kisra flour, dried okra, karkadeh tea, traditional perfumes",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Best For: Sudanese traditional ingredients",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Average Bill: AED 50-150",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Community: Popular meeting spot for Sudanese families",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Syrian & Levantine",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Al Ameen Syrian Products",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Location: Muroor Road, near 15th Street",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Phone: +971 2 444 3366",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Hours: 9 AM – 10 PM daily",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Google Maps: View Location",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Specialties: Premium zaatar, olive oil, Arabic coffee, ma’amoul, spices",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Best For: Authentic Levantine flavors",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Average Bill: AED 80-250",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Quality: High-end imported products",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Eastern European",
+      "className": "has-text-align-center"
+    },
+    {
+      "tag": "p",
+      "text": "MyLavka European Store",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Location: Al Khalidiya area",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Phone: +971 2 665 8899",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Hours: 10 AM – 9 PM daily",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Google Maps: View Location",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Specialties: Ukrainian, Armenian, Russian products – specialty cheese, meats, bakery items",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Best For: Eastern European comfort foods",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Average Bill: AED 120-400",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Special: Up to 40% bulk purchase discounts",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Fresh Markets Abu Dhabi – Best Prices",
+      "className": "has-text-align-center has-normal-font-size"
+    },
+    {
+      "tag": "p",
+      "text": "For the freshest produce at wholesale prices, Abu Dhabi’s traditional markets are unbeatable. These fresh markets Abu Dhabi offer significant savings on fruits, vegetables, fish, and spices.",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "p",
+      "text": "Mina Fruit & Vegetable Market",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "p",
+      "text": "Best Prices for Fresh Produce",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Location: Zayed Port, Al Mina district",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Phone: +971 2 673 2222",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Hours: 5 AM – 12 PM daily (best selection before 9 AM)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Google Maps: View Location",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Why Visit: Wholesale prices, freshest selection, direct from docks",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Best For: Weekly fruit and vegetable shopping",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Average Savings: 40-60% compared to hypermarkets",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Parking: Available but crowded on weekends",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Tip: Bring cash, bargaining expected",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Abu Dhabi Fish Market",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "p",
+      "text": "Fresh Daily Catch",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Location: Zayed Port, adjacent to vegetable market",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Phone: +971 2 673 3333",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Hours: 6 AM – 12 PM daily",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Google Maps: View Location",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Best Selection: Early morning (6-8 AM)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Popular Fish: Hammour, kingfish, shrimp, crab",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Average Prices: AED 25-45 per kg (much cheaper than supermarkets)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Services: Cleaning and filleting available",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Tip: Bring cooler bag, prices negotiable",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Zayed Port Spice & Dry Goods Market",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Location: Inside Mina Zayed complex",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Hours: 8 AM – 6 PM daily",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Google Maps: View Location",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Specialties: Bulk rice, spices, lentils, nuts",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Why Visit: Wholesale prices for large families",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Average Savings: 50-70% on spices and rice",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Best For: Monthly bulk shopping",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Languages: Arabic, Hindi, Urdu commonly spoken.",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Emergency & Late-Night Shopping",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "24-Hour Options:",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Choithrams (multiple locations)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Abela Supermarket (Al Khalidiya)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Al Madina Hypermarket (MBZ City)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "ADNOC Oasis stores (at gas stations)",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Late-Night Until 12 AM:",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Most LuLu Hypermarket branches",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Carrefour (mall locations)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Spinneys (selected branches)",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Emergency Essentials Available:",
+      "className": "has-small-font-size"
+    },
+    {
+      "tag": "li",
+      "text": "Baby formula and diapers",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Medications (basic)",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Fresh bread and milk",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Mobile phone top-ups",
+      "className": ""
+    },
+    {
+      "tag": "li",
+      "text": "Household cleaning supplies",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Abu Dhabi offers excellent grocery shopping options for every budget and preference. From international grocery stores Abu Dhabi to traditional markets, you’ll find everything you need. The city’s hypermarkets provide convenience and variety, while specialty stores serve specific communities with authentic products.",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "For newcomers to Abu Dhabi, grocery shopping is one of the first essentials to figure out. This comprehensive guide to grocery stores Abu Dhabi helps you find the best options whether you’re looking for budget-friendly shopping, 24-hour convenience, or specialty international ingredients.",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "The best grocery stores Abu Dhabi combine quality, price, and convenience. Major chains like LuLu Hypermarket and Carrefour offer everything under one roof, while specialty stores provide authentic ethnic ingredients. Traditional markets like Mina offer the best prices for fresh produce.",
+      "className": ""
+    },
+    {
+      "tag": "p",
+      "text": "Remember to compare prices between different grocery stores Abu Dhabi, as significant savings are possible. Many stores offer loyalty programs and weekly promotions that can reduce your monthly grocery budget considerably.",
+      "className": ""
+    }
+  ]
+}
