@@ -762,66 +762,45 @@
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div> -->
 
-        <!-- Review Section -->
-        <div class="review-section">
-            <h2>Share Your Experience</h2>
-            <p>Help other newcomers by sharing your experience with services in Abu Dhabi</p>
-            
-            <form class="review-form" onsubmit="submitReview(event)">
-                <div class="form-group">
-                    <label for="reviewer-name">Your Name</label>
-                    <input type="text" id="reviewer-name" name="name" required placeholder="Enter your name">
+        <!-- Google Reviews Section -->
+        <div class="google-reviews-section">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2 data-en="What Our Users Say" data-ar="ما يقوله مستخدمونا">What Our Users Say</h2>
+                <p data-en="Real reviews from Abu Dhabi newcomers who found our guide helpful" data-ar="مراجعات حقيقية من الوافدين الجدد في أبوظبي الذين وجدوا دليلنا مفيداً">Real reviews from Abu Dhabi newcomers who found our guide helpful</p>
+            </div>
+
+            <!-- Google Reviews Widget Placeholder -->
+            <div id="google-reviews-container" style="background: white; border-radius: 15px; padding: 30px; text-align: center; margin-bottom: 20px;">
+                <div style="margin-bottom: 20px;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">⭐</div>
+                    <h3 data-en="Leave us a Google Review!" data-ar="اتركوا لنا مراجعة على جوجل!">Leave us a Google Review!</h3>
+                    <p data-en="Help other newcomers by sharing your experience with our Abu Dhabi guide" data-ar="ساعدوا الوافدين الجدد الآخرين من خلال مشاركة تجربتكم مع دليل أبوظبي الخاص بنا">Help other newcomers by sharing your experience with our Abu Dhabi guide</p>
                 </div>
                 
-                <div class="form-group">
-                    <label for="service-category">Service Category</label>
-                    <select id="service-category" name="category" required>
-                        <option value="">Select a category</option>
-                        <option value="visa">Visa & Legal Help</option>
-                        <option value="newcomer">Newcomer Setup</option>
-                        <option value="transport">Transport & Driving License</option>
-                        <option value="food">Food & Grocery</option>
-                        <option value="discount">Discount Warehouses</option>
-                        <option value="hospital">Discounted Hospitals</option>
-                        <option value="handyman">Handyman & Repair</option>
-                        <option value="mobile">Mobile & PC Repair</option>
-                        <option value="education">Kids Education</option>
-                        <option value="kids-fun">Kids Fun & Activities</option>
-                        <option value="tailor">Tailor, Curtains & Bedsheets</option>
-                        <option value="cargo">Home Country Cargo</option>
-                        <option value="quran">Quran Centers & Islamic Books</option>
-                        <option value="gym">Gyms & Wellness</option>
-                        <option value="weekend">Weekend Fun</option>
-                    </select>
-                </div>
+                <!-- Google Review Button (will be customized with your Google Business Profile) -->
+                <a href="#" id="google-review-btn" target="_blank" rel="noopener" 
+                   style="display: inline-block; background: #4285f4; color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; font-weight: 600; margin: 10px; transition: all 0.3s ease;">
+                    <span data-en="📝 Write Google Review" data-ar="📝 اكتب مراجعة جوجل">📝 Write Google Review</span>
+                </a>
                 
-                <div class="form-group">
-                    <label>Rating</label>
-                    <div class="rating-stars" data-rating="0">
-                        <span class="star" data-value="1">⭐</span>
-                        <span class="star" data-value="2">⭐</span>
-                        <span class="star" data-value="3">⭐</span>
-                        <span class="star" data-value="4">⭐</span>
-                        <span class="star" data-value="5">⭐</span>
-                    </div>
-                    <input type="hidden" id="rating-value" name="rating" value="0">
-                </div>
-                
-                <div class="form-group">
-                    <label for="review-text">Your Review</label>
-                    <textarea id="review-text" name="review" required placeholder="Share your experience, tips, or recommendations..."></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">Submit Review</button>
-            </form>
-            
-            <div class="recent-reviews">
-                <h3>Community Reviews</h3>
-                <div class="no-reviews-yet">
-                    <div style="font-size: 3rem; margin-bottom: 15px;">💬</div>
-                    <h4 style="color: #4a5568; margin-bottom: 10px;">No reviews yet</h4>
-                    <p>Be the first to share your experience and help other newcomers to Abu Dhabi!</p>
-                </div>
+                <!-- WhatsApp Alternative -->
+                <a href="https://wa.me/971501234567?text=Hi! I'd like to share feedback about the New in Abu Dhabi guide" target="_blank" 
+                   style="display: inline-block; background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; font-weight: 600; margin: 10px; transition: all 0.3s ease;">
+                    <span data-en="💬 Share via WhatsApp" data-ar="💬 شارك عبر واتساب">💬 Share via WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Setup Instructions (temporary - will be removed after setup) -->
+            <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 10px; padding: 20px; margin: 20px 0; color: #856404;">
+                <h4>🔧 Google Reviews Setup Instructions</h4>
+                <p><strong>To activate automatic Google Reviews:</strong></p>
+                <ol style="text-align: left; margin: 10px 0 0 20px;">
+                    <li>Create a Google Business Profile for "New in Abu Dhabi"</li>
+                    <li>Get your Google Place ID</li>
+                    <li>Replace the review link above with your actual Google review URL</li>
+                    <li>Optionally: Add Google Reviews widget to show existing reviews</li>
+                </ol>
+                <p><strong>Contact:</strong> <a href="mailto:Eterna.General@gmail.com">Eterna.General@gmail.com</a> for setup help</p>
             </div>
         </div>
 

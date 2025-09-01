@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="About Us - New In Abu Dhabi" data-ar="معلومات عنا - جديد في أبوظبي">About Us - New In Abu Dhabi</title>
+    <meta name="description" content="Learn about New In Abu Dhabi - your comprehensive settlement guide for newcomers to Abu Dhabi, UAE">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .about-section {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        
+        .about-section h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .mission-card, .vision-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .about-container {
+                padding: 10px;
+            }
+            
+            .about-section {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span data-en="New In Abu Dhabi" data-ar="جديد في أبوظبي">New In Abu Dhabi</span>
+            </a>
+            <div class="language-switcher">
+                <button onclick="switchLanguage('en')" class="lang-btn active" id="en-btn">EN</button>
+                <span class="lang-separator">|</span>
+                <button onclick="switchLanguage('ar')" class="lang-btn" id="ar-btn">AR</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="about-container">
+        <div class="about-section">
+            <h1 data-en="About New In Abu Dhabi" data-ar="حول جديد في أبوظبي">About New In Abu Dhabi</h1>
+        </div>
+
+        <div class="about-section">
+            <h2 data-en="OUR MISSION" data-ar="مهمتنا">OUR MISSION</h2>
+            <p data-en="New In Abu Dhabi exists to help newcomers navigate their settlement journey with practical, budget-friendly guidance curated by locals who understand the real challenges of moving to Abu Dhabi." data-ar="يوجد جديد في أبوظبي لمساعدة الوافدين الجدد على التنقل في رحلة الاستقرار من خلال إرشادات عملية وموفرة للميزانية منسقة من قبل السكان المحليين الذين يفهمون التحديات الحقيقية للانتقال إلى أبوظبي.">
+                New In Abu Dhabi exists to help newcomers navigate their settlement journey with practical, budget-friendly guidance curated by locals who understand the real challenges of moving to Abu Dhabi.
+            </p>
+        </div>
+
+        <div class="about-section">
+            <h2 data-en="WHO WE ARE" data-ar="من نحن">WHO WE ARE</h2>
+            <p data-en="We're residents who have experienced the settlement process firsthand. We know which services offer the best value, where to find reliable help, and how to avoid common expensive mistakes." data-ar="نحن مقيمون خضعنا لعملية الاستقرار بأنفسنا. نعرف أي الخدمات تقدم أفضل قيمة، وأين نجد المساعدة الموثوقة، وكيف نتجنب الأخطاء المكلفة الشائعة.">
+                We're residents who have experienced the settlement process firsthand. We know which services offer the best value, where to find reliable help, and how to avoid common expensive mistakes.
+            </p>
+        </div>
+
+        <div class="about-section">
+            <h2 data-en="WHAT MAKES US DIFFERENT" data-ar="ما يميزنا">WHAT MAKES US DIFFERENT</h2>
+            <ul>
+                <li data-en="Local insider knowledge, not generic advice" data-ar="معرفة محلية من الداخل، وليس نصائح عامة">Local insider knowledge, not generic advice</li>
+                <li data-en="Budget-conscious recommendations" data-ar="توصيات واعية بالميزانية">Budget-conscious recommendations</li>
+                <li data-en="Practical information you can actually use" data-ar="معلومات عملية يمكنك استخدامها فعلاً">Practical information you can actually use</li>
+                <li data-en="Real experiences from people who live here" data-ar="تجارب حقيقية من أشخاص يعيشون هنا">Real experiences from people who live here</li>
+            </ul>
+        </div>
+
+        <div class="about-section">
+            <h2 data-en="OUR COMMITMENT" data-ar="التزامنا">OUR COMMITMENT</h2>
+            <p data-en="We regularly update our information to ensure accuracy and relevance. Our recommendations are based on actual experience and value for money." data-ar="نقوم بتحديث معلوماتنا بانتظام لضمان الدقة والملائمة. توصياتنا مبنية على تجربة فعلية وقيمة مقابل المال.">
+                We regularly update our information to ensure accuracy and relevance. Our recommendations are based on actual experience and value for money.
+            </p>
+        </div>
+
+        <div class="about-section">
+            <h2 data-en="AFFILIATE DISCLOSURE" data-ar="إفصاح الشراكة">AFFILIATE DISCLOSURE</h2>
+            <p data-en="To keep this resource free, we may earn commissions from some recommended services. This doesn't affect our recommendations - we only suggest services we genuinely believe are valuable." data-ar="للحفاظ على هذا المورد مجانياً، قد نكسب عمولات من بعض الخدمات الموصى بها. هذا لا يؤثر على توصياتنا - نحن نقترح فقط الخدمات التي نؤمن حقاً بقيمتها.">
+                To keep this resource free, we may earn commissions from some recommended services. This doesn't affect our recommendations - we only suggest services we genuinely believe are valuable.
+            </p>
+        </div>
+
+        <div class="about-section">
+            <h2 data-en="CONTACT US" data-ar="اتصل بنا">CONTACT US</h2>
+            <p data-en="Contact us at Eterna.General@gmail.com with questions or suggestions." data-ar="اتصل بنا على Eterna.General@gmail.com للأسئلة أو الاقتراحات.">
+                Contact us at <a href="mailto:Eterna.General@gmail.com">Eterna.General@gmail.com</a> with questions or suggestions.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-en="New In Abu Dhabi" data-ar="جديد في أبوظبي">New In Abu Dhabi</h3>
+                <p data-en="Your trusted guide for settling in Abu Dhabi" data-ar="دليلك الموثوق للاستقرار في أبوظبي">Your trusted guide for settling in Abu Dhabi</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4 data-en="Legal" data-ar="قانوني">Legal</h4>
+                <ul>
+                    <li><a href="about.html" data-en="About Us" data-ar="معلومات عنا">About Us</a></li>
+                    <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                    <li><a href="privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a></li>
+                    <li><a href="terms.html" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4 data-en="Contact Info" data-ar="معلومات الاتصال">Contact Info</h4>
+                <p>📧 Eterna.General@gmail.com</p>
+                <p data-en="🌍 Serving Abu Dhabi, UAE" data-ar="🌍 نخدم أبوظبي، الإمارات">🌍 Serving Abu Dhabi, UAE</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p data-en="© 2025 New In Abu Dhabi. All rights reserved." data-ar="© 2025 جديد في أبوظبي. جميع الحقوق محفوظة.">© 2025 New In Abu Dhabi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
