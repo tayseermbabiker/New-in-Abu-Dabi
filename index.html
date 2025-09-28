@@ -78,12 +78,12 @@
         }
 
         .lang-option:hover {
-            background: rgba(212, 165, 116, 0.2);
+            background: rgba(102, 126, 234, 0.2);
             color: #2d3748;
         }
 
         .lang-option.active {
-            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            background: linear-gradient(135deg, #FFB74D 0%, #FF7043 100%);
             color: white;
         }
 
@@ -103,10 +103,10 @@
             text-align: center;
             margin-bottom: 40px;
             padding: 40px 20px 20px;
-            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            background: linear-gradient(135deg, #FFD700 0%, #FF6B6B 30%, #4ECDC4 70%, #45B7D1 100%);
             color: white;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(255,183,77,0.3);
         }
 
         .guide-header h1 {
@@ -235,66 +235,60 @@
             }
         }
 
-        /* Products Section */
-        .products-section {
-            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
-            margin: 30px 0;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(212, 165, 116, 0.15);
-        }
-
-        .product-card-minimal {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            margin: 10px;
-            backdrop-filter: blur(10px);
-        }
-
-        .product-content {
-            padding: 25px;
+        /* Digital Guide Section */
+        .digital-guide-section {
+            margin: 20px 0;
             text-align: center;
         }
 
-        .product-title {
-            font-size: 1.3rem;
-            color: #2d3748;
-            margin-bottom: 15px;
-            font-weight: 600;
+        .guide-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin: 0 auto;
+            max-width: 300px;
+            border: 2px solid transparent;
+            background-image: linear-gradient(white, white), linear-gradient(135deg, #FFB74D, #FF7043);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
         }
 
-        .product-description {
-            color: #4a5568;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .product-footer {
+        .guide-content {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 20px;
+            justify-content: space-between;
+            gap: 15px;
         }
 
-        .price {
-            font-size: 1.3rem;
+        .guide-title {
+            font-size: 1rem;
+            color: #2d3748;
+            margin: 0;
+            font-weight: 600;
+            flex: 1;
+        }
+
+        .guide-price {
+            font-size: 1.1rem;
             font-weight: 700;
-            color: #2c5f4f;
+            color: #26A69A;
+            margin: 0;
         }
 
-        .product-btn {
-            background: linear-gradient(135deg, #2c5f4f 0%, #27ae60 100%);
+        .guide-btn {
+            background: linear-gradient(135deg, #FFB74D 0%, #FF7043 100%);
             color: white;
-            padding: 10px 25px;
-            border-radius: 25px;
+            padding: 8px 16px;
+            border-radius: 20px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(44, 95, 79, 0.25);
         }
 
-        .product-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(44, 95, 79, 0.35);
+        .guide-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(255, 183, 77, 0.3);
             color: white;
             text-decoration: none;
         }
@@ -347,7 +341,7 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(45deg, #d4a574, #e67e22);
+            background: linear-gradient(45deg, #FFB74D, #26A69A);
         }
 
         .card-image img {
@@ -360,6 +354,17 @@
             z-index: 1;
         }
 
+        /* Fallback for missing images */
+        .card-image img[src]:not([src=""]) {
+            opacity: 1;
+        }
+
+        .card-image img:not([src]),
+        .card-image img[src=""],
+        .card-image img[src*="404"] {
+            opacity: 0;
+        }
+
         .card-image::before {
             content: '';
             position: absolute;
@@ -367,7 +372,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(212,165,116,0.3), rgba(230,126,34,0.3));
+            background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(240,147,251,0.1));
             z-index: 2;
         }
 
@@ -443,8 +448,8 @@
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #d4a574;
-            box-shadow: 0 0 0 3px rgba(212,165,116,0.1);
+            border-color: #26A69A;
+            box-shadow: 0 0 0 3px rgba(38,166,154,0.15);
         }
 
         .rating-stars {
@@ -466,7 +471,7 @@
         }
 
         .submit-btn {
-            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
+            background: linear-gradient(135deg, #FFB74D 0%, #FF7043 100%);
             color: white;
             padding: 12px 30px;
             border: none;
@@ -480,7 +485,7 @@
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(212,165,116,0.3);
+            box-shadow: 0 8px 20px rgba(255,183,77,0.4);
         }
 
         .no-reviews-yet {
@@ -504,25 +509,31 @@
             }
             
             .search-box-main {
-                flex-direction: column;
-                padding: 15px;
-                border-radius: 15px;
+                padding: 5px;
+                border-radius: 25px;
             }
-            
+
             .search-box-main input {
-                margin-bottom: 10px;
-                text-align: center;
+                padding: 10px 15px;
+                font-size: 0.9rem;
             }
-            
+
             .search-btn {
-                width: 100%;
-                justify-content: center;
-                border-radius: 10px;
+                padding: 10px 15px;
+                border-radius: 20px;
             }
             
-            .product-footer {
-                flex-direction: column;
-                gap: 15px;
+            .guide-card {
+                max-width: 100%;
+                margin: 0 10px;
+            }
+
+            .guide-content {
+                gap: 10px;
+            }
+
+            .guide-title {
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -542,7 +553,7 @@
         <!-- Header Section with Search -->
         <div class="guide-header">
             <h1 data-en="New in Abu Dhabi?" data-ar="جديد في أبوظبي؟">New in Abu Dhabi?</h1>
-            <p data-en="Practical, budget-friendly guides for visas, SIMs, driving, kids, and weekend plans—curated by locals." data-ar="أدلة عملية واقتصادية للتأشيرات وشرائح الهاتف والقيادة والأطفال وخطط نهاية الأسبوع - منسقة من قبل السكان المحليين.">Practical, budget-friendly guides for visas, SIMs, driving, kids, and weekend plans—curated by locals.</p>
+            <p data-en="Practical local guides for expats" data-ar="أدلة محلية عملية للمغتربين">Practical local guides for expats</p>
             
             <!-- Search Bar -->
             <div class="search-container">
@@ -569,16 +580,13 @@
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div> -->
 
-        <!-- Featured Digital Products Section -->
-        <div class="products-section">
-            <div class="product-card-minimal">
-                <div class="product-content">
-                    <h3 class="product-title" data-en="💡 Transportation Hack - Save Money on Transport" data-ar="💡 خدعة النقل - وفر المال على المواصلات">💡 Transportation Hack - Save Money on Transport</h3>
-                    <p class="product-description" data-en="Don't get lost, fined, or overcharged. Get insider tips: exact buses to Dubai, cheapest smart cards, late-night taxi tricks." data-ar="لا تتيه أو تدفع غرامات أو تدفع أكثر من اللازم. احصل على نصائح داخلية: الحافلات المحددة إلى دبي، أرخص البطاقات الذكية، حيل التاكسي في وقت متأخر من الليل.">Don't get lost, fined, or overcharged. Get insider tips: exact buses to Dubai, cheapest smart cards, late-night taxi tricks.</p>
-                    <div class="product-footer">
-                        <span class="price" data-en="Only AED 5" data-ar="5 دراهم فقط">Only AED 5</span>
-                        <a href="https://eternabasics.myshopify.com/products/transportation-hack" class="product-btn" target="_blank" data-en="Get Guide" data-ar="احصل على الدليل">Get Guide</a>
-                    </div>
+        <!-- Featured Digital Guide -->
+        <div class="digital-guide-section">
+            <div class="guide-card">
+                <div class="guide-content">
+                    <h3 class="guide-title" data-en="💡 Transportation Guide" data-ar="💡 دليل النقل">💡 Transportation Guide</h3>
+                    <p class="guide-price" data-en="AED 5" data-ar="5 دراهم">AED 5</p>
+                    <a href="https://eternabasics.myshopify.com/products/transportation-hack" class="guide-btn" target="_blank" data-en="Download" data-ar="تحميل">Download</a>
                 </div>
             </div>
         </div>
