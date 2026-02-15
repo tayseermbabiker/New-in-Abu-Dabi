@@ -12,653 +12,857 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12+ Budget Supermarkets & Grocery Stores in Abu Dhabi (2025) | Save 30-50%</title>
-    <meta name="description" content="Complete guide to affordable grocery shopping in Abu Dhabi. Find Turkish, Sudanese, African & Filipino specialty stores, 24-hour markets & budget supermarkets in central Abu Dhabi (Electra Street, Tourist Club). Compare prices at Lulu, Carrefour & Union Coop. Save 30-50% on weekly shopping."
-    
-    <!-- Arabic Font Loading -->
+    <title>12+ Budget Supermarkets & Grocery Stores in Abu Dhabi (2026) | Save 30-50%</title>
+    <meta name="description" content="Complete guide to affordable grocery shopping in Abu Dhabi. Find Turkish, Sudanese, African & Filipino specialty stores, 24-hour markets & budget supermarkets in central Abu Dhabi (Electra Street, Tourist Club). Compare prices at Lulu, Carrefour & Union Coop. Save 30-50% on weekly shopping.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --navy: #0c2340;
+            --navy-light: #1a3a5c;
+            --steel: #1a5276;
+            --sunset: #d4894a;
+            --sunset-dark: #b8733a;
+            --sunset-light: #e8a86a;
+            --sand: #f0e6d3;
+            --cream: #faf9f7;
+            --white: #ffffff;
+            --text-dark: #1a2332;
+            --text-mid: #4a5568;
+            --text-light: #718096;
+            --border: #e2e0dc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
         body {
             font-family: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            background: var(--cream);
             line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-            margin: 0;
-            padding: 20px 0;
         }
 
-        [dir="rtl"] body {
-            font-family: 'Cairo', 'Inter', sans-serif;
-            text-align: right;
+        [dir="rtl"] body { font-family: 'Cairo', 'Inter', sans-serif; text-align: right; }
+        [dir="rtl"] .lang-switcher { right: auto; left: 20px; }
+        [dir="rtl"] .store-item { border-left: none; border-right: 3px solid var(--sunset); }
+        [dir="rtl"] .price-category { border-left: none; border-right: 3px solid var(--steel); }
+        [dir="rtl"] .related-card { border-left: none; border-right: 3px solid var(--sunset); }
+        [dir="rtl"] li { padding-left: 0; padding-right: 20px; }
+        [dir="rtl"] li::before { left: auto; right: 0; }
+
+        /* ── Language Switcher ── */
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 6px 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: background 0.3s;
         }
 
-        .container {
-            max-width: 1000px;
+        .lang-switcher.scrolled {
+            background: rgba(255,255,255,0.95);
+            border-color: var(--border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .scrolled .lang-btn { color: var(--text-mid); }
+        .lang-btn:hover { color: #fff; background: rgba(255,255,255,0.1); }
+        .scrolled .lang-btn:hover { color: var(--text-dark); background: rgba(0,0,0,0.05); }
+        .lang-btn.active { color: #fff; background: var(--sunset); }
+        .scrolled .lang-btn.active { color: #fff; background: var(--sunset); }
+
+        /* ── Hero ── */
+        .hero {
+            position: relative;
+            min-height: 340px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+
+        .hero-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(12,35,64,0.2) 0%,
+                rgba(12,35,64,0.1) 20%,
+                rgba(12,35,64,0.4) 55%,
+                rgba(12,35,64,0.88) 100%
+            );
+        }
+
+        .hero-overlay::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 80% 90%, rgba(212,137,74,0.15) 0%, transparent 55%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px 40px;
         }
 
-        .page-header {
-            background: linear-gradient(135deg, #FFB74D 0%, #FF7043 100%);
-            color: white;
-            padding: 40px 20px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .back-link {
-            display: inline-block;
-            color: #FFB74D;
+        .hero-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255,255,255,0.7);
             text-decoration: none;
-            margin-bottom: 20px;
+            font-size: 0.85rem;
             font-weight: 500;
+            margin-bottom: 16px;
+            transition: color 0.2s;
         }
 
-        .back-link:hover {
-            color: #FF7043;
+        .hero-back:hover { color: #fff; }
+
+        .hero-tag {
+            display: inline-block;
+            background: var(--sunset);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 10px;
+        }
+
+        [dir="rtl"] .hero-title { font-family: 'Cairo', sans-serif; }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.8);
+            font-weight: 300;
+            max-width: 560px;
+            line-height: 1.6;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 16px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(8px);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        /* ── Main Content ── */
+        .main-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px 0;
         }
 
         .content-section {
-            background: white;
-            padding: 30px;
+            background: var(--white);
+            padding: 32px;
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(0,0,0,0.04);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
         }
 
         .content-section h2 {
-            color: #2d3748;
-            font-size: 1.8rem;
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--navy);
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--sunset);
+            text-align: center;
+        }
+
+        [dir="rtl"] .content-section h2 { font-family: 'Cairo', sans-serif; }
+
+        .content-section > p {
+            color: var(--text-mid);
+            font-size: 0.9rem;
             margin-bottom: 20px;
-            font-weight: 600;
-            border-bottom: 2px solid #FFB74D;
-            padding-bottom: 10px;
             text-align: center;
         }
 
         .content-section h3 {
-            color: #2d3748;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .store-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .store-item {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #FFB74D;
-        }
-
-        [dir="rtl"] .store-item {
-            border-left: none;
-            border-right: 4px solid #FFB74D;
-        }
-
-        .store-item h4 {
-            color: #2d3748;
+            color: var(--navy);
+            font-size: 1.05rem;
             margin-bottom: 10px;
             font-weight: 600;
         }
 
-        .price-category {
-            background: #e6fffa;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-            border-left: 4px solid #38b2ac;
-        }
-
-        [dir="rtl"] .price-category {
-            border-left: none;
-            border-right: 4px solid #38b2ac;
-        }
-
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
+        /* ── Store Grid ── */
+        .store-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
             margin: 20px 0;
         }
 
-        .comparison-table th,
-        .comparison-table td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #e2e8f0;
+        .store-item {
+            background: var(--cream);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid var(--sunset);
+            transition: box-shadow 0.2s;
         }
 
-        [dir="rtl"] .comparison-table th,
-        [dir="rtl"] .comparison-table td {
-            text-align: right;
+        .store-item:hover {
+            box-shadow: 0 4px 16px rgba(12,35,64,0.08);
         }
 
-        .comparison-table th {
-            background: #f7fafc;
+        .store-item h4 {
+            color: var(--navy);
+            margin-bottom: 10px;
             font-weight: 600;
-            color: #2d3748;
+            font-size: 0.95rem;
         }
 
+        /* ── Price Categories ── */
+        .price-category {
+            background: #f0f7fa;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 12px 0;
+            border-left: 3px solid var(--steel);
+        }
+
+        .price-category h3 { margin-bottom: 8px; }
+
+        /* ── Tips Box ── */
         .tips-box {
-            background: #fff5f5;
-            border: 1px solid #fed7d7;
+            background: #fdf6f0;
+            border: 1px solid #f0dece;
             border-radius: 8px;
             padding: 20px;
             margin: 20px 0;
         }
 
-        .language-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1001;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 8px 15px;
-            border-radius: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
+        .tips-box h3 {
+            color: var(--sunset-dark);
+        }
+
+        /* ── Lists ── */
+        ul { list-style-type: none; padding: 0; }
+
+        li {
+            padding: 4px 0 4px 20px;
+            position: relative;
             font-size: 0.9rem;
-            font-weight: 600;
+            color: var(--text-mid);
         }
 
-        [dir="rtl"] .language-switcher {
-            right: auto;
-            left: 20px;
+        li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--sunset);
         }
 
-        .lang-option {
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: #4a5568;
-            padding: 4px 8px;
+        /* ── FAQ ── */
+        .faq-item {
+            margin: 16px 0;
+            padding: 18px;
+            background: var(--cream);
             border-radius: 8px;
         }
 
-        .lang-option:hover {
-            background: rgba(212, 165, 116, 0.2);
-            color: #2d3748;
+        .faq-item h3 {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
         }
 
-        .lang-option.active {
-            background: linear-gradient(135deg, #FFB74D 0%, #FF7043 100%);
-            color: white;
+        .faq-item p {
+            font-size: 0.88rem;
+            color: var(--text-mid);
+            line-height: 1.6;
         }
 
-        .lang-divider {
-            color: #a0aec0;
-            font-weight: 300;
+        /* ── Related Guides ── */
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+            margin-top: 16px;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .related-card {
+            display: block;
+            padding: 16px;
+            background: var(--cream);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-dark);
+            border-left: 3px solid var(--sunset);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        li {
-            padding: 5px 0;
-            padding-left: 20px;
-            position: relative;
+        .related-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(12,35,64,0.08);
         }
 
-        li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #FFB74D;
-            font-weight: bold;
+        .related-card strong { font-size: 0.9rem; }
+        .related-card p { margin: 4px 0 0; font-size: 0.8rem; color: var(--text-light); }
+
+        /* ── Footer ── */
+        .footer {
+            background: var(--navy);
+            color: #fff;
+            padding: 32px 24px;
+            margin-top: 48px;
         }
 
-        [dir="rtl"] li {
-            padding-left: 0;
-            padding-right: 20px;
+        .footer-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
         }
 
-        [dir="rtl"] li:before {
-            left: auto;
-            right: 0;
+        .footer-brand h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1rem;
+            margin-bottom: 2px;
+        }
+
+        [dir="rtl"] .footer-brand h3 { font-family: 'Cairo', sans-serif; }
+
+        .footer-brand p { font-size: 0.75rem; opacity: 0.5; }
+
+        .footer-links { display: flex; gap: 20px; }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--sunset-light); }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .hero { min-height: 300px; }
+            .hero-title { font-size: 1.8rem; }
+            .content-section { padding: 24px 18px; }
+            .content-section h2 { font-size: 1.3rem; }
+            .store-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 520px) {
+            .hero { min-height: 280px; }
+            .hero-content { padding: 0 16px 32px; }
+            .hero-title { font-size: 1.5rem; }
+            .hero-stats { gap: 8px; }
+            .hero-stat { font-size: 0.72rem; padding: 5px 10px; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .footer-links { justify-content: center; }
         }
     </style>
 </head>
 <body>
-    <div class="language-switcher">
-        <span class="lang-option active" onclick="switchLanguage('en')" data-lang="en">EN</span>
-        <span class="lang-divider">|</span>
-        <span class="lang-option" onclick="switchLanguage('ar')" data-lang="ar">AR</span>
+
+<!-- ── Lang Switcher ── -->
+<div class="lang-switcher" id="langSwitcher">
+    <button class="lang-btn active" onclick="switchLanguage('en')" data-lang="en">EN</button>
+    <button class="lang-btn" onclick="switchLanguage('ar')" data-lang="ar">AR</button>
+</div>
+
+<!-- ── Hero ── -->
+<section class="hero">
+    <img src="grocery.jpg" alt="Grocery shopping in Abu Dhabi" class="hero-img">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <a href="index.html" class="hero-back" data-en="&larr; Back to all guides" data-ar="&rarr; العودة لجميع الأدلة">&larr; Back to all guides</a>
+        <span class="hero-tag" data-en="Food Guide" data-ar="دليل الطعام">Food Guide</span>
+        <h1 class="hero-title" data-en="Food & Groceries" data-ar="الطعام والبقالة">Food & Groceries</h1>
+        <p class="hero-subtitle" data-en="Best supermarkets, ethnic stores, fresh markets & delivery options. From budget hypermarkets to specialty shops — with prices, hours & insider tips." data-ar="أفضل الأسواق والمتاجر العرقية والأسواق الطازجة وخيارات التوصيل. من الأسواق الاقتصادية إلى المحلات المتخصصة — مع الأسعار والمواعيد ونصائح من الداخل.">Best supermarkets, ethnic stores, fresh markets & delivery options. From budget hypermarkets to specialty shops — with prices, hours & insider tips.</p>
+        <div class="hero-stats">
+            <span class="hero-stat" data-en="20+ Stores Listed" data-ar="20+ متجر مدرج">20+ Stores Listed</span>
+            <span class="hero-stat" data-en="Save 30-50%" data-ar="وفر 30-50%">Save 30-50%</span>
+        </div>
+    </div>
+</section>
+
+<!-- ── Content ── -->
+<main class="main-content">
+
+    <!-- Everyday Hypermarkets -->
+    <div class="content-section">
+        <h2 data-en="Everyday Hypermarkets" data-ar="الأسواق اليومية الكبرى">Everyday Hypermarkets</h2>
+
+        <div class="price-category">
+            <h3 data-en="24-Hour Stores:" data-ar="المحلات المفتوحة 24 ساعة:">24-Hour Stores:</h3>
+            <ul>
+                <li data-en="Choithrams (AED 200+ average shop)" data-ar="تشويثرامز (متوسط التسوق 200+ درهم)">Choithrams (AED 200+ average shop)</li>
+                <li data-en="Abela Supermarket (AED 150+ average)" data-ar="سوبر ماركت أبيلا (متوسط 150+ درهم)">Abela Supermarket (AED 150+ average)</li>
+                <li data-en="Al Madina Hypermarket (AED 180+ average)" data-ar="هايبر ماركت المدينة (متوسط 180+ درهم)">Al Madina Hypermarket (AED 180+ average)</li>
+            </ul>
+        </div>
+
+        <div class="price-category">
+            <h3 data-en="Budget Options:" data-ar="الخيارات الاقتصادية:">Budget Options:</h3>
+            <ul>
+                <li data-en="Union Coop (AED 120+ average shop)" data-ar="اتحاد كوب (متوسط التسوق 120+ درهم)">Union Coop (AED 120+ average shop)</li>
+                <li data-en="Aswaaq (AED 100+ average)" data-ar="أسواق (متوسط 100+ درهم)">Aswaaq (AED 100+ average)</li>
+                <li data-en="Mina Markets (AED 80+ average)" data-ar="أسواق الميناء (متوسط 80+ درهم)">Mina Markets (AED 80+ average)</li>
+            </ul>
+        </div>
+
+        <div class="price-category">
+            <h3 data-en="Premium / International:" data-ar="المتميز / الدولي:">Premium / International:</h3>
+            <ul>
+                <li data-en="Waitrose (AED 300+ average shop)" data-ar="ويتروز (متوسط التسوق 300+ درهم)">Waitrose (AED 300+ average shop)</li>
+                <li data-en="Spinneys (AED 250+ average)" data-ar="سبينيز (متوسط 250+ درهم)">Spinneys (AED 250+ average)</li>
+                <li data-en="Organic Foods & Cafe (AED 200+ average)" data-ar="الأطعمة العضوية والمقهى (متوسط 200+ درهم)">Organic Foods & Cafe (AED 200+ average)</li>
+            </ul>
+        </div>
     </div>
 
-    <div class="container">
-        <a href="index.html" class="back-link" data-en="← Back to Home" data-ar="← العودة للصفحة الرئيسية">← Back to Home</a>
+    <!-- 24-Hour Stores Details -->
+    <div class="content-section">
+        <h2 data-en="24-Hour Grocery Stores Abu Dhabi" data-ar="محلات البقالة المفتوحة 24 ساعة في أبوظبي">24-Hour Grocery Stores Abu Dhabi</h2>
+        <p data-en="When you need emergency grocery shopping in Abu Dhabi, these 24-hour grocery stores are your best option." data-ar="عندما تحتاج للتسوق الطارئ في أبوظبي، هذه المحلات المفتوحة 24 ساعة هي أفضل خيار لك.">When you need emergency grocery shopping in Abu Dhabi, these 24-hour grocery stores are your best option.</p>
 
-        <!-- Last Updated Badge -->
-        <div style="text-align: center; background: #e6fffa; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #81e6d9;">
-            <p style="margin: 0; color: #2d3748; font-size: 0.95rem;">
-                🏪 <strong data-en="20+ Stores Listed" data-ar="20+ متجر مدرج">20+ Stores Listed</strong> |
-                💰 <strong data-en="Save 30-50% vs Premium Markets" data-ar="وفر 30-50% مقارنة بالأسواق الممتازة">Save 30-50% vs Premium Markets</strong>
-            </p>
-        </div>
-
-        <div class="page-header">
-            <h1 data-en="Food & Groceries" data-ar="الطعام والبقالة">Food & Groceries</h1>
-            <p data-en="Discover the best grocery stores in Abu Dhabi for families and expats. From budget hypermarkets to specialty ethnic stores, find everything you need for grocery shopping in Abu Dhabi with current prices, hours, and delivery options." data-ar="اكتشف أفضل محلات البقالة في أبوظبي للعائلات والوافدين. من الأسواق الاقتصادية إلى المحلات العرقية المتخصصة، اعثر على كل ما تحتاجه للتسوق في أبوظبي مع الأسعار الحالية والمواعيد وخيارات التوصيل.">Discover the best grocery stores in Abu Dhabi for families and expats. From budget hypermarkets to specialty ethnic stores, find everything you need for grocery shopping in Abu Dhabi with current prices, hours, and delivery options.</p>
-        </div>
-
-        <!-- Everyday Hypermarkets -->
-        <div class="content-section">
-            <h2 data-en="Everyday Hypermarkets" data-ar="الأسواق اليومية الكبرى">Everyday Hypermarkets</h2>
-            
-            <div class="price-category">
-                <h3 data-en="24-Hour Stores:" data-ar="المحلات المفتوحة 24 ساعة:">24-Hour Stores:</h3>
+        <div class="store-grid">
+            <div class="store-item">
+                <h4 data-en="Choithrams - Premium 24-Hour Chain" data-ar="تشويثرامز - سلسلة متميزة تعمل 24 ساعة">Choithrams - Premium 24-Hour Chain</h4>
                 <ul>
-                    <li data-en="Choithrams (AED 200+ average shop)" data-ar="تشويثرامز (متوسط التسوق 200+ درهم)">Choithrams (AED 200+ average shop)</li>
-                    <li data-en="Abela Supermarket (AED 150+ average)" data-ar="سوبر ماركت أبيلا (متوسط 150+ درهم)">Abela Supermarket (AED 150+ average)</li>
-                    <li data-en="Al Madina Hypermarket (AED 180+ average)" data-ar="هايبر ماركت المدينة (متوسط 180+ درهم)">Al Madina Hypermarket (AED 180+ average)</li>
+                    <li data-en="Location 1: King Khalid Bin Abdul Aziz Street, Al Khalidiya" data-ar="الموقع الأول: شارع الملك خالد بن عبد العزيز، الخالدية">Location 1: King Khalid Bin Abdul Aziz Street, Al Khalidiya</li>
+                    <li data-en="Phone: +971 2 665 7009" data-ar="الهاتف: +971 2 665 7009">Phone: +971 2 665 7009</li>
+                    <li data-en="Location 2: Corniche Road, near Oryx Hotel" data-ar="الموقع الثاني: شارع الكورنيش، قرب فندق الوريكس">Location 2: Corniche Road, near Oryx Hotel</li>
+                    <li data-en="Phone: +971 2 681 6930" data-ar="الهاتف: +971 2 681 6930">Phone: +971 2 681 6930</li>
+                    <li data-en="Hours: 24/7 at main branches" data-ar="الساعات: 24/7 في الفروع الرئيسية">Hours: 24/7 at main branches</li>
+                    <li data-en="Why Choose: Always open, fresh bakery, international brands" data-ar="لماذا تختار: مفتوح دائماً، مخبز طازج، علامات تجارية دولية">Why Choose: Always open, fresh bakery, international brands</li>
+                    <li data-en="Best For: Emergency shopping, late-night needs" data-ar="الأفضل لـ: التسوق الطارئ، الاحتياجات المسائية">Best For: Emergency shopping, late-night needs</li>
+                    <li data-en="Average Bill: AED 200-500" data-ar="متوسط الفاتورة: 200-500 درهم">Average Bill: AED 200-500</li>
+                    <li data-en="Online: Delivery available through website" data-ar="عبر الإنترنت: التوصيل متاح عبر الموقع">Online: Delivery available through website</li>
                 </ul>
             </div>
 
-            <div class="price-category">
-                <h3 data-en="Budget Options:" data-ar="الخيارات الاقتصادية:">Budget Options:</h3>
+            <div class="store-item">
+                <h4 data-en="Abela Supermarket - 24-Hour Organic & Vegan Options" data-ar="سوبر ماركت أبيلا - خيارات عضوية ونباتية 24 ساعة">Abela Supermarket - 24-Hour Organic & Vegan Options</h4>
                 <ul>
-                    <li data-en="Union Coop (AED 120+ average shop)" data-ar="اتحاد كوب (متوسط التسوق 120+ درهم)">Union Coop (AED 120+ average shop)</li>
-                    <li data-en="Aswaaq (AED 100+ average)" data-ar="أسواق (متوسط 100+ درهم)">Aswaaq (AED 100+ average)</li>
-                    <li data-en="Mina Markets (AED 80+ average)" data-ar="أسواق الميناء (متوسط 80+ درهم)">Mina Markets (AED 80+ average)</li>
+                    <li data-en="Address: Ground Floor, Bin Butti Building, Al Khalidiya" data-ar="العنوان: الطابق الأرضي، مبنى بن بوطي، الخالدية">Address: Ground Floor, Bin Butti Building, Al Khalidiya</li>
+                    <li data-en="Phone: +971 2 667 4675" data-ar="الهاتف: +971 2 667 4675">Phone: +971 2 667 4675</li>
+                    <li data-en="Hours: 24/7" data-ar="الساعات: 24/7">Hours: 24/7</li>
+                    <li data-en="Why Choose: Organic products, vegan options, always open" data-ar="لماذا تختار: منتجات عضوية، خيارات نباتية، مفتوح دائماً">Why Choose: Organic products, vegan options, always open</li>
+                    <li data-en="Best For: Health-conscious families, emergency shopping" data-ar="الأفضل لـ: العائلات المهتمة بالصحة، التسوق الطارئ">Best For: Health-conscious families, emergency shopping</li>
+                    <li data-en="Average Bill: AED 150-400" data-ar="متوسط الفاتورة: 150-400 درهم">Average Bill: AED 150-400</li>
+                    <li data-en="Special: Large selection of organic and specialty diet foods" data-ar="خاص: مجموعة كبيرة من الأطعمة العضوية والحميات المتخصصة">Special: Large selection of organic and specialty diet foods</li>
                 </ul>
             </div>
 
-            <div class="price-category">
-                <h3 data-en="Premium/International:" data-ar="المتميز/الدولي:">Premium/International:</h3>
+            <div class="store-item">
+                <h4 data-en="Al Madina Hypermarket - 24-Hour Budget Option" data-ar="هايبر ماركت المدينة - خيار اقتصادي 24 ساعة">Al Madina Hypermarket - 24-Hour Budget Option</h4>
                 <ul>
-                    <li data-en="Waitrose (AED 300+ average shop)" data-ar="ويتروز (متوسط التسوق 300+ درهم)">Waitrose (AED 300+ average shop)</li>
-                    <li data-en="Spinneys (AED 250+ average)" data-ar="سبينيز (متوسط 250+ درهم)">Spinneys (AED 250+ average)</li>
-                    <li data-en="Organic Foods & Cafe (AED 200+ average)" data-ar="الأطعمة العضوية والمقهى (متوسط 200+ درهم)">Organic Foods & Cafe (AED 200+ average)</li>
+                    <li data-en="Main Location: 42nd Street, Mohamed Bin Zayed City" data-ar="الموقع الرئيسي: الشارع 42، مدينة محمد بن زايد">Main Location: 42nd Street, Mohamed Bin Zayed City</li>
+                    <li data-en="Phone: +971 2 555 0033" data-ar="الهاتف: +971 2 555 0033">Phone: +971 2 555 0033</li>
+                    <li data-en="Other Branches: Al Raha, Al Mafraq, Musaffah" data-ar="فروع أخرى: الراحة، المفرق، مصفح">Other Branches: Al Raha, Al Mafraq, Musaffah</li>
+                    <li data-en="Hours: 24/7" data-ar="الساعات: 24/7">Hours: 24/7</li>
+                    <li data-en="Why Choose: Budget-friendly, electronics section" data-ar="لماذا تختار: اقتصادي، قسم الإلكترونيات">Why Choose: Budget-friendly, electronics section</li>
+                    <li data-en="Best For: Late-night shopping, household items" data-ar="الأفضل لـ: التسوق المسائي، الأدوات المنزلية">Best For: Late-night shopping, household items</li>
+                    <li data-en="Average Bill: AED 120-350" data-ar="متوسط الفاتورة: 120-350 درهم">Average Bill: AED 120-350</li>
                 </ul>
-            </div>
-        </div>
-
-        <!-- 24-Hour Stores Details -->
-        <div class="content-section">
-            <h2 data-en="24-Hour Grocery Stores Abu Dhabi" data-ar="محلات البقالة المفتوحة 24 ساعة في أبوظبي">24-Hour Grocery Stores Abu Dhabi</h2>
-            <p data-en="When you need emergency grocery shopping in Abu Dhabi, these 24-hour grocery stores are your best option. Open around the clock, these supermarkets ensure you never run out of essentials." data-ar="عندما تحتاج للتسوق الطارئ في أبوظبي، هذه المحلات المفتوحة 24 ساعة هي أفضل خيار لك. مفتوحة على مدار الساعة، هذه الأسواق تضمن عدم نفاد المواد الأساسية.">When you need emergency grocery shopping in Abu Dhabi, these 24-hour grocery stores are your best option. Open around the clock, these supermarkets ensure you never run out of essentials.</p>
-            
-            <div class="store-grid">
-                <div class="store-item">
-                    <h4 data-en="Choithrams - Premium 24-Hour Chain" data-ar="تشويثرامز - سلسلة متميزة تعمل 24 ساعة">Choithrams - Premium 24-Hour Chain</h4>
-                    <ul>
-                        <li data-en="Location 1: King Khalid Bin Abdul Aziz Street, Al Khalidiya" data-ar="الموقع الأول: شارع الملك خالد بن عبد العزيز، الخالدية">Location 1: King Khalid Bin Abdul Aziz Street, Al Khalidiya</li>
-                        <li data-en="Phone: +971 2 665 7009" data-ar="الهاتف: +971 2 665 7009">Phone: +971 2 665 7009</li>
-                        <li data-en="Location 2: Corniche Road, near Oryx Hotel" data-ar="الموقع الثاني: شارع الكورنيش، قرب فندق الوريكس">Location 2: Corniche Road, near Oryx Hotel</li>
-                        <li data-en="Phone: +971 2 681 6930" data-ar="الهاتف: +971 2 681 6930">Phone: +971 2 681 6930</li>
-                        <li data-en="Hours: 24/7 at main branches" data-ar="الساعات: 24/7 في الفروع الرئيسية">Hours: 24/7 at main branches</li>
-                        <li data-en="Why Choose: Always open, fresh bakery, international brands" data-ar="لماذا تختار: مفتوح دائماً، مخبز طازج، علامات تجارية دولية">Why Choose: Always open, fresh bakery, international brands</li>
-                        <li data-en="Best For: Emergency shopping, late-night needs" data-ar="الأفضل لـ: التسوق الطارئ، الاحتياجات المسائية">Best For: Emergency shopping, late-night needs</li>
-                        <li data-en="Average Bill: AED 200-500" data-ar="متوسط الفاتورة: 200-500 درهم">Average Bill: AED 200-500</li>
-                        <li data-en="Online: Delivery available through website" data-ar="عبر الإنترنت: التوصيل متاح عبر الموقع">Online: Delivery available through website</li>
-                    </ul>
-                </div>
-
-                <div class="store-item">
-                    <h4 data-en="Abela Supermarket - 24-Hour Organic & Vegan Options" data-ar="سوبر ماركت أبيلا - خيارات عضوية ونباتية 24 ساعة">Abela Supermarket - 24-Hour Organic & Vegan Options</h4>
-                    <ul>
-                        <li data-en="Address: Ground Floor, Bin Butti Building, Al Khalidiya" data-ar="العنوان: الطابق الأرضي، مبنى بن بوطي، الخالدية">Address: Ground Floor, Bin Butti Building, Al Khalidiya</li>
-                        <li data-en="Phone: +971 2 667 4675" data-ar="الهاتف: +971 2 667 4675">Phone: +971 2 667 4675</li>
-                        <li data-en="Hours: 24/7" data-ar="الساعات: 24/7">Hours: 24/7</li>
-                        <li data-en="Why Choose: Organic products, vegan options, always open" data-ar="لماذا تختار: منتجات عضوية، خيارات نباتية، مفتوح دائماً">Why Choose: Organic products, vegan options, always open</li>
-                        <li data-en="Best For: Health-conscious families, emergency shopping" data-ar="الأفضل لـ: العائلات المهتمة بالصحة، التسوق الطارئ">Best For: Health-conscious families, emergency shopping</li>
-                        <li data-en="Average Bill: AED 150-400" data-ar="متوسط الفاتورة: 150-400 درهم">Average Bill: AED 150-400</li>
-                        <li data-en="Special: Large selection of organic and specialty diet foods" data-ar="خاص: مجموعة كبيرة من الأطعمة العضوية والحميات المتخصصة">Special: Large selection of organic and specialty diet foods</li>
-                    </ul>
-                </div>
-
-                <div class="store-item">
-                    <h4 data-en="Al Madina Hypermarket - 24-Hour Budget Option" data-ar="هايبر ماركت المدينة - خيار اقتصادي 24 ساعة">Al Madina Hypermarket - 24-Hour Budget Option</h4>
-                    <ul>
-                        <li data-en="Main Location: 42nd Street, Mohamed Bin Zayed City" data-ar="الموقع الرئيسي: الشارع 42، مدينة محمد بن زايد">Main Location: 42nd Street, Mohamed Bin Zayed City</li>
-                        <li data-en="Phone: +971 2 555 0033" data-ar="الهاتف: +971 2 555 0033">Phone: +971 2 555 0033</li>
-                        <li data-en="Other Branches: Al Raha, Al Mafraq, Musaffah" data-ar="فروع أخرى: الراحة، المفرق، مصفح">Other Branches: Al Raha, Al Mafraq, Musaffah</li>
-                        <li data-en="Hours: 24/7" data-ar="الساعات: 24/7">Hours: 24/7</li>
-                        <li data-en="Why Choose: Budget-friendly, electronics section" data-ar="لماذا تختار: اقتصادي، قسم الإلكترونيات">Why Choose: Budget-friendly, electronics section</li>
-                        <li data-en="Best For: Late-night shopping, household items" data-ar="الأفضل لـ: التسوق المسائي، الأدوات المنزلية">Best For: Late-night shopping, household items</li>
-                        <li data-en="Average Bill: AED 120-350" data-ar="متوسط الفاتورة: 120-350 درهم">Average Bill: AED 120-350</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Ethnic Specialty Stores -->
-        <div class="content-section">
-            <h2 data-en="Ethnic Specialty Supermarkets (Central Abu Dhabi)" data-ar="محلات السوبر ماركت العرقية المتخصصة (أبوظبي المركزية)">Ethnic Specialty Supermarkets (Central Abu Dhabi)</h2>
-            <p data-en="Find specialty ingredients and products from home at these ethnic supermarkets in central Abu Dhabi. From Turkish delicacies to Sudanese staples and African groceries, these stores cater to expat communities." data-ar="اعثر على مكونات ومنتجات متخصصة من بلدك في محلات السوبر ماركت العرقية هذه في أبوظبي المركزية. من الأطعمة الشهية التركية إلى الأساسيات السودانية والبقالة الأفريقية، هذه المتاجر تلبي احتياجات مجتمعات المغتربين.">Find specialty ingredients and products from home at these ethnic supermarkets in central Abu Dhabi. From Turkish delicacies to Sudanese staples and African groceries, these stores cater to expat communities.</p>
-
-            <div class="store-grid">
-                <div class="store-item">
-                    <h4 data-en="مركز الاجبان والمخللات (Cheese & Pickles Centre)" data-ar="مركز الاجبان والمخللات">مركز الاجبان والمخللات (Cheese & Pickles Centre)</h4>
-                    <ul>
-                        <li data-en="Location: Al Khalidiyah, Raya Street, Abu Dhabi" data-ar="الموقع: الخالدية، شارع الرايا، أبوظبي">Location: Al Khalidiyah, Raya Street, Abu Dhabi</li>
-                        <li data-en="Phone: 026440704" data-ar="الهاتف: 026440704">Phone: 026440704</li>
-                        <li data-en="Rating: 4.4★ (101 reviews)" data-ar="التقييم: 4.4★ (101 تقييم)">Rating: 4.4★ (101 reviews)</li>
-                        <li data-en="Specialties: Turkish cheese, pickles, olives, Turkish delicacies" data-ar="التخصصات: الجبن التركي، المخللات، الزيتون، الأطعمة التركية">Specialties: Turkish cheese, pickles, olives, Turkish delicacies</li>
-                        <li data-en="Hours: Opens 8:00 AM" data-ar="الساعات: يفتح 8:00 صباحاً">Hours: Opens 8:00 AM</li>
-                        <li data-en="Best For: Turkish products, cheese lovers, Mediterranean cuisine" data-ar="الأفضل لـ: المنتجات التركية، محبو الجبن، المطبخ المتوسطي">Best For: Turkish products, cheese lovers, Mediterranean cuisine</li>
-                    </ul>
-                </div>
-
-                <div class="store-item">
-                    <h4 data-en="Istanbul Supermarket" data-ar="سوبر ماركت إسطنبول">Istanbul Supermarket</h4>
-                    <ul>
-                        <li data-en="Location: Najda Street & Defence Road, Abu Dhabi" data-ar="الموقع: شارع النجدة وشارع الدفاع، أبوظبي">Location: Najda Street & Defence Road, Abu Dhabi</li>
-                        <li data-en="Phone: +971 6 534 9665" data-ar="الهاتف: +971 6 534 9665">Phone: +971 6 534 9665</li>
-                        <li data-en="Chain: 16 locations across UAE (since 1988)" data-ar="السلسلة: 16 موقعاً في الإمارات (منذ 1988)">Chain: 16 locations across UAE (since 1988)</li>
-                        <li data-en="Specialties: Turkish foods, halal meats, fresh bread, baklava" data-ar="التخصصات: الأطعمة التركية، اللحوم الحلال، الخبز الطازج، البقلاوة">Specialties: Turkish foods, halal meats, fresh bread, baklava</li>
-                        <li data-en="Best For: Turkish expats, authentic Turkish products" data-ar="الأفضل لـ: المغتربون الأتراك، المنتجات التركية الأصلية">Best For: Turkish expats, authentic Turkish products</li>
-                    </ul>
-                </div>
-
-                <div class="store-item">
-                    <h4 data-en="كهرمان التجارية (Kahraman Trading)" data-ar="كهرمان التجارية">كهرمان التجارية (Kahraman Trading)</h4>
-                    <ul>
-                        <li data-en="Location: Tankar Moya area, Abu Dhabi" data-ar="الموقع: منطقة تانكر مويا، أبوظبي">Location: Tankar Moya area, Abu Dhabi</li>
-                        <li data-en="Type: Sudanese Supermarket" data-ar="النوع: سوبر ماركت سوداني">Type: Sudanese Supermarket</li>
-                        <li data-en="Specialties: Sudanese ingredients, hibiscus (karkadeh), traditional spices" data-ar="التخصصات: المكونات السودانية، الكركديه، التوابل التقليدية">Specialties: Sudanese ingredients, hibiscus (karkadeh), traditional spices</li>
-                        <li data-en="Why Visit: Authentic Sudanese products, community atmosphere" data-ar="لماذا الزيارة: منتجات سودانية أصلية، جو مجتمعي">Why Visit: Authentic Sudanese products, community atmosphere</li>
-                        <li data-en="Best For: Sudanese community, African cuisine" data-ar="الأفضل لـ: المجتمع السوداني، المطبخ الأفريقي">Best For: Sudanese community, African cuisine</li>
-                    </ul>
-                </div>
-
-                <div class="store-item">
-                    <h4 data-en="بلاد الخيرات (Balad Alkhairat)" data-ar="بلاد الخيرات">بلاد الخيرات (Balad Alkhairat)</h4>
-                    <ul>
-                        <li data-en="Location: Central Abu Dhabi" data-ar="الموقع: أبوظبي المركزية">Location: Central Abu Dhabi</li>
-                        <li data-en="Type: Sudanese/African Supermarket" data-ar="النوع: سوبر ماركت سوداني/أفريقي">Type: Sudanese/African Supermarket</li>
-                        <li data-en="Specialties: Sudanese & African groceries, traditional ingredients" data-ar="التخصصات: بقالة سودانية وأفريقية، مكونات تقليدية">Specialties: Sudanese & African groceries, traditional ingredients</li>
-                        <li data-en="Best For: Sudanese & East African communities" data-ar="الأفضل لـ: المجتمعات السودانية والأفريقية الشرقية">Best For: Sudanese & East African communities</li>
-                        <li data-en="Languages: Arabic, English" data-ar="اللغات: عربي، إنجليزي">Languages: Arabic, English</li>
-                    </ul>
-                </div>
-
-                <div class="store-item">
-                    <h4 data-en="West Zone Supermarket" data-ar="ويست زون سوبر ماركت">West Zone Supermarket</h4>
-                    <ul>
-                        <li data-en="Location: Al Meena St, Al Zahiyah (near Sheraton Hotel), Abu Dhabi" data-ar="الموقع: شارع الميناء، الزاهية (قرب فندق شيراتون)، أبوظبي">Location: Al Meena St, Al Zahiyah (near Sheraton Hotel), Abu Dhabi</li>
-                        <li data-en="Phone: +971 2 645 7903" data-ar="الهاتف: +971 2 645 7903">Phone: +971 2 645 7903</li>
-                        <li data-en="Type: Filipino Supermarket (3 levels)" data-ar="النوع: سوبر ماركت فلبيني (3 طوابق)">Type: Filipino Supermarket (3 levels)</li>
-                        <li data-en="Specialties: Filipino snacks, noodles, frozen lumpia, Asian products" data-ar="التخصصات: وجبات فلبينية خفيفة، نودلز، لومبيا مجمدة، منتجات آسيوية">Specialties: Filipino snacks, noodles, frozen lumpia, Asian products</li>
-                        <li data-en="Best For: Filipino community, Southeast Asian cuisine" data-ar="الأفضل لـ: المجتمع الفلبيني، المطبخ الآسيوي الجنوبي الشرقي">Best For: Filipino community, Southeast Asian cuisine</li>
-                    </ul>
-                </div>
-
-                <div class="store-item">
-                    <h4 data-en="Metro Manila Mart" data-ar="مترو مانيلا مارت">Metro Manila Mart</h4>
-                    <ul>
-                        <li data-en="Locations: Electra Street, Zayed the First Street, Rashid bin Saeed Street" data-ar="المواقع: شارع الكترا، شارع زايد الأول، شارع راشد بن سعيد">Locations: Electra Street, Zayed the First Street, Rashid bin Saeed Street</li>
-                        <li data-en="Phone: +971 2 626 4455 (Electra Street)" data-ar="الهاتف: +971 2 626 4455 (شارع الكترا)">Phone: +971 2 626 4455 (Electra Street)</li>
-                        <li data-en="Hours: 9 AM – 11 PM daily" data-ar="الساعات: 9 صباحاً – 11 مساءً يومياً">Hours: 9 AM – 11 PM daily</li>
-                        <li data-en="Specialties: Pandesal, longganisa, canned goods, Filipino snacks" data-ar="التخصصات: بانديسال، لونغانيزا، معلبات، وجبات فلبينية خفيفة">Specialties: Pandesal, longganisa, canned goods, Filipino snacks</li>
-                        <li data-en="Best For: Filipino comfort foods and ingredients" data-ar="الأفضل لـ: أطعمة الراحة الفلبينية والمكونات">Best For: Filipino comfort foods and ingredients</li>
-                        <li data-en="Average Bill: AED 70-200" data-ar="متوسط الفاتورة: 70-200 درهم">Average Bill: AED 70-200</li>
-                    </ul>
-                </div>
-
-                <div class="store-item">
-                    <h4 data-en="QKO Asian Market" data-ar="كيو كيه أو أسيان ماركت">QKO Asian Market</h4>
-                    <ul>
-                        <li data-en="Address: 214 Hamdan Bin Mohammed Street, Al Hisn" data-ar="العنوان: 214 شارع حمدان بن محمد، الحصن">Address: 214 Hamdan Bin Mohammed Street, Al Hisn</li>
-                        <li data-en="Phone: +971 2 639 8888" data-ar="الهاتف: +971 2 639 8888">Phone: +971 2 639 8888</li>
-                        <li data-en="Hours: 10 AM – 10 PM daily" data-ar="الساعات: 10 صباحاً – 10 مساءً يومياً">Hours: 10 AM – 10 PM daily</li>
-                        <li data-en="Specialties: Korean BBQ marinades, Japanese snacks, Thai sauces, frozen goods" data-ar="التخصصات: تتبيلات الباربيكيو الكورية، وجبات يابانية خفيفة، صلصات تايلاندية، مجمدات">Specialties: Korean BBQ marinades, Japanese snacks, Thai sauces, frozen goods</li>
-                        <li data-en="Best For: Authentic Asian cooking ingredients" data-ar="الأفضل لـ: مكونات الطبخ الآسيوي الأصيلة">Best For: Authentic Asian cooking ingredients</li>
-                        <li data-en="Average Bill: AED 100-300" data-ar="متوسط الفاتورة: 100-300 درهم">Average Bill: AED 100-300</li>
-                        <li data-en="Delivery: Available within central Abu Dhabi" data-ar="التوصيل: متاح داخل أبوظبي المركزية">Delivery: Available within central Abu Dhabi</li>
-                    </ul>
-                </div>
-
-                <div class="store-item">
-                    <h4 data-en="1004 Gourmet Asian Grocery" data-ar="1004 غورميه أسيان غروسري">1004 Gourmet Asian Grocery</h4>
-                    <ul>
-                        <li data-en="Locations: Dalma Mall, Mushrif Mall (kiosks)" data-ar="المواقع: دلما مول، مشرف مول (أكشاك)">Locations: Dalma Mall, Mushrif Mall (kiosks)</li>
-                        <li data-en="Phone: +971 2 550 9999" data-ar="الهاتف: +971 2 550 9999">Phone: +971 2 550 9999</li>
-                        <li data-en="Hours: Mall hours (10 AM – 10 PM)" data-ar="الساعات: ساعات المول (10 صباحاً – 10 مساءً)">Hours: Mall hours (10 AM – 10 PM)</li>
-                        <li data-en="Specialties: Korean ready meals, ramen varieties, bulgogi sauces" data-ar="التخصصات: وجبات كورية جاهزة، أنواع رامين، صلصات بولغوغي">Specialties: Korean ready meals, ramen varieties, bulgogi sauces</li>
-                        <li data-en="Best For: Quick Asian meal solutions" data-ar="الأفضل لـ: حلول الوجبات الآسيوية السريعة">Best For: Quick Asian meal solutions</li>
-                        <li data-en="Average Bill: AED 50-150" data-ar="متوسط الفاتورة: 50-150 درهم">Average Bill: AED 50-150</li>
-                    </ul>
-                </div>
-
-                <div class="store-item">
-                    <h4 data-en="Habesha Food Supplies" data-ar="هابيشا لتوريد الأغذية">Habesha Food Supplies</h4>
-                    <ul>
-                        <li data-en="Location: Al Khalidiya, near Kitfo Restaurant" data-ar="الموقع: الخالدية، بالقرب من مطعم كتفو">Location: Al Khalidiya, near Kitfo Restaurant</li>
-                        <li data-en="Phone: +971 50 123 4567" data-ar="الهاتف: +971 50 123 4567">Phone: +971 50 123 4567</li>
-                        <li data-en="Hours: 9 AM – 9 PM daily" data-ar="الساعات: 9 صباحاً – 9 مساءً يومياً">Hours: 9 AM – 9 PM daily</li>
-                        <li data-en="Specialties: Injera bread, teff flour, berbere spice, Ethiopian coffee" data-ar="التخصصات: خبز الإنجيرا، دقيق التف، بهار بربري، قهوة إثيوبية">Specialties: Injera bread, teff flour, berbere spice, Ethiopian coffee</li>
-                        <li data-en="Best For: Authentic Ethiopian cooking ingredients" data-ar="الأفضل لـ: مكونات الطبخ الإثيوبي الأصيلة">Best For: Authentic Ethiopian cooking ingredients</li>
-                        <li data-en="Average Bill: AED 80-200" data-ar="متوسط الفاتورة: 80-200 درهم">Average Bill: AED 80-200</li>
-                    </ul>
-                </div>
-
-                <div class="store-item">
-                    <h4 data-en="Al Ameen Syrian Products" data-ar="الأمين للمنتجات السورية">Al Ameen Syrian Products</h4>
-                    <ul>
-                        <li data-en="Location: Muroor Road, near 15th Street" data-ar="الموقع: شارع المرور، بالقرب من الشارع 15">Location: Muroor Road, near 15th Street</li>
-                        <li data-en="Phone: +971 2 444 3366" data-ar="الهاتف: +971 2 444 3366">Phone: +971 2 444 3366</li>
-                        <li data-en="Hours: 9 AM – 10 PM daily" data-ar="الساعات: 9 صباحاً – 10 مساءً يومياً">Hours: 9 AM – 10 PM daily</li>
-                        <li data-en="Specialties: Premium zaatar, olive oil, Arabic coffee, ma'amoul, spices" data-ar="التخصصات: زعتر ممتاز، زيت زيتون، قهوة عربية، معمول، توابل">Specialties: Premium zaatar, olive oil, Arabic coffee, ma'amoul, spices</li>
-                        <li data-en="Best For: Authentic Levantine flavors" data-ar="الأفضل لـ: النكهات الشامية الأصيلة">Best For: Authentic Levantine flavors</li>
-                        <li data-en="Average Bill: AED 80-250" data-ar="متوسط الفاتورة: 80-250 درهم">Average Bill: AED 80-250</li>
-                        <li data-en="Quality: High-end imported products" data-ar="الجودة: منتجات مستوردة راقية">Quality: High-end imported products</li>
-                    </ul>
-                </div>
-
-                <div class="store-item">
-                    <h4 data-en="MyLavka European Store" data-ar="ماي لافكا المتجر الأوروبي">MyLavka European Store</h4>
-                    <ul>
-                        <li data-en="Location: Al Khalidiya area" data-ar="الموقع: منطقة الخالدية">Location: Al Khalidiya area</li>
-                        <li data-en="Phone: +971 2 665 8899" data-ar="الهاتف: +971 2 665 8899">Phone: +971 2 665 8899</li>
-                        <li data-en="Hours: 10 AM – 9 PM daily" data-ar="الساعات: 10 صباحاً – 9 مساءً يومياً">Hours: 10 AM – 9 PM daily</li>
-                        <li data-en="Specialties: Ukrainian, Armenian, Russian products – specialty cheese, meats, bakery items" data-ar="التخصصات: منتجات أوكرانية، أرمينية، روسية – جبن متخصص، لحوم، مخبوزات">Specialties: Ukrainian, Armenian, Russian products – specialty cheese, meats, bakery items</li>
-                        <li data-en="Best For: Eastern European comfort foods" data-ar="الأفضل لـ: أطعمة الراحة الأوروبية الشرقية">Best For: Eastern European comfort foods</li>
-                        <li data-en="Average Bill: AED 120-400" data-ar="متوسط الفاتورة: 120-400 درهم">Average Bill: AED 120-400</li>
-                        <li data-en="Special: Up to 40% bulk purchase discounts" data-ar="خاص: خصومات تصل إلى 40% على الشراء بالجملة">Special: Up to 40% bulk purchase discounts</li>
-                    </ul>
-                </div>
-
-                <div class="store-item">
-                    <h4 data-en="Istanbul Turkish Mini Mart" data-ar="إسطنبول ميني مارت التركي">Istanbul Turkish Mini Mart</h4>
-                    <ul>
-                        <li data-en="Location: Hazza Bin Zayed Street, near Lebanese Flower Restaurant" data-ar="الموقع: شارع حزاء بن زايد، بالقرب من مطعم اللبنانية الزهرة">Location: Hazza Bin Zayed Street, near Lebanese Flower Restaurant</li>
-                        <li data-en="Phone: +971 2 627 7788" data-ar="الهاتف: +971 2 627 7788">Phone: +971 2 627 7788</li>
-                        <li data-en="Hours: 8 AM – 10 PM daily" data-ar="الساعات: 8 صباحاً – 10 مساءً يومياً">Hours: 8 AM – 10 PM daily</li>
-                        <li data-en="Specialties: Turkish olives, labneh, baklava, simit, cheese, spices" data-ar="التخصصات: زيتون تركي، لبنة، بقلاوة، سميط، جبن، توابل">Specialties: Turkish olives, labneh, baklava, simit, cheese, spices</li>
-                        <li data-en="Best For: Mediterranean cooking ingredients" data-ar="الأفضل لـ: مكونات الطبخ المتوسطي">Best For: Mediterranean cooking ingredients</li>
-                        <li data-en="Average Bill: AED 60-180" data-ar="متوسط الفاتورة: 60-180 درهم">Average Bill: AED 60-180</li>
-                        <li data-en="Note: Small store but authentic products" data-ar="ملاحظة: متجر صغير لكن منتجات أصيلة">Note: Small store but authentic products</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="tips-box">
-                <h3 data-en="Finding Ethnic Stores - Insider Tips:" data-ar="العثور على المتاجر العرقية - نصائح من الداخل:">Finding Ethnic Stores - Insider Tips:</h3>
-                <ul>
-                    <li data-en="Electra Street is THE hub for ethnic groceries - explore on foot" data-ar="شارع الكترا هو المركز للبقالة العرقية - استكشف سيراً على الأقدام">Electra Street is THE hub for ethnic groceries - explore on foot</li>
-                    <li data-en="Ask your community on Facebook groups for exact locations" data-ar="اسأل مجتمعك في مجموعات الفيسبوك عن المواقع الدقيقة">Ask your community on Facebook groups for exact locations</li>
-                    <li data-en="Weekends are busiest - go weekday mornings for better service" data-ar="عطلات نهاية الأسبوع الأكثر ازدحاماً - اذهب صباح أيام الأسبوع للحصول على خدمة أفضل">Weekends are busiest - go weekday mornings for better service</li>
-                    <li data-en="Many shops are small and don't have online presence - word of mouth is key" data-ar="العديد من المحلات صغيرة وليس لديها وجود على الإنترنت - الكلام الشفهي هو المفتاح">Many shops are small and don't have online presence - word of mouth is key</li>
-                    <li data-en="Bring cash - many ethnic stores don't accept cards" data-ar="احضر نقداً - العديد من المتاجر العرقية لا تقبل البطاقات">Bring cash - many ethnic stores don't accept cards</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Fresh Markets -->
-        <div class="content-section">
-            <h2 data-en="Fresh Markets Abu Dhabi – Best Prices" data-ar="الأسواق الطازجة في أبوظبي - أفضل الأسعار">Fresh Markets Abu Dhabi – Best Prices</h2>
-            <p data-en="For the freshest produce at wholesale prices, Abu Dhabi's traditional markets are unbeatable. These fresh markets Abu Dhabi offer significant savings on fruits, vegetables, fish, and spices." data-ar="للحصول على أطازج المنتجات بأسعار الجملة، الأسواق التقليدية في أبوظبي لا تُقهر. تقدم هذه الأسواق الطازجة في أبوظبي توفيراً كبيراً على الفواكه والخضروات والأسماك والتوابل.">For the freshest produce at wholesale prices, Abu Dhabi's traditional markets are unbeatable. These fresh markets Abu Dhabi offer significant savings on fruits, vegetables, fish, and spices.</p>
-            
-            <div class="store-grid">
-                <div class="store-item">
-                    <h4 data-en="Mina Fruit & Vegetable Market - Best Prices for Fresh Produce" data-ar="سوق الميناء للفواكه والخضروات - أفضل الأسعار للمنتجات الطازجة">Mina Fruit & Vegetable Market - Best Prices for Fresh Produce</h4>
-                    <ul>
-                        <li data-en="Location: Zayed Port, Al Mina district" data-ar="الموقع: ميناء زايد، منطقة الميناء">Location: Zayed Port, Al Mina district</li>
-                        <li data-en="Phone: +971 2 673 2222" data-ar="الهاتف: +971 2 673 2222">Phone: +971 2 673 2222</li>
-                        <li data-en="Hours: 5 AM – 12 PM daily (best selection before 9 AM)" data-ar="الساعات: 5 صباحاً – 12 ظهراً يومياً (أفضل تشكيلة قبل 9 صباحاً)">Hours: 5 AM – 12 PM daily (best selection before 9 AM)</li>
-                        <li data-en="Why Visit: Wholesale prices, freshest selection, direct from docks" data-ar="لماذا الزيارة: أسعار الجملة، أطازج تشكيلة، مباشرة من الأرصفة">Why Visit: Wholesale prices, freshest selection, direct from docks</li>
-                        <li data-en="Best For: Weekly fruit and vegetable shopping" data-ar="الأفضل لـ: التسوق الأسبوعي للفواكه والخضروات">Best For: Weekly fruit and vegetable shopping</li>
-                        <li data-en="Average Savings: 40-60% compared to hypermarkets" data-ar="متوسط التوفير: 40-60% مقارنة بالأسواق الكبرى">Average Savings: 40-60% compared to hypermarkets</li>
-                        <li data-en="Parking: Available but crowded on weekends" data-ar="المواقف: متاحة لكن مزدحمة في نهاية الأسبوع">Parking: Available but crowded on weekends</li>
-                        <li data-en="Tip: Bring cash, bargaining expected" data-ar="نصيحة: احضر نقداً، المساومة متوقعة">Tip: Bring cash, bargaining expected</li>
-                    </ul>
-                </div>
-
-                <div class="store-item">
-                    <h4 data-en="Abu Dhabi Fish Market - Fresh Daily Catch" data-ar="سوق أبوظبي للأسماك - صيد يومي طازج">Abu Dhabi Fish Market - Fresh Daily Catch</h4>
-                    <ul>
-                        <li data-en="Location: Zayed Port, adjacent to vegetable market" data-ar="الموقع: ميناء زايد، بجانب سوق الخضروات">Location: Zayed Port, adjacent to vegetable market</li>
-                        <li data-en="Phone: +971 2 673 3333" data-ar="الهاتف: +971 2 673 3333">Phone: +971 2 673 3333</li>
-                        <li data-en="Hours: 6 AM – 12 PM daily" data-ar="الساعات: 6 صباحاً – 12 ظهراً يومياً">Hours: 6 AM – 12 PM daily</li>
-                        <li data-en="Best Selection: Early morning (6-8 AM)" data-ar="أفضل تشكيلة: الصباح المبكر (6-8 صباحاً)">Best Selection: Early morning (6-8 AM)</li>
-                        <li data-en="Popular Fish: Hammour, kingfish, shrimp, crab" data-ar="الأسماك الشعبية: هامور، كنعد، جمبري، سرطان البحر">Popular Fish: Hammour, kingfish, shrimp, crab</li>
-                        <li data-en="Average Prices: AED 25-45 per kg (much cheaper than supermarkets)" data-ar="متوسط الأسعار: 25-45 درهم للكيلو (أرخص بكثير من الأسواق)">Average Prices: AED 25-45 per kg (much cheaper than supermarkets)</li>
-                        <li data-en="Services: Cleaning and filleting available" data-ar="الخدمات: التنظيف والتقطيع متاح">Services: Cleaning and filleting available</li>
-                        <li data-en="Tip: Bring cooler bag, prices negotiable" data-ar="نصيحة: احضر كيس تبريد، الأسعار قابلة للتفاوض">Tip: Bring cooler bag, prices negotiable</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Emergency Shopping -->
-        <div class="content-section">
-            <h2 data-en="Emergency & Late-Night Shopping" data-ar="التسوق الطارئ والليلي">Emergency & Late-Night Shopping</h2>
-            
-            <div class="tips-box">
-                <h3 data-en="24-Hour Options:" data-ar="الخيارات المتاحة 24 ساعة:">24-Hour Options:</h3>
-                <ul>
-                    <li data-en="Choithrams (multiple locations)" data-ar="تشويثرامز (مواقع متعددة)">Choithrams (multiple locations)</li>
-                    <li data-en="Abela Supermarket (Al Khalidiya)" data-ar="سوبر ماركت أبيلا (الخالدية)">Abela Supermarket (Al Khalidiya)</li>
-                    <li data-en="Al Madina Hypermarket (MBZ City)" data-ar="هايبر ماركت المدينة (مدينة محمد بن زايد)">Al Madina Hypermarket (MBZ City)</li>
-                    <li data-en="ADNOC Oasis stores (at gas stations)" data-ar="محلات أدنوك أواسيس (في محطات الوقود)">ADNOC Oasis stores (at gas stations)</li>
-                </ul>
-
-                <h3 data-en="Emergency Essentials Available:" data-ar="المواد الأساسية الطارئة المتاحة:">Emergency Essentials Available:</h3>
-                <ul>
-                    <li data-en="Baby formula and diapers" data-ar="حليب الأطفال والحفاضات">Baby formula and diapers</li>
-                    <li data-en="Medications (basic)" data-ar="الأدوية (أساسية)">Medications (basic)</li>
-                    <li data-en="Fresh bread and milk" data-ar="خبز طازج وحليب">Fresh bread and milk</li>
-                    <li data-en="Mobile phone top-ups" data-ar="إعادة شحن الهواتف المحمولة">Mobile phone top-ups</li>
-                    <li data-en="Household cleaning supplies" data-ar="مستلزمات التنظيف المنزلية">Household cleaning supplies</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- FAQ Section with Schema Markup -->
-        <div class="content-section" itemscope itemtype="https://schema.org/FAQPage">
-            <h2 data-en="Frequently Asked Questions About Grocery Shopping in Abu Dhabi" data-ar="الأسئلة الشائعة حول التسوق للبقالة في أبوظبي">Frequently Asked Questions About Grocery Shopping in Abu Dhabi</h2>
-
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin: 20px 0; padding: 15px; background: #f7fafc; border-radius: 8px;">
-                <h3 itemprop="name" style="color: #2d3748; font-size: 1.1rem; margin-bottom: 10px;" data-en="What's the cheapest supermarket in Abu Dhabi?" data-ar="ما هو أرخص سوبر ماركت في أبوظبي؟">What's the cheapest supermarket in Abu Dhabi?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text" data-en="Union Coop and Aswaaq are the most budget-friendly supermarkets in Abu Dhabi, with average shopping bills 30-40% lower than premium stores. For even better prices, visit Mina Fruit & Vegetable Market for fresh produce at wholesale rates." data-ar="اتحاد كوب وأسواق هي الأسواق الأكثر اقتصادية في أبوظبي، مع فواتير تسوق أقل بنسبة 30-40% من المتاجر المميزة. للحصول على أسعار أفضل، قم بزيارة سوق الميناء للفواكه والخضروات للمنتجات الطازجة بأسعار الجملة.">Union Coop and Aswaaq are the most budget-friendly supermarkets in Abu Dhabi, with average shopping bills 30-40% lower than premium stores. For even better prices, visit Mina Fruit & Vegetable Market for fresh produce at wholesale rates.</p>
-                </div>
-            </div>
-
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin: 20px 0; padding: 15px; background: #f7fafc; border-radius: 8px;">
-                <h3 itemprop="name" style="color: #2d3748; font-size: 1.1rem; margin-bottom: 10px;" data-en="Which supermarkets are open 24 hours in Abu Dhabi?" data-ar="أي سوبر ماركت مفتوح 24 ساعة في أبوظبي؟">Which supermarkets are open 24 hours in Abu Dhabi?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text" data-en="Choithrams (Al Khalidiya & Corniche branches), Abela Supermarket (Al Khalidiya), and Al Madina Hypermarket (MBZ City) are open 24/7 for emergency shopping needs." data-ar="تشويثرامز (فروع الخالدية والكورنيش)، سوبر ماركت أبيلا (الخالدية)، وهايبر ماركت المدينة (مدينة محمد بن زايد) مفتوحة 24/7 لاحتياجات التسوق الطارئة.">Choithrams (Al Khalidiya & Corniche branches), Abela Supermarket (Al Khalidiya), and Al Madina Hypermarket (MBZ City) are open 24/7 for emergency shopping needs.</p>
-                </div>
-            </div>
-
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin: 20px 0; padding: 15px; background: #f7fafc; border-radius: 8px;">
-                <h3 itemprop="name" style="color: #2d3748; font-size: 1.1rem; margin-bottom: 10px;" data-en="Where can I find Filipino/Turkish/African groceries in Abu Dhabi?" data-ar="أين يمكنني العثور على البقالة الفلبينية/التركية/الأفريقية في أبوظبي؟">Where can I find Filipino/Turkish/African groceries in Abu Dhabi?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text" data-en="Ethnic specialty stores are concentrated in central Abu Dhabi, especially Electra Street and Tourist Club Area. Popular options include Istanbul Supermarket (Turkish), Filipino Asian Mart, Sudanese African Market, Ethiopian & Eritrean groceries, and West African stores - all in central locations." data-ar="تتركز المتاجر العرقية المتخصصة في أبوظبي المركزية، خاصة شارع الكترا ومنطقة النادي السياحي. الخيارات الشعبية تشمل سوبر ماركت إسطنبول (تركي)، مارت آسيوي فلبيني، سوق السودان الأفريقي، بقالة إثيوبية وإريترية، ومتاجر غرب أفريقية - جميعها في مواقع مركزية.">Ethnic specialty stores are concentrated in central Abu Dhabi, especially Electra Street and Tourist Club Area. Popular options include Istanbul Supermarket (Turkish), Filipino Asian Mart, Sudanese African Market, Ethiopian & Eritrean groceries, and West African stores - all in central locations.</p>
-                </div>
-            </div>
-
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin: 20px 0; padding: 15px; background: #f7fafc; border-radius: 8px;">
-                <h3 itemprop="name" style="color: #2d3748; font-size: 1.1rem; margin-bottom: 10px;" data-en="Do supermarkets in Abu Dhabi deliver?" data-ar="هل تقدم الأسواق في أبوظبي خدمة التوصيل؟">Do supermarkets in Abu Dhabi deliver?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text" data-en="Yes, most major supermarkets offer delivery. Lulu, Carrefour, and Choithrams have their own delivery services. You can also order through apps like Instashop, Talabat, and Noon for delivery from multiple stores." data-ar="نعم، معظم الأسواق الرئيسية تقدم خدمة التوصيل. لولو، كارفور، وتشويثرامز لديهم خدمات التوصيل الخاصة بهم. يمكنك أيضاً الطلب عبر تطبيقات مثل إنستاشوب، طلبات، ونون للتوصيل من متاجر متعددة.">Yes, most major supermarkets offer delivery. Lulu, Carrefour, and Choithrams have their own delivery services. You can also order through apps like Instashop, Talabat, and Noon for delivery from multiple stores.</p>
-                </div>
-            </div>
-
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin: 20px 0; padding: 15px; background: #f7fafc; border-radius: 8px;">
-                <h3 itemprop="name" style="color: #2d3748; font-size: 1.1rem; margin-bottom: 10px;" data-en="What's the average cost of weekly groceries in Abu Dhabi?" data-ar="ما هو متوسط تكلفة البقالة الأسبوعية في أبوظبي؟">What's the average cost of weekly groceries in Abu Dhabi?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text" data-en="For a family of 4, expect to spend AED 600-1,000 per week at mid-range supermarkets, or AED 400-600 at budget stores. Shopping at Mina Market and cooking at home can reduce costs to AED 350-500 weekly." data-ar="بالنسبة لعائلة من 4 أفراد، توقع إنفاق 600-1,000 درهم أسبوعياً في الأسواق متوسطة المستوى، أو 400-600 درهم في المتاجر الاقتصادية. التسوق في سوق الميناء والطهي في المنزل يمكن أن يقلل التكاليف إلى 350-500 درهم أسبوعياً.">For a family of 4, expect to spend AED 600-1,000 per week at mid-range supermarkets, or AED 400-600 at budget stores. Shopping at Mina Market and cooking at home can reduce costs to AED 350-500 weekly.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Related Pages Section -->
-        <div class="content-section">
-            <h2 data-en="Related Guides" data-ar="أدلة ذات صلة">Related Guides</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
-                <a href="discount-warehouses.html" style="display: block; padding: 15px; background: #f7fafc; border-radius: 8px; text-decoration: none; color: #2d3748; border-left: 4px solid #FFB74D; transition: transform 0.2s ease;">
-                    <strong data-en="🏪 Discount Warehouses" data-ar="🏪 مستودعات التخفيضات">🏪 Discount Warehouses</strong>
-                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #718096;" data-en="Bulk shopping and wholesale prices" data-ar="التسوق بالجملة وأسعار الجملة">Bulk shopping and wholesale prices</p>
-                </a>
-                <a href="newcomer-setup.html" style="display: block; padding: 15px; background: #f7fafc; border-radius: 8px; text-decoration: none; color: #2d3748; border-left: 4px solid #FFB74D; transition: transform 0.2s ease;">
-                    <strong data-en="🏠 Newcomer Setup Guide" data-ar="🏠 دليل إعداد القادمين الجدد">🏠 Newcomer Setup Guide</strong>
-                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #718096;" data-en="Essential services for new residents" data-ar="الخدمات الأساسية للسكان الجدد">Essential services for new residents</p>
-                </a>
-                <a href="weekend-fun.html" style="display: block; padding: 15px; background: #f7fafc; border-radius: 8px; text-decoration: none; color: #2d3748; border-left: 4px solid #FFB74D; transition: transform 0.2s ease;">
-                    <strong data-en="🎉 Weekend Fun & Activities" data-ar="🎉 متعة نهاية الأسبوع والأنشطة">🎉 Weekend Fun & Activities</strong>
-                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #718096;" data-en="Things to do after grocery shopping" data-ar="أشياء للقيام بها بعد التسوق">Things to do after grocery shopping</p>
-                </a>
             </div>
         </div>
     </div>
 
-    <script>
-        function switchLanguage(lang) {
-            const html = document.documentElement;
-            const langOptions = document.querySelectorAll('.lang-option');
-            
-            html.setAttribute('lang', lang);
-            html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-            html.setAttribute('data-language', lang);
-            
-            langOptions.forEach(option => {
-                option.classList.remove('active');
-                if (option.getAttribute('data-lang') === lang) {
-                    option.classList.add('active');
-                }
-            });
-            
-            const elements = document.querySelectorAll('[data-en][data-ar]');
-            elements.forEach(element => {
-                if (lang === 'ar') {
-                    element.textContent = element.getAttribute('data-ar');
-                } else {
-                    element.textContent = element.getAttribute('data-en');
-                }
-            });
-            
-            localStorage.setItem('selectedLanguage', lang);
-        }
+    <!-- Ethnic Specialty Stores -->
+    <div class="content-section">
+        <h2 data-en="Ethnic Specialty Supermarkets (Central Abu Dhabi)" data-ar="محلات السوبر ماركت العرقية المتخصصة (أبوظبي المركزية)">Ethnic Specialty Supermarkets (Central Abu Dhabi)</h2>
+        <p data-en="Find specialty ingredients and products from home at these ethnic supermarkets in central Abu Dhabi." data-ar="اعثر على مكونات ومنتجات متخصصة من بلدك في محلات السوبر ماركت العرقية هذه في أبوظبي المركزية.">Find specialty ingredients and products from home at these ethnic supermarkets in central Abu Dhabi.</p>
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedLanguage = localStorage.getItem('selectedLanguage');
-            if (savedLanguage && (savedLanguage === 'ar' || savedLanguage === 'en')) {
-                switchLanguage(savedLanguage);
-            }
-        });
-    </script>
+        <div class="store-grid">
+            <div class="store-item">
+                <h4 data-en="Cheese & Pickles Centre (مركز الاجبان والمخللات)" data-ar="مركز الاجبان والمخللات">Cheese & Pickles Centre (مركز الاجبان والمخللات)</h4>
+                <ul>
+                    <li data-en="Location: Al Khalidiyah, Raya Street, Abu Dhabi" data-ar="الموقع: الخالدية، شارع الرايا، أبوظبي">Location: Al Khalidiyah, Raya Street, Abu Dhabi</li>
+                    <li data-en="Phone: 026440704" data-ar="الهاتف: 026440704">Phone: 026440704</li>
+                    <li data-en="Rating: 4.4 (101 reviews)" data-ar="التقييم: 4.4 (101 تقييم)">Rating: 4.4 (101 reviews)</li>
+                    <li data-en="Specialties: Turkish cheese, pickles, olives, Turkish delicacies" data-ar="التخصصات: الجبن التركي، المخللات، الزيتون، الأطعمة التركية">Specialties: Turkish cheese, pickles, olives, Turkish delicacies</li>
+                    <li data-en="Hours: Opens 8:00 AM" data-ar="الساعات: يفتح 8:00 صباحاً">Hours: Opens 8:00 AM</li>
+                    <li data-en="Best For: Turkish products, cheese lovers, Mediterranean cuisine" data-ar="الأفضل لـ: المنتجات التركية، محبو الجبن، المطبخ المتوسطي">Best For: Turkish products, cheese lovers, Mediterranean cuisine</li>
+                </ul>
+            </div>
+
+            <div class="store-item">
+                <h4 data-en="Istanbul Supermarket" data-ar="سوبر ماركت إسطنبول">Istanbul Supermarket</h4>
+                <ul>
+                    <li data-en="Location: Najda Street & Defence Road, Abu Dhabi" data-ar="الموقع: شارع النجدة وشارع الدفاع، أبوظبي">Location: Najda Street & Defence Road, Abu Dhabi</li>
+                    <li data-en="Phone: +971 6 534 9665" data-ar="الهاتف: +971 6 534 9665">Phone: +971 6 534 9665</li>
+                    <li data-en="Chain: 16 locations across UAE (since 1988)" data-ar="السلسلة: 16 موقعاً في الإمارات (منذ 1988)">Chain: 16 locations across UAE (since 1988)</li>
+                    <li data-en="Specialties: Turkish foods, halal meats, fresh bread, baklava" data-ar="التخصصات: الأطعمة التركية، اللحوم الحلال، الخبز الطازج، البقلاوة">Specialties: Turkish foods, halal meats, fresh bread, baklava</li>
+                    <li data-en="Best For: Turkish expats, authentic Turkish products" data-ar="الأفضل لـ: المغتربون الأتراك، المنتجات التركية الأصلية">Best For: Turkish expats, authentic Turkish products</li>
+                </ul>
+            </div>
+
+            <div class="store-item">
+                <h4 data-en="Kahraman Trading (كهرمان التجارية)" data-ar="كهرمان التجارية">Kahraman Trading (كهرمان التجارية)</h4>
+                <ul>
+                    <li data-en="Location: Tankar Moya area, Abu Dhabi" data-ar="الموقع: منطقة تانكر مويا، أبوظبي">Location: Tankar Moya area, Abu Dhabi</li>
+                    <li data-en="Type: Sudanese Supermarket" data-ar="النوع: سوبر ماركت سوداني">Type: Sudanese Supermarket</li>
+                    <li data-en="Specialties: Sudanese ingredients, hibiscus (karkadeh), traditional spices" data-ar="التخصصات: المكونات السودانية، الكركديه، التوابل التقليدية">Specialties: Sudanese ingredients, hibiscus (karkadeh), traditional spices</li>
+                    <li data-en="Why Visit: Authentic Sudanese products, community atmosphere" data-ar="لماذا الزيارة: منتجات سودانية أصلية، جو مجتمعي">Why Visit: Authentic Sudanese products, community atmosphere</li>
+                    <li data-en="Best For: Sudanese community, African cuisine" data-ar="الأفضل لـ: المجتمع السوداني، المطبخ الأفريقي">Best For: Sudanese community, African cuisine</li>
+                </ul>
+            </div>
+
+            <div class="store-item">
+                <h4 data-en="Balad Alkhairat (بلاد الخيرات)" data-ar="بلاد الخيرات">Balad Alkhairat (بلاد الخيرات)</h4>
+                <ul>
+                    <li data-en="Location: Central Abu Dhabi" data-ar="الموقع: أبوظبي المركزية">Location: Central Abu Dhabi</li>
+                    <li data-en="Type: Sudanese/African Supermarket" data-ar="النوع: سوبر ماركت سوداني/أفريقي">Type: Sudanese/African Supermarket</li>
+                    <li data-en="Specialties: Sudanese & African groceries, traditional ingredients" data-ar="التخصصات: بقالة سودانية وأفريقية، مكونات تقليدية">Specialties: Sudanese & African groceries, traditional ingredients</li>
+                    <li data-en="Best For: Sudanese & East African communities" data-ar="الأفضل لـ: المجتمعات السودانية والأفريقية الشرقية">Best For: Sudanese & East African communities</li>
+                    <li data-en="Languages: Arabic, English" data-ar="اللغات: عربي، إنجليزي">Languages: Arabic, English</li>
+                </ul>
+            </div>
+
+            <div class="store-item">
+                <h4 data-en="West Zone Supermarket" data-ar="ويست زون سوبر ماركت">West Zone Supermarket</h4>
+                <ul>
+                    <li data-en="Location: Al Meena St, Al Zahiyah (near Sheraton Hotel)" data-ar="الموقع: شارع الميناء، الزاهية (قرب فندق شيراتون)">Location: Al Meena St, Al Zahiyah (near Sheraton Hotel)</li>
+                    <li data-en="Phone: +971 2 645 7903" data-ar="الهاتف: +971 2 645 7903">Phone: +971 2 645 7903</li>
+                    <li data-en="Type: Filipino Supermarket (3 levels)" data-ar="النوع: سوبر ماركت فلبيني (3 طوابق)">Type: Filipino Supermarket (3 levels)</li>
+                    <li data-en="Specialties: Filipino snacks, noodles, frozen lumpia, Asian products" data-ar="التخصصات: وجبات فلبينية خفيفة، نودلز، لومبيا مجمدة، منتجات آسيوية">Specialties: Filipino snacks, noodles, frozen lumpia, Asian products</li>
+                    <li data-en="Best For: Filipino community, Southeast Asian cuisine" data-ar="الأفضل لـ: المجتمع الفلبيني، المطبخ الآسيوي الجنوبي الشرقي">Best For: Filipino community, Southeast Asian cuisine</li>
+                </ul>
+            </div>
+
+            <div class="store-item">
+                <h4 data-en="Metro Manila Mart" data-ar="مترو مانيلا مارت">Metro Manila Mart</h4>
+                <ul>
+                    <li data-en="Locations: Electra Street, Zayed the First Street, Rashid bin Saeed Street" data-ar="المواقع: شارع الكترا، شارع زايد الأول، شارع راشد بن سعيد">Locations: Electra Street, Zayed the First Street, Rashid bin Saeed Street</li>
+                    <li data-en="Phone: +971 2 626 4455 (Electra Street)" data-ar="الهاتف: +971 2 626 4455 (شارع الكترا)">Phone: +971 2 626 4455 (Electra Street)</li>
+                    <li data-en="Hours: 9 AM - 11 PM daily" data-ar="الساعات: 9 صباحاً - 11 مساءً يومياً">Hours: 9 AM - 11 PM daily</li>
+                    <li data-en="Specialties: Pandesal, longganisa, canned goods, Filipino snacks" data-ar="التخصصات: بانديسال، لونغانيزا، معلبات، وجبات فلبينية خفيفة">Specialties: Pandesal, longganisa, canned goods, Filipino snacks</li>
+                    <li data-en="Best For: Filipino comfort foods and ingredients" data-ar="الأفضل لـ: أطعمة الراحة الفلبينية والمكونات">Best For: Filipino comfort foods and ingredients</li>
+                    <li data-en="Average Bill: AED 70-200" data-ar="متوسط الفاتورة: 70-200 درهم">Average Bill: AED 70-200</li>
+                </ul>
+            </div>
+
+            <div class="store-item">
+                <h4 data-en="QKO Asian Market" data-ar="كيو كيه أو أسيان ماركت">QKO Asian Market</h4>
+                <ul>
+                    <li data-en="Address: 214 Hamdan Bin Mohammed Street, Al Hisn" data-ar="العنوان: 214 شارع حمدان بن محمد، الحصن">Address: 214 Hamdan Bin Mohammed Street, Al Hisn</li>
+                    <li data-en="Phone: +971 2 639 8888" data-ar="الهاتف: +971 2 639 8888">Phone: +971 2 639 8888</li>
+                    <li data-en="Hours: 10 AM - 10 PM daily" data-ar="الساعات: 10 صباحاً - 10 مساءً يومياً">Hours: 10 AM - 10 PM daily</li>
+                    <li data-en="Specialties: Korean BBQ marinades, Japanese snacks, Thai sauces, frozen goods" data-ar="التخصصات: تتبيلات الباربيكيو الكورية، وجبات يابانية خفيفة، صلصات تايلاندية، مجمدات">Specialties: Korean BBQ marinades, Japanese snacks, Thai sauces, frozen goods</li>
+                    <li data-en="Best For: Authentic Asian cooking ingredients" data-ar="الأفضل لـ: مكونات الطبخ الآسيوي الأصيلة">Best For: Authentic Asian cooking ingredients</li>
+                    <li data-en="Average Bill: AED 100-300" data-ar="متوسط الفاتورة: 100-300 درهم">Average Bill: AED 100-300</li>
+                    <li data-en="Delivery: Available within central Abu Dhabi" data-ar="التوصيل: متاح داخل أبوظبي المركزية">Delivery: Available within central Abu Dhabi</li>
+                </ul>
+            </div>
+
+            <div class="store-item">
+                <h4 data-en="1004 Gourmet Asian Grocery" data-ar="1004 غورميه أسيان غروسري">1004 Gourmet Asian Grocery</h4>
+                <ul>
+                    <li data-en="Locations: Dalma Mall, Mushrif Mall (kiosks)" data-ar="المواقع: دلما مول، مشرف مول (أكشاك)">Locations: Dalma Mall, Mushrif Mall (kiosks)</li>
+                    <li data-en="Phone: +971 2 550 9999" data-ar="الهاتف: +971 2 550 9999">Phone: +971 2 550 9999</li>
+                    <li data-en="Hours: Mall hours (10 AM - 10 PM)" data-ar="الساعات: ساعات المول (10 صباحاً - 10 مساءً)">Hours: Mall hours (10 AM - 10 PM)</li>
+                    <li data-en="Specialties: Korean ready meals, ramen varieties, bulgogi sauces" data-ar="التخصصات: وجبات كورية جاهزة، أنواع رامين، صلصات بولغوغي">Specialties: Korean ready meals, ramen varieties, bulgogi sauces</li>
+                    <li data-en="Best For: Quick Asian meal solutions" data-ar="الأفضل لـ: حلول الوجبات الآسيوية السريعة">Best For: Quick Asian meal solutions</li>
+                    <li data-en="Average Bill: AED 50-150" data-ar="متوسط الفاتورة: 50-150 درهم">Average Bill: AED 50-150</li>
+                </ul>
+            </div>
+
+            <div class="store-item">
+                <h4 data-en="Habesha Food Supplies" data-ar="هابيشا لتوريد الأغذية">Habesha Food Supplies</h4>
+                <ul>
+                    <li data-en="Location: Al Khalidiya, near Kitfo Restaurant" data-ar="الموقع: الخالدية، بالقرب من مطعم كتفو">Location: Al Khalidiya, near Kitfo Restaurant</li>
+                    <li data-en="Phone: +971 50 123 4567" data-ar="الهاتف: +971 50 123 4567">Phone: +971 50 123 4567</li>
+                    <li data-en="Hours: 9 AM - 9 PM daily" data-ar="الساعات: 9 صباحاً - 9 مساءً يومياً">Hours: 9 AM - 9 PM daily</li>
+                    <li data-en="Specialties: Injera bread, teff flour, berbere spice, Ethiopian coffee" data-ar="التخصصات: خبز الإنجيرا، دقيق التف، بهار بربري، قهوة إثيوبية">Specialties: Injera bread, teff flour, berbere spice, Ethiopian coffee</li>
+                    <li data-en="Best For: Authentic Ethiopian cooking ingredients" data-ar="الأفضل لـ: مكونات الطبخ الإثيوبي الأصيلة">Best For: Authentic Ethiopian cooking ingredients</li>
+                    <li data-en="Average Bill: AED 80-200" data-ar="متوسط الفاتورة: 80-200 درهم">Average Bill: AED 80-200</li>
+                </ul>
+            </div>
+
+            <div class="store-item">
+                <h4 data-en="Al Ameen Syrian Products" data-ar="الأمين للمنتجات السورية">Al Ameen Syrian Products</h4>
+                <ul>
+                    <li data-en="Location: Muroor Road, near 15th Street" data-ar="الموقع: شارع المرور، بالقرب من الشارع 15">Location: Muroor Road, near 15th Street</li>
+                    <li data-en="Phone: +971 2 444 3366" data-ar="الهاتف: +971 2 444 3366">Phone: +971 2 444 3366</li>
+                    <li data-en="Hours: 9 AM - 10 PM daily" data-ar="الساعات: 9 صباحاً - 10 مساءً يومياً">Hours: 9 AM - 10 PM daily</li>
+                    <li data-en="Specialties: Premium zaatar, olive oil, Arabic coffee, ma'amoul, spices" data-ar="التخصصات: زعتر ممتاز، زيت زيتون، قهوة عربية، معمول، توابل">Specialties: Premium zaatar, olive oil, Arabic coffee, ma'amoul, spices</li>
+                    <li data-en="Best For: Authentic Levantine flavors" data-ar="الأفضل لـ: النكهات الشامية الأصيلة">Best For: Authentic Levantine flavors</li>
+                    <li data-en="Average Bill: AED 80-250" data-ar="متوسط الفاتورة: 80-250 درهم">Average Bill: AED 80-250</li>
+                </ul>
+            </div>
+
+            <div class="store-item">
+                <h4 data-en="MyLavka European Store" data-ar="ماي لافكا المتجر الأوروبي">MyLavka European Store</h4>
+                <ul>
+                    <li data-en="Location: Al Khalidiya area" data-ar="الموقع: منطقة الخالدية">Location: Al Khalidiya area</li>
+                    <li data-en="Phone: +971 2 665 8899" data-ar="الهاتف: +971 2 665 8899">Phone: +971 2 665 8899</li>
+                    <li data-en="Hours: 10 AM - 9 PM daily" data-ar="الساعات: 10 صباحاً - 9 مساءً يومياً">Hours: 10 AM - 9 PM daily</li>
+                    <li data-en="Specialties: Ukrainian, Armenian, Russian products - specialty cheese, meats, bakery" data-ar="التخصصات: منتجات أوكرانية، أرمينية، روسية - جبن متخصص، لحوم، مخبوزات">Specialties: Ukrainian, Armenian, Russian products - specialty cheese, meats, bakery</li>
+                    <li data-en="Best For: Eastern European comfort foods" data-ar="الأفضل لـ: أطعمة الراحة الأوروبية الشرقية">Best For: Eastern European comfort foods</li>
+                    <li data-en="Average Bill: AED 120-400" data-ar="متوسط الفاتورة: 120-400 درهم">Average Bill: AED 120-400</li>
+                    <li data-en="Special: Up to 40% bulk purchase discounts" data-ar="خاص: خصومات تصل إلى 40% على الشراء بالجملة">Special: Up to 40% bulk purchase discounts</li>
+                </ul>
+            </div>
+
+            <div class="store-item">
+                <h4 data-en="Istanbul Turkish Mini Mart" data-ar="إسطنبول ميني مارت التركي">Istanbul Turkish Mini Mart</h4>
+                <ul>
+                    <li data-en="Location: Hazza Bin Zayed Street, near Lebanese Flower Restaurant" data-ar="الموقع: شارع حزاء بن زايد، بالقرب من مطعم اللبنانية الزهرة">Location: Hazza Bin Zayed Street, near Lebanese Flower Restaurant</li>
+                    <li data-en="Phone: +971 2 627 7788" data-ar="الهاتف: +971 2 627 7788">Phone: +971 2 627 7788</li>
+                    <li data-en="Hours: 8 AM - 10 PM daily" data-ar="الساعات: 8 صباحاً - 10 مساءً يومياً">Hours: 8 AM - 10 PM daily</li>
+                    <li data-en="Specialties: Turkish olives, labneh, baklava, simit, cheese, spices" data-ar="التخصصات: زيتون تركي، لبنة، بقلاوة، سميط، جبن، توابل">Specialties: Turkish olives, labneh, baklava, simit, cheese, spices</li>
+                    <li data-en="Best For: Mediterranean cooking ingredients" data-ar="الأفضل لـ: مكونات الطبخ المتوسطي">Best For: Mediterranean cooking ingredients</li>
+                    <li data-en="Average Bill: AED 60-180" data-ar="متوسط الفاتورة: 60-180 درهم">Average Bill: AED 60-180</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tips-box">
+            <h3 data-en="Finding Ethnic Stores - Insider Tips:" data-ar="العثور على المتاجر العرقية - نصائح من الداخل:">Finding Ethnic Stores - Insider Tips:</h3>
+            <ul>
+                <li data-en="Electra Street is THE hub for ethnic groceries - explore on foot" data-ar="شارع الكترا هو المركز للبقالة العرقية - استكشف سيراً على الأقدام">Electra Street is THE hub for ethnic groceries - explore on foot</li>
+                <li data-en="Ask your community on Facebook groups for exact locations" data-ar="اسأل مجتمعك في مجموعات الفيسبوك عن المواقع الدقيقة">Ask your community on Facebook groups for exact locations</li>
+                <li data-en="Weekends are busiest - go weekday mornings for better service" data-ar="عطلات نهاية الأسبوع الأكثر ازدحاماً - اذهب صباح أيام الأسبوع للحصول على خدمة أفضل">Weekends are busiest - go weekday mornings for better service</li>
+                <li data-en="Many shops are small and don't have online presence - word of mouth is key" data-ar="العديد من المحلات صغيرة وليس لديها وجود على الإنترنت - الكلام الشفهي هو المفتاح">Many shops are small and don't have online presence - word of mouth is key</li>
+                <li data-en="Bring cash - many ethnic stores don't accept cards" data-ar="احضر نقداً - العديد من المتاجر العرقية لا تقبل البطاقات">Bring cash - many ethnic stores don't accept cards</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Fresh Markets -->
+    <div class="content-section">
+        <h2 data-en="Fresh Markets Abu Dhabi - Best Prices" data-ar="الأسواق الطازجة في أبوظبي - أفضل الأسعار">Fresh Markets Abu Dhabi - Best Prices</h2>
+        <p data-en="For the freshest produce at wholesale prices, Abu Dhabi's traditional markets are unbeatable." data-ar="للحصول على أطازج المنتجات بأسعار الجملة، الأسواق التقليدية في أبوظبي لا تُقهر.">For the freshest produce at wholesale prices, Abu Dhabi's traditional markets are unbeatable.</p>
+
+        <div class="store-grid">
+            <div class="store-item">
+                <h4 data-en="Mina Fruit & Vegetable Market" data-ar="سوق الميناء للفواكه والخضروات">Mina Fruit & Vegetable Market</h4>
+                <ul>
+                    <li data-en="Location: Zayed Port, Al Mina district" data-ar="الموقع: ميناء زايد، منطقة الميناء">Location: Zayed Port, Al Mina district</li>
+                    <li data-en="Phone: +971 2 673 2222" data-ar="الهاتف: +971 2 673 2222">Phone: +971 2 673 2222</li>
+                    <li data-en="Hours: 5 AM - 12 PM daily (best selection before 9 AM)" data-ar="الساعات: 5 صباحاً - 12 ظهراً يومياً (أفضل تشكيلة قبل 9 صباحاً)">Hours: 5 AM - 12 PM daily (best selection before 9 AM)</li>
+                    <li data-en="Why Visit: Wholesale prices, freshest selection, direct from docks" data-ar="لماذا الزيارة: أسعار الجملة، أطازج تشكيلة، مباشرة من الأرصفة">Why Visit: Wholesale prices, freshest selection, direct from docks</li>
+                    <li data-en="Best For: Weekly fruit and vegetable shopping" data-ar="الأفضل لـ: التسوق الأسبوعي للفواكه والخضروات">Best For: Weekly fruit and vegetable shopping</li>
+                    <li data-en="Average Savings: 40-60% compared to hypermarkets" data-ar="متوسط التوفير: 40-60% مقارنة بالأسواق الكبرى">Average Savings: 40-60% compared to hypermarkets</li>
+                    <li data-en="Parking: Available but crowded on weekends" data-ar="المواقف: متاحة لكن مزدحمة في نهاية الأسبوع">Parking: Available but crowded on weekends</li>
+                    <li data-en="Tip: Bring cash, bargaining expected" data-ar="نصيحة: احضر نقداً، المساومة متوقعة">Tip: Bring cash, bargaining expected</li>
+                </ul>
+            </div>
+
+            <div class="store-item">
+                <h4 data-en="Abu Dhabi Fish Market" data-ar="سوق أبوظبي للأسماك">Abu Dhabi Fish Market</h4>
+                <ul>
+                    <li data-en="Location: Zayed Port, adjacent to vegetable market" data-ar="الموقع: ميناء زايد، بجانب سوق الخضروات">Location: Zayed Port, adjacent to vegetable market</li>
+                    <li data-en="Phone: +971 2 673 3333" data-ar="الهاتف: +971 2 673 3333">Phone: +971 2 673 3333</li>
+                    <li data-en="Hours: 6 AM - 12 PM daily" data-ar="الساعات: 6 صباحاً - 12 ظهراً يومياً">Hours: 6 AM - 12 PM daily</li>
+                    <li data-en="Best Selection: Early morning (6-8 AM)" data-ar="أفضل تشكيلة: الصباح المبكر (6-8 صباحاً)">Best Selection: Early morning (6-8 AM)</li>
+                    <li data-en="Popular Fish: Hammour, kingfish, shrimp, crab" data-ar="الأسماك الشعبية: هامور، كنعد، جمبري، سرطان البحر">Popular Fish: Hammour, kingfish, shrimp, crab</li>
+                    <li data-en="Average Prices: AED 25-45 per kg (much cheaper than supermarkets)" data-ar="متوسط الأسعار: 25-45 درهم للكيلو (أرخص بكثير من الأسواق)">Average Prices: AED 25-45 per kg (much cheaper than supermarkets)</li>
+                    <li data-en="Services: Cleaning and filleting available" data-ar="الخدمات: التنظيف والتقطيع متاح">Services: Cleaning and filleting available</li>
+                    <li data-en="Tip: Bring cooler bag, prices negotiable" data-ar="نصيحة: احضر كيس تبريد، الأسعار قابلة للتفاوض">Tip: Bring cooler bag, prices negotiable</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Emergency Shopping -->
+    <div class="content-section">
+        <h2 data-en="Emergency & Late-Night Shopping" data-ar="التسوق الطارئ والليلي">Emergency & Late-Night Shopping</h2>
+
+        <div class="tips-box">
+            <h3 data-en="24-Hour Options:" data-ar="الخيارات المتاحة 24 ساعة:">24-Hour Options:</h3>
+            <ul>
+                <li data-en="Choithrams (multiple locations)" data-ar="تشويثرامز (مواقع متعددة)">Choithrams (multiple locations)</li>
+                <li data-en="Abela Supermarket (Al Khalidiya)" data-ar="سوبر ماركت أبيلا (الخالدية)">Abela Supermarket (Al Khalidiya)</li>
+                <li data-en="Al Madina Hypermarket (MBZ City)" data-ar="هايبر ماركت المدينة (مدينة محمد بن زايد)">Al Madina Hypermarket (MBZ City)</li>
+                <li data-en="ADNOC Oasis stores (at gas stations)" data-ar="محلات أدنوك أواسيس (في محطات الوقود)">ADNOC Oasis stores (at gas stations)</li>
+            </ul>
+
+            <h3 style="margin-top:16px;" data-en="Emergency Essentials Available:" data-ar="المواد الأساسية الطارئة المتاحة:">Emergency Essentials Available:</h3>
+            <ul>
+                <li data-en="Baby formula and diapers" data-ar="حليب الأطفال والحفاضات">Baby formula and diapers</li>
+                <li data-en="Medications (basic)" data-ar="الأدوية (أساسية)">Medications (basic)</li>
+                <li data-en="Fresh bread and milk" data-ar="خبز طازج وحليب">Fresh bread and milk</li>
+                <li data-en="Mobile phone top-ups" data-ar="إعادة شحن الهواتف المحمولة">Mobile phone top-ups</li>
+                <li data-en="Household cleaning supplies" data-ar="مستلزمات التنظيف المنزلية">Household cleaning supplies</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="content-section" itemscope itemtype="https://schema.org/FAQPage">
+        <h2 data-en="Frequently Asked Questions" data-ar="الأسئلة الشائعة">Frequently Asked Questions</h2>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name" data-en="What's the cheapest supermarket in Abu Dhabi?" data-ar="ما هو أرخص سوبر ماركت في أبوظبي؟">What's the cheapest supermarket in Abu Dhabi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-en="Union Coop and Aswaaq are the most budget-friendly supermarkets in Abu Dhabi, with average shopping bills 30-40% lower than premium stores. For even better prices, visit Mina Fruit & Vegetable Market for fresh produce at wholesale rates." data-ar="اتحاد كوب وأسواق هي الأسواق الأكثر اقتصادية في أبوظبي، مع فواتير تسوق أقل بنسبة 30-40% من المتاجر المميزة.">Union Coop and Aswaaq are the most budget-friendly supermarkets in Abu Dhabi, with average shopping bills 30-40% lower than premium stores. For even better prices, visit Mina Fruit & Vegetable Market for fresh produce at wholesale rates.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name" data-en="Which supermarkets are open 24 hours in Abu Dhabi?" data-ar="أي سوبر ماركت مفتوح 24 ساعة في أبوظبي؟">Which supermarkets are open 24 hours in Abu Dhabi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-en="Choithrams (Al Khalidiya & Corniche branches), Abela Supermarket (Al Khalidiya), and Al Madina Hypermarket (MBZ City) are open 24/7 for emergency shopping needs." data-ar="تشويثرامز (فروع الخالدية والكورنيش)، سوبر ماركت أبيلا (الخالدية)، وهايبر ماركت المدينة (مدينة محمد بن زايد) مفتوحة 24/7.">Choithrams (Al Khalidiya & Corniche branches), Abela Supermarket (Al Khalidiya), and Al Madina Hypermarket (MBZ City) are open 24/7 for emergency shopping needs.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name" data-en="Where can I find Filipino/Turkish/African groceries in Abu Dhabi?" data-ar="أين يمكنني العثور على البقالة الفلبينية/التركية/الأفريقية في أبوظبي؟">Where can I find Filipino/Turkish/African groceries in Abu Dhabi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-en="Ethnic specialty stores are concentrated in central Abu Dhabi, especially Electra Street and Tourist Club Area. Popular options include Istanbul Supermarket (Turkish), West Zone (Filipino), Kahraman Trading (Sudanese), and QKO Asian Market." data-ar="تتركز المتاجر العرقية المتخصصة في أبوظبي المركزية، خاصة شارع الكترا ومنطقة النادي السياحي.">Ethnic specialty stores are concentrated in central Abu Dhabi, especially Electra Street and Tourist Club Area. Popular options include Istanbul Supermarket (Turkish), West Zone (Filipino), Kahraman Trading (Sudanese), and QKO Asian Market.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name" data-en="Do supermarkets in Abu Dhabi deliver?" data-ar="هل تقدم الأسواق في أبوظبي خدمة التوصيل؟">Do supermarkets in Abu Dhabi deliver?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-en="Yes, most major supermarkets offer delivery. Lulu, Carrefour, and Choithrams have their own delivery services. You can also order through apps like Instashop, Talabat, and Noon." data-ar="نعم، معظم الأسواق الرئيسية تقدم خدمة التوصيل. لولو، كارفور، وتشويثرامز لديهم خدمات التوصيل الخاصة بهم.">Yes, most major supermarkets offer delivery. Lulu, Carrefour, and Choithrams have their own delivery services. You can also order through apps like Instashop, Talabat, and Noon.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name" data-en="What's the average cost of weekly groceries in Abu Dhabi?" data-ar="ما هو متوسط تكلفة البقالة الأسبوعية في أبوظبي؟">What's the average cost of weekly groceries in Abu Dhabi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-en="For a family of 4, expect AED 600-1,000 per week at mid-range supermarkets, or AED 400-600 at budget stores. Shopping at Mina Market and cooking at home can reduce costs to AED 350-500 weekly." data-ar="بالنسبة لعائلة من 4 أفراد، توقع 600-1,000 درهم أسبوعياً في الأسواق متوسطة المستوى، أو 400-600 درهم في المتاجر الاقتصادية.">For a family of 4, expect AED 600-1,000 per week at mid-range supermarkets, or AED 400-600 at budget stores. Shopping at Mina Market and cooking at home can reduce costs to AED 350-500 weekly.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Guides -->
+    <div class="content-section">
+        <h2 data-en="Related Guides" data-ar="أدلة ذات صلة">Related Guides</h2>
+        <div class="related-grid">
+            <a href="discount-warehouses.html" class="related-card">
+                <strong data-en="Discount Warehouses" data-ar="مستودعات التخفيضات">Discount Warehouses</strong>
+                <p data-en="Bulk shopping and wholesale prices" data-ar="التسوق بالجملة وأسعار الجملة">Bulk shopping and wholesale prices</p>
+            </a>
+            <a href="newcomer-setup.html" class="related-card">
+                <strong data-en="Newcomer Setup Guide" data-ar="دليل إعداد القادمين الجدد">Newcomer Setup Guide</strong>
+                <p data-en="Essential services for new residents" data-ar="الخدمات الأساسية للسكان الجدد">Essential services for new residents</p>
+            </a>
+            <a href="weekend-fun.html" class="related-card">
+                <strong data-en="Weekend Fun & Activities" data-ar="متعة نهاية الأسبوع والأنشطة">Weekend Fun & Activities</strong>
+                <p data-en="Things to do after grocery shopping" data-ar="أشياء للقيام بها بعد التسوق">Things to do after grocery shopping</p>
+            </a>
+        </div>
+    </div>
+
+</main>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <h3 data-en="New In Abu Dhabi" data-ar="جديد في أبوظبي">New In Abu Dhabi</h3>
+            <p data-en="Your guide to settling in the UAE capital" data-ar="دليلك للاستقرار في عاصمة الإمارات">Your guide to settling in the UAE capital</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+            <a href="about.html" data-en="About" data-ar="حول">About</a>
+            <a href="contact.html" data-en="Contact" data-ar="اتصل">Contact</a>
+            <a href="privacy.html" data-en="Privacy" data-ar="الخصوصية">Privacy</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Language switcher
+function switchLanguage(lang) {
+    const html = document.documentElement;
+    html.setAttribute('lang', lang);
+    html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    html.setAttribute('data-language', lang);
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+
+    document.querySelectorAll('[data-en][data-ar]').forEach(el => {
+        const text = el.getAttribute(lang === 'ar' ? 'data-ar' : 'data-en');
+        el.textContent = text;
+    });
+
+    localStorage.setItem('selectedLanguage', lang);
+}
+
+// Lang switcher style on scroll
+window.addEventListener('scroll', function() {
+    document.getElementById('langSwitcher').classList.toggle('scrolled', window.scrollY > 200);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const saved = localStorage.getItem('selectedLanguage');
+    if (saved === 'ar') switchLanguage('ar');
+});
+</script>
+
 </body>
 </html>
