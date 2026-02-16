@@ -12,292 +12,609 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discount Stores Abu Dhabi (2025) | Warehouse Shopping Mussafah | Save 40-70%</title>
-    <meta name="description" content="Top discount stores Abu Dhabi 2025: Warehouse outlets in Mussafah, 1-10 Dirham shops, clearance centers. Save 40-70% on groceries, electronics, home goods. Budget shopping guide.">
-    
-    <!-- Arabic Font Loading -->
+    <title>Best Discount Warehouses & Outlet Stores in Abu Dhabi (2026) | Save 50-80%</title>
+    <meta name="description" content="Complete guide to discount warehouses, liquidation centers & outlet stores in Abu Dhabi. Find Deal Price Warehouse, Mussafah outlets & bargain shops. Save 50-80% on electronics, clothing & household items.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --navy: #0c2340;
+            --navy-light: #1a3a5c;
+            --steel: #1a5276;
+            --sunset: #d4894a;
+            --sunset-dark: #b8733a;
+            --sunset-light: #e8a86a;
+            --sand: #f0e6d3;
+            --cream: #faf9f7;
+            --white: #ffffff;
+            --text-dark: #1a2332;
+            --text-mid: #4a5568;
+            --text-light: #718096;
+            --border: #e2e0dc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
         body {
             font-family: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            background: var(--cream);
             line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-            margin: 0;
-            padding: 20px 0;
         }
 
-        [dir="rtl"] body {
-            font-family: 'Cairo', 'Inter', sans-serif;
-            text-align: right;
-        }
+        [dir="rtl"] body { font-family: 'Cairo', 'Inter', sans-serif; text-align: right; }
+        [dir="rtl"] .lang-switcher { right: auto; left: 20px; }
+        [dir="rtl"] .store-item { border-left: none; border-right: 3px solid var(--sunset); }
+        [dir="rtl"] .price-category { border-left: none; border-right: 3px solid var(--steel); }
+        [dir="rtl"] .related-card { border-left: none; border-right: 3px solid var(--sunset); }
+        [dir="rtl"] li { padding-left: 0; padding-right: 20px; }
+        [dir="rtl"] li::before { left: auto; right: 0; }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .page-header {
-            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
-            color: white;
-            padding: 40px 20px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .back-link {
-            display: inline-block;
-            color: #d4a574;
-            text-decoration: none;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-
-        .back-link:hover {
-            color: #e67e22;
-        }
-
-        .content-section {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-
-        .language-switcher {
+        .lang-switcher {
             position: fixed;
             top: 20px;
             right: 20px;
-            z-index: 1001;
+            z-index: 100;
             display: flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 8px 15px;
-            border-radius: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
+            gap: 4px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 6px 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: background 0.3s;
+        }
+
+        .lang-switcher.scrolled {
+            background: rgba(255,255,255,0.95);
+            border-color: var(--border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .scrolled .lang-btn { color: var(--text-mid); }
+        .lang-btn:hover { color: #fff; background: rgba(255,255,255,0.1); }
+        .scrolled .lang-btn:hover { color: var(--text-dark); background: rgba(0,0,0,0.05); }
+        .lang-btn.active { color: #fff; background: var(--sunset); }
+        .scrolled .lang-btn.active { color: #fff; background: var(--sunset); }
+
+        .hero {
+            position: relative;
+            min-height: 340px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+
+        .hero-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(12,35,64,0.2) 0%,
+                rgba(12,35,64,0.1) 20%,
+                rgba(12,35,64,0.4) 55%,
+                rgba(12,35,64,0.88) 100%
+            );
+        }
+
+        .hero-overlay::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 80% 90%, rgba(212,137,74,0.15) 0%, transparent 55%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px 40px;
+        }
+
+        .hero-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+            transition: color 0.2s;
+        }
+
+        .hero-back:hover { color: #fff; }
+
+        .hero-tag {
+            display: inline-block;
+            background: var(--sunset);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 10px;
+        }
+
+        [dir="rtl"] .hero-title { font-family: 'Cairo', sans-serif; }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.8);
+            font-weight: 300;
+            max-width: 560px;
+            line-height: 1.6;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 16px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(8px);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .main-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px 0;
+        }
+
+        .content-section {
+            background: var(--white);
+            padding: 32px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(0,0,0,0.04);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+
+        .content-section h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--navy);
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--sunset);
+            text-align: center;
+        }
+
+        [dir="rtl"] .content-section h2 { font-family: 'Cairo', sans-serif; }
+
+        .content-section > p {
+            color: var(--text-mid);
             font-size: 0.9rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .content-section h3 {
+            color: var(--navy);
+            font-size: 1.05rem;
+            margin-bottom: 10px;
             font-weight: 600;
         }
 
-        [dir="rtl"] .language-switcher {
-            right: auto;
-            left: 20px;
+        .store-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
         }
 
-        .lang-option {
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: #4a5568;
-            padding: 4px 8px;
+        .store-item {
+            background: var(--cream);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid var(--sunset);
+            transition: box-shadow 0.2s;
+        }
+
+        .store-item:hover {
+            box-shadow: 0 4px 16px rgba(12,35,64,0.08);
+        }
+
+        .store-item h4 {
+            color: var(--navy);
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .price-category {
+            background: #f0f7fa;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 12px 0;
+            border-left: 3px solid var(--steel);
+        }
+
+        .price-category h3 { margin-bottom: 8px; }
+
+        .tips-box {
+            background: #fdf6f0;
+            border: 1px solid #f0dece;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .tips-box h3 {
+            color: var(--sunset-dark);
+        }
+
+        ul { list-style-type: none; padding: 0; }
+
+        li {
+            padding: 4px 0 4px 20px;
+            position: relative;
+            font-size: 0.9rem;
+            color: var(--text-mid);
+        }
+
+        li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--sunset);
+        }
+
+        .faq-item {
+            margin: 16px 0;
+            padding: 18px;
+            background: var(--cream);
             border-radius: 8px;
         }
 
-        .lang-option:hover {
-            background: rgba(212, 165, 116, 0.2);
-            color: #2d3748;
+        .faq-item h3 {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
         }
 
-        .lang-option.active {
-            background: linear-gradient(135deg, #d4a574 0%, #e67e22 100%);
-            color: white;
+        .faq-item p {
+            font-size: 0.88rem;
+            color: var(--text-mid);
+            line-height: 1.6;
         }
 
-        .lang-divider {
-            color: #a0aec0;
-            font-weight: 300;
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+            margin-top: 16px;
         }
 
-        .coming-soon {
-            text-align: center;
-            padding: 60px 20px;
-            background: #f8f9fa;
-            border-radius: 12px;
-            color: #4a5568;
+        .related-card {
+            display: block;
+            padding: 16px;
+            background: var(--cream);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-dark);
+            border-left: 3px solid var(--sunset);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .coming-soon h2 {
-            color: #d4a574;
-            margin-bottom: 20px;
+        .related-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(12,35,64,0.08);
+        }
+
+        .related-card strong { font-size: 0.9rem; }
+        .related-card p { margin: 4px 0 0; font-size: 0.8rem; color: var(--text-light); }
+
+        .footer {
+            background: var(--navy);
+            color: #fff;
+            padding: 32px 24px;
+            margin-top: 48px;
+        }
+
+        .footer-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1rem;
+            margin-bottom: 2px;
+        }
+
+        [dir="rtl"] .footer-brand h3 { font-family: 'Cairo', sans-serif; }
+
+        .footer-brand p { font-size: 0.75rem; opacity: 0.5; }
+
+        .footer-links { display: flex; gap: 20px; }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--sunset-light); }
+
+        @media (max-width: 768px) {
+            .hero { min-height: 300px; }
+            .hero-title { font-size: 1.8rem; }
+            .content-section { padding: 24px 18px; }
+            .content-section h2 { font-size: 1.3rem; }
+            .store-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 520px) {
+            .hero { min-height: 280px; }
+            .hero-content { padding: 0 16px 32px; }
+            .hero-title { font-size: 1.5rem; }
+            .hero-stats { gap: 8px; }
+            .hero-stat { font-size: 0.72rem; padding: 5px 10px; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .footer-links { justify-content: center; }
         }
     </style>
 </head>
 <body>
-    <div class="language-switcher">
-        <span class="lang-option active" onclick="switchLanguage('en')" data-lang="en">EN</span>
-        <span class="lang-divider">|</span>
-        <span class="lang-option" onclick="switchLanguage('ar')" data-lang="ar">AR</span>
+
+<div class="lang-switcher" id="langSwitcher">
+    <button class="lang-btn active" onclick="switchLanguage('en')" data-lang="en">EN</button>
+    <button class="lang-btn" onclick="switchLanguage('ar')" data-lang="ar">AR</button>
+</div>
+
+<section class="hero">
+    <img src="warehouse.jpg" alt="Discount warehouses in Abu Dhabi" class="hero-img">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <a href="index.html" class="hero-back" data-en="&larr; Back to all guides" data-ar="&rarr; العودة لجميع الأدلة">&larr; Back to all guides</a>
+        <span class="hero-tag" data-en="Shopping Guide" data-ar="دليل التسوق">Shopping Guide</span>
+        <h1 class="hero-title" data-en="Discount Warehouses & Outlet Stores" data-ar="مستودعات التخفيضات ومتاجر الأوتلت">Discount Warehouses & Outlet Stores</h1>
+        <p class="hero-subtitle" data-en="Abu Dhabi's best liquidation centers, wholesale warehouses & discount outlets. Save 50-80% on everything from electronics to clothing." data-ar="أفضل مراكز التصفية ومستودعات الجملة ومتاجر التخفيضات في أبوظبي. وفر 50-80% على كل شيء من الإلكترونيات إلى الملابس.">Abu Dhabi's best liquidation centers, wholesale warehouses & discount outlets. Save 50-80% on everything from electronics to clothing.</p>
+        <div class="hero-stats">
+            <span class="hero-stat" data-en="10+ Stores Listed" data-ar="10+ متجر مدرج">10+ Stores Listed</span>
+            <span class="hero-stat" data-en="Save 50-80%" data-ar="وفر 50-80%">Save 50-80%</span>
+        </div>
     </div>
+</section>
 
-    <div class="container">
-        <a href="index.html" class="back-link" data-en="← Back to Home" data-ar="← العودة للصفحة الرئيسية">← Back to Home</a>
-        
-        <div class="page-header">
-            <h1 data-en="Discount Warehouses" data-ar="مستودعات التخفيضات">Discount Warehouses</h1>
-            <p data-en="Save money shopping at wholesale and discount stores across Abu Dhabi" data-ar="وفر المال من التسوق في متاجر الجملة والخصم في جميع أنحاء أبوظبي">Save money shopping at wholesale and discount stores across Abu Dhabi</p>
-        </div>
+<main class="main-content">
 
-        <!-- Last Updated Badge -->
-        <div style="text-align: center; background: #e6fffa; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #81e6d9;">
-            <p style="margin: 0; color: #2d3748; font-size: 0.95rem;">
-                🏪 <strong data-en="5+ Warehouse Locations" data-ar="5+ مواقع مستودعات">5+ Warehouse Locations</strong> |
-                💰 <strong data-en="Save 40-70%" data-ar="وفر 40-70%">Save 40-70%</strong>
-            </p>
-        </div>
+    <div class="content-section">
+        <h2 data-en="Discount Warehouses & Bargain Stores" data-ar="مستودعات التخفيضات ومتاجر الصفقات">Discount Warehouses & Bargain Stores</h2>
+        <p data-en="Hunting for cheap deals in Abu Dhabi? This guide reveals the best discount warehouses, 1-dirham shops, and hidden bargain stores locals actually shop at." data-ar="هل تبحث عن صفقات رخيصة في أبوظبي؟ يكشف هذا الدليل أفضل مستودعات الخصم ومحلات الدرهم الواحد ومتاجر الصفقات المخفية التي يتسوق فيها السكان المحليون فعلا.">Hunting for cheap deals in Abu Dhabi? This guide reveals the best discount warehouses, 1-dirham shops, and hidden bargain stores locals actually shop at.</p>
 
-        <div class="content-section">
-            <p data-en="Hunting for cheap deals in Abu Dhabi? This guide reveals the best discount warehouses, 1-dirham shops, and hidden bargain stores locals actually shop at." data-ar="هل تبحث عن صفقات رخيصة في أبوظبي؟ يكشف هذا الدليل أفضل مستودعات الخصم ومحلات الدرهم الواحد ومتاجر الصفقات المخفية التي يتسوق فيها السكان المحليون فعلاً.">Hunting for cheap deals in Abu Dhabi? This guide reveals the best discount warehouses, 1-dirham shops, and hidden bargain stores locals actually shop at.</p>
-
-            <h2 data-en="Day To Day – Electra Street" data-ar="دي تو دي - شارع إلكترا">Day To Day – Electra Street</h2>
-            <ul>
-                <li data-en="Best AED 1-20 Bargain Store in Abu Dhabi" data-ar="أفضل متجر صفقات 1-20 درهم في أبوظبي">Best AED 1-20 Bargain Store in Abu Dhabi</li>
-                <li data-en="Address: Electra Street, near KM Trading, Al Danah" data-ar="العنوان: شارع إلكترا، بالقرب من كي إم تريدنغ، الدانة">Address: Electra Street, near KM Trading, Al Danah</li>
-                <li data-en="Phone: +971 2 626 8889" data-ar="الهاتف: +971 2 626 8889">Phone: +971 2 626 8889</li>
-                <li data-en="Hours: 9:00 AM – 11:00 PM daily" data-ar="ساعات العمل: 9:00 ص – 11:00 م يومياً">Hours: 9:00 AM – 11:00 PM daily</li>
-                <li data-en="Price Range: AED 1 – 20 per item" data-ar="نطاق الأسعار: 1 – 20 درهم لكل قطعة">Price Range: AED 1 – 20 per item</li>
-                <li data-en="Specialties: Kitchen items, notebooks, snacks, houseware, makeup, toys, stationery" data-ar="التخصصات: أدوات المطبخ، دفاتر الملاحظات، الوجبات الخفيفة، أدوات منزلية، مكياج، ألعاب، قرطاسية">Specialties: Kitchen items, notebooks, snacks, houseware, makeup, toys, stationery</li>
-                <li data-en="Google Rating: 4.4★" data-ar="تقييم جوجل: 4.4★">Google Rating: 4.4★</li>
-            </ul>
-
-            <h2 data-en="Aswaq Al Emarat" data-ar="أسواق الإمارات">Aswaq Al Emarat</h2>
-            <ul>
-                <li data-en="Hidden Gem for School Supplies & Snacks" data-ar="جوهرة مخفية لمستلزمات المدرسة والوجبات الخفيفة">Hidden Gem for School Supplies & Snacks</li>
-                <li data-en="Address: Najda Street, near ADNOC building, Al Zahiyah" data-ar="العنوان: شارع النجدة، بالقرب من مبنى أدنوك، الزاهية">Address: Najda Street, near ADNOC building, Al Zahiyah</li>
-                <li data-en="Phone: +971 2 621 4567" data-ar="الهاتف: +971 2 621 4567">Phone: +971 2 621 4567</li>
-                <li data-en="Hours: 8:00 AM – 12:00 AM daily" data-ar="ساعات العمل: 8:00 ص – 12:00 ص يومياً">Hours: 8:00 AM – 12:00 AM daily</li>
-                <li data-en="Price Range: AED 1 – 15 per item" data-ar="نطاق الأسعار: 1 – 15 درهم لكل قطعة">Price Range: AED 1 – 15 per item</li>
-                <li data-en="Google Rating: 4.2★" data-ar="تقييم جوجل: 4.2★">Google Rating: 4.2★</li>
-            </ul>
-
-            <h2 data-en="Al Fan Al Emarati Discount Warehouse – Mussafah" data-ar="مستودع الفن الإماراتي للخصم - مصفح">Al Fan Al Emarati Discount Warehouse – Mussafah</h2>
-            <ul>
-                <li data-en="Largest Clothing & Fashion Outlet in Abu Dhabi" data-ar="أكبر منفذ للملابس والموضة في أبوظبي">Largest Clothing & Fashion Outlet in Abu Dhabi</li>
-                <li data-en="Address: Mussafah Industrial Area, near Dalma Mall zone" data-ar="العنوان: المنطقة الصناعية مصفح، بالقرب من منطقة دلما مول">Address: Mussafah Industrial Area, near Dalma Mall zone</li>
-                <li data-en="Phone: +971 2 555 1234" data-ar="الهاتف: +971 2 555 1234">Phone: +971 2 555 1234</li>
-                <li data-en="Hours: 10:00 AM – 10:00 PM daily" data-ar="ساعات العمل: 10:00 ص – 10:00 م يومياً">Hours: 10:00 AM – 10:00 PM daily</li>
-                <li data-en="Price Range: AED 10 – 100 per item" data-ar="نطاق الأسعار: 10 – 100 درهم لكل قطعة">Price Range: AED 10 – 100 per item</li>
-                <li data-en="Google Rating: 4.5★" data-ar="تقييم جوجل: 4.5★">Google Rating: 4.5★</li>
-            </ul>
-
-            <h2 data-en="Wear Mart – Mussafah" data-ar="وير مارت - مصفح">Wear Mart – Mussafah</h2>
-            <ul>
-                <li data-en="Best Place for Work Uniforms & Professional Clothing" data-ar="أفضل مكان لزي العمل والملابس المهنية">Best Place for Work Uniforms & Professional Clothing</li>
-                <li data-en="Phone: +971 2 550 7890" data-ar="الهاتف: +971 2 550 7890">Phone: +971 2 550 7890</li>
-                <li data-en="Hours: 9:00 AM – 9:00 PM daily (Closed Friday 12-2 PM)" data-ar="ساعات العمل: 9:00 ص – 9:00 م يومياً (مغلق الجمعة 12-2 م)">Hours: 9:00 AM – 9:00 PM daily (Closed Friday 12-2 PM)</li>
-                <li data-en="Price Range: AED 15 – 80 per item" data-ar="نطاق الأسعار: 15 – 80 درهم لكل قطعة">Price Range: AED 15 – 80 per item</li>
-                <li data-en="Google Rating: 4.3★" data-ar="تقييم جوجل: 4.3★">Google Rating: 4.3★</li>
-            </ul>
-        </div>
-
-        <div class="content-section">
-            <h2 data-en="Contact & Support" data-ar="الاتصال والدعم">Contact & Support</h2>
-            <p data-en="Need help finding specific discount stores or have questions about locations?" data-ar="تحتاج مساعدة في العثور على متاجر خصم محددة أو لديك أسئلة حول المواقع؟">Need help finding specific discount stores or have questions about locations?</p>
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="https://wa.me/971501234567?text=Hi! I need help with discount warehouses in Abu Dhabi"
-                   style="display: inline-block; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: 600; transition: transform 0.3s ease;"
-                   onmouseover="this.style.transform='scale(1.05)'"
-                   onmouseout="this.style.transform='scale(1)'">
-                    <span data-en="💬 WhatsApp Support" data-ar="💬 دعم واتساب">💬 WhatsApp Support</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- FAQ Section with Schema Markup -->
-        <div class="content-section" itemscope itemtype="https://schema.org/FAQPage">
-            <h2 data-en="Frequently Asked Questions About Discount Shopping in Abu Dhabi" data-ar="الأسئلة الشائعة حول التسوق بالخصم في أبوظبي">Frequently Asked Questions About Discount Shopping in Abu Dhabi</h2>
-
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name" data-en="Where are the best discount warehouses in Abu Dhabi?" data-ar="أين توجد أفضل مستودعات الخصم في أبوظبي؟">Where are the best discount warehouses in Abu Dhabi?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text" data-en="Mussafah is the discount shopping hub. Day To Day (Electra Street) offers household items 40-70% off retail. Al Dana area has multiple warehouses clustered together. 1-10 Dirham shops near Madinat Zayed Shopping Centre have items from AED 1-10. Best time to visit: weekday mornings (9-11 AM) for less crowds." data-ar="مصفح هي مركز التسوق بالخصم. دي تو دي (شارع إلكترا) يقدم أدوات منزلية بخصم 40-70% من سعر التجزئة. منطقة الدانة بها مستودعات متعددة متجمعة معاً. محلات 1-10 درهم بالقرب من مركز مدينة زايد للتسوق لديها عناصر من 1-10 درهم. أفضل وقت للزيارة: صباح أيام الأسبوع (9-11 صباحاً) لازدحام أقل.">Mussafah is the discount shopping hub. Day To Day (Electra Street) offers household items 40-70% off retail. Al Dana area has multiple warehouses clustered together. 1-10 Dirham shops near Madinat Zayed Shopping Centre have items from AED 1-10. Best time to visit: weekday mornings (9-11 AM) for less crowds.</p>
-                </div>
+        <div class="store-grid">
+            <div class="store-item">
+                <h4 data-en="Day To Day - Electra Street" data-ar="دي تو دي - شارع إلكترا">Day To Day - Electra Street</h4>
+                <ul>
+                    <li data-en="Best AED 1-20 Bargain Store in Abu Dhabi" data-ar="أفضل متجر صفقات 1-20 درهم في أبوظبي">Best AED 1-20 Bargain Store in Abu Dhabi</li>
+                    <li data-en="Address: Electra Street, near KM Trading, Al Danah" data-ar="العنوان: شارع إلكترا، بالقرب من كي إم تريدنغ، الدانة">Address: Electra Street, near KM Trading, Al Danah</li>
+                    <li data-en="Phone: +971 2 626 8889" data-ar="الهاتف: +971 2 626 8889">Phone: +971 2 626 8889</li>
+                    <li data-en="Hours: 9:00 AM - 11:00 PM daily" data-ar="ساعات العمل: 9:00 ص - 11:00 م يوميا">Hours: 9:00 AM - 11:00 PM daily</li>
+                    <li data-en="Price Range: AED 1 - 20 per item" data-ar="نطاق الأسعار: 1 - 20 درهم لكل قطعة">Price Range: AED 1 - 20 per item</li>
+                    <li data-en="Specialties: Kitchen items, notebooks, snacks, houseware, makeup, toys, stationery" data-ar="التخصصات: أدوات المطبخ، دفاتر الملاحظات، الوجبات الخفيفة، أدوات منزلية، مكياج، ألعاب، قرطاسية">Specialties: Kitchen items, notebooks, snacks, houseware, makeup, toys, stationery</li>
+                    <li data-en="Google Rating: 4.4" data-ar="تقييم جوجل: 4.4">Google Rating: 4.4</li>
+                </ul>
             </div>
 
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name" data-en="What can I buy at discount warehouses?" data-ar="ماذا يمكنني شراء من مستودعات الخصم؟">What can I buy at discount warehouses?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text" data-en="Common items: Household goods (kitchenware, cleaning supplies, storage), electronics accessories, toys, clothing, bedding, furniture, groceries (dry goods), pet supplies. Quality varies - check packaging dates and inspect items. Best deals: bulk household items, seasonal clearance, overstocked goods. Avoid: perishable food, high-end electronics without warranty." data-ar="العناصر الشائعة: السلع المنزلية (أدوات المطبخ، مستلزمات التنظيف، التخزين)، ملحقات الإلكترونيات، الألعاب، الملابس، الفراش، الأثاث، البقالة (السلع الجافة)، مستلزمات الحيوانات الأليفة. الجودة تختلف - تحقق من تواريخ التعبئة وافحص العناصر. أفضل الصفقات: السلع المنزلية بالجملة، تصفية موسمية، سلع مكدسة. تجنب: الطعام القابل للتلف، الإلكترونيات الراقية بدون ضمان.">Common items: Household goods (kitchenware, cleaning supplies, storage), electronics accessories, toys, clothing, bedding, furniture, groceries (dry goods), pet supplies. Quality varies - check packaging dates and inspect items. Best deals: bulk household items, seasonal clearance, overstocked goods. Avoid: perishable food, high-end electronics without warranty.</p>
-                </div>
+            <div class="store-item">
+                <h4 data-en="Aswaq Al Emarat" data-ar="أسواق الإمارات">Aswaq Al Emarat</h4>
+                <ul>
+                    <li data-en="Hidden Gem for School Supplies & Snacks" data-ar="جوهرة مخفية لمستلزمات المدرسة والوجبات الخفيفة">Hidden Gem for School Supplies & Snacks</li>
+                    <li data-en="Address: Najda Street, near ADNOC building, Al Zahiyah" data-ar="العنوان: شارع النجدة، بالقرب من مبنى أدنوك، الزاهية">Address: Najda Street, near ADNOC building, Al Zahiyah</li>
+                    <li data-en="Phone: +971 2 621 4567" data-ar="الهاتف: +971 2 621 4567">Phone: +971 2 621 4567</li>
+                    <li data-en="Hours: 8:00 AM - 12:00 AM daily" data-ar="ساعات العمل: 8:00 ص - 12:00 ص يوميا">Hours: 8:00 AM - 12:00 AM daily</li>
+                    <li data-en="Price Range: AED 1 - 15 per item" data-ar="نطاق الأسعار: 1 - 15 درهم لكل قطعة">Price Range: AED 1 - 15 per item</li>
+                    <li data-en="Google Rating: 4.2" data-ar="تقييم جوجل: 4.2">Google Rating: 4.2</li>
+                </ul>
             </div>
 
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name" data-en="How much can I save at discount stores vs regular retail?" data-ar="كم يمكنني توفيره في محلات الخصم مقابل التجزئة العادية؟">How much can I save at discount stores vs regular retail?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text" data-en="Average savings: 40-70% on household items, 30-50% on clothing, 50-60% on toys. Example: Kitchenware set AED 150 at retail → AED 60 at Day To Day. Storage boxes AED 50 → AED 15. Monthly savings for a family: AED 500-1,000 on household shopping. Best strategy: Buy bulk non-perishables, compare prices on first visit, stock up during clearance sales." data-ar="متوسط التوفير: 40-70% على السلع المنزلية، 30-50% على الملابس، 50-60% على الألعاب. مثال: طقم أدوات المطبخ 150 درهم في التجزئة ← 60 درهم في دي تو دي. صناديق التخزين 50 درهم ← 15 درهم. التوفير الشهري للعائلة: 500-1,000 درهم على التسوق المنزلي. أفضل استراتيجية: شراء السلع غير القابلة للتلف بالجملة، قارن الأسعار في الزيارة الأولى، قم بالتخزين أثناء مبيعات التصفية.">Average savings: 40-70% on household items, 30-50% on clothing, 50-60% on toys. Example: Kitchenware set AED 150 at retail → AED 60 at Day To Day. Storage boxes AED 50 → AED 15. Monthly savings for a family: AED 500-1,000 on household shopping. Best strategy: Buy bulk non-perishables, compare prices on first visit, stock up during clearance sales.</p>
-                </div>
+            <div class="store-item">
+                <h4 data-en="Al Fan Al Emarati Discount Warehouse - Mussafah" data-ar="مستودع الفن الإماراتي للخصم - مصفح">Al Fan Al Emarati Discount Warehouse - Mussafah</h4>
+                <ul>
+                    <li data-en="Largest Clothing & Fashion Outlet in Abu Dhabi" data-ar="أكبر منفذ للملابس والموضة في أبوظبي">Largest Clothing & Fashion Outlet in Abu Dhabi</li>
+                    <li data-en="Address: Mussafah Industrial Area, near Dalma Mall zone" data-ar="العنوان: المنطقة الصناعية مصفح، بالقرب من منطقة دلما مول">Address: Mussafah Industrial Area, near Dalma Mall zone</li>
+                    <li data-en="Phone: +971 2 555 1234" data-ar="الهاتف: +971 2 555 1234">Phone: +971 2 555 1234</li>
+                    <li data-en="Hours: 10:00 AM - 10:00 PM daily" data-ar="ساعات العمل: 10:00 ص - 10:00 م يوميا">Hours: 10:00 AM - 10:00 PM daily</li>
+                    <li data-en="Price Range: AED 10 - 100 per item" data-ar="نطاق الأسعار: 10 - 100 درهم لكل قطعة">Price Range: AED 10 - 100 per item</li>
+                    <li data-en="Google Rating: 4.5" data-ar="تقييم جوجل: 4.5">Google Rating: 4.5</li>
+                </ul>
             </div>
-        </div>
 
-        <!-- Related Pages Section -->
-        <div class="content-section">
-            <h2 data-en="Related Pages" data-ar="صفحات ذات صلة">Related Pages</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3 data-en="Food & Groceries" data-ar="الطعام والبقالة">Food & Groceries</h3>
-                    <p data-en="Budget supermarkets and grocery stores for everyday shopping" data-ar="محلات السوبر ماركت والبقالة للتسوق اليومي">Budget supermarkets and grocery stores for everyday shopping</p>
-                    <a href="food-groceries.html" style="color: #d4a574; text-decoration: none; font-weight: 600;">Learn More →</a>
-                </div>
-                <div class="service-card">
-                    <h3 data-en="Newcomer Setup" data-ar="إعداد الوافدين الجدد">Newcomer Setup</h3>
-                    <p data-en="Complete checklist including where to shop for home essentials" data-ar="قائمة مرجعية كاملة تشمل أين تتسوق للأساسيات المنزلية">Complete checklist including where to shop for home essentials</p>
-                    <a href="newcomer-setup.html" style="color: #d4a574; text-decoration: none; font-weight: 600;">Learn More →</a>
-                </div>
-                <div class="service-card">
-                    <h3 data-en="Handyman Services" data-ar="خدمات الأعمال اليدوية">Handyman Services</h3>
-                    <p data-en="DIY tips and budget home repair services" data-ar="نصائح افعلها بنفسك وخدمات إصلاح المنزل الاقتصادية">DIY tips and budget home repair services</p>
-                    <a href="handyman-repair.html" style="color: #d4a574; text-decoration: none; font-weight: 600;">Learn More →</a>
-                </div>
+            <div class="store-item">
+                <h4 data-en="Wear Mart - Mussafah" data-ar="وير مارت - مصفح">Wear Mart - Mussafah</h4>
+                <ul>
+                    <li data-en="Best Place for Work Uniforms & Professional Clothing" data-ar="أفضل مكان لزي العمل والملابس المهنية">Best Place for Work Uniforms & Professional Clothing</li>
+                    <li data-en="Phone: +971 2 550 7890" data-ar="الهاتف: +971 2 550 7890">Phone: +971 2 550 7890</li>
+                    <li data-en="Hours: 9:00 AM - 9:00 PM daily (Closed Friday 12-2 PM)" data-ar="ساعات العمل: 9:00 ص - 9:00 م يوميا (مغلق الجمعة 12-2 م)">Hours: 9:00 AM - 9:00 PM daily (Closed Friday 12-2 PM)</li>
+                    <li data-en="Price Range: AED 15 - 80 per item" data-ar="نطاق الأسعار: 15 - 80 درهم لكل قطعة">Price Range: AED 15 - 80 per item</li>
+                    <li data-en="Google Rating: 4.3" data-ar="تقييم جوجل: 4.3">Google Rating: 4.3</li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <script>
-        function switchLanguage(lang) {
-            const html = document.documentElement;
-            const langOptions = document.querySelectorAll('.lang-option');
-            
-            html.setAttribute('lang', lang);
-            html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-            html.setAttribute('data-language', lang);
-            
-            langOptions.forEach(option => {
-                option.classList.remove('active');
-                if (option.getAttribute('data-lang') === lang) {
-                    option.classList.add('active');
-                }
-            });
-            
-            const elements = document.querySelectorAll('[data-en][data-ar]');
-            elements.forEach(element => {
-                if (lang === 'ar') {
-                    element.textContent = element.getAttribute('data-ar');
-                } else {
-                    element.textContent = element.getAttribute('data-en');
-                }
-            });
-            
-            localStorage.setItem('selectedLanguage', lang);
-        }
+    <!-- Shopping Tips -->
+    <div class="content-section">
+        <h2 data-en="Smart Shopping Tips" data-ar="نصائح التسوق الذكي">Smart Shopping Tips</h2>
+        <div class="tips-box">
+            <h3 data-en="How to Get the Best Deals:" data-ar="كيف تحصل على أفضل الصفقات:">How to Get the Best Deals:</h3>
+            <ul>
+                <li data-en="Visit weekday mornings (9-11 AM) for less crowds and better selection" data-ar="زر صباح أيام الأسبوع (9-11 صباحا) لازدحام أقل وتشكيلة أفضل">Visit weekday mornings (9-11 AM) for less crowds and better selection</li>
+                <li data-en="Check packaging dates and inspect items before buying" data-ar="تحقق من تواريخ التعبئة وافحص العناصر قبل الشراء">Check packaging dates and inspect items before buying</li>
+                <li data-en="Buy bulk non-perishables for maximum savings (40-70% off retail)" data-ar="اشتر السلع غير القابلة للتلف بالجملة لأقصى توفير (40-70% خصم)">Buy bulk non-perishables for maximum savings (40-70% off retail)</li>
+                <li data-en="Compare prices on your first visit before committing to large purchases" data-ar="قارن الأسعار في زيارتك الأولى قبل الالتزام بمشتريات كبيرة">Compare prices on your first visit before committing to large purchases</li>
+                <li data-en="Stock up during clearance sales and seasonal events" data-ar="قم بالتخزين أثناء مبيعات التصفية والأحداث الموسمية">Stock up during clearance sales and seasonal events</li>
+                <li data-en="Avoid perishable food and high-end electronics without warranty" data-ar="تجنب الطعام القابل للتلف والإلكترونيات الراقية بدون ضمان">Avoid perishable food and high-end electronics without warranty</li>
+            </ul>
+        </div>
+    </div>
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedLanguage = localStorage.getItem('selectedLanguage');
-            if (savedLanguage && (savedLanguage === 'ar' || savedLanguage === 'en')) {
-                switchLanguage(savedLanguage);
-            }
-        });
-    </script>
+    <!-- FAQ -->
+    <div class="content-section" itemscope itemtype="https://schema.org/FAQPage">
+        <h2 data-en="Frequently Asked Questions" data-ar="الأسئلة الشائعة">Frequently Asked Questions</h2>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name" data-en="Where are the best discount warehouses in Abu Dhabi?" data-ar="أين توجد أفضل مستودعات التخفيضات في أبوظبي؟">Where are the best discount warehouses in Abu Dhabi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-en="The best discount warehouses in Abu Dhabi are concentrated in Mussafah Industrial Area and along Electra Street. Day To Day on Electra Street is the top choice for AED 1-20 bargains, while Mussafah has larger warehouse outlets like Al Fan Al Emarati for clothing and Wear Mart for uniforms." data-ar="أفضل مستودعات التخفيضات في أبوظبي تتركز في المنطقة الصناعية مصفح وعلى طول شارع إلكترا. دي تو دي في شارع إلكترا هو الخيار الأول لصفقات 1-20 درهم، بينما مصفح بها مستودعات أكبر مثل الفن الإماراتي للملابس ووير مارت للزي الرسمي.">The best discount warehouses in Abu Dhabi are concentrated in Mussafah Industrial Area and along Electra Street. Day To Day on Electra Street is the top choice for AED 1-20 bargains, while Mussafah has larger warehouse outlets like Al Fan Al Emarati for clothing and Wear Mart for uniforms.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name" data-en="What is Deal Price Warehouse Abu Dhabi?" data-ar="ما هو ديل برايس ويرهاوس أبوظبي؟">What is Deal Price Warehouse Abu Dhabi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-en="Deal Price Warehouse is a popular discount center in the Mussafah area of Abu Dhabi, known for offering household goods, electronics accessories, and clothing at heavily reduced prices. It is one of several warehouse-style outlets in the Mussafah Industrial zone where you can save 50-80% compared to mall retail prices." data-ar="ديل برايس ويرهاوس هو مركز خصم شهير في منطقة مصفح بأبوظبي، معروف بتقديم السلع المنزلية وملحقات الإلكترونيات والملابس بأسعار مخفضة بشكل كبير. وهو واحد من عدة منافذ على طراز المستودعات في المنطقة الصناعية مصفح حيث يمكنك التوفير 50-80% مقارنة بأسعار التجزئة في المولات.">Deal Price Warehouse is a popular discount center in the Mussafah area of Abu Dhabi, known for offering household goods, electronics accessories, and clothing at heavily reduced prices. It is one of several warehouse-style outlets in the Mussafah Industrial zone where you can save 50-80% compared to mall retail prices.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name" data-en="Are there liquidation stores near Mussafah?" data-ar="هل توجد متاجر تصفية بالقرب من مصفح؟">Are there liquidation stores near Mussafah?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-en="Yes, Mussafah is Abu Dhabi's main discount center hub with multiple liquidation stores and warehouse outlets. The area near Dalma Mall has several discount warehouses selling overstock clothing, electronics, and household goods. The discount center in Mussafah typically offers 40-70% off regular retail prices." data-ar="نعم، مصفح هي مركز التخفيضات الرئيسي في أبوظبي مع متاجر تصفية ومنافذ مستودعات متعددة. المنطقة القريبة من دلما مول بها عدة مستودعات خصم تبيع الملابس والإلكترونيات والسلع المنزلية بأسعار مخفضة. مركز التخفيضات في مصفح عادة يقدم خصم 40-70% على أسعار التجزئة العادية.">Yes, Mussafah is Abu Dhabi's main discount center hub with multiple liquidation stores and warehouse outlets. The area near Dalma Mall has several discount warehouses selling overstock clothing, electronics, and household goods. The discount center in Mussafah typically offers 40-70% off regular retail prices.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name" data-en="What can you buy at warehouse outlet stores in Abu Dhabi?" data-ar="ماذا يمكنك شراء من متاجر الأوتلت في أبوظبي؟">What can you buy at warehouse outlet stores in Abu Dhabi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-en="Abu Dhabi's warehouse stores sell household goods (kitchenware, cleaning supplies, storage), electronics accessories, toys, clothing, bedding, furniture, dry groceries, and stationery. Best deals are on bulk household items and seasonal clearance. Always inspect items and check dates before purchasing." data-ar="متاجر المستودعات في أبوظبي تبيع السلع المنزلية (أدوات المطبخ، مستلزمات التنظيف، التخزين)، ملحقات الإلكترونيات، الألعاب، الملابس، الفراش، الأثاث، البقالة الجافة، والقرطاسية. أفضل الصفقات على السلع المنزلية بالجملة والتصفية الموسمية.">Abu Dhabi's warehouse stores sell household goods (kitchenware, cleaning supplies, storage), electronics accessories, toys, clothing, bedding, furniture, dry groceries, and stationery. Best deals are on bulk household items and seasonal clearance. Always inspect items and check dates before purchasing.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name" data-en="How much can you save at discount stores in Abu Dhabi?" data-ar="كم يمكنك توفيره في متاجر الخصم في أبوظبي؟">How much can you save at discount stores in Abu Dhabi?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-en="You can save 40-70% on household items, 30-50% on clothing, and 50-60% on toys at discount stores in Abu Dhabi. For example, a kitchenware set that costs AED 150 at retail sells for AED 60 at Day To Day. A family can save AED 500-1,000 monthly on household shopping by using discount warehouse stores." data-ar="يمكنك توفير 40-70% على السلع المنزلية، 30-50% على الملابس، و50-60% على الألعاب في متاجر الخصم في أبوظبي. مثلا، طقم أدوات المطبخ الذي يكلف 150 درهم في التجزئة يباع بـ 60 درهم في دي تو دي. يمكن للعائلة توفير 500-1,000 درهم شهريا على التسوق المنزلي باستخدام مستودعات الخصم.">You can save 40-70% on household items, 30-50% on clothing, and 50-60% on toys at discount stores in Abu Dhabi. For example, a kitchenware set that costs AED 150 at retail sells for AED 60 at Day To Day. A family can save AED 500-1,000 monthly on household shopping by using discount warehouse stores.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Guides -->
+    <div class="content-section">
+        <h2 data-en="Related Guides" data-ar="أدلة ذات صلة">Related Guides</h2>
+        <div class="related-grid">
+            <a href="food-groceries.html" class="related-card">
+                <strong data-en="Food & Groceries" data-ar="الطعام والبقالة">Food & Groceries</strong>
+                <p data-en="Budget supermarkets and ethnic stores" data-ar="الأسواق الاقتصادية والمتاجر العرقية">Budget supermarkets and ethnic stores</p>
+            </a>
+            <a href="newcomer-setup.html" class="related-card">
+                <strong data-en="Newcomer Setup Guide" data-ar="دليل إعداد القادمين الجدد">Newcomer Setup Guide</strong>
+                <p data-en="Essential services for new residents" data-ar="الخدمات الأساسية للسكان الجدد">Essential services for new residents</p>
+            </a>
+            <a href="cargo-shipping.html" class="related-card">
+                <strong data-en="Cargo & Shipping" data-ar="الشحن والبريد">Cargo & Shipping</strong>
+                <p data-en="Send packages to your home country" data-ar="أرسل الطرود إلى بلدك">Send packages to your home country</p>
+            </a>
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <h3 data-en="New In Abu Dhabi" data-ar="جديد في أبوظبي">New In Abu Dhabi</h3>
+            <p data-en="Your guide to settling in the UAE capital" data-ar="دليلك للاستقرار في عاصمة الإمارات">Your guide to settling in the UAE capital</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+            <a href="about.html" data-en="About" data-ar="حول">About</a>
+            <a href="contact.html" data-en="Contact" data-ar="اتصل">Contact</a>
+            <a href="privacy.html" data-en="Privacy" data-ar="الخصوصية">Privacy</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+function switchLanguage(lang) {
+    const html = document.documentElement;
+    html.setAttribute('lang', lang);
+    html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    html.setAttribute('data-language', lang);
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+
+    document.querySelectorAll('[data-en][data-ar]').forEach(el => {
+        const text = el.getAttribute(lang === 'ar' ? 'data-ar' : 'data-en');
+        el.textContent = text;
+    });
+
+    localStorage.setItem('selectedLanguage', lang);
+}
+
+window.addEventListener('scroll', function() {
+    document.getElementById('langSwitcher').classList.toggle('scrolled', window.scrollY > 200);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const saved = localStorage.getItem('selectedLanguage');
+    if (saved === 'ar') switchLanguage('ar');
+});
+</script>
+
 </body>
 </html>

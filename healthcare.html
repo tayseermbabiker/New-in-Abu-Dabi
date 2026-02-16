@@ -12,374 +12,422 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affordable Hospitals & Clinics in Abu Dhabi (2025) | Without Insurance Options</title>
-    <meta name="description" content="Complete guide to budget-friendly healthcare in Abu Dhabi. Government hospitals, low-cost private clinics, FAZAA discounts, no-insurance options. Emergency care from AED 50. Compare consultation fees, specialist costs & pharmacy clinics across all areas."
-    
-    <!-- Arabic Font Loading -->
+    <title>Cheap Hospitals & Low-Cost Healthcare in Abu Dhabi (2026) | FAZAA Discounts</title>
+    <meta name="description" content="Find affordable healthcare in Abu Dhabi without insurance. Government hospitals (SKMC, Al Mafraq, Tawam), FAZAA card discounts, pharmacy walk-in clinics & free health screenings. Save 50-80% on medical costs.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --navy: #0c2340;
+            --navy-light: #1a3a5c;
+            --steel: #1a5276;
+            --sunset: #d4894a;
+            --sunset-dark: #b8733a;
+            --sunset-light: #e8a86a;
+            --sand: #f0e6d3;
+            --cream: #faf9f7;
+            --white: #ffffff;
+            --text-dark: #1a2332;
+            --text-mid: #4a5568;
+            --text-light: #718096;
+            --border: #e2e0dc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
         body {
             font-family: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            background: var(--cream);
             line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-            margin: 0;
-            padding: 20px 0;
         }
 
-        [dir="rtl"] body {
-            font-family: 'Cairo', 'Inter', sans-serif;
-            text-align: right;
-        }
+        [dir="rtl"] body { font-family: 'Cairo', 'Inter', sans-serif; text-align: right; }
+        [dir="rtl"] .lang-switcher { right: auto; left: 20px; }
+        [dir="rtl"] .store-item { border-left: none; border-right: 3px solid var(--sunset); }
+        [dir="rtl"] .price-category { border-left: none; border-right: 3px solid var(--steel); }
+        [dir="rtl"] .related-card { border-left: none; border-right: 3px solid var(--sunset); }
+        [dir="rtl"] li { padding-left: 0; padding-right: 20px; }
+        [dir="rtl"] li::before { left: auto; right: 0; }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .lang-switcher {
+            position: fixed; top: 20px; right: 20px; z-index: 100;
+            display: flex; align-items: center; gap: 4px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            padding: 6px 10px; border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2); transition: background 0.3s;
         }
-
-        .page-header {
-            background: linear-gradient(135deg, #FFB74D 0%, #FF7043 100%);
-            color: white;
-            padding: 40px 20px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            text-align: center;
+        .lang-switcher.scrolled {
+            background: rgba(255,255,255,0.95); border-color: var(--border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            font-weight: 700;
+        .lang-btn {
+            background: none; border: none; color: rgba(255,255,255,0.7);
+            font-size: 0.8rem; font-weight: 600; padding: 4px 10px;
+            border-radius: 6px; cursor: pointer; transition: all 0.2s; font-family: inherit;
         }
+        .scrolled .lang-btn { color: var(--text-mid); }
+        .lang-btn:hover { color: #fff; background: rgba(255,255,255,0.1); }
+        .scrolled .lang-btn:hover { color: var(--text-dark); background: rgba(0,0,0,0.05); }
+        .lang-btn.active { color: #fff; background: var(--sunset); }
+        .scrolled .lang-btn.active { color: #fff; background: var(--sunset); }
 
-        .back-link {
-            display: inline-block;
-            color: #FFB74D;
-            text-decoration: none;
-            margin-bottom: 20px;
-            font-weight: 500;
+        .hero { position: relative; min-height: 340px; display: flex; align-items: flex-end; overflow: hidden; }
+        .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(12,35,64,0.2) 0%, rgba(12,35,64,0.1) 20%, rgba(12,35,64,0.4) 55%, rgba(12,35,64,0.88) 100%);
         }
-
-        .back-link:hover {
-            color: #FF7043;
+        .hero-overlay::after {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 80% 90%, rgba(212,137,74,0.15) 0%, transparent 55%);
         }
+        .hero-content { position: relative; z-index: 10; width: 100%; max-width: 900px; margin: 0 auto; padding: 0 24px 40px; }
+        .hero-back { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem; font-weight: 500; margin-bottom: 16px; transition: color 0.2s; }
+        .hero-back:hover { color: #fff; }
+        .hero-tag { display: inline-block; background: var(--sunset); color: #fff; font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px; border-radius: 4px; margin-bottom: 12px; }
+        .hero-title { font-family: 'Playfair Display', Georgia, serif; font-size: 2.4rem; font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 10px; }
+        [dir="rtl"] .hero-title { font-family: 'Cairo', sans-serif; }
+        .hero-subtitle { font-size: 1rem; color: rgba(255,255,255,0.8); font-weight: 300; max-width: 560px; line-height: 1.6; }
+        .hero-stats { display: flex; gap: 16px; margin-top: 18px; flex-wrap: wrap; }
+        .hero-stat { background: rgba(255,255,255,0.12); backdrop-filter: blur(8px); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; color: rgba(255,255,255,0.9); font-weight: 500; border: 1px solid rgba(255,255,255,0.15); }
 
-        .content-section {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
+        .main-content { max-width: 900px; margin: 0 auto; padding: 40px 24px 0; }
+        .content-section { background: var(--white); padding: 32px; border-radius: 12px; margin-bottom: 24px; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+        .content-section h2 { font-family: 'Playfair Display', Georgia, serif; color: var(--navy); font-size: 1.5rem; margin-bottom: 16px; font-weight: 700; padding-bottom: 12px; border-bottom: 2px solid var(--sunset); text-align: center; }
+        [dir="rtl"] .content-section h2 { font-family: 'Cairo', sans-serif; }
+        .content-section > p { color: var(--text-mid); font-size: 0.9rem; margin-bottom: 20px; text-align: center; }
+        .content-section h3 { color: var(--navy); font-size: 1.05rem; margin-bottom: 10px; font-weight: 600; }
+
+        .store-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 20px 0; }
+        .store-item { background: var(--cream); padding: 20px; border-radius: 8px; border-left: 3px solid var(--sunset); transition: box-shadow 0.2s; }
+        .store-item:hover { box-shadow: 0 4px 16px rgba(12,35,64,0.08); }
+        .store-item h4 { color: var(--navy); margin-bottom: 10px; font-weight: 600; font-size: 0.95rem; }
+
+        .price-category { background: #f0f7fa; padding: 16px 20px; border-radius: 8px; margin: 12px 0; border-left: 3px solid var(--steel); }
+        .price-category h3 { margin-bottom: 8px; }
+
+        .tips-box { background: #fdf6f0; border: 1px solid #f0dece; border-radius: 8px; padding: 20px; margin: 20px 0; }
+        .tips-box h3 { color: var(--sunset-dark); }
+
+        ul { list-style-type: none; padding: 0; }
+        li { padding: 4px 0 4px 20px; position: relative; font-size: 0.9rem; color: var(--text-mid); }
+        li::before { content: ""; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; border-radius: 50%; background: var(--sunset); }
+
+        .faq-item { margin: 16px 0; padding: 18px; background: var(--cream); border-radius: 8px; }
+        .faq-item h3 { font-size: 0.95rem; margin-bottom: 8px; }
+        .faq-item p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.6; }
+
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
+        .related-card { display: block; padding: 16px; background: var(--cream); border-radius: 8px; text-decoration: none; color: var(--text-dark); border-left: 3px solid var(--sunset); transition: transform 0.2s, box-shadow 0.2s; }
+        .related-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(12,35,64,0.08); }
+        .related-card strong { font-size: 0.9rem; }
+        .related-card p { margin: 4px 0 0; font-size: 0.8rem; color: var(--text-light); }
+
+        .footer { background: var(--navy); color: #fff; padding: 32px 24px; margin-top: 48px; }
+        .footer-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .footer-brand h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; margin-bottom: 2px; }
+        [dir="rtl"] .footer-brand h3 { font-family: 'Cairo', sans-serif; }
+        .footer-brand p { font-size: 0.75rem; opacity: 0.5; }
+        .footer-links { display: flex; gap: 20px; }
+        .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.8rem; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--sunset-light); }
+
+        @media (max-width: 768px) {
+            .hero { min-height: 300px; }
+            .hero-title { font-size: 1.8rem; }
+            .content-section { padding: 24px 18px; }
+            .content-section h2 { font-size: 1.3rem; }
+            .store-grid { grid-template-columns: 1fr; }
         }
-
-        .language-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1001;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 8px 15px;
-            border-radius: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        [dir="rtl"] .language-switcher {
-            right: auto;
-            left: 20px;
-        }
-
-        .lang-option {
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: #4a5568;
-            padding: 4px 8px;
-            border-radius: 8px;
-        }
-
-        .lang-option:hover {
-            background: rgba(212, 165, 116, 0.2);
-            color: #2d3748;
-        }
-
-        .lang-option.active {
-            background: linear-gradient(135deg, #FFB74D 0%, #FF7043 100%);
-            color: white;
-        }
-
-        .lang-divider {
-            color: #a0aec0;
-            font-weight: 300;
-        }
-
-        .coming-soon {
-            text-align: center;
-            padding: 60px 20px;
-            background: #f8f9fa;
-            border-radius: 12px;
-            color: #4a5568;
-        }
-
-        .coming-soon h2 {
-            color: #FFB74D;
-            margin-bottom: 20px;
+        @media (max-width: 520px) {
+            .hero { min-height: 280px; }
+            .hero-content { padding: 0 16px 32px; }
+            .hero-title { font-size: 1.5rem; }
+            .hero-stats { gap: 8px; }
+            .hero-stat { font-size: 0.72rem; padding: 5px 10px; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .footer-links { justify-content: center; }
         }
     </style>
 </head>
 <body>
-    <div class="language-switcher">
-        <span class="lang-option active" onclick="switchLanguage('en')" data-lang="en">EN</span>
-        <span class="lang-divider">|</span>
-        <span class="lang-option" onclick="switchLanguage('ar')" data-lang="ar">AR</span>
+
+<div class="lang-switcher" id="langSwitcher">
+    <button class="lang-btn active" onclick="switchLanguage('en')" data-lang="en">EN</button>
+    <button class="lang-btn" onclick="switchLanguage('ar')" data-lang="ar">AR</button>
+</div>
+
+<section class="hero">
+    <img src="hospital.jpg" alt="Healthcare in Abu Dhabi" class="hero-img">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <a href="index.html" class="hero-back" data-en="&larr; Back to all guides" data-ar="&rarr; العودة لجميع الأدلة">&larr; Back to all guides</a>
+        <span class="hero-tag" data-en="Healthcare Guide" data-ar="دليل الرعاية الصحية">Healthcare Guide</span>
+        <h1 class="hero-title" data-en="Low-Cost Healthcare" data-ar="الرعاية الصحية منخفضة التكلفة">Low-Cost Healthcare</h1>
+        <p class="hero-subtitle" data-en="Affordable hospitals, pharmacy clinics & FAZAA discounts for expats. Government hospitals, free screenings & money-saving healthcare tips in Abu Dhabi." data-ar="المستشفيات بأسعار معقولة وعيادات الصيدليات وخصومات فزعة للوافدين. المستشفيات الحكومية والفحوصات المجانية ونصائح التوفير الصحي في أبوظبي.">Affordable hospitals, pharmacy clinics & FAZAA discounts for expats. Government hospitals, free screenings & money-saving healthcare tips in Abu Dhabi.</p>
+        <div class="hero-stats">
+            <span class="hero-stat" data-en="8+ Hospitals Listed" data-ar="8+ مستشفى مدرج">8+ Hospitals Listed</span>
+            <span class="hero-stat" data-en="FAZAA Discounts" data-ar="خصومات فزعة">FAZAA Discounts</span>
+        </div>
+    </div>
+</section>
+
+<main class="main-content">
+
+    <!-- Cost Comparison -->
+    <div class="content-section">
+        <h2 data-en="Healthcare Cost Comparison 2026" data-ar="مقارنة تكاليف الرعاية الصحية 2026">Healthcare Cost Comparison 2026</h2>
+        <p data-en="Compare consultation fees across public hospitals, private clinics, and pharmacy walk-in clinics in Abu Dhabi." data-ar="قارن رسوم الاستشارة بين المستشفيات العامة والعيادات الخاصة وعيادات الصيدليات في أبوظبي.">Compare consultation fees across public hospitals, private clinics, and pharmacy walk-in clinics in Abu Dhabi.</p>
+
+        <div class="price-category">
+            <h3 data-en="General Consultation" data-ar="استشارة عامة">General Consultation</h3>
+            <ul>
+                <li data-en="Public Hospital: AED 50-100" data-ar="مستشفى حكومي: 50-100 درهم">Public Hospital: AED 50-100</li>
+                <li data-en="Private Clinic: AED 150-250" data-ar="عيادة خاصة: 150-250 درهم">Private Clinic: AED 150-250</li>
+                <li data-en="Pharmacy Clinic: AED 50-75" data-ar="عيادة صيدلية: 50-75 درهم">Pharmacy Clinic: AED 50-75</li>
+            </ul>
+        </div>
+
+        <div class="price-category">
+            <h3 data-en="Specialist Consultation" data-ar="استشارة متخصص">Specialist Consultation</h3>
+            <ul>
+                <li data-en="Public Hospital: AED 100-200" data-ar="مستشفى حكومي: 100-200 درهم">Public Hospital: AED 100-200</li>
+                <li data-en="Private Clinic: AED 250-400" data-ar="عيادة خاصة: 250-400 درهم">Private Clinic: AED 250-400</li>
+                <li data-en="Pharmacy Clinic: Not available" data-ar="عيادة صيدلية: غير متاح">Pharmacy Clinic: Not available</li>
+            </ul>
+        </div>
+
+        <div class="price-category">
+            <h3 data-en="Emergency Visit" data-ar="زيارة طوارئ">Emergency Visit</h3>
+            <ul>
+                <li data-en="Public Hospital: Free - AED 50" data-ar="مستشفى حكومي: مجاني - 50 درهم">Public Hospital: Free - AED 50</li>
+                <li data-en="Private Clinic: AED 300-500" data-ar="عيادة خاصة: 300-500 درهم">Private Clinic: AED 300-500</li>
+                <li data-en="Pharmacy Clinic: Minor issues only" data-ar="عيادة صيدلية: مشاكل طفيفة فقط">Pharmacy Clinic: Minor issues only</li>
+            </ul>
+        </div>
+
+        <div class="price-category">
+            <h3 data-en="Lab Tests (Basic)" data-ar="فحوصات مخبرية (أساسية)">Lab Tests (Basic)</h3>
+            <ul>
+                <li data-en="Public Hospital: AED 50-150" data-ar="مستشفى حكومي: 50-150 درهم">Public Hospital: AED 50-150</li>
+                <li data-en="Private Clinic: AED 100-300" data-ar="عيادة خاصة: 100-300 درهم">Private Clinic: AED 100-300</li>
+                <li data-en="Pharmacy Clinic: AED 80-200" data-ar="عيادة صيدلية: 80-200 درهم">Pharmacy Clinic: AED 80-200</li>
+            </ul>
+        </div>
     </div>
 
-    <div class="container">
-        <a href="index.html" class="back-link" data-en="← Back to Home" data-ar="← العودة للصفحة الرئيسية">← Back to Home</a>
+    <!-- Government Hospitals -->
+    <div class="content-section">
+        <h2 data-en="Government Hospitals (Most Affordable)" data-ar="المستشفيات الحكومية (الأكثر اقتصادية)">Government Hospitals (Most Affordable)</h2>
+        <p data-en="Public hospitals in Abu Dhabi offer the most affordable healthcare, especially for emergency services. UAE residents and citizens receive heavily subsidized rates." data-ar="تقدم المستشفيات العامة في أبوظبي الرعاية الصحية الأكثر اقتصادية، خاصة لخدمات الطوارئ. يحصل المقيمون والمواطنون في الإمارات على أسعار مدعومة بشكل كبير.">Public hospitals in Abu Dhabi offer the most affordable healthcare, especially for emergency services. UAE residents and citizens receive heavily subsidized rates.</p>
 
-        <!-- Last Updated Badge -->
-        <div style="text-align: center; background: #e6fffa; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #81e6d9;">
-            <p style="margin: 0; color: #2d3748; font-size: 0.95rem;">
-                🏥 <strong data-en="5+ Verified Facilities" data-ar="5+ منشأة موثقة">5+ Verified Facilities</strong> |
-                💊 <strong data-en="Emergency Care from AED 50" data-ar="رعاية طوارئ من 50 درهم">Emergency Care from AED 50</strong>
-            </p>
-        </div>
-
-        <div class="page-header">
-            <h1 data-en="Affordable Healthcare in Abu Dhabi" data-ar="الرعاية الصحية الميسورة في أبوظبي">Affordable Healthcare in Abu Dhabi</h1>
-            <p data-en="Complete guide to budget-friendly healthcare options, government hospitals, low-cost clinics, and no-insurance medical services in Abu Dhabi" data-ar="دليل شامل لخيارات الرعاية الصحية بأسعار معقولة والمستشفيات الحكومية والعيادات منخفضة التكلفة والخدمات الطبية بدون تأمين في أبوظبي">Complete guide to budget-friendly healthcare options, government hospitals, low-cost clinics, and no-insurance medical services in Abu Dhabi</p>
-        </div>
-
-        <!-- Price Comparison Table -->
-        <div class="content-section">
-            <h2 data-en="Healthcare Cost Comparison 2025" data-ar="مقارنة تكاليف الرعاية الصحية 2025">Healthcare Cost Comparison 2025</h2>
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th data-en="Service Type" data-ar="نوع الخدمة">Service Type</th>
-                        <th data-en="Public Hospital" data-ar="مستشفى حكومي">Public Hospital</th>
-                        <th data-en="Private Clinic" data-ar="عيادة خاصة">Private Clinic</th>
-                        <th data-en="Pharmacy Clinic" data-ar="عيادة صيدلية">Pharmacy Clinic</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-en="General Consultation" data-ar="استشارة عامة">General Consultation</td>
-                        <td>AED 50-100</td>
-                        <td>AED 150-250</td>
-                        <td>AED 50-75</td>
-                    </tr>
-                    <tr>
-                        <td data-en="Specialist Consultation" data-ar="استشارة متخصص">Specialist Consultation</td>
-                        <td>AED 100-200</td>
-                        <td>AED 250-400</td>
-                        <td data-en="Not available" data-ar="غير متاح">Not available</td>
-                    </tr>
-                    <tr>
-                        <td data-en="Emergency Visit" data-ar="زيارة طوارئ">Emergency Visit</td>
-                        <td data-en="Free-AED 50" data-ar="مجاني-50 درهم">Free-AED 50</td>
-                        <td>AED 300-500</td>
-                        <td data-en="Minor only" data-ar="طفيفة فقط">Minor only</td>
-                    </tr>
-                    <tr>
-                        <td data-en="Lab Tests (Basic)" data-ar="فحوصات مخبرية (أساسية)">Lab Tests (Basic)</td>
-                        <td>AED 50-150</td>
-                        <td>AED 100-300</td>
-                        <td>AED 80-200</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Public Hospitals -->
-        <div class="content-section">
-            <h2 data-en="Government/Public Hospitals (Most Affordable)" data-ar="المستشفيات الحكومية/العامة (الأكثر تكلفة)">Government/Public Hospitals (Most Affordable)</h2>
-            <p data-en="Public hospitals in Abu Dhabi offer the most affordable healthcare, especially for emergency services. UAE residents and citizens receive heavily subsidized rates." data-ar="تقدم المستشفيات العامة في أبوظبي الرعاية الصحية الأكثر تكلفة، خاصة لخدمات الطوارئ. يحصل المقيمون والمواطنون في الإمارات على أسعار مدعومة بشكل كبير.">Public hospitals in Abu Dhabi offer the most affordable healthcare, especially for emergency services. UAE residents and citizens receive heavily subsidized rates.</p>
-
-            <div style="margin: 20px 0;">
-                <div style="background: #f7fafc; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #38b2ac;">
-                    <h3 style="color: #2d3748; margin-bottom: 10px;">Sheikh Khalifa Medical City (SKMC)</h3>
-                    <p><strong data-en="Type:" data-ar="النوع:">Type:</strong> <span data-en="Major Government Hospital" data-ar="مستشفى حكومي رئيسي">Major Government Hospital</span></p>
-                    <p><strong data-en="Emergency:" data-ar="الطوارئ:">Emergency:</strong> <span data-en="24/7, Free for UAE residents" data-ar="24/7، مجاني لسكان الإمارات">24/7, Free for UAE residents</span></p>
-                    <p><strong data-en="General Consultation:" data-ar="استشارة عامة:">General Consultation:</strong> AED 50-100</p>
-                    <p><strong data-en="Specialist:" data-ar="متخصص:">Specialist:</strong> AED 100-200</p>
-                    <p><strong data-en="Location:" data-ar="الموقع:">Location:</strong> <span data-en="Al Karamah, near Airport Road" data-ar="الكرامة، بالقرب من طريق المطار">Al Karamah, near Airport Road</span></p>
-                    <p><strong data-en="Phone:" data-ar="الهاتف:">Phone:</strong> +971 2 610 2000</p>
-                    <p><strong data-en="Best For:" data-ar="الأفضل لـ:">Best For:</strong> <span data-en="Emergency care, major procedures, affordable specialists" data-ar="رعاية الطوارئ، الإجراءات الرئيسية، المتخصصون بأسعار معقولة">Emergency care, major procedures, affordable specialists</span></p>
-                    <a href="https://maps.google.com/?q=Sheikh+Khalifa+Medical+City+Abu+Dhabi" target="_blank" style="color: #FFB74D; text-decoration: none;">📍 View on Google Maps</a>
-                </div>
-
-                <div style="background: #f7fafc; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #38b2ac;">
-                    <h3 style="color: #2d3748; margin-bottom: 10px;">Al Mafraq Hospital</h3>
-                    <p><strong data-en="Type:" data-ar="النوع:">Type:</strong> <span data-en="Government Hospital" data-ar="مستشفى حكومي">Government Hospital</span></p>
-                    <p><strong data-en="Emergency:" data-ar="الطوارئ:">Emergency:</strong> <span data-en="24/7 Emergency Department" data-ar="قسم طوارئ 24/7">24/7 Emergency Department</span></p>
-                    <p><strong data-en="General Consultation:" data-ar="استشارة عامة:">General Consultation:</strong> AED 60-120</p>
-                    <p><strong data-en="Specialist:" data-ar="متخصص:">Specialist:</strong> AED 120-250</p>
-                    <p><strong data-en="Location:" data-ar="الموقع:">Location:</strong> <span data-en="Al Mafraq area, near airport" data-ar="منطقة المفرق، بالقرب من المطار">Al Mafraq area, near airport</span></p>
-                    <p><strong data-en="Phone:" data-ar="الهاتف:">Phone:</strong> +971 2 581 7777</p>
-                    <p><strong data-en="Best For:" data-ar="الأفضل لـ:">Best For:</strong> <span data-en="Maternity, pediatrics, general medicine" data-ar="الأمومة، طب الأطفال، الطب العام">Maternity, pediatrics, general medicine</span></p>
-                    <a href="https://maps.google.com/?q=Al+Mafraq+Hospital+Abu+Dhabi" target="_blank" style="color: #FFB74D; text-decoration: none;">📍 View on Google Maps</a>
-                </div>
-
-                <div style="background: #f7fafc; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #38b2ac;">
-                    <h3 style="color: #2d3748; margin-bottom: 10px;">Tawam Hospital (Al Ain)</h3>
-                    <p><strong data-en="Type:" data-ar="النوع:">Type:</strong> <span data-en="Major Teaching Hospital" data-ar="مستشفى تعليمي رئيسي">Major Teaching Hospital</span></p>
-                    <p><strong data-en="General Consultation:" data-ar="استشارة عامة:">General Consultation:</strong> AED 50-100</p>
-                    <p><strong data-en="Note:" data-ar="ملاحظة:">Note:</strong> <span data-en="Excellent for complex cases, worth the drive for specialized care" data-ar="ممتاز للحالات المعقدة، يستحق القيادة للرعاية المتخصصة">Excellent for complex cases, worth the drive for specialized care</span></p>
-                    <a href="https://maps.google.com/?q=Tawam+Hospital+Al+Ain" target="_blank" style="color: #FFB74D; text-decoration: none;">📍 View on Google Maps</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Budget Private Clinics -->
-        <div class="content-section">
-            <h2 data-en="Budget-Friendly Private Clinics" data-ar="العيادات الخاصة الاقتصادية">Budget-Friendly Private Clinics</h2>
-            <p data-en="Private clinics offer faster appointments and more convenient locations. These are the most affordable private options in Abu Dhabi." data-ar="تقدم العيادات الخاصة مواعيد أسرع ومواقع أكثر ملاءمة. هذه هي الخيارات الخاصة الأكثر تكلفة في أبوظبي.">Private clinics offer faster appointments and more convenient locations. These are the most affordable private options in Abu Dhabi.</p>
-
-            <div style="background: #fff5f5; border: 1px solid #fed7d7; border-radius: 8px; padding: 20px; margin: 20px 0;">
-                <h3 data-en="💰 Pharmacy Clinics (Cheapest Private Option)" data-ar="💰 عيادات الصيدلية (الخيار الخاص الأرخص)">💰 Pharmacy Clinics (Cheapest Private Option)</h3>
-                <p data-en="Many pharmacies in Abu Dhabi have walk-in clinics with licensed doctors. Consultation: AED 50-75" data-ar="العديد من الصيدليات في أبوظبي لديها عيادات فورية مع أطباء مرخصين. استشارة: 50-75 درهم">Many pharmacies in Abu Dhabi have walk-in clinics with licensed doctors. Consultation: AED 50-75</p>
+        <div class="store-grid">
+            <div class="store-item">
+                <h4 data-en="Sheikh Khalifa Medical City (SKMC)" data-ar="مدينة الشيخ خليفة الطبية">Sheikh Khalifa Medical City (SKMC)</h4>
                 <ul>
-                    <li><strong>Life Pharmacy Clinics</strong> - <span data-en="Multiple locations, walk-in service" data-ar="مواقع متعددة، خدمة فورية">Multiple locations, walk-in service</span></li>
-                    <li><strong>Boots Pharmacy Clinics</strong> - <span data-en="Mall locations, convenient hours" data-ar="مواقع المولات، ساعات ملائمة">Mall locations, convenient hours</span></li>
-                    <li><strong data-en="Best For:" data-ar="الأفضل لـ:">Best For:</strong> <span data-en="Minor illnesses, prescriptions, sick notes" data-ar="الأمراض البسيطة، الوصفات، شهادات المرض">Minor illnesses, prescriptions, sick notes</span></li>
+                    <li data-en="Type: Major Government Hospital" data-ar="النوع: مستشفى حكومي رئيسي">Type: Major Government Hospital</li>
+                    <li data-en="Emergency: 24/7, Free for UAE residents" data-ar="الطوارئ: 24/7، مجاني لسكان الإمارات">Emergency: 24/7, Free for UAE residents</li>
+                    <li data-en="General Consultation: AED 50-100" data-ar="استشارة عامة: 50-100 درهم">General Consultation: AED 50-100</li>
+                    <li data-en="Specialist: AED 100-200" data-ar="متخصص: 100-200 درهم">Specialist: AED 100-200</li>
+                    <li data-en="Location: Al Karamah, near Airport Road" data-ar="الموقع: الكرامة، بالقرب من طريق المطار">Location: Al Karamah, near Airport Road</li>
+                    <li data-en="Phone: +971 2 610 2000" data-ar="الهاتف: +971 2 610 2000">Phone: +971 2 610 2000</li>
+                    <li data-en="Best For: Emergency care, major procedures, affordable specialists" data-ar="الأفضل لـ: رعاية الطوارئ، الإجراءات الرئيسية، المتخصصون بأسعار معقولة">Best For: Emergency care, major procedures, affordable specialists</li>
                 </ul>
             </div>
-        </div>
 
-        <!-- Money-Saving Tips -->
-        <div class="content-section">
-            <h2 data-en="💰 How to Save Money on Healthcare in Abu Dhabi" data-ar="💰 كيفية توفير المال على الرعاية الصحية في أبوظبي">💰 How to Save Money on Healthcare in Abu Dhabi</h2>
-
-            <div style="background: #e6fffa; border: 1px solid #81e6d9; border-radius: 8px; padding: 20px; margin: 20px 0;">
-                <h3 data-en="Essential Tips:" data-ar="نصائح أساسية:">Essential Tips:</h3>
+            <div class="store-item">
+                <h4 data-en="Al Mafraq Hospital" data-ar="مستشفى المفرق">Al Mafraq Hospital</h4>
                 <ul>
-                    <li data-en="✅ Use public hospitals for emergencies - often free for UAE residents" data-ar="✅ استخدم المستشفيات العامة للطوارئ - غالباً مجانية لسكان الإمارات">✅ Use public hospitals for emergencies - often free for UAE residents</li>
-                    <li data-en="✅ Pharmacy clinics for minor issues (AED 50-75 vs AED 150-250 at private clinics)" data-ar="✅ عيادات الصيدلية للمشاكل البسيطة (50-75 درهم مقابل 150-250 درهم في العيادات الخاصة)">✅ Pharmacy clinics for minor issues (AED 50-75 vs AED 150-250 at private clinics)</li>
-                    <li data-en="✅ Get employer-provided health insurance (mandatory in UAE)" data-ar="✅ احصل على التأمين الصحي المقدم من صاحب العمل (إلزامي في الإمارات)">✅ Get employer-provided health insurance (mandatory in UAE)</li>
-                    <li data-en="✅ FAZAA card holders get 50% discounts at participating hospitals" data-ar="✅ حاملو بطاقة فزاع يحصلون على خصم 50% في المستشفيات المشاركة">✅ FAZAA card holders get 50% discounts at participating hospitals</li>
-                    <li data-en="✅ Book appointments in advance - walk-ins cost more" data-ar="✅ احجز المواعيد مسبقاً - الزيارات الفورية تكلف أكثر">✅ Book appointments in advance - walk-ins cost more</li>
-                    <li data-en="✅ Generic medicines are 50-70% cheaper than branded" data-ar="✅ الأدوية العامة أرخص بنسبة 50-70% من ذات العلامات التجارية">✅ Generic medicines are 50-70% cheaper than branded</li>
-                    <li data-en="✅ Compare lab test prices - they vary significantly" data-ar="✅ قارن أسعار الفحوصات المخبرية - تختلف بشكل كبير">✅ Compare lab test prices - they vary significantly</li>
+                    <li data-en="Type: Government Hospital" data-ar="النوع: مستشفى حكومي">Type: Government Hospital</li>
+                    <li data-en="Emergency: 24/7 Emergency Department" data-ar="الطوارئ: قسم طوارئ 24/7">Emergency: 24/7 Emergency Department</li>
+                    <li data-en="General Consultation: AED 60-120" data-ar="استشارة عامة: 60-120 درهم">General Consultation: AED 60-120</li>
+                    <li data-en="Specialist: AED 120-250" data-ar="متخصص: 120-250 درهم">Specialist: AED 120-250</li>
+                    <li data-en="Location: Al Mafraq area, near airport" data-ar="الموقع: منطقة المفرق، بالقرب من المطار">Location: Al Mafraq area, near airport</li>
+                    <li data-en="Phone: +971 2 581 7777" data-ar="الهاتف: +971 2 581 7777">Phone: +971 2 581 7777</li>
+                    <li data-en="Best For: Maternity, pediatrics, general medicine" data-ar="الأفضل لـ: الأمومة، طب الأطفال، الطب العام">Best For: Maternity, pediatrics, general medicine</li>
                 </ul>
             </div>
-        </div>
 
-        <div class="content-section">
-            <h2 data-en="Contact & Support" data-ar="الاتصال والدعم">Contact & Support</h2>
-            <p data-en="Need help finding affordable healthcare options?" data-ar="تحتاج مساعدة في العثور على خيارات رعاية صحية ميسورة التكلفة؟">Need help finding affordable healthcare options?</p>
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="https://wa.me/971501234567?text=Hi! I need help with healthcare in Abu Dhabi" 
-                   style="display: inline-block; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: 600; transition: transform 0.3s ease;" 
-                   onmouseover="this.style.transform='scale(1.05)'" 
-                   onmouseout="this.style.transform='scale(1)'">
-                    <span data-en="💬 WhatsApp Support" data-ar="💬 دعم واتساب">💬 WhatsApp Support</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- FAQ Section with Schema Markup -->
-        <div class="content-section" itemscope itemtype="https://schema.org/FAQPage">
-            <h2 data-en="Frequently Asked Questions About Healthcare in Abu Dhabi" data-ar="الأسئلة الشائعة حول الرعاية الصحية في أبوظبي">Frequently Asked Questions About Healthcare in Abu Dhabi</h2>
-
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin: 20px 0; padding: 15px; background: #f7fafc; border-radius: 8px;">
-                <h3 itemprop="name" style="color: #2d3748; font-size: 1.1rem; margin-bottom: 10px;" data-en="What's the cheapest hospital without insurance in Abu Dhabi?" data-ar="ما هو أرخص مستشفى بدون تأمين في أبوظبي؟">What's the cheapest hospital without insurance in Abu Dhabi?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text" data-en="Sheikh Khalifa Medical City and Al Mafraq Hospital are the most affordable, with general consultations at AED 50-100 and emergency care often free for UAE residents. For non-residents, pharmacy clinics (AED 50-75) are the cheapest option for minor health issues." data-ar="مستشفى الشيخ خليفة الطبية ومستشفى المفرق هي الأكثر تكلفة، مع استشارات عامة بسعر 50-100 درهم ورعاية طوارئ غالباً مجانية لسكان الإمارات. لغير المقيمين، عيادات الصيدلية (50-75 درهم) هي الخيار الأرخص للمشاكل الصحية البسيطة.">Sheikh Khalifa Medical City and Al Mafraq Hospital are the most affordable, with general consultations at AED 50-100 and emergency care often free for UAE residents. For non-residents, pharmacy clinics (AED 50-75) are the cheapest option for minor health issues.</p>
-                </div>
-            </div>
-
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin: 20px 0; padding: 15px; background: #f7fafc; border-radius: 8px;">
-                <h3 itemprop="name" style="color: #2d3748; font-size: 1.1rem; margin-bottom: 10px;" data-en="Can I go to the hospital without health insurance in Abu Dhabi?" data-ar="هل يمكنني الذهاب إلى المستشفى بدون تأمين صحي في أبوظبي؟">Can I go to the hospital without health insurance in Abu Dhabi?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text" data-en="Yes, you can visit any hospital without insurance, but you'll pay out-of-pocket. Public hospitals are most affordable (AED 50-200 per visit). Private hospitals can charge AED 300-500 for consultations. Health insurance is mandatory for all UAE residents, so check with your employer." data-ar="نعم، يمكنك زيارة أي مستشفى بدون تأمين، لكنك ستدفع من جيبك. المستشفيات العامة هي الأكثر تكلفة (50-200 درهم لكل زيارة). المستشفيات الخاصة يمكن أن تفرض 300-500 درهم للاستشارات. التأمين الصحي إلزامي لجميع سكان الإمارات، لذا تحقق مع صاحب العمل.">Yes, you can visit any hospital without insurance, but you'll pay out-of-pocket. Public hospitals are most affordable (AED 50-200 per visit). Private hospitals can charge AED 300-500 for consultations. Health insurance is mandatory for all UAE residents, so check with your employer.</p>
-                </div>
-            </div>
-
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin: 20px 0; padding: 15px; background: #f7fafc; border-radius: 8px;">
-                <h3 itemprop="name" style="color: #2d3748; font-size: 1.1rem; margin-bottom: 10px;" data-en="Where can I get cheap medical consultation in Abu Dhabi?" data-ar="أين يمكنني الحصول على استشارة طبية رخيصة في أبوظبي؟">Where can I get cheap medical consultation in Abu Dhabi?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text" data-en="Cheapest options: 1) Pharmacy clinics at Life Pharmacy or Boots (AED 50-75), 2) Public hospitals like SKMC (AED 50-100), 3) Walk-in clinics during weekday mornings for lower rates. Avoid private hospital emergency rooms unless necessary as they charge AED 300-500." data-ar="الخيارات الأرخص: 1) عيادات الصيدلية في لايف فارمسي أو بوتس (50-75 درهم)، 2) المستشفيات العامة مثل SKMC (50-100 درهم)، 3) العيادات الفورية خلال صباح أيام الأسبوع للحصول على أسعار أقل. تجنب غرف الطوارئ في المستشفيات الخاصة ما لم يكن ضرورياً حيث تفرض 300-500 درهم.">Cheapest options: 1) Pharmacy clinics at Life Pharmacy or Boots (AED 50-75), 2) Public hospitals like SKMC (AED 50-100), 3) Walk-in clinics during weekday mornings for lower rates. Avoid private hospital emergency rooms unless necessary as they charge AED 300-500.</p>
-                </div>
-            </div>
-
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin: 20px 0; padding: 15px; background: #f7fafc; border-radius: 8px;">
-                <h3 itemprop="name" style="color: #2d3748; font-size: 1.1rem; margin-bottom: 10px;" data-en="What is FAZAA card and how does it help with healthcare costs?" data-ar="ما هي بطاقة فزاع وكيف تساعد في تكاليف الرعاية الصحية؟">What is FAZAA card and how does it help with healthcare costs?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text" data-en="FAZAA is a discount card for UAE residents offering 50% off at participating hospitals and clinics. Available for government employees, their families, and some private sector workers. Check fazaa.ae for participating healthcare providers and application process." data-ar="فزاع هي بطاقة خصم لسكان الإمارات تقدم خصم 50% في المستشفيات والعيادات المشاركة. متاحة لموظفي الحكومة وعائلاتهم وبعض عمال القطاع الخاص. تحقق من fazaa.ae لمقدمي الرعاية الصحية المشاركين وعملية التقديم.">FAZAA is a discount card for UAE residents offering 50% off at participating hospitals and clinics. Available for government employees, their families, and some private sector workers. Check fazaa.ae for participating healthcare providers and application process.</p>
-                </div>
-            </div>
-
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin: 20px 0; padding: 15px; background: #f7fafc; border-radius: 8px;">
-                <h3 itemprop="name" style="color: #2d3748; font-size: 1.1rem; margin-bottom: 10px;" data-en="How much does emergency care cost in Abu Dhabi?" data-ar="كم تكلف رعاية الطوارئ في أبوظبي؟">How much does emergency care cost in Abu Dhabi?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text" data-en="Emergency care costs: Public hospitals (Sheikh Khalifa, Al Mafraq) - Free to AED 50 for UAE residents. Private hospitals - AED 300-500 for initial consultation, plus additional costs for tests/treatment. Always go to public hospitals for true emergencies to avoid high costs." data-ar="تكاليف رعاية الطوارئ: المستشفيات العامة (الشيخ خليفة، المفرق) - مجاني إلى 50 درهم لسكان الإمارات. المستشفيات الخاصة - 300-500 درهم للاستشارة الأولية، بالإضافة إلى تكاليف إضافية للفحوصات/العلاج. اذهب دائماً إلى المستشفيات العامة للحالات الطارئة الحقيقية لتجنب التكاليف العالية.">Emergency care costs: Public hospitals (Sheikh Khalifa, Al Mafraq) - Free to AED 50 for UAE residents. Private hospitals - AED 300-500 for initial consultation, plus additional costs for tests/treatment. Always go to public hospitals for true emergencies to avoid high costs.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Related Pages Section -->
-        <div class="content-section">
-            <h2 data-en="Related Guides" data-ar="أدلة ذات صلة">Related Guides</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
-                <a href="newcomer-setup.html" style="display: block; padding: 15px; background: #f7fafc; border-radius: 8px; text-decoration: none; color: #2d3748; border-left: 4px solid #FFB74D; transition: transform 0.2s ease;">
-                    <strong data-en="🏠 Newcomer Setup Guide" data-ar="🏠 دليل إعداد القادمين الجدد">🏠 Newcomer Setup Guide</strong>
-                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #718096;" data-en="Health insurance & essential services" data-ar="التأمين الصحي والخدمات الأساسية">Health insurance & essential services</p>
-                </a>
-                <a href="visa-legal.html" style="display: block; padding: 15px; background: #f7fafc; border-radius: 8px; text-decoration: none; color: #2d3748; border-left: 4px solid #FFB74D; transition: transform 0.2s ease;">
-                    <strong data-en="📋 Visa & Legal Help" data-ar="📋 مساعدة التأشيرات والقانون">📋 Visa & Legal Help</strong>
-                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #718096;" data-en="Medical fitness tests & visa requirements" data-ar="فحوصات اللياقة الطبية ومتطلبات التأشيرة">Medical fitness tests & visa requirements</p>
-                </a>
-                <a href="food-groceries.html" style="display: block; padding: 15px; background: #f7fafc; border-radius: 8px; text-decoration: none; color: #2d3748; border-left: 4px solid #FFB74D; transition: transform 0.2s ease;">
-                    <strong data-en="💊 Pharmacies & Health Products" data-ar="💊 الصيدليات والمنتجات الصحية">💊 Pharmacies & Health Products</strong>
-                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #718096;" data-en="24-hour pharmacies & medicine availability" data-ar="صيدليات 24 ساعة وتوافر الأدوية">24-hour pharmacies & medicine availability</p>
-                </a>
+            <div class="store-item">
+                <h4 data-en="Tawam Hospital (Al Ain)" data-ar="مستشفى توام (العين)">Tawam Hospital (Al Ain)</h4>
+                <ul>
+                    <li data-en="Type: Major Teaching Hospital" data-ar="النوع: مستشفى تعليمي رئيسي">Type: Major Teaching Hospital</li>
+                    <li data-en="General Consultation: AED 50-100" data-ar="استشارة عامة: 50-100 درهم">General Consultation: AED 50-100</li>
+                    <li data-en="Note: Excellent for complex cases, worth the drive for specialized care" data-ar="ملاحظة: ممتاز للحالات المعقدة، يستحق القيادة للرعاية المتخصصة">Note: Excellent for complex cases, worth the drive for specialized care</li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <script>
-        function switchLanguage(lang) {
-            const html = document.documentElement;
-            const langOptions = document.querySelectorAll('.lang-option');
-            
-            html.setAttribute('lang', lang);
-            html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-            html.setAttribute('data-language', lang);
-            
-            langOptions.forEach(option => {
-                option.classList.remove('active');
-                if (option.getAttribute('data-lang') === lang) {
-                    option.classList.add('active');
-                }
-            });
-            
-            const elements = document.querySelectorAll('[data-en][data-ar]');
-            elements.forEach(element => {
-                if (lang === 'ar') {
-                    element.textContent = element.getAttribute('data-ar');
-                } else {
-                    element.textContent = element.getAttribute('data-en');
-                }
-            });
-            
-            localStorage.setItem('selectedLanguage', lang);
-        }
+    <!-- Pharmacy Clinics -->
+    <div class="content-section">
+        <h2 data-en="Pharmacy Walk-In Clinics (Cheapest Private Option)" data-ar="عيادات الصيدليات الفورية (الخيار الخاص الأرخص)">Pharmacy Walk-In Clinics (Cheapest Private Option)</h2>
+        <p data-en="Many pharmacies in Abu Dhabi have walk-in clinics with licensed doctors. Consultation: AED 50-75." data-ar="العديد من الصيدليات في أبوظبي لديها عيادات فورية مع أطباء مرخصين. استشارة: 50-75 درهم.">Many pharmacies in Abu Dhabi have walk-in clinics with licensed doctors. Consultation: AED 50-75.</p>
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedLanguage = localStorage.getItem('selectedLanguage');
-            if (savedLanguage && (savedLanguage === 'ar' || savedLanguage === 'en')) {
-                switchLanguage(savedLanguage);
-            }
-        });
-    </script>
+        <div class="store-grid">
+            <div class="store-item">
+                <h4 data-en="Life Pharmacy Clinics" data-ar="عيادات لايف فارمسي">Life Pharmacy Clinics</h4>
+                <ul>
+                    <li data-en="Multiple locations across Abu Dhabi" data-ar="مواقع متعددة في أبوظبي">Multiple locations across Abu Dhabi</li>
+                    <li data-en="Walk-in service, no appointment needed" data-ar="خدمة فورية، لا حاجة لموعد">Walk-in service, no appointment needed</li>
+                    <li data-en="Consultation: AED 50-75" data-ar="الاستشارة: 50-75 درهم">Consultation: AED 50-75</li>
+                    <li data-en="Best For: Minor illnesses, prescriptions, sick notes" data-ar="الأفضل لـ: الأمراض البسيطة، الوصفات، شهادات المرض">Best For: Minor illnesses, prescriptions, sick notes</li>
+                </ul>
+            </div>
+            <div class="store-item">
+                <h4 data-en="Boots Pharmacy Clinics" data-ar="عيادات بوتس فارمسي">Boots Pharmacy Clinics</h4>
+                <ul>
+                    <li data-en="Mall locations, convenient hours" data-ar="مواقع المولات، ساعات ملائمة">Mall locations, convenient hours</li>
+                    <li data-en="Consultation: AED 50-75" data-ar="الاستشارة: 50-75 درهم">Consultation: AED 50-75</li>
+                    <li data-en="Best For: Quick consultations while shopping" data-ar="الأفضل لـ: استشارات سريعة أثناء التسوق">Best For: Quick consultations while shopping</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAZAA Discounts -->
+    <div class="content-section">
+        <h2 data-en="FAZAA Card Healthcare Discounts" data-ar="خصومات بطاقة فزعة الصحية">FAZAA Card Healthcare Discounts</h2>
+        <p data-en="FAZAA card holders get up to 50% off at participating hospitals and clinics in Abu Dhabi." data-ar="حاملو بطاقة فزعة يحصلون على خصم يصل إلى 50% في المستشفيات والعيادات المشاركة في أبوظبي.">FAZAA card holders get up to 50% off at participating hospitals and clinics in Abu Dhabi.</p>
+
+        <div class="tips-box">
+            <h3 data-en="FAZAA Card Benefits:" data-ar="مزايا بطاقة فزعة:">FAZAA Card Benefits:</h3>
+            <ul>
+                <li data-en="50% discount at participating hospitals and clinics" data-ar="خصم 50% في المستشفيات والعيادات المشاركة">50% discount at participating hospitals and clinics</li>
+                <li data-en="Available for government employees and their families" data-ar="متاحة لموظفي الحكومة وعائلاتهم">Available for government employees and their families</li>
+                <li data-en="Some private sector workers also eligible" data-ar="بعض عمال القطاع الخاص مؤهلون أيضا">Some private sector workers also eligible</li>
+                <li data-en="Check fazaa.ae for participating healthcare providers" data-ar="تحقق من fazaa.ae لمقدمي الرعاية الصحية المشاركين">Check fazaa.ae for participating healthcare providers</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Money-Saving Tips -->
+    <div class="content-section">
+        <h2 data-en="Money-Saving Healthcare Tips" data-ar="نصائح التوفير على الرعاية الصحية">Money-Saving Healthcare Tips</h2>
+        <div class="tips-box">
+            <h3 data-en="Essential Tips:" data-ar="نصائح أساسية:">Essential Tips:</h3>
+            <ul>
+                <li data-en="Use public hospitals for emergencies - often free for UAE residents" data-ar="استخدم المستشفيات العامة للطوارئ - غالبا مجانية لسكان الإمارات">Use public hospitals for emergencies - often free for UAE residents</li>
+                <li data-en="Pharmacy clinics for minor issues (AED 50-75 vs AED 150-250 at private clinics)" data-ar="عيادات الصيدلية للمشاكل البسيطة (50-75 درهم مقابل 150-250 درهم في العيادات الخاصة)">Pharmacy clinics for minor issues (AED 50-75 vs AED 150-250 at private clinics)</li>
+                <li data-en="Get employer-provided health insurance (mandatory in UAE)" data-ar="احصل على التأمين الصحي المقدم من صاحب العمل (إلزامي في الإمارات)">Get employer-provided health insurance (mandatory in UAE)</li>
+                <li data-en="FAZAA card holders get 50% discounts at participating hospitals" data-ar="حاملو بطاقة فزعة يحصلون على خصم 50% في المستشفيات المشاركة">FAZAA card holders get 50% discounts at participating hospitals</li>
+                <li data-en="Book appointments in advance - walk-ins cost more" data-ar="احجز المواعيد مسبقا - الزيارات الفورية تكلف أكثر">Book appointments in advance - walk-ins cost more</li>
+                <li data-en="Generic medicines are 50-70% cheaper than branded" data-ar="الأدوية العامة أرخص بنسبة 50-70% من ذات العلامات التجارية">Generic medicines are 50-70% cheaper than branded</li>
+                <li data-en="Compare lab test prices - they vary significantly" data-ar="قارن أسعار الفحوصات المخبرية - تختلف بشكل كبير">Compare lab test prices - they vary significantly</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="content-section" itemscope itemtype="https://schema.org/FAQPage">
+        <h2 data-en="Frequently Asked Questions" data-ar="الأسئلة الشائعة">Frequently Asked Questions</h2>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name" data-en="What is the cheapest hospital in Abu Dhabi without insurance?" data-ar="ما هو أرخص مستشفى في أبوظبي بدون تأمين؟">What is the cheapest hospital in Abu Dhabi without insurance?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-en="Sheikh Khalifa Medical City (SKMC) and Al Mafraq Hospital are the cheapest hospitals in Abu Dhabi without insurance. General consultations cost AED 50-100, and emergency care is often free for UAE residents. For minor issues, pharmacy walk-in clinics at Life Pharmacy or Boots cost just AED 50-75." data-ar="مدينة الشيخ خليفة الطبية ومستشفى المفرق هما أرخص المستشفيات في أبوظبي بدون تأمين. الاستشارات العامة تكلف 50-100 درهم، ورعاية الطوارئ غالبا مجانية لسكان الإمارات. للمشاكل البسيطة، عيادات الصيدليات الفورية في لايف فارمسي أو بوتس تكلف فقط 50-75 درهم.">Sheikh Khalifa Medical City (SKMC) and Al Mafraq Hospital are the cheapest hospitals in Abu Dhabi without insurance. General consultations cost AED 50-100, and emergency care is often free for UAE residents. For minor issues, pharmacy walk-in clinics at Life Pharmacy or Boots cost just AED 50-75.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name" data-en="How do FAZAA healthcare discounts work?" data-ar="كيف تعمل خصومات فزعة الصحية؟">How do FAZAA healthcare discounts work?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-en="FAZAA is a discount card program offering up to 50% off healthcare at participating hospitals and clinics in Abu Dhabi. It is available to UAE government employees, their families, and some private sector workers. Simply present your FAZAA card at registration to receive the discount. Visit fazaa.ae for participating providers." data-ar="فزعة هو برنامج بطاقة خصم يقدم خصم يصل إلى 50% على الرعاية الصحية في المستشفيات والعيادات المشاركة في أبوظبي. متاح لموظفي حكومة الإمارات وعائلاتهم وبعض عمال القطاع الخاص. قدم بطاقة فزعة عند التسجيل للحصول على الخصم.">FAZAA is a discount card program offering up to 50% off healthcare at participating hospitals and clinics in Abu Dhabi. It is available to UAE government employees, their families, and some private sector workers. Simply present your FAZAA card at registration to receive the discount. Visit fazaa.ae for participating providers.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name" data-en="Which government hospitals in Abu Dhabi treat expats?" data-ar="أي المستشفيات الحكومية في أبوظبي تعالج الوافدين؟">Which government hospitals in Abu Dhabi treat expats?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-en="All government hospitals in Abu Dhabi treat expats, including Sheikh Khalifa Medical City (SKMC), Al Mafraq Hospital, and Tawam Hospital in Al Ain. Expats pay out-of-pocket rates (AED 50-200 per visit) which are still much cheaper than private hospitals. Emergency care is provided to everyone regardless of insurance status." data-ar="جميع المستشفيات الحكومية في أبوظبي تعالج الوافدين، بما في ذلك مدينة الشيخ خليفة الطبية ومستشفى المفرق ومستشفى توام في العين. يدفع الوافدون من جيبهم (50-200 درهم لكل زيارة) وهي أرخص بكثير من المستشفيات الخاصة.">All government hospitals in Abu Dhabi treat expats, including Sheikh Khalifa Medical City (SKMC), Al Mafraq Hospital, and Tawam Hospital in Al Ain. Expats pay out-of-pocket rates (AED 50-200 per visit) which are still much cheaper than private hospitals. Emergency care is provided to everyone regardless of insurance status.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name" data-en="Are there free hospitals in Abu Dhabi for low-income residents?" data-ar="هل توجد مستشفيات مجانية في أبوظبي للسكان ذوي الدخل المنخفض؟">Are there free hospitals in Abu Dhabi for low-income residents?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-en="Government hospitals provide free emergency care for UAE citizens and heavily subsidized rates for residents. Low-income workers can access affordable care at public hospitals like SKMC (from AED 50). Health insurance is mandatory for all UAE residents, and employers must provide it. If you are uninsured, public hospitals are the most affordable option." data-ar="توفر المستشفيات الحكومية رعاية طوارئ مجانية للمواطنين الإماراتيين وأسعار مدعومة بشكل كبير للمقيمين. يمكن للعمال ذوي الدخل المنخفض الحصول على رعاية بأسعار معقولة في المستشفيات العامة مثل SKMC (من 50 درهم).">Government hospitals provide free emergency care for UAE citizens and heavily subsidized rates for residents. Low-income workers can access affordable care at public hospitals like SKMC (from AED 50). Health insurance is mandatory for all UAE residents, and employers must provide it. If you are uninsured, public hospitals are the most affordable option.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name" data-en="How much does a doctor visit cost in Abu Dhabi without insurance?" data-ar="كم تكلف زيارة الطبيب في أبوظبي بدون تأمين؟">How much does a doctor visit cost in Abu Dhabi without insurance?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-en="Without insurance, a doctor visit in Abu Dhabi costs AED 50-100 at government hospitals, AED 150-250 at private clinics, or AED 50-75 at pharmacy walk-in clinics. Specialists cost AED 100-400 depending on the facility. The cheapest option for non-emergency care is pharmacy clinics at Life Pharmacy or Boots." data-ar="بدون تأمين، تكلف زيارة الطبيب في أبوظبي 50-100 درهم في المستشفيات الحكومية، 150-250 درهم في العيادات الخاصة، أو 50-75 درهم في عيادات الصيدليات الفورية. المتخصصون يكلفون 100-400 درهم حسب المنشأة. الخيار الأرخص للرعاية غير الطارئة هو عيادات الصيدليات.">Without insurance, a doctor visit in Abu Dhabi costs AED 50-100 at government hospitals, AED 150-250 at private clinics, or AED 50-75 at pharmacy walk-in clinics. Specialists cost AED 100-400 depending on the facility. The cheapest option for non-emergency care is pharmacy clinics at Life Pharmacy or Boots.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Guides -->
+    <div class="content-section">
+        <h2 data-en="Related Guides" data-ar="أدلة ذات صلة">Related Guides</h2>
+        <div class="related-grid">
+            <a href="newcomer-setup.html" class="related-card">
+                <strong data-en="Newcomer Setup Guide" data-ar="دليل إعداد القادمين الجدد">Newcomer Setup Guide</strong>
+                <p data-en="Essential services for new residents" data-ar="الخدمات الأساسية للسكان الجدد">Essential services for new residents</p>
+            </a>
+            <a href="visa-legal.html" class="related-card">
+                <strong data-en="Visa & Legal Help" data-ar="التأشيرات والمساعدة القانونية">Visa & Legal Help</strong>
+                <p data-en="Visa types, renewals & legal services" data-ar="أنواع التأشيرات والتجديد والخدمات القانونية">Visa types, renewals & legal services</p>
+            </a>
+            <a href="gyms-wellness.html" class="related-card">
+                <strong data-en="Gyms & Wellness" data-ar="الصالات الرياضية والعافية">Gyms & Wellness</strong>
+                <p data-en="Affordable fitness and spa options" data-ar="خيارات اللياقة والسبا بأسعار معقولة">Affordable fitness and spa options</p>
+            </a>
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <h3 data-en="New In Abu Dhabi" data-ar="جديد في أبوظبي">New In Abu Dhabi</h3>
+            <p data-en="Your guide to settling in the UAE capital" data-ar="دليلك للاستقرار في عاصمة الإمارات">Your guide to settling in the UAE capital</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+            <a href="about.html" data-en="About" data-ar="حول">About</a>
+            <a href="contact.html" data-en="Contact" data-ar="اتصل">Contact</a>
+            <a href="privacy.html" data-en="Privacy" data-ar="الخصوصية">Privacy</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+function switchLanguage(lang) {
+    const html = document.documentElement;
+    html.setAttribute('lang', lang);
+    html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    html.setAttribute('data-language', lang);
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+
+    document.querySelectorAll('[data-en][data-ar]').forEach(el => {
+        const text = el.getAttribute(lang === 'ar' ? 'data-ar' : 'data-en');
+        el.textContent = text;
+    });
+
+    localStorage.setItem('selectedLanguage', lang);
+}
+
+window.addEventListener('scroll', function() {
+    document.getElementById('langSwitcher').classList.toggle('scrolled', window.scrollY > 200);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const saved = localStorage.getItem('selectedLanguage');
+    if (saved === 'ar') switchLanguage('ar');
+});
+</script>
+
 </body>
 </html>
