@@ -535,6 +535,174 @@
             border: 1px solid var(--border);
             display: flex;
             flex-direction: column;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .whats-new-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 24px rgba(12,35,64,0.1);
+            border-color: var(--sunset-light);
+        }
+
+        /* ── What's New Modal ── */
+        .wn-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(12,35,64,0.6);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .wn-modal-overlay.active { display: flex; }
+
+        .wn-modal {
+            background: var(--white);
+            border-radius: 14px;
+            max-width: 520px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+            animation: wnModalIn 0.25s ease-out;
+        }
+
+        @keyframes wnModalIn {
+            from { opacity: 0; transform: translateY(20px) scale(0.97); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .wn-modal-header {
+            padding: 24px 24px 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .wn-modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-light);
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .wn-modal-close:hover { color: var(--text-dark); }
+
+        .wn-modal-tag {
+            display: inline-block;
+            background: var(--navy);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .wn-modal-source {
+            display: inline-block;
+            background: var(--sand);
+            color: var(--text-mid);
+            font-size: 0.65rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-left: 6px;
+        }
+
+        .wn-modal-body {
+            padding: 16px 24px 24px;
+        }
+
+        .wn-modal-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 12px 0 8px;
+            line-height: 1.35;
+        }
+
+        [dir="rtl"] .wn-modal-body h3 { font-family: 'Cairo', sans-serif; }
+
+        .wn-modal-date {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 14px;
+        }
+
+        .wn-modal-desc {
+            font-size: 0.9rem;
+            color: var(--text-mid);
+            line-height: 1.65;
+            margin-bottom: 20px;
+        }
+
+        .wn-modal-divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 0 0 16px;
+        }
+
+        .wn-modal-guide {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--sand);
+            border-radius: 10px;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: inherit;
+            transition: background 0.2s;
+        }
+
+        .wn-modal-guide:hover { background: #e8e0d0; }
+
+        .wn-modal-guide-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .wn-modal-guide-text {
+            flex: 1;
+        }
+
+        .wn-modal-guide-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--sunset);
+            margin-bottom: 2px;
+        }
+
+        .wn-modal-guide-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .wn-modal-guide-arrow {
+            color: var(--sunset);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 520px) {
+            .wn-modal { border-radius: 10px; }
+            .wn-modal-body h3 { font-size: 1.15rem; }
+            .wn-modal-overlay { padding: 16px; }
         }
 
         .whats-new-tag {
@@ -694,11 +862,12 @@
                 document.getElementById('whats-new-section').style.display = 'none';
                 return;
             }
+            window._wnItems = data.items;
             var html = '';
-            data.items.forEach(function(item) {
+            data.items.forEach(function(item, idx) {
                 var d = new Date(item.pubDate);
                 var dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                html += '<div class="whats-new-card">'
+                html += '<div class="whats-new-card" data-wn-idx="' + idx + '">'
                     + '<span class="whats-new-tag">' + item.category + '</span>'
                     + '<h3>' + item.title + '</h3>'
                     + '<p class="wn-desc">' + item.description + '</p>'
@@ -706,6 +875,12 @@
                     + '</div>';
             });
             grid.innerHTML = html;
+            grid.addEventListener('click', function(e) {
+                var card = e.target.closest('.whats-new-card');
+                if (!card) return;
+                var idx = parseInt(card.getAttribute('data-wn-idx'));
+                if (window._wnItems && window._wnItems[idx]) openWnModal(window._wnItems[idx]);
+            });
         })
         .catch(function() {
             document.getElementById('whats-new-section').style.display = 'none';
@@ -954,6 +1129,111 @@ function switchLanguage(lang) {
 document.addEventListener('DOMContentLoaded', function() {
     const saved = localStorage.getItem('selectedLanguage');
     if (saved === 'ar') switchLanguage('ar');
+});
+</script>
+
+<!-- What's New Modal -->
+<div class="wn-modal-overlay" id="wn-modal-overlay">
+    <div class="wn-modal">
+        <div class="wn-modal-header">
+            <div>
+                <span class="wn-modal-tag" id="wn-modal-tag"></span>
+                <span class="wn-modal-source" id="wn-modal-source"></span>
+            </div>
+            <button class="wn-modal-close" onclick="closeWnModal()">&times;</button>
+        </div>
+        <div class="wn-modal-body">
+            <h3 id="wn-modal-title"></h3>
+            <p class="wn-modal-date" id="wn-modal-date"></p>
+            <p class="wn-modal-desc" id="wn-modal-desc"></p>
+            <hr class="wn-modal-divider">
+            <a class="wn-modal-guide" id="wn-modal-guide" href="#">
+                <span class="wn-modal-guide-icon" id="wn-modal-guide-icon"></span>
+                <div class="wn-modal-guide-text">
+                    <div class="wn-modal-guide-label" data-en="Related Guide" data-ar="دليل ذو صلة">Related Guide</div>
+                    <div class="wn-modal-guide-title" id="wn-modal-guide-title"></div>
+                </div>
+                <span class="wn-modal-guide-arrow">&rarr;</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+// Category-to-guide mapping
+var guideMap = {
+    'shows':       { href: 'weekend-fun.html', title: 'Weekend Fun & Activities', icon: '\uD83C\uDFAD' },
+    'sold out':    { href: 'weekend-fun.html', title: 'Weekend Fun & Activities', icon: '\uD83C\uDFAD' },
+    'events':      { href: 'weekend-fun.html', title: 'Weekend Fun & Activities', icon: '\uD83C\uDF89' },
+    'culture':     { href: 'weekend-fun.html', title: 'Weekend Fun & Activities', icon: '\uD83C\uDFDB\uFE0F' },
+    'outdoor':     { href: 'weekend-fun.html', title: 'Weekend Fun & Activities', icon: '\uD83C\uDFD6\uFE0F' },
+    'attractions': { href: 'weekend-fun.html', title: 'Weekend Fun & Activities', icon: '\u2B50' },
+    'sport & fitness': { href: 'gyms-wellness.html', title: 'Gyms & Wellness', icon: '\uD83C\uDFCB\uFE0F' },
+    'sport':       { href: 'gyms-wellness.html', title: 'Gyms & Wellness', icon: '\uD83C\uDFCB\uFE0F' },
+    'fitness':     { href: 'gyms-wellness.html', title: 'Gyms & Wellness', icon: '\uD83C\uDFCB\uFE0F' },
+    'food':        { href: 'food-groceries.html', title: 'Food & Grocery Guide', icon: '\uD83C\uDF5C' },
+    'dining':      { href: 'food-groceries.html', title: 'Food & Grocery Guide', icon: '\uD83C\uDF7D\uFE0F' },
+    'restaurants': { href: 'food-groceries.html', title: 'Food & Grocery Guide', icon: '\uD83C\uDF7D\uFE0F' },
+    'kids':        { href: 'kids-fun.html', title: 'Kids Fun & Activities', icon: '\uD83D\uDC76' },
+    'family':      { href: 'kids-fun.html', title: 'Kids Fun & Activities', icon: '\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67' },
+    'education':   { href: 'kids-education.html', title: 'Kids Education', icon: '\uD83D\uDCDA' },
+    'health':      { href: 'healthcare.html', title: 'Affordable Healthcare', icon: '\uD83C\uDFE5' },
+    'medical':     { href: 'healthcare.html', title: 'Affordable Healthcare', icon: '\uD83C\uDFE5' },
+    'wellness':    { href: 'gyms-wellness.html', title: 'Gyms & Wellness', icon: '\uD83E\uDDD8' },
+    'shopping':    { href: 'discount-warehouses.html', title: 'Discount Warehouses', icon: '\uD83D\uDED2' },
+    'deals':       { href: 'discount-warehouses.html', title: 'Discount Warehouses', icon: '\uD83D\uDCB0' },
+    'visa':        { href: 'visa-legal.html', title: 'Visa & Legal Help', icon: '\uD83D\uDCC4' },
+    'transport':   { href: 'transport-driving.html', title: 'Transport & Driving', icon: '\uD83D\uDE97' },
+    'abu dhabi':   { href: 'weekend-fun.html', title: 'Weekend Fun & Activities', icon: '\uD83C\uDF1F' }
+};
+
+var defaultGuide = { href: 'weekend-fun.html', title: 'Weekend Fun & Activities', icon: '\uD83C\uDF1F' };
+
+var sourceLabels = {
+    'whatson': "What's On UAE",
+    'eventbrite': 'Eventbrite',
+    'allevents': 'AllEvents.in',
+    'etihad-arena': 'Etihad Arena'
+};
+
+function getGuide(category) {
+    var key = (category || '').toLowerCase();
+    if (guideMap[key]) return guideMap[key];
+    for (var k in guideMap) {
+        if (key.includes(k)) return guideMap[k];
+    }
+    return defaultGuide;
+}
+
+function openWnModal(item) {
+    var d = new Date(item.pubDate);
+    var dateStr = d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+    var guide = getGuide(item.category);
+
+    document.getElementById('wn-modal-tag').textContent = item.category;
+    document.getElementById('wn-modal-source').textContent = sourceLabels[item.source] || item.source || '';
+    document.getElementById('wn-modal-title').textContent = item.title;
+    document.getElementById('wn-modal-date').textContent = dateStr;
+    document.getElementById('wn-modal-desc').textContent = item.description;
+    document.getElementById('wn-modal-guide').href = guide.href;
+    document.getElementById('wn-modal-guide-icon').textContent = guide.icon;
+    document.getElementById('wn-modal-guide-title').textContent = guide.title;
+
+    document.getElementById('wn-modal-overlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeWnModal() {
+    document.getElementById('wn-modal-overlay').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+document.getElementById('wn-modal-overlay').addEventListener('click', function(e) {
+    if (e.target === this) closeWnModal();
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeWnModal();
 });
 </script>
 
