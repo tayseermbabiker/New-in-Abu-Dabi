@@ -490,9 +490,139 @@
             opacity: 0.5;
         }
 
+        /* ── What's New Section ── */
+        .whats-new-section {
+            padding: 40px 24px 32px;
+            background: var(--cream);
+        }
+
+        .whats-new-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .whats-new-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .whats-new-header h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 0 0 6px;
+        }
+
+        [dir="rtl"] .whats-new-header h2 { font-family: 'Cairo', sans-serif; }
+
+        .whats-new-header p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .whats-new-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .whats-new-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .whats-new-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 24px rgba(12,35,64,0.1);
+            border-color: var(--sunset-light);
+        }
+
+        .whats-new-tag {
+            display: inline-block;
+            background: var(--navy);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            align-self: flex-start;
+        }
+
+        .whats-new-card h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin: 0 0 8px;
+            line-height: 1.4;
+        }
+
+        .whats-new-card .wn-desc {
+            font-size: 0.82rem;
+            color: var(--text-mid);
+            line-height: 1.55;
+            margin: 0 0 10px;
+            flex: 1;
+        }
+
+        .whats-new-card .wn-date {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .whats-new-attribution {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+
+        .whats-new-attribution a {
+            color: var(--sunset);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .whats-new-attribution a:hover {
+            color: var(--sunset-dark);
+        }
+
+        /* Skeleton loading */
+        .wn-skeleton { pointer-events: none; }
+        .wn-skeleton .whats-new-tag,
+        .wn-skeleton h3,
+        .wn-skeleton .wn-desc,
+        .wn-skeleton .wn-date {
+            background: var(--border);
+            color: transparent;
+            border-radius: 4px;
+            animation: wnPulse 1.2s ease-in-out infinite;
+        }
+        .wn-skeleton .whats-new-tag { width: 60px; }
+        .wn-skeleton h3 { width: 85%; height: 18px; }
+        .wn-skeleton .wn-desc { width: 100%; height: 36px; }
+        .wn-skeleton .wn-date { width: 40%; height: 14px; }
+        @keyframes wnPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
         /* ── Responsive ── */
         @media (max-width: 1024px) {
             .categories-grid { grid-template-columns: repeat(2, 1fr); }
+            .whats-new-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
@@ -513,6 +643,9 @@
                 grid-template-columns: 1fr;
                 gap: 14px;
             }
+            .whats-new-grid { grid-template-columns: 1fr; }
+            .whats-new-section { padding: 32px 16px 24px; }
+            .whats-new-header h2 { font-size: 1.4rem; }
             .card-image { height: 160px; }
             .footer-inner { flex-direction: column; text-align: center; }
             .footer-links { justify-content: center; }
@@ -543,6 +676,51 @@
         </div>
     </div>
 </section>
+
+<!-- ── What's New in Abu Dhabi ── -->
+<section class="whats-new-section" id="whats-new-section">
+    <div class="whats-new-inner">
+        <div class="whats-new-header">
+            <h2 data-en="What's Happening in Abu Dhabi" data-ar="ماذا يحدث في أبوظبي">What's Happening in Abu Dhabi</h2>
+            <p data-en="Fresh picks this week" data-ar="جديد هذا الأسبوع">Fresh picks this week</p>
+        </div>
+        <div class="whats-new-grid" id="whats-new-grid">
+            <div class="whats-new-card wn-skeleton"><span class="whats-new-tag">...</span><h3>Loading</h3><p class="wn-desc">Loading</p><p class="wn-date">Loading</p></div>
+            <div class="whats-new-card wn-skeleton"><span class="whats-new-tag">...</span><h3>Loading</h3><p class="wn-desc">Loading</p><p class="wn-date">Loading</p></div>
+            <div class="whats-new-card wn-skeleton"><span class="whats-new-tag">...</span><h3>Loading</h3><p class="wn-desc">Loading</p><p class="wn-date">Loading</p></div>
+        </div>
+        <div class="whats-new-attribution"><span data-en="Powered by" data-ar="مدعوم من">Powered by</span> <a href="https://whatson.ae" target="_blank" rel="noopener">What's On UAE</a></div>
+    </div>
+</section>
+
+<script>
+(function() {
+    fetch('/api/whats-new')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            var grid = document.getElementById('whats-new-grid');
+            if (!data.items || data.items.length === 0) {
+                document.getElementById('whats-new-section').style.display = 'none';
+                return;
+            }
+            var html = '';
+            data.items.forEach(function(item) {
+                var d = new Date(item.pubDate);
+                var dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                html += '<a href="' + item.link + '" target="_blank" rel="noopener" class="whats-new-card">'
+                    + '<span class="whats-new-tag">' + item.category + '</span>'
+                    + '<h3>' + item.title + '</h3>'
+                    + '<p class="wn-desc">' + item.description + '</p>'
+                    + '<p class="wn-date">' + dateStr + '</p>'
+                    + '</a>';
+            });
+            grid.innerHTML = html;
+        })
+        .catch(function() {
+            document.getElementById('whats-new-section').style.display = 'none';
+        });
+})();
+</script>
 
 <!-- ── Guides ── -->
 <main class="main-content">

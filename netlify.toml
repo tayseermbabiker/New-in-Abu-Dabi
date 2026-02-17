@@ -4,9 +4,10 @@
 [build]
   # Build command - not needed for static HTML sites
   command = "echo 'Static site - no build required'"
-  
+
   # Publish directory - where the site files are located
   publish = "."
+  functions = "netlify/functions"
 
 # Headers for better performance and security
 [[headers]]
@@ -59,6 +60,12 @@
   from = "/index"
   to = "/"
   status = 301
+
+# API proxy for Netlify functions
+[[redirects]]
+  from = "/api/whats-new"
+  to = "/.netlify/functions/whats-new"
+  status = 200
 
 # 404 handling - redirect to home page for now
 [[redirects]]

@@ -1,0 +1,8 @@
+{
+  "name": "newinabudhabi",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "fast-xml-parser": "^5.3.6"
+  }
+}
