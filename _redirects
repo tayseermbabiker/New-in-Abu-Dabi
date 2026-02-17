@@ -30,7 +30,8 @@
 # /go/fab           https://affiliate-link.com/fab      302
 # /go/etisalat      https://affiliate-link.com/etisalat 302
 
-# API endpoints for future enhancements
+# API endpoints
+/api/whats-new     /.netlify/functions/whats-new  200
 # /api/reviews      /.netlify/functions/reviews    200
 # /api/contact      /.netlify/functions/contact    200
 
