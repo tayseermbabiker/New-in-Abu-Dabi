@@ -120,8 +120,8 @@ async function fetchEtihadArena() {
       const href = links[i].href.replace(/\\u002F/g, '/');
       const fullUrl = href.startsWith('http') ? href : 'https://www.etihadarena.ae' + href;
       const label = links[i].label;
-      // Extract event name from URL slug
-      const slug = href.split('/').pop();
+      // Extract event name from final URL slug
+      const slug = href.split(/\\u002F|\//).filter(Boolean).pop() || '';
       const name = slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 
       if (isExcluded(name)) continue;
