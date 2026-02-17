@@ -1,55 +1,21 @@
 const { XMLParser } = require('fast-xml-parser');
 
-const FEED_URL = 'https://whatson.ae/feed/';
 const MAX_ITEMS = 6;
 const CACHE_SECONDS = 1800; // 30 minutes
+const FETCH_TIMEOUT = 8000;
 
-const EXCLUDED_KEYWORDS = ['workshop', 'seminar', 'webinar', 'conference'];
+const EXCLUDED_KEYWORDS = ['workshop', 'seminar', 'webinar', 'conference', 'promo code', 'betwinner', 'betting', '1xbet'];
 
 const FALLBACK_ITEMS = [
-  {
-    title: 'Louvre Abu Dhabi — A World-Class Museum Experience',
-    link: 'https://whatson.ae/abu-dhabi/culture/louvre-abu-dhabi/',
-    description: 'Explore masterpieces from around the world at Louvre Abu Dhabi, the first universal museum in the Arab world on Saadiyat Island.',
-    pubDate: new Date().toISOString(),
-    category: 'Culture'
-  },
-  {
-    title: 'Abu Dhabi Corniche — The Ultimate Waterfront Walk',
-    link: 'https://whatson.ae/abu-dhabi/outdoor/corniche/',
-    description: 'Stroll along the stunning Abu Dhabi Corniche with pristine beaches, cycling paths, and gorgeous skyline views stretching for kilometres.',
-    pubDate: new Date().toISOString(),
-    category: 'Outdoor'
-  },
-  {
-    title: 'Yas Island — Theme Parks, Racing & Beaches',
-    link: 'https://whatson.ae/abu-dhabi/attractions/yas-island/',
-    description: 'From Ferrari World to Yas Waterworld and Warner Bros, Yas Island packs more thrills per square kilometre than anywhere in the UAE.',
-    pubDate: new Date().toISOString(),
-    category: 'Attractions'
-  },
-  {
-    title: 'Sheikh Zayed Grand Mosque — An Architectural Marvel',
-    link: 'https://whatson.ae/abu-dhabi/culture/sheikh-zayed-grand-mosque/',
-    description: 'Visit one of the world\'s largest and most beautiful mosques, featuring 82 domes, over 1,000 columns, and the world\'s largest hand-knotted carpet.',
-    pubDate: new Date().toISOString(),
-    category: 'Culture'
-  },
-  {
-    title: 'Saadiyat Island — Art, Nature & Luxury',
-    link: 'https://whatson.ae/abu-dhabi/attractions/saadiyat-island/',
-    description: 'Discover Abu Dhabi\'s cultural district with world-class museums, pristine beaches, and luxury resorts on this stunning island destination.',
-    pubDate: new Date().toISOString(),
-    category: 'Attractions'
-  },
-  {
-    title: 'Mangrove National Park — Kayaking in Abu Dhabi',
-    link: 'https://whatson.ae/abu-dhabi/outdoor/mangrove-national-park/',
-    description: 'Paddle through Abu Dhabi\'s protected mangrove forests, home to herons, flamingos, and marine life — a peaceful escape from the city.',
-    pubDate: new Date().toISOString(),
-    category: 'Outdoor'
-  }
+  { title: 'Louvre Abu Dhabi — A World-Class Museum Experience', description: 'Explore masterpieces from around the world at Louvre Abu Dhabi, the first universal museum in the Arab world on Saadiyat Island.', pubDate: new Date().toISOString(), category: 'Culture' },
+  { title: 'Abu Dhabi Corniche — The Ultimate Waterfront Walk', description: 'Stroll along the stunning Abu Dhabi Corniche with pristine beaches, cycling paths, and gorgeous skyline views stretching for kilometres.', pubDate: new Date().toISOString(), category: 'Outdoor' },
+  { title: 'Yas Island — Theme Parks, Racing & Beaches', description: 'From Ferrari World to Yas Waterworld and Warner Bros, Yas Island packs more thrills per square kilometre than anywhere in the UAE.', pubDate: new Date().toISOString(), category: 'Attractions' },
+  { title: 'Sheikh Zayed Grand Mosque — An Architectural Marvel', description: 'Visit one of the world\'s largest and most beautiful mosques, featuring 82 domes, over 1,000 columns, and the world\'s largest hand-knotted carpet.', pubDate: new Date().toISOString(), category: 'Culture' },
+  { title: 'Saadiyat Island — Art, Nature & Luxury', description: 'Discover Abu Dhabi\'s cultural district with world-class museums, pristine beaches, and luxury resorts on this stunning island destination.', pubDate: new Date().toISOString(), category: 'Attractions' },
+  { title: 'Mangrove National Park — Kayaking in Abu Dhabi', description: 'Paddle through Abu Dhabi\'s protected mangrove forests, home to herons, flamingos, and marine life — a peaceful escape from the city.', pubDate: new Date().toISOString(), category: 'Outdoor' }
 ];
+
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36';
 
 function stripHtml(str) {
   if (!str) return '';
@@ -70,55 +36,243 @@ function truncate(str, len) {
   return str.substring(0, len).replace(/\s+\S*$/, '') + '...';
 }
 
-function hasExcludedKeyword(item) {
-  const titleLower = (item.title || '').toLowerCase();
-  const categories = Array.isArray(item.category) ? item.category : [item.category || ''];
-  const categoryStr = categories.join(' ').toLowerCase();
-
-  return EXCLUDED_KEYWORDS.some(kw => titleLower.includes(kw) || categoryStr.includes(kw));
+function isExcluded(title) {
+  const lower = (title || '').toLowerCase();
+  return EXCLUDED_KEYWORDS.some(kw => lower.includes(kw));
 }
 
-function isAbuDhabiItem(item) {
-  const categories = Array.isArray(item.category) ? item.category : [item.category || ''];
-  return categories.some(c => (c || '').toLowerCase().includes('abu dhabi'));
-}
-
-function pickCategory(item) {
-  const categories = Array.isArray(item.category) ? item.category : [item.category || ''];
-  const nonCity = categories.find(c => {
-    const lower = (c || '').toLowerCase();
-    return lower && !lower.includes('abu dhabi') && !lower.includes('dubai') && !lower.includes('sharjah');
-  });
-  return nonCity || categories[0] || 'Abu Dhabi';
-}
-
-exports.handler = async function () {
+function isFutureDate(dateStr) {
+  if (!dateStr) return true; // keep items without dates
   try {
-    const res = await fetch(FEED_URL, {
-      headers: { 'User-Agent': 'NewInAbuDhabi/1.0 (+https://newinabudhabi.com)' },
-      signal: AbortSignal.timeout(8000)
-    });
+    const d = new Date(dateStr);
+    return d >= new Date(new Date().toDateString());
+  } catch { return true; }
+}
 
-    if (!res.ok) {
-      throw new Error(`RSS fetch failed: ${res.status}`);
-    }
+// ── Source 1: What's On UAE RSS ──
+async function fetchWhatsOn() {
+  const res = await fetch('https://whatson.ae/feed/', {
+    headers: { 'User-Agent': UA },
+    signal: AbortSignal.timeout(FETCH_TIMEOUT)
+  });
+  if (!res.ok) return [];
 
-    const xml = await res.text();
-    const parser = new XMLParser({ ignoreAttributes: false, isArray: (name) => name === 'item' || name === 'category' });
-    const feed = parser.parse(xml);
+  const xml = await res.text();
+  const parser = new XMLParser({ ignoreAttributes: false, isArray: (name) => name === 'item' || name === 'category' });
+  const feed = parser.parse(xml);
 
-    const items = (feed?.rss?.channel?.item || [])
-      .filter(item => isAbuDhabiItem(item) && !hasExcludedKeyword(item))
-      .slice(0, MAX_ITEMS)
-      .map(item => ({
+  return (feed?.rss?.channel?.item || [])
+    .filter(item => {
+      const cats = Array.isArray(item.category) ? item.category : [item.category || ''];
+      return cats.some(c => (c || '').toLowerCase().includes('abu dhabi'));
+    })
+    .filter(item => !isExcluded(item.title))
+    .slice(0, 8)
+    .map(item => {
+      const cats = Array.isArray(item.category) ? item.category : [item.category || ''];
+      const category = cats.find(c => {
+        const l = (c || '').toLowerCase();
+        return l && !l.includes('abu dhabi') && !l.includes('dubai');
+      }) || 'Abu Dhabi';
+      return {
         title: stripHtml(item.title || ''),
-        link: item.link || '',
         description: truncate(stripHtml(item.description || ''), 150),
         pubDate: item.pubDate || new Date().toISOString(),
-        category: pickCategory(item)
-      }));
+        category,
+        source: 'whatson'
+      };
+    });
+}
 
-    const result = items.length > 0 ? items : FALLBACK_ITEMS;
+// ── Source 2: Eventbrite Abu Dhabi (JSON-LD) ──
+async function fetchEventbrite() {
+  const res = await fetch('https://www.eventbrite.com/d/united-arab-emirates--abu-dhabi/events/', {
+    headers: { 'User-Agent': UA },
+    signal: AbortSignal.timeout(FETCH_TIMEOUT)
+  });
+  if (!res.ok) return [];
+
+  const html = await res.text();
+  const items = [];
+
+  // Extract JSON-LD blocks
+  let idx = 0;
+  while (true) {
+    const start = html.indexOf('<script type="application/ld+json">', idx);
+    if (start === -1) break;
+    const end = html.indexOf('</script>', start);
+    if (end === -1) break;
+    const json = html.substring(start + 35, end);
+    idx = end + 9;
+
+    try {
+      const data = JSON.parse(json);
+      if (data.itemListElement) {
+        for (const entry of data.itemListElement) {
+          const ev = entry.item || entry;
+          if (!ev.name || !isFutureDate(ev.startDate)) continue;
+          if (isExcluded(ev.name)) continue;
+          items.push({
+            title: stripHtml(ev.name),
+            description: truncate(stripHtml(ev.description || ''), 150),
+            pubDate: ev.startDate || new Date().toISOString(),
+            category: 'Events',
+            source: 'eventbrite'
+          });
+        }
+      }
+    } catch { /* skip bad JSON */ }
+  }
+
+  return items.slice(0, 8);
+}
+
+// ── Source 3: AllEvents.in Abu Dhabi (JSON-LD) ──
+async function fetchAllEvents() {
+  const res = await fetch('https://allevents.in/abu-dhabi', {
+    headers: { 'User-Agent': UA },
+    signal: AbortSignal.timeout(FETCH_TIMEOUT)
+  });
+  if (!res.ok) return [];
+
+  const html = await res.text();
+  const items = [];
+
+  let idx = 0;
+  while (true) {
+    const start = html.indexOf('<script type="application/ld+json">', idx);
+    if (start === -1) break;
+    const end = html.indexOf('</script>', start);
+    if (end === -1) break;
+    const json = html.substring(start + 35, end);
+    idx = end + 9;
+
+    try {
+      const data = JSON.parse(json);
+      if (data.itemListElement) {
+        for (const entry of data.itemListElement) {
+          const ev = entry.item || entry;
+          if (!ev.name || !ev.startDate) continue;
+          if (!isFutureDate(ev.startDate)) continue;
+          if (isExcluded(ev.name)) continue;
+          // Skip items with dates too far in the future (spam)
+          const d = new Date(ev.startDate);
+          const maxDate = new Date();
+          maxDate.setFullYear(maxDate.getFullYear() + 1);
+          if (d > maxDate) continue;
+          items.push({
+            title: stripHtml(ev.name),
+            description: truncate(stripHtml(ev.description || ''), 150),
+            pubDate: ev.startDate || new Date().toISOString(),
+            category: 'Events',
+            source: 'allevents'
+          });
+        }
+      }
+    } catch { /* skip bad JSON */ }
+  }
+
+  return items.slice(0, 8);
+}
+
+// ── Source 4: Etihad Arena (embedded JSON) ──
+async function fetchEtihadArena() {
+  const res = await fetch('https://www.etihadarena.ae/en/events', {
+    headers: { 'User-Agent': UA },
+    signal: AbortSignal.timeout(FETCH_TIMEOUT)
+  });
+  if (!res.ok) return [];
+
+  const html = await res.text();
+  const items = [];
+
+  // Extract imageDetail blocks which contain event data
+  const detailRe = /"imageDetail"\s*:\s*\[([\s\S]*?)\]/g;
+  let match;
+  while ((match = detailRe.exec(html)) !== null) {
+    const block = match[1];
+    if (block.length < 100) continue;
+
+    // Extract individual event objects from the block
+    // Each event has imageTitle (date) and moreLinkButton (link + label)
+    const eventRe = /"imageTitle":"([^"]*)"/g;
+    const linkRe = /"moreLinkButton":\{[^}]*"href":"([^"]*)","label":"([^"]*)"/g;
+
+    const dates = [];
+    const links = [];
+    let em;
+    while ((em = eventRe.exec(block)) !== null) dates.push(em[1]);
+    while ((em = linkRe.exec(block)) !== null) links.push({ href: em[1], label: em[2] });
+
+    for (let i = 0; i < Math.min(dates.length, links.length); i++) {
+      const href = links[i].href.replace(/\\u002F/g, '/');
+      const fullUrl = href.startsWith('http') ? href : 'https://www.etihadarena.ae' + href;
+      const label = links[i].label;
+      // Extract event name from URL slug
+      const slug = href.split('/').pop();
+      const name = slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+      if (isExcluded(name)) continue;
+
+      items.push({
+        title: name,
+        description: dates[i] + ' at Etihad Arena, Yas Island',
+        pubDate: new Date().toISOString(),
+        category: label === 'SOLD OUT' ? 'Sold Out' : 'Shows',
+        source: 'etihad-arena'
+      });
+    }
+  }
+
+  return items.slice(0, 8);
+}
+
+// ── Deduplicate by title similarity ──
+function deduplicate(items) {
+  const seen = new Set();
+  return items.filter(item => {
+    const key = item.title.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 30);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+// ── Main handler ──
+exports.handler = async function () {
+  try {
+    const results = await Promise.allSettled([
+      fetchWhatsOn(),
+      fetchEventbrite(),
+      fetchAllEvents(),
+      fetchEtihadArena()
+    ]);
+
+    const sources = ['whatson', 'eventbrite', 'allevents', 'etihad-arena'];
+    const activeSources = [];
+
+    let allItems = [];
+    results.forEach((result, i) => {
+      if (result.status === 'fulfilled' && result.value.length > 0) {
+        allItems = allItems.concat(result.value);
+        activeSources.push(sources[i]);
+      }
+    });
+
+    // Deduplicate and limit
+    let items = deduplicate(allItems).slice(0, MAX_ITEMS);
+
+    if (items.length === 0) {
+      return {
+        statusCode: 200,
+        headers: {
+          'Content-Type': 'application/json',
+          'Cache-Control': 'public, max-age=300',
+          'Access-Control-Allow-Origin': '*'
+        },
+        body: JSON.stringify({ items: FALLBACK_ITEMS, source: 'fallback', sources: [] })
+      };
+    }
 
     return {
       statusCode: 200,
@@ -127,7 +281,7 @@ exports.handler = async function () {
         'Cache-Control': `public, max-age=${CACHE_SECONDS}`,
         'Access-Control-Allow-Origin': '*'
       },
-      body: JSON.stringify({ items: result, source: items.length > 0 ? 'rss' : 'fallback' })
+      body: JSON.stringify({ items, source: 'live', sources: activeSources })
     };
   } catch (err) {
     console.error('whats-new error:', err.message);
@@ -138,7 +292,7 @@ exports.handler = async function () {
         'Cache-Control': 'public, max-age=300',
         'Access-Control-Allow-Origin': '*'
       },
-      body: JSON.stringify({ items: FALLBACK_ITEMS, source: 'fallback' })
+      body: JSON.stringify({ items: FALLBACK_ITEMS, source: 'fallback', sources: [] })
     };
   }
 };
