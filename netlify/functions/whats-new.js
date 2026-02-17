@@ -139,6 +139,52 @@ async function fetchEtihadArena() {
   return items.slice(0, 8);
 }
 
+// ── Source 3: Abu Dhabi Calendar (visitabudhabi.ae public API) ──
+async function fetchAbuDhabiCalendar() {
+  const res = await fetch('https://scapim.dct.gov.ae/prod-vad/search/v1', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Referer': 'https://visitabudhabi.ae/',
+      'User-Agent': UA
+    },
+    body: JSON.stringify({
+      contentType: 'Event',
+      language: 'en',
+      facetFields: [],
+      limit: 20,
+      offset: 0,
+      filters: [],
+      isPreviewMode: false
+    }),
+    signal: AbortSignal.timeout(FETCH_TIMEOUT)
+  });
+  if (!res.ok) return [];
+
+  const json = await res.json();
+  const events = json?.data?.results || [];
+
+  return events
+    .filter(ev => ev.name && !isExcluded(ev.name))
+    .filter(ev => isFutureDate(ev.startDate))
+    .slice(0, 10)
+    .map(ev => {
+      const cats = ev.eventCategories || [];
+      const category = cats[0] || 'Events';
+      const desc = ev.description
+        ? truncate(stripHtml(ev.description), 150)
+        : (ev.startDate ? new Date(ev.startDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Abu Dhabi Event');
+      return {
+        title: stripHtml(ev.name),
+        description: desc,
+        pubDate: ev.startDate || new Date().toISOString(),
+        category,
+        source: 'ad-calendar'
+      };
+    });
+}
+
 // ── Deduplicate by title similarity ──
 function deduplicate(items) {
   const seen = new Set();
@@ -155,10 +201,11 @@ exports.handler = async function () {
   try {
     const results = await Promise.allSettled([
       fetchWhatsOn(),
-      fetchEtihadArena()
+      fetchEtihadArena(),
+      fetchAbuDhabiCalendar()
     ]);
 
-    const sources = ['whatson', 'etihad-arena'];
+    const sources = ['whatson', 'etihad-arena', 'ad-calendar'];
     const activeSources = [];
 
     let allItems = [];
