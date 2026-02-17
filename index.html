@@ -532,18 +532,9 @@
             background: var(--white);
             border-radius: 10px;
             padding: 20px;
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.2s, box-shadow 0.2s;
             border: 1px solid var(--border);
             display: flex;
             flex-direction: column;
-        }
-
-        .whats-new-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 24px rgba(12,35,64,0.1);
-            border-color: var(--sunset-light);
         }
 
         .whats-new-tag {
@@ -622,7 +613,6 @@
         /* ── Responsive ── */
         @media (max-width: 1024px) {
             .categories-grid { grid-template-columns: repeat(2, 1fr); }
-            .whats-new-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
@@ -632,6 +622,7 @@
             .search-box { max-width: 100%; }
             .section-title { font-size: 1.6rem; }
             .card-image { height: 140px; }
+            .whats-new-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 520px) {
@@ -707,12 +698,12 @@
             data.items.forEach(function(item) {
                 var d = new Date(item.pubDate);
                 var dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                html += '<a href="' + item.link + '" target="_blank" rel="noopener" class="whats-new-card">'
+                html += '<div class="whats-new-card">'
                     + '<span class="whats-new-tag">' + item.category + '</span>'
                     + '<h3>' + item.title + '</h3>'
                     + '<p class="wn-desc">' + item.description + '</p>'
                     + '<p class="wn-date">' + dateStr + '</p>'
-                    + '</a>';
+                    + '</div>';
             });
             grid.innerHTML = html;
         })
