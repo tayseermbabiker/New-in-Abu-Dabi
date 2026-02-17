@@ -4,7 +4,10 @@ const MAX_ITEMS = 6;
 const CACHE_SECONDS = 1800; // 30 minutes
 const FETCH_TIMEOUT = 8000;
 
-const EXCLUDED_KEYWORDS = ['workshop', 'seminar', 'webinar', 'conference', 'promo code', 'betwinner', 'betting', '1xbet'];
+const EXCLUDED_KEYWORDS = [
+  'workshop', 'seminar', 'webinar', 'conference', 'summit',
+  'promo code', 'betwinner', 'betting', '1xbet', 'casino'
+];
 
 const FALLBACK_ITEMS = [
   { title: 'Louvre Abu Dhabi — A World-Class Museum Experience', description: 'Explore masterpieces from around the world at Louvre Abu Dhabi, the first universal museum in the Arab world on Saadiyat Island.', pubDate: new Date().toISOString(), category: 'Culture' },
@@ -84,98 +87,7 @@ async function fetchWhatsOn() {
     });
 }
 
-// ── Source 2: Eventbrite Abu Dhabi (JSON-LD) ──
-async function fetchEventbrite() {
-  const res = await fetch('https://www.eventbrite.com/d/united-arab-emirates--abu-dhabi/events/', {
-    headers: { 'User-Agent': UA },
-    signal: AbortSignal.timeout(FETCH_TIMEOUT)
-  });
-  if (!res.ok) return [];
-
-  const html = await res.text();
-  const items = [];
-
-  // Extract JSON-LD blocks
-  let idx = 0;
-  while (true) {
-    const start = html.indexOf('<script type="application/ld+json">', idx);
-    if (start === -1) break;
-    const end = html.indexOf('</script>', start);
-    if (end === -1) break;
-    const json = html.substring(start + 35, end);
-    idx = end + 9;
-
-    try {
-      const data = JSON.parse(json);
-      if (data.itemListElement) {
-        for (const entry of data.itemListElement) {
-          const ev = entry.item || entry;
-          if (!ev.name || !isFutureDate(ev.startDate)) continue;
-          if (isExcluded(ev.name)) continue;
-          items.push({
-            title: stripHtml(ev.name),
-            description: truncate(stripHtml(ev.description || ''), 150),
-            pubDate: ev.startDate || new Date().toISOString(),
-            category: 'Events',
-            source: 'eventbrite'
-          });
-        }
-      }
-    } catch { /* skip bad JSON */ }
-  }
-
-  return items.slice(0, 8);
-}
-
-// ── Source 3: AllEvents.in Abu Dhabi (JSON-LD) ──
-async function fetchAllEvents() {
-  const res = await fetch('https://allevents.in/abu-dhabi', {
-    headers: { 'User-Agent': UA },
-    signal: AbortSignal.timeout(FETCH_TIMEOUT)
-  });
-  if (!res.ok) return [];
-
-  const html = await res.text();
-  const items = [];
-
-  let idx = 0;
-  while (true) {
-    const start = html.indexOf('<script type="application/ld+json">', idx);
-    if (start === -1) break;
-    const end = html.indexOf('</script>', start);
-    if (end === -1) break;
-    const json = html.substring(start + 35, end);
-    idx = end + 9;
-
-    try {
-      const data = JSON.parse(json);
-      if (data.itemListElement) {
-        for (const entry of data.itemListElement) {
-          const ev = entry.item || entry;
-          if (!ev.name || !ev.startDate) continue;
-          if (!isFutureDate(ev.startDate)) continue;
-          if (isExcluded(ev.name)) continue;
-          // Skip items with dates too far in the future (spam)
-          const d = new Date(ev.startDate);
-          const maxDate = new Date();
-          maxDate.setFullYear(maxDate.getFullYear() + 1);
-          if (d > maxDate) continue;
-          items.push({
-            title: stripHtml(ev.name),
-            description: truncate(stripHtml(ev.description || ''), 150),
-            pubDate: ev.startDate || new Date().toISOString(),
-            category: 'Events',
-            source: 'allevents'
-          });
-        }
-      }
-    } catch { /* skip bad JSON */ }
-  }
-
-  return items.slice(0, 8);
-}
-
-// ── Source 4: Etihad Arena (embedded JSON) ──
+// ── Source 2: Etihad Arena (embedded JSON) ──
 async function fetchEtihadArena() {
   const res = await fetch('https://www.etihadarena.ae/en/events', {
     headers: { 'User-Agent': UA },
@@ -243,12 +155,10 @@ exports.handler = async function () {
   try {
     const results = await Promise.allSettled([
       fetchWhatsOn(),
-      fetchEventbrite(),
-      fetchAllEvents(),
       fetchEtihadArena()
     ]);
 
-    const sources = ['whatson', 'eventbrite', 'allevents', 'etihad-arena'];
+    const sources = ['whatson', 'etihad-arena'];
     const activeSources = [];
 
     let allItems = [];
