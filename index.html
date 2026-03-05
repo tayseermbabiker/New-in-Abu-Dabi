@@ -594,10 +594,27 @@
             margin: 0;
         }
 
-        .whats-new-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        /* Carousel slider */
+        .wn-slider-wrapper {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .wn-slider-track {
+            display: flex;
             gap: 16px;
+            animation: wnSlide 30s linear infinite;
+            will-change: transform;
+        }
+
+        .wn-slider-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes wnSlide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
         .whats-new-card {
@@ -609,6 +626,8 @@
             flex-direction: column;
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
+            flex-shrink: 0;
+            width: 300px;
         }
 
         .whats-new-card:hover {
@@ -866,7 +885,7 @@
             .search-box { max-width: 100%; }
             .section-title { font-size: 1.6rem; }
             .card-image { height: 140px; }
-            .whats-new-grid { grid-template-columns: repeat(2, 1fr); }
+            .whats-new-card { width: 260px; }
         }
 
         @media (max-width: 520px) {
@@ -878,7 +897,7 @@
                 grid-template-columns: 1fr;
                 gap: 14px;
             }
-            .whats-new-grid { grid-template-columns: 1fr; }
+            .whats-new-card { width: 240px; }
             .whats-new-section { padding: 32px 16px 12px; }
             .whats-new-header h2 { font-size: 1.4rem; }
             .card-image { height: 160px; }
@@ -1077,17 +1096,19 @@
         </div>
     </div>
 
-    <!-- What's New in Abu Dhabi (moved below guides) -->
+    <!-- What's New in Abu Dhabi — carousel -->
     <section class="whats-new-section" id="whats-new-section" style="padding-left:0;padding-right:0;">
         <div class="whats-new-inner">
             <div class="whats-new-header">
                 <h2 data-en="What's Happening in Abu Dhabi" data-ar="ماذا يحدث في أبوظبي">What's Happening in Abu Dhabi</h2>
                 <p data-en="Fresh picks this week" data-ar="جديد هذا الأسبوع">Fresh picks this week</p>
             </div>
-            <div class="whats-new-grid" id="whats-new-grid">
-                <div class="whats-new-card wn-skeleton"><span class="whats-new-tag">...</span><h3>Loading</h3><p class="wn-desc">Loading</p><p class="wn-date">Loading</p></div>
-                <div class="whats-new-card wn-skeleton"><span class="whats-new-tag">...</span><h3>Loading</h3><p class="wn-desc">Loading</p><p class="wn-date">Loading</p></div>
-                <div class="whats-new-card wn-skeleton"><span class="whats-new-tag">...</span><h3>Loading</h3><p class="wn-desc">Loading</p><p class="wn-date">Loading</p></div>
+            <div class="wn-slider-wrapper">
+                <div class="wn-slider-track" id="wn-slider-track">
+                    <div class="whats-new-card wn-skeleton"><span class="whats-new-tag">...</span><h3>Loading</h3><p class="wn-desc">Loading</p><p class="wn-date">Loading</p></div>
+                    <div class="whats-new-card wn-skeleton"><span class="whats-new-tag">...</span><h3>Loading</h3><p class="wn-desc">Loading</p><p class="wn-date">Loading</p></div>
+                    <div class="whats-new-card wn-skeleton"><span class="whats-new-tag">...</span><h3>Loading</h3><p class="wn-desc">Loading</p><p class="wn-date">Loading</p></div>
+                </div>
             </div>
         </div>
     </section>
@@ -1097,25 +1118,28 @@
         fetch('/api/whats-new')
             .then(function(r) { return r.json(); })
             .then(function(data) {
-                var grid = document.getElementById('whats-new-grid');
+                var track = document.getElementById('wn-slider-track');
                 if (!data.items || data.items.length === 0) {
                     document.getElementById('whats-new-section').style.display = 'none';
                     return;
                 }
                 window._wnItems = data.items;
-                var html = '';
-                data.items.forEach(function(item, idx) {
+                function buildCard(item, idx) {
                     var d = new Date(item.pubDate);
                     var dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                    html += '<div class="whats-new-card" data-wn-idx="' + idx + '">'
+                    return '<div class="whats-new-card" data-wn-idx="' + idx + '">'
                         + '<span class="whats-new-tag">' + item.category + '</span>'
                         + '<h3>' + item.title + '</h3>'
                         + '<p class="wn-desc">' + item.description + '</p>'
                         + '<p class="wn-date">' + dateStr + '</p>'
                         + '</div>';
-                });
-                grid.innerHTML = html;
-                grid.addEventListener('click', function(e) {
+                }
+                var html = '';
+                data.items.forEach(function(item, idx) { html += buildCard(item, idx); });
+                // Duplicate for infinite loop
+                data.items.forEach(function(item, idx) { html += buildCard(item, idx); });
+                track.innerHTML = html;
+                track.addEventListener('click', function(e) {
                     var card = e.target.closest('.whats-new-card');
                     if (!card) return;
                     var idx = parseInt(card.getAttribute('data-wn-idx'));
