@@ -229,6 +229,78 @@
             font-family: inherit;
         }
 
+        .hero-authority {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.65);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        /* ── Start Here ── */
+        .start-here { margin-bottom: 40px; }
+        .start-here-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--sunset);
+            margin-bottom: 8px;
+        }
+        .start-here-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+        [dir="rtl"] .start-here-title { font-family: 'Cairo', sans-serif; }
+        .start-here-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .start-here-card {
+            background: var(--white);
+            border: 2px solid var(--sunset);
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+        .start-here-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(212,137,74,0.15);
+        }
+        .start-here-badge {
+            position: absolute;
+            top: -10px;
+            left: 16px;
+            background: var(--sunset);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        [dir="rtl"] .start-here-badge { left: auto; right: 16px; }
+        .start-here-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin: 4px 0 6px;
+        }
+        .start-here-card p {
+            font-size: 0.82rem;
+            color: var(--text-mid);
+            line-height: 1.5;
+            margin: 0;
+        }
+        @media (max-width: 768px) { .start-here-grid { grid-template-columns: 1fr; } }
+
         .search-box input::placeholder { color: var(--text-light); }
 
         .search-btn {
@@ -822,15 +894,11 @@
     <img src="hero-abudhabi.jpg" alt="Abu Dhabi skyline across the Corniche waterfront" class="hero-img">
     <div class="hero-overlay"></div>
 
-    <div class="lang-switcher">
-        <button class="lang-btn active" onclick="switchLanguage('en')" data-lang="en">EN</button>
-        <button class="lang-btn" onclick="switchLanguage('ar')" data-lang="ar">AR</button>
-    </div>
-
     <div class="hero-content">
         <span class="hero-tag" data-en="Expat Guide" data-ar="دليل المغتربين">Expat Guide</span>
         <h1 class="hero-title" data-en="New in Abu Dhabi?" data-ar="جديد في أبوظبي؟">New in Abu Dhabi?</h1>
         <p class="hero-subtitle" data-en="Practical, budget-friendly guides written by someone who's been through it all." data-ar="أدلة عملية ومناسبة للميزانية كتبها شخص مر بكل ذلك.">Practical, budget-friendly guides written by someone who's been through it all.</p>
+        <p class="hero-authority" data-en="Written by an expat who settled in Abu Dhabi &mdash; updated March 2026" data-ar="كتبه مغترب استقر في أبوظبي &mdash; محدث مارس 2026">Written by an expat who settled in Abu Dhabi &mdash; updated March 2026</p>
 
         <div class="search-box">
             <input type="text" id="main-search" data-en="Search guides..." data-ar="ابحث في الأدلة..." placeholder="Search guides..." autocomplete="off">
@@ -840,61 +908,33 @@
     </div>
 </section>
 
-<!-- ── What's New in Abu Dhabi ── -->
-<section class="whats-new-section" id="whats-new-section">
-    <div class="whats-new-inner">
-        <div class="whats-new-header">
-            <h2 data-en="What's Happening in Abu Dhabi" data-ar="ماذا يحدث في أبوظبي">What's Happening in Abu Dhabi</h2>
-            <p data-en="Fresh picks this week" data-ar="جديد هذا الأسبوع">Fresh picks this week</p>
-        </div>
-        <div class="whats-new-grid" id="whats-new-grid">
-            <div class="whats-new-card wn-skeleton"><span class="whats-new-tag">...</span><h3>Loading</h3><p class="wn-desc">Loading</p><p class="wn-date">Loading</p></div>
-            <div class="whats-new-card wn-skeleton"><span class="whats-new-tag">...</span><h3>Loading</h3><p class="wn-desc">Loading</p><p class="wn-date">Loading</p></div>
-            <div class="whats-new-card wn-skeleton"><span class="whats-new-tag">...</span><h3>Loading</h3><p class="wn-desc">Loading</p><p class="wn-date">Loading</p></div>
-        </div>
-    </div>
-</section>
-
-<script>
-(function() {
-    fetch('/api/whats-new')
-        .then(function(r) { return r.json(); })
-        .then(function(data) {
-            var grid = document.getElementById('whats-new-grid');
-            if (!data.items || data.items.length === 0) {
-                document.getElementById('whats-new-section').style.display = 'none';
-                return;
-            }
-            window._wnItems = data.items;
-            var html = '';
-            data.items.forEach(function(item, idx) {
-                var d = new Date(item.pubDate);
-                var dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                html += '<div class="whats-new-card" data-wn-idx="' + idx + '">'
-                    + '<span class="whats-new-tag">' + item.category + '</span>'
-                    + '<h3>' + item.title + '</h3>'
-                    + '<p class="wn-desc">' + item.description + '</p>'
-                    + '<p class="wn-date">' + dateStr + '</p>'
-                    + '</div>';
-            });
-            grid.innerHTML = html;
-            grid.addEventListener('click', function(e) {
-                var card = e.target.closest('.whats-new-card');
-                if (!card) return;
-                var idx = parseInt(card.getAttribute('data-wn-idx'));
-                if (window._wnItems && window._wnItems[idx]) openWnModal(window._wnItems[idx]);
-            });
-        })
-        .catch(function() {
-            document.getElementById('whats-new-section').style.display = 'none';
-        });
-})();
-</script>
-
 <!-- ── Guides ── -->
 <main class="main-content">
+    <!-- Start Here -->
+    <div class="start-here">
+        <p class="start-here-label" data-en="Start Here" data-ar="ابدأ من هنا">Start Here</p>
+        <h2 class="start-here-title" data-en="Your first week essentials" data-ar="أساسيات أسبوعك الأول">Your first week essentials</h2>
+        <div class="start-here-grid">
+            <a href="visa-legal.html" class="start-here-card">
+                <span class="start-here-badge" data-en="Step 1" data-ar="خطوة 1">Step 1</span>
+                <h3 data-en="Visa & Emirates ID" data-ar="التأشيرة والهوية الإماراتية">Visa & Emirates ID</h3>
+                <p data-en="Tasheel locations, Emirates ID costs, family sponsorship process" data-ar="مواقع تسهيل، تكاليف الهوية الإماراتية، إجراءات كفالة العائلة">Tasheel locations, Emirates ID costs, family sponsorship process</p>
+            </a>
+            <a href="newcomer-setup.html" class="start-here-card">
+                <span class="start-here-badge" data-en="Step 2" data-ar="خطوة 2">Step 2</span>
+                <h3 data-en="Newcomer Setup" data-ar="إعداد القادمين الجدد">Newcomer Setup</h3>
+                <p data-en="SIM card, bank account, mobile plan, furniture — all in one guide" data-ar="شريحة هاتف، حساب بنكي، خطة جوال، أثاث — كل شيء في دليل واحد">SIM card, bank account, mobile plan, furniture — all in one guide</p>
+            </a>
+            <a href="transport-driving.html" class="start-here-card">
+                <span class="start-here-badge" data-en="Step 3" data-ar="خطوة 3">Step 3</span>
+                <h3 data-en="Transport & Driving" data-ar="النقل والقيادة">Transport & Driving</h3>
+                <p data-en="Driving license conversion, public transport, Hafilat bus card" data-ar="تحويل رخصة القيادة، النقل العام، بطاقة حافلات">Driving license conversion, public transport, Hafilat bus card</p>
+            </a>
+        </div>
+    </div>
+
     <div class="section-header">
-        <p class="section-label" data-en="Browse Guides" data-ar="تصفح الأدلة">Browse Guides</p>
+        <p class="section-label" data-en="Browse All Guides" data-ar="تصفح جميع الأدلة">Browse All Guides</p>
         <h2 class="section-title" data-en="Everything you need to settle in" data-ar="كل ما تحتاجه للاستقرار">Everything you need to settle in</h2>
     </div>
 
@@ -1036,6 +1076,57 @@
             </a>
         </div>
     </div>
+
+    <!-- What's New in Abu Dhabi (moved below guides) -->
+    <section class="whats-new-section" id="whats-new-section" style="padding-left:0;padding-right:0;">
+        <div class="whats-new-inner">
+            <div class="whats-new-header">
+                <h2 data-en="What's Happening in Abu Dhabi" data-ar="ماذا يحدث في أبوظبي">What's Happening in Abu Dhabi</h2>
+                <p data-en="Fresh picks this week" data-ar="جديد هذا الأسبوع">Fresh picks this week</p>
+            </div>
+            <div class="whats-new-grid" id="whats-new-grid">
+                <div class="whats-new-card wn-skeleton"><span class="whats-new-tag">...</span><h3>Loading</h3><p class="wn-desc">Loading</p><p class="wn-date">Loading</p></div>
+                <div class="whats-new-card wn-skeleton"><span class="whats-new-tag">...</span><h3>Loading</h3><p class="wn-desc">Loading</p><p class="wn-date">Loading</p></div>
+                <div class="whats-new-card wn-skeleton"><span class="whats-new-tag">...</span><h3>Loading</h3><p class="wn-desc">Loading</p><p class="wn-date">Loading</p></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    (function() {
+        fetch('/api/whats-new')
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                var grid = document.getElementById('whats-new-grid');
+                if (!data.items || data.items.length === 0) {
+                    document.getElementById('whats-new-section').style.display = 'none';
+                    return;
+                }
+                window._wnItems = data.items;
+                var html = '';
+                data.items.forEach(function(item, idx) {
+                    var d = new Date(item.pubDate);
+                    var dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    html += '<div class="whats-new-card" data-wn-idx="' + idx + '">'
+                        + '<span class="whats-new-tag">' + item.category + '</span>'
+                        + '<h3>' + item.title + '</h3>'
+                        + '<p class="wn-desc">' + item.description + '</p>'
+                        + '<p class="wn-date">' + dateStr + '</p>'
+                        + '</div>';
+                });
+                grid.innerHTML = html;
+                grid.addEventListener('click', function(e) {
+                    var card = e.target.closest('.whats-new-card');
+                    if (!card) return;
+                    var idx = parseInt(card.getAttribute('data-wn-idx'));
+                    if (window._wnItems && window._wnItems[idx]) openWnModal(window._wnItems[idx]);
+                });
+            })
+            .catch(function() {
+                document.getElementById('whats-new-section').style.display = 'none';
+            });
+    })();
+    </script>
 </main>
 
 <!-- ── Footer ── -->
@@ -1240,5 +1331,6 @@ document.addEventListener('keydown', function(e) {
 });
 </script>
 
+<script src="nav.js"></script>
 </body>
 </html>

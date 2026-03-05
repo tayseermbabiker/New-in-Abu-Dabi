@@ -91,10 +91,6 @@
 </head>
 <body>
 
-<div class="lang-switcher" id="langSwitcher">
-    <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
-    <button class="lang-btn" onclick="switchLanguage('ar')">AR</button>
-</div>
 
 <section class="hero">
     <img src="handyman.jpg" alt="Handyman and home repair services in Abu Dhabi" width="1200" height="400" loading="eager">
@@ -465,5 +461,6 @@ function switchLanguage(lang){
 window.addEventListener('scroll',()=>{document.getElementById('langSwitcher').classList.toggle('scrolled',window.scrollY>200)});
 document.addEventListener('DOMContentLoaded',()=>{const s=localStorage.getItem('selectedLanguage');if(s==='ar'||s==='en')switchLanguage(s)});
 </script>
+<script src="nav.js"></script>
 </body>
 </html>
