@@ -747,8 +747,20 @@
             font-size: 0.9rem;
             color: var(--text-mid);
             line-height: 1.65;
+            margin-bottom: 14px;
+        }
+
+        .wn-modal-readmore {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--sunset-dark);
+            text-decoration: none;
             margin-bottom: 20px;
         }
+        .wn-modal-readmore:hover { text-decoration: underline; }
 
         .wn-modal-divider {
             border: none;
@@ -846,6 +858,10 @@
             line-height: 1.55;
             margin: 0 0 10px;
             flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         .whats-new-card .wn-date {
@@ -1266,6 +1282,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <h3 id="wn-modal-title"></h3>
             <p class="wn-modal-date" id="wn-modal-date"></p>
             <p class="wn-modal-desc" id="wn-modal-desc"></p>
+            <a class="wn-modal-readmore" id="wn-modal-readmore" href="#" target="_blank" rel="noopener" style="display:none;">Read full story &rarr;</a>
             <hr class="wn-modal-divider">
             <a class="wn-modal-guide" id="wn-modal-guide" href="#">
                 <span class="wn-modal-guide-icon" id="wn-modal-guide-icon"></span>
@@ -1313,7 +1330,8 @@ var sourceLabels = {
     'whatson': "What's On UAE",
     'eventbrite': 'Eventbrite',
     'allevents': 'AllEvents.in',
-    'etihad-arena': 'Etihad Arena'
+    'etihad-arena': 'Etihad Arena',
+    'ad-calendar': 'Visit Abu Dhabi'
 };
 
 function getGuide(category) {
@@ -1330,11 +1348,23 @@ function openWnModal(item) {
     var dateStr = d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
     var guide = getGuide(item.category);
 
+    var sourceLabel = sourceLabels[item.source] || item.source || '';
     document.getElementById('wn-modal-tag').textContent = item.category;
-    document.getElementById('wn-modal-source').textContent = sourceLabels[item.source] || item.source || '';
+    document.getElementById('wn-modal-source').textContent = sourceLabel;
     document.getElementById('wn-modal-title').textContent = item.title;
     document.getElementById('wn-modal-date').textContent = dateStr;
-    document.getElementById('wn-modal-desc').textContent = item.description;
+    document.getElementById('wn-modal-desc').textContent = item.fullDescription || item.description;
+
+    // Source link to the original article (only if we have one)
+    var readMore = document.getElementById('wn-modal-readmore');
+    if (item.link) {
+        readMore.href = item.link;
+        readMore.textContent = (sourceLabel ? 'Read full story on ' + sourceLabel : 'Read full story') + ' →';
+        readMore.style.display = 'inline-flex';
+    } else {
+        readMore.style.display = 'none';
+    }
+
     document.getElementById('wn-modal-guide').href = guide.href;
     document.getElementById('wn-modal-guide-icon').textContent = guide.icon;
     document.getElementById('wn-modal-guide-title').textContent = guide.title;

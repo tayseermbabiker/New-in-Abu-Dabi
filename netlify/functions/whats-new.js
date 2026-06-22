@@ -20,16 +20,35 @@ const FALLBACK_ITEMS = [
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36';
 
-function stripHtml(str) {
+function safeCodePoint(num, fallback) {
+  try {
+    if (!Number.isFinite(num) || num < 0 || num > 0x10ffff) return fallback;
+    return String.fromCodePoint(num);
+  } catch { return fallback; }
+}
+
+// Decode HTML entities: numeric (decimal + hex) and common named ones.
+// Handles double-encoding (e.g. &amp;#8217;) by decoding &amp; first.
+function decodeEntities(str) {
   if (!str) return '';
   return str
-    .replace(/<[^>]*>/g, '')
-    .replace(/&nbsp;/g, ' ')
     .replace(/&amp;/g, '&')
+    .replace(/&#x([0-9a-fA-F]+);/g, (m, h) => safeCodePoint(parseInt(h, 16), m))
+    .replace(/&#(\d+);/g, (m, n) => safeCodePoint(parseInt(n, 10), m))
+    .replace(/&nbsp;/g, ' ')
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
-    .replace(/&#039;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&rsquo;/g, '’').replace(/&lsquo;/g, '‘')
+    .replace(/&rdquo;/g, '”').replace(/&ldquo;/g, '“')
+    .replace(/&ndash;/g, '–').replace(/&mdash;/g, '—')
+    .replace(/&hellip;/g, '…');
+}
+
+function stripHtml(str) {
+  if (!str) return '';
+  return decodeEntities(str.replace(/<[^>]*>/g, ''))
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -77,11 +96,14 @@ async function fetchWhatsOn() {
         const l = (c || '').toLowerCase();
         return l && !l.includes('abu dhabi') && !l.includes('dubai');
       }) || 'Abu Dhabi';
+      const full = stripHtml(item.description || '');
       return {
         title: stripHtml(item.title || ''),
-        description: truncate(stripHtml(item.description || ''), 150),
+        description: truncate(full, 150),
+        fullDescription: truncate(full, 500),
         pubDate: item.pubDate || new Date().toISOString(),
         category,
+        link: typeof item.link === 'string' ? item.link : '',
         source: 'whatson'
       };
     });
@@ -126,11 +148,14 @@ async function fetchEtihadArena() {
 
       if (isExcluded(name)) continue;
 
+      const evDesc = dates[i] + ' at Etihad Arena, Yas Island';
       items.push({
         title: name,
-        description: dates[i] + ' at Etihad Arena, Yas Island',
+        description: evDesc,
+        fullDescription: evDesc,
         pubDate: new Date().toISOString(),
         category: label === 'SOLD OUT' ? 'Sold Out' : 'Shows',
+        link: fullUrl,
         source: 'etihad-arena'
       });
     }
@@ -172,14 +197,19 @@ async function fetchAbuDhabiCalendar() {
     .map(ev => {
       const cats = ev.eventCategories || [];
       const category = cats[0] || 'Events';
-      const desc = ev.description
-        ? truncate(stripHtml(ev.description), 150)
+      const full = ev.description
+        ? stripHtml(ev.description)
         : (ev.startDate ? new Date(ev.startDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Abu Dhabi Event');
+      const slug = ev.slug || ev.urlSlug || '';
+      const link = ev.url || ev.canonicalUrl || ev.permalink ||
+        (slug ? 'https://visitabudhabi.ae/en/events-calendar/' + slug : '');
       return {
         title: stripHtml(ev.name),
-        description: desc,
+        description: truncate(full, 150),
+        fullDescription: truncate(full, 500),
         pubDate: ev.startDate || new Date().toISOString(),
         category,
+        link,
         source: 'ad-calendar'
       };
     });
