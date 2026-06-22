@@ -26,21 +26,21 @@
   ].join('\n');
   document.head.appendChild(style);
 
-  // Determine current page
-  var path = location.pathname.split('/').pop() || 'index.html';
+  // Determine current page (normalize trailing slash)
+  var path = location.pathname.replace(/\/$/, '') || '/';
 
-  // Nav links
+  // Nav links (canonical clean URLs)
   var links = [
-    { href: 'visa-legal.html', en: 'Visa & Legal', ar: '\u062A\u0623\u0634\u064A\u0631\u0627\u062A' },
-    { href: 'newcomer-setup.html', en: 'Newcomer Setup', ar: '\u0625\u0639\u062F\u0627\u062F \u0627\u0644\u0642\u0627\u062F\u0645\u064A\u0646' },
-    { href: 'transport-driving.html', en: 'Transport', ar: '\u0627\u0644\u0646\u0642\u0644' },
-    { href: 'healthcare.html', en: 'Healthcare', ar: '\u0627\u0644\u0631\u0639\u0627\u064A\u0629 \u0627\u0644\u0635\u062D\u064A\u0629' },
-    { href: 'kids-education.html', en: 'Kids & Schools', ar: '\u0627\u0644\u0623\u0637\u0641\u0627\u0644' },
-    { href: 'weekend-fun.html', en: 'Weekend Fun', ar: '\u0639\u0637\u0644\u0629 \u0646\u0647\u0627\u064A\u0629 \u0627\u0644\u0623\u0633\u0628\u0648\u0639' }
+    { href: '/visa-legal-help/', en: 'Visa & Legal', ar: '\u062A\u0623\u0634\u064A\u0631\u0627\u062A' },
+    { href: '/newcomer-setup/', en: 'Newcomer Setup', ar: '\u0625\u0639\u062F\u0627\u062F \u0627\u0644\u0642\u0627\u062F\u0645\u064A\u0646' },
+    { href: '/transport-driving/', en: 'Transport', ar: '\u0627\u0644\u0646\u0642\u0644' },
+    { href: '/low-cost-hospital/', en: 'Healthcare', ar: '\u0627\u0644\u0631\u0639\u0627\u064A\u0629 \u0627\u0644\u0635\u062D\u064A\u0629' },
+    { href: '/kids-nurseries/', en: 'Kids & Schools', ar: '\u0627\u0644\u0623\u0637\u0641\u0627\u0644' },
+    { href: '/weekend-fun/', en: 'Weekend Fun', ar: '\u0639\u0637\u0644\u0629 \u0646\u0647\u0627\u064A\u0629 \u0627\u0644\u0623\u0633\u0628\u0648\u0639' }
   ];
 
   var linksHtml = links.map(function (l) {
-    var cls = path === l.href ? ' class="active"' : '';
+    var cls = path === l.href.replace(/\/$/, '') ? ' class="active"' : '';
     return '<a href="' + l.href + '"' + cls + ' data-en="' + l.en + '" data-ar="' + l.ar + '">' + l.en + '</a>';
   }).join('');
 
@@ -49,7 +49,7 @@
   nav.className = 'site-nav';
   nav.innerHTML =
     '<div class="site-nav-inner">' +
-      '<a href="index.html" class="site-nav-brand" data-en="New In Abu Dhabi" data-ar="\u062C\u062F\u064A\u062F \u0641\u064A \u0623\u0628\u0648\u0638\u0628\u064A">New In Abu Dhabi</a>' +
+      '<a href="/" class="site-nav-brand" data-en="New In Abu Dhabi" data-ar="\u062C\u062F\u064A\u062F \u0641\u064A \u0623\u0628\u0648\u0638\u0628\u064A">New In Abu Dhabi</a>' +
       '<ul class="site-nav-links" id="site-nav-links">' + linksHtml + '</ul>' +
       '<div class="nav-lang">' +
         '<button class="nav-lang-btn active" data-lang="en" onclick="switchLanguage(\'en\')">EN</button>' +

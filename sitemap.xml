@@ -4,142 +4,142 @@
   <!-- Homepage -->
   <url>
     <loc>https://newinabudhabi.com/</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Main Content Pages -->
+  <!-- Main Content Pages (canonical clean URLs) -->
   <url>
-    <loc>https://newinabudhabi.com/visa-legal.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://newinabudhabi.com/low-cost-hospital/</loc>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://newinabudhabi.com/newcomer-setup.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://newinabudhabi.com/food-groceries/</loc>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://newinabudhabi.com/transport-driving.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://newinabudhabi.com/discount-warehouses/</loc>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://newinabudhabi.com/food-groceries.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://newinabudhabi.com/kids-nurseries/</loc>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://newinabudhabi.com/discount-warehouses.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://newinabudhabi.com/kids-fun-activities/</loc>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://newinabudhabi.com/healthcare.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://newinabudhabi.com/handymen-repairs-home-services/</loc>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://newinabudhabi.com/handyman-repair.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://newinabudhabi.com/mobile-repair-pc-repair/</loc>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://newinabudhabi.com/mobile-pc-repair.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://newinabudhabi.com/tailors-curtains-bedsheets/</loc>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://newinabudhabi.com/kids-education.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://newinabudhabi.com/transport-driving/</loc>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://newinabudhabi.com/kids-fun.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://newinabudhabi.com/newcomer-setup/</loc>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://newinabudhabi.com/tailor-curtains.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://newinabudhabi.com/visa-legal-help/</loc>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://newinabudhabi.com/cargo-shipping.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://newinabudhabi.com/shipping-cargo-to-home-country/</loc>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://newinabudhabi.com/quran-islamic.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://newinabudhabi.com/tahfeez-center-islamic-books/</loc>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://newinabudhabi.com/gyms-wellness.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://newinabudhabi.com/gyms-wellness/</loc>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://newinabudhabi.com/weekend-fun.html</loc>
-    <lastmod>2025-11-17</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://newinabudhabi.com/weekend-fun/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Secondary Pages -->
   <url>
     <loc>https://newinabudhabi.com/about.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://newinabudhabi.com/contact.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://newinabudhabi.com/privacy.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://newinabudhabi.com/terms.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

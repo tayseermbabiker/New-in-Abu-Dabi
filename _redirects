@@ -1,6 +1,81 @@
 # Netlify redirects file
 # Handle URL redirects and rewrites
 
+# ---------------------------------------------------------------------------
+# CANONICAL CLEAN URLS (added 2026-06-22)
+# Google indexed clean slugs (no .html). Some slugs differ from the filename,
+# so they were 404ing (served homepage via the /* fallback). These rules:
+#   1) serve each clean slug from its real file (200 rewrite)
+#   2) force-redirect the .html version to the clean slug (301!) to kill dupes
+# The "!" force flag is REQUIRED to redirect away from a path where a real
+# file exists, otherwise Netlify serves the file and ignores the rule.
+# ---------------------------------------------------------------------------
+
+# 1. Low-cost healthcare  (file: healthcare.html)
+/low-cost-hospital        /healthcare.html              200
+/low-cost-hospital/       /healthcare.html              200
+/healthcare.html          /low-cost-hospital/           301!
+/healthcare               /low-cost-hospital/           301!
+
+# 2. Kids nurseries / education  (file: kids-education.html)
+/kids-nurseries           /kids-education.html          200
+/kids-nurseries/          /kids-education.html          200
+/kids-education.html      /kids-nurseries/              301!
+/education                /kids-nurseries/              301!
+
+# 3. Handyman & home services  (file: handyman-repair.html)
+/handymen-repairs-home-services   /handyman-repair.html  200
+/handymen-repairs-home-services/  /handyman-repair.html  200
+/handyman-repair.html     /handymen-repairs-home-services/   301!
+
+# 4. Kids fun & activities  (file: kids-fun.html)
+/kids-fun-activities      /kids-fun.html                200
+/kids-fun-activities/     /kids-fun.html                200
+/kids-fun.html            /kids-fun-activities/         301!
+
+# 5. Tailors, curtains & bedsheets  (file: tailor-curtains.html)
+/tailors-curtains-bedsheets    /tailor-curtains.html    200
+/tailors-curtains-bedsheets/   /tailor-curtains.html    200
+/tailor-curtains.html     /tailors-curtains-bedsheets/  301!
+
+# 6. Quran / Tahfeez centers  (file: quran-islamic.html)
+/tahfeez-center-islamic-books    /quran-islamic.html    200
+/tahfeez-center-islamic-books/   /quran-islamic.html    200
+/quran-islamic.html       /tahfeez-center-islamic-books/   301!
+
+# 7. Mobile & PC repair  (file: mobile-pc-repair.html)
+/mobile-repair-pc-repair       /mobile-pc-repair.html   200
+/mobile-repair-pc-repair/      /mobile-pc-repair.html   200
+/mobile-pc-repair.html    /mobile-repair-pc-repair/     301!
+
+# 8. Cargo shipping home  (file: cargo-shipping.html)
+/shipping-cargo-to-home-country   /cargo-shipping.html  200
+/shipping-cargo-to-home-country/  /cargo-shipping.html  200
+/cargo-shipping.html      /shipping-cargo-to-home-country/   301!
+
+# 9. Visa & legal help  (file: visa-legal.html)
+/visa-legal-help          /visa-legal.html              200
+/visa-legal-help/         /visa-legal.html              200
+/visa-legal.html          /visa-legal-help/             301!
+/visa                     /visa-legal-help/             301!
+
+# --- Pages where the clean slug already matches the filename ---
+# (Netlify already serves these at the clean slug; just kill the .html dupe)
+/food-groceries.html      /food-groceries/              301!
+/discount-warehouses.html /discount-warehouses/         301!
+/transport-driving.html   /transport-driving/           301!
+/transport-driving-license/   /transport-driving/       301!
+/transport                /transport-driving/           301!
+/newcomer-setup.html      /newcomer-setup/              301!
+/gyms-wellness.html       /gyms-wellness/               301!
+/beauty-wellness          /gyms-wellness/               301!
+/salon                    /gyms-wellness/               301!
+/weekend-fun.html         /weekend-fun/                 301!
+
+# ---------------------------------------------------------------------------
+# Standard redirects
+# ---------------------------------------------------------------------------
+
 # Redirect common variations to canonical URLs
 /home              /                    301
 /index             /                    301
@@ -13,27 +88,12 @@
 /wp-includes/*     /                    301
 /wordpress/*       /                    301
 
-# Service category shortcuts (future enhancement)
-/visa              /#visa-legal         301
-/transport         /#transport          301
-/healthcare        /#healthcare         301
-/education         /#education          301
-/housing           /#housing            301
-/reviews           /#reviews            301
-
 # Handle trailing slashes consistently
 /privacy/          /privacy.html        301
 /terms/            /terms.html          301
 
-# Affiliate link redirects (when implemented)
-# /go/adcb          https://affiliate-link.com/adcb     302
-# /go/fab           https://affiliate-link.com/fab      302
-# /go/etisalat      https://affiliate-link.com/etisalat 302
-
 # API endpoints
 /api/whats-new     /.netlify/functions/whats-new  200
-# /api/reviews      /.netlify/functions/reviews    200
-# /api/contact      /.netlify/functions/contact    200
 
 # SPA fallback - serve index.html for any unmatched routes
 /*                 /index.html          404
