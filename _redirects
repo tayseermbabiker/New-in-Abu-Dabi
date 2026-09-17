@@ -62,7 +62,6 @@
 
 # --- Pages where the clean slug already matches the filename ---
 # (Netlify serves these at the no-slash slug; just kill the .html dupe)
-/sales-this-week.html     /sales-this-week               301!
 /food-groceries.html      /food-groceries               301!
 /discount-warehouses.html /discount-warehouses          301!
 /transport-driving.html   /transport-driving            301!

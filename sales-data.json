@@ -1,5 +1,0 @@
-{
-  "_schema_help": "One object per deal. Fields: store (retailer name), branch (specific mall/location, optional), category (Electronics/Fashion/Home & Furniture/Beauty/Sports/Other — NOT generic supermarket groceries), offer (short headline, e.g. 'Up to 50% off small appliances'), validFrom/validTo (YYYY-MM-DD — validTo controls auto-expiry, item is hidden the day after), sourceUrl + sourceLabel (link to the retailer's own page/post you verified this from), verifiedDate (YYYY-MM-DD you personally checked it), note (1 short sentence of your own commentary), featured (true = eligible for the top TL;DR box, use sparingly). Run 'npm run build:sales' after editing this file to regenerate sales-this-week.html.",
-  "weekLabel": "",
-  "deals": []
-}
