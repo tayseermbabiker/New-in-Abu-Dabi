@@ -1,0 +1,48 @@
+{
+  "generatedAt": "2026-09-20",
+  "weekLabel": "14 Sept – 20 Sept, 2026",
+  "deals": [
+    {
+      "store": "Lulu Hypermarket",
+      "branch": "Online — ships to Abu Dhabi",
+      "category": "Fashion",
+      "offer": "Up to 74% off designer sunglasses (Emporio Armani, Nike, Lacoste, Armani Exchange, O'Neill, Fila)",
+      "validFrom": "",
+      "validTo": "",
+      "location": "Online",
+      "sourceUrl": "https://gcc.luluhypermarket.com/en-ae/deals",
+      "sourceLabel": "LuLu Hypermarket UAE official site — \"Eye Express\" section",
+      "verifiedDate": "2026-09-19",
+      "note": "Ongoing online promotion, no fixed end date shown — re-verified weekly rather than assigned a false expiry.",
+      "featured": true
+    },
+    {
+      "store": "Lulu Hypermarket",
+      "branch": "Online — ships to Abu Dhabi",
+      "category": "Home & Furniture",
+      "offer": "Up to 60% off luggage and travel trolleys (Delsey, American Tourister, Skybags, Wagon R)",
+      "validFrom": "",
+      "validTo": "",
+      "location": "Online",
+      "sourceUrl": "https://gcc.luluhypermarket.com/en-ae/deals",
+      "sourceLabel": "LuLu Hypermarket UAE official site — \"Lulu Travel Fest\" section",
+      "verifiedDate": "2026-09-19",
+      "note": "Ongoing online promotion, no fixed end date shown — re-verified weekly rather than assigned a false expiry.",
+      "featured": false
+    },
+    {
+      "store": "Max Fashion",
+      "branch": "Online & UAE stores",
+      "category": "Fashion",
+      "offer": "Storewide clearance sale, roughly 30-50% off women's and kids' clothing and accessories",
+      "validFrom": "",
+      "validTo": "",
+      "location": "Online & UAE stores",
+      "sourceUrl": "https://www.maxfashion.com/ae/en/search?q=allPromotions.en%3ASale",
+      "sourceLabel": "Max Fashion UAE official site — Sale filter",
+      "verifiedDate": "2026-09-19",
+      "note": "Rolling clearance sale — discount varies by item, no fixed end date shown.",
+      "featured": false
+    }
+  ]
+}

@@ -2,6 +2,9 @@
   "name": "newinabudhabi",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "build:sales": "node scripts/build-sales-page.js"
+  },
   "dependencies": {
     "fast-xml-parser": "^5.3.6"
   }

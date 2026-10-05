@@ -31,6 +31,7 @@
 
   // Nav links (canonical clean URLs)
   var links = [
+    { href: '/sales-this-week', en: "This Week's Sales", ar: '\u0639\u0631\u0648\u0636 \u0647\u0630\u0627 \u0627\u0644\u0623\u0633\u0628\u0648\u0639' },
     { href: '/visa-legal-help', en: 'Visa & Legal', ar: '\u062A\u0623\u0634\u064A\u0631\u0627\u062A' },
     { href: '/newcomer-setup', en: 'Newcomer Setup', ar: '\u0625\u0639\u062F\u0627\u062F \u0627\u0644\u0642\u0627\u062F\u0645\u064A\u0646' },
     { href: '/transport-driving', en: 'Transport', ar: '\u0627\u0644\u0646\u0642\u0644' },
